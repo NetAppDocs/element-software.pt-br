@@ -1,0 +1,116 @@
+---
+permalink: api/reference_element_api_modifysnapmirrorrelationship.html 
+sidebar: sidebar 
+keywords: modify,modifying,edit,editing,change,changing,snapmirror,relationship,modifysnapmirrorrelationship 
+summary: Você pode usar ModifySnapMirrorRelationship para alterar os intervalos nos quais um snapshot agendado ocorre. Você também pode excluir ou pausar uma programação usando este método. 
+---
+= ModifySnapMirrorRelacionship
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar `ModifySnapMirrorRelationship` para alterar os intervalos em que ocorre um instantâneo agendado. Você também pode excluir ou pausar uma programação usando este método.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+
+
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+Destinaçãovolume
+ a| 
+O volume de destino na relação SnapMirror.
+ a| 
+xref:reference_element_api_snapmirrorvolumeinfo.adoc[SnapMirrorVolumeinfo]
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+MaxTransferRate
+ a| 
+Especifica a taxa máxima de transferência de dados entre os volumes em kilobytes por segundo. O valor padrão, 0, é ilimitado e permite que o relacionamento SnapMirror utilize totalmente a largura de banda de rede disponível.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+Nome da política
+ a| 
+Especifica o nome da política ONTAP SnapMirror para a relação.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+ScheduleName
+ a| 
+O nome do cronograma pré-existente do cron no sistema ONTAP que é usado para atualizar o relacionamento do SnapMirror.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+O ID do ponto de extremidade do sistema de armazenamento ONTAP remoto que se comunica com o cluster de armazenamento Element.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+
+
+| Nome | Descrição | Tipo 
+
+
+ a| 
+SnapMirrorRelacionship
+ a| 
+Um objeto contendo os atributos de relação SnapMirror modificados.
+ a| 
+xref:reference_element_api_snapmirrorrelationship.adoc[SnapMirrorRelacionship]
+
+|===
+
+
+== Novo desde a versão
+
+10,1

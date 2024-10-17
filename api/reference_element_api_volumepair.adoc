@@ -1,0 +1,99 @@
+---
+permalink: api/reference_element_api_volumepair.html 
+sidebar: sidebar 
+keywords: object,objects,volumePair 
+summary: O objeto volumePair contém informações sobre um volume que é emparelhado com outro volume em um cluster diferente. Se o volume não estiver emparelhado, este objeto está vazio. Você pode usar os métodos ListActivePairedVolumes e ListActiveVolumes API para retornar informações sobre volumes emparelhados. 
+---
+= VolumePair
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto volumePair contém informações sobre um volume que é emparelhado com outro volume em um cluster diferente. Se o volume não estiver emparelhado, este objeto está vazio. Você pode usar os `ListActivePairedVolumes` métodos e `ListActiveVolumes` API para retornar informações sobre volumes emparelhados.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+ClausterPairID
+ a| 
+O cluster no qual o volume está emparelhado.
+ a| 
+número inteiro
+
+
+
+ a| 
+RemoteReplication
+ a| 
+Detalhes sobre replicação de volume. Membros:
+
+* Modo: (String) um dos "Async", "Sync" ou "SnapshotsOnly".
+* PauseLimit: (Inteiro) uso interno somente.
+* RemoteServiceID: (Inteiro) o ID de serviço de corte remoto.
+* ResumeDetails: (String) reservado para uso futuro.
+* SnapshotReplication (objeto JSON)
++
+** estado: (String) o estado da replicação de snapshot em curso, se uma estiver em andamento.
+** StateDetails: (String) reservado para uso futuro.
+
+
+* estado: (String) o estado da replicação do volume.
+* StateDetails: (String) reservado para uso futuro.
+
+ a| 
+Objeto JSON
+
+
+
+ a| 
+RemoteSliceID
+ a| 
+A ID de corte definida pelo cluster no cluster remoto.
+ a| 
+número inteiro
+
+
+
+ a| 
+RemoteVolumeID
+ a| 
+A ID do volume no cluster remoto com o qual o volume local está emparelhado.
+ a| 
+número inteiro
+
+
+
+ a| 
+RemoteVolumeName
+ a| 
+O nome do volume remoto.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+VolumePairUID
+ a| 
+Um identificador universalmente exclusivo, definido por cluster para esse emparelhamento em um formato canônico.
+ a| 
+cadeia de carateres
+
+|===
+
+
+== Encontre mais informações
+
+* xref:reference_element_api_listactivepairedvolumes.adoc[ListActivePairedVolumes]
+* xref:reference_element_api_listactivevolumes.adoc[ListActiveVolumes]
+

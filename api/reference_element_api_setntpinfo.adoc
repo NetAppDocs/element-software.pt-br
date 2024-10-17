@@ -1,0 +1,98 @@
+---
+permalink: api/reference_element_api_setntpinfo.html 
+sidebar: sidebar 
+keywords: ntp,info,set,setting,setntpinfo 
+summary: Você pode usar o método SetNtpInfo para configurar o NTP em nós de cluster. Os valores definidos com esta interface aplicam-se a todos os nós do cluster. Se um servidor de transmissão NTP transmite periodicamente informações de tempo na sua rede, você pode opcionalmente configurar os nós como clientes de transmissão. 
+---
+= SetNtpInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `SetNtpInfo` método para configurar o NTP em nós de cluster. Os valores definidos com esta interface aplicam-se a todos os nós do cluster. Se um servidor de transmissão NTP transmite periodicamente informações de tempo na sua rede, você pode opcionalmente configurar os nós como clientes de transmissão.
+
+
+
+== Parâmetros
+
+
+NOTE: Certifique-se de que utiliza servidores NTP internos à rede, em vez dos padrões de instalação.
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+servidores
+ a| 
+Lista de servidores NTP para adicionar a cada configuração NTP de nó.
+ a| 
+array de cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+broadcastclient
+ a| 
+Ativa cada nó no cluster como um cliente de broadcast.
+ a| 
+booleano
+ a| 
+falso
+ a| 
+Não
+
+|===
+
+
+== Valores de retorno
+
+Este método não tem valores de retorno.
+
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "SetNtpInfo",
+   "params": {
+     "servers"  : [
+       "ntpserver1.example.org",
+       "ntpserver2.example.org",
+       "ntpserver3.example.org"
+     ],
+     "broadcastclient" : false
+   },
+   "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+    "id" : 1,
+    "result" : {}
+}
+----
+
+
+== Novo desde a versão
+
+9,6

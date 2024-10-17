@@ -1,0 +1,29 @@
+---
+permalink: storage/task_system_manage_snmp_configure_snmp_traps.html 
+sidebar: sidebar 
+keywords: snmp, config, traps, notifications, monitor, health, enable, disable 
+summary: Os administradores de sistema podem usar traps SNMP, também chamados de notificações, para monitorar a integridade do cluster SolidFire. 
+---
+= Configurar traps SNMP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os administradores de sistema podem usar traps SNMP, também chamados de notificações, para monitorar a integridade do cluster SolidFire.
+
+Quando os traps SNMP estão ativados, o cluster SolidFire gera traps associados a entradas de log de eventos e alertas de sistema. Para receber notificações SNMP, você precisa escolher os traps que devem ser gerados e identificar os destinatários das informações da armadilha. Por padrão, não são geradas armadilhas.
+
+. Clique em *Cluster* > *SNMP*.
+. Selecione um ou mais tipos de traps na seção *SNMP Trap Settings* que o sistema deve gerar:
++
+** Armadilhas de falha do cluster
+** Armadilhas de falha resolvidas pelo cluster
+** Armadilhas de eventos de cluster
+
+
+. Na seção *destinatários da armadilha*, insira as informações do host, da porta e da cadeia de carateres da comunidade para um destinatário.
+. *Opcional*: Para adicionar outro destinatário de armadilha, clique em *Adicionar um destinatário de armadilha* e insira informações de cadeia de carateres de host, porta e comunidade.
+. Clique em *Salvar alterações*.
+

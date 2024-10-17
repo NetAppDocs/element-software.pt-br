@@ -1,0 +1,73 @@
+---
+permalink: api/reference_element_api_disablebmccoldreset.html 
+sidebar: sidebar 
+keywords: BMC cold reset,BMC reset,disable BMC 
+summary: 'Você pode usar o método DisableBmcColdReset para desativar a tarefa em segundo plano que redefine periodicamente o controlador de gerenciamento da placa base (BMC) para todos os nós no cluster.' 
+---
+= DisableBmcColdReset
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `DisableBmcColdReset` método para desativar a tarefa em segundo plano que redefine periodicamente o controlador de gerenciamento da placa base (BMC) para todos os nós do cluster.
+
+
+
+== Parâmetro
+
+Este método não tem nenhum parâmetro de entrada.
+
+
+
+== Valores de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+CBmcResetDurationMinutes
+ a| 
+Retorna o tempo entre intervalos de reinicialização. O intervalo deve ser sempre 0 após a conclusão do comando.
+ a| 
+número inteiro
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+  "method": "DisableBmcColdReset",
+  "params": {},
+  "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+    "id": 1,
+    "result": {
+        "cBmcResetDurationMinutes": 0
+    }
+}
+----
+
+
+== Novo desde a versão
+
+12,0

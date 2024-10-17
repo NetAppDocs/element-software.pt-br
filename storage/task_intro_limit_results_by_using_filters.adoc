@@ -1,0 +1,27 @@
+---
+permalink: storage/task_intro_limit_results_by_using_filters.html 
+sidebar: sidebar 
+keywords: filter, filtering, sorting information, viewing lists, unfiltered list 
+summary: 'Você pode filtrar informações de lista em páginas na IU do elemento. Ao visualizar listas (como volumes e instantâneos), você pode adicionar um ou mais filtros para focar as informações e torná-las mais facilmente encaixadas na página.' 
+---
+= Limite os resultados usando filtros
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode filtrar informações de lista em páginas na IU do elemento. Ao visualizar listas (como volumes e instantâneos), você pode adicionar um ou mais filtros para focar as informações e torná-las mais facilmente encaixadas na página.
+
+. Ao visualizar informações da lista, clique em *filtro*.
+. Expanda o campo *Filtrar por*.
+. Escolha uma coluna pela qual filtrar a partir do elemento mais à esquerda no campo.
+. Escolha uma restrição para a coluna.
+. Introduza o texto para filtrar por.
+. Clique em *Add*.
++
+O sistema executa o novo filtro nas informações da lista e armazena temporariamente o novo filtro no campo Filtrar por.
+
+. Para adicionar outro filtro, clique em *Add* e escolha novamente o filtro.
+. Clique em *Limpar tudo* para remover a lista de filtros e exibir as informações da lista não filtrada.
+

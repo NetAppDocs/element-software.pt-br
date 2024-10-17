@@ -1,0 +1,61 @@
+---
+permalink: api/reference_element_api_removenodesslcertificate.html 
+sidebar: sidebar 
+keywords: ssl,cert,certificate,remove,removing,node,management,removenodesslcertificate 
+summary: Você pode usar o método RemoveNodeSSLCertificate para remover o certificado SSL do usuário e a chave privada para o nó de gerenciamento. Depois que o certificado e a chave privada forem removidos, o nó de gerenciamento será configurado para usar o certificado padrão e a chave privada. 
+---
+= RemoveNodeSSLCertificate
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `RemoveNodeSSLCertificate` método para remover o certificado SSL do usuário e a chave privada para o nó de gerenciamento. Depois que o certificado e a chave privada forem removidos, o nó de gerenciamento será configurado para usar o certificado padrão e a chave privada.
+
+
+
+== Parâmetros
+
+
+NOTE: Você deve chamar esse método para o nó de gerenciamento. Por exemplo:
+
+[listing]
+----
+https://<management node IP>:442/json-rpc/10.0
+----
+Este método não tem parâmetros de entrada.
+
+
+
+== Valores de retorno
+
+Este método não tem valores de retorno.
+
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+    "method" : "RemoveNodeSSLCertificate",
+    "params" : {},
+    "id" : 3
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+    "id" : 3,
+    "result" : {}
+}
+----

@@ -1,0 +1,118 @@
+---
+permalink: api/reference_element_api_setconfig.html 
+sidebar: sidebar 
+keywords: config,configuration,set,setting,node,setconfig,network,cluster 
+summary: Você pode usar o método SetConfig para definir as informações de rede e cluster para o nó. Este método inclui as mesmas configurações em um único método de API que estão disponíveis usando os métodos SetClusterConfig e SetNetworkConfig. Somente os campos que você deseja alterar precisam ser incluídos com este método. 
+---
+= Configuração
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `SetConfig` método para definir as informações de rede e cluster para o nó. Este método inclui as mesmas configurações em um único método de API que estão disponíveis usando ambos `SetClusterConfig` os métodos e `SetNetworkConfig`. Somente os campos que você deseja alterar precisam ser incluídos com este método.
+
+
+
+== Parâmetro
+
+CUIDADO:
+
+Alterar o modo de ligação em um nó pode causar uma perda temporária de conetividade de rede.
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+cluster
+ a| 
+Informações do cluster que identificam como o nó de storage se comunica com o cluster de armazenamento ao qual está associado.
+ a| 
+xref:reference_element_api_cluster.adoc[cluster]
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+rede
+ a| 
+Tipos de conexão de rede e configurações atuais para cada interface de rede do nó.
+ a| 
+xref:reference_element_api_network_all_interfaces.adoc[rede (todas as interfaces)]
+ a| 
+Nenhum
+ a| 
+Não
+
+|===
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+config
+ a| 
+A configuração nova e atual do nó. Este objeto contém:
+
+* xref:reference_element_api_cluster.adoc[cluster]: Informações de cluster que identificam como o nó de armazenamento se comunica com o cluster de armazenamento ao qual está associado.
+* xref:reference_element_api_network_all_interfaces.adoc[rede (todas as interfaces)]: Tipos de conexão de rede e configurações atuais para cada interface de rede do nó.
+
+ a| 
+Objeto JSON
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+	"method": "SetConfig",
+	"params": {
+		"cluster": {
+			"name": "MyHostname"
+		},
+		"network": {
+			"Bond10G": {
+				"bond-mode": "ALB"
+			}
+		}
+	}
+}
+----
+
+
+== Exemplo de resposta
+
+A resposta deste método é a mesma que o retorno para o método GetConfig. Todos os campos para a exibição do objeto e os valores atualizados são vistos quando SetConfig é usado.
+
+
+
+== Novo desde a versão
+
+9,6
+
+
+
+== Encontre mais informações
+
+* xref:reference_element_api_setclusterconfig.adoc[SetClusterConfig]
+* xref:reference_element_api_setnetworkconfig.adoc[SetNetworkConfig]
+* xref:reference_element_api_response_example_getconfig.adoc[GetConfig]
+

@@ -1,0 +1,184 @@
+---
+permalink: api/reference_element_api_updatebulkvolumestatus.html 
+sidebar: sidebar 
+keywords: updatebulkvolumestatus,update,updating,bulk,volume,status,job 
+summary: Pode utilizar o método UpdateBulkVolumeStatus para atualizar o estado de um trabalho de volume em massa que iniciou com os métodos StartBulkVolumeRead ou StartBulkVolumeWrite. 
+---
+= UpdateBulkVolumeStatus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode utilizar o `UpdateBulkVolumeStatus` método para atualizar o estado de um trabalho de volume em massa que iniciou com os `StartBulkVolumeRead` métodos ou `StartBulkVolumeWrite`.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+chave
+ a| 
+A chave atribuída durante a inicialização de uma xref:reference_element_api_startbulkvolumeread.adoc[StartBulkVolumeRead] sessão ouxref:reference_element_api_startbulkvolumewrite.adoc[StartBulkVolumeWrite].
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+estado
+ a| 
+O sistema define o estado do trabalho de volume em massa fornecido. Valores possíveis:
+
+* Em execução: Trabalhos que ainda estão ativos.
+* Concluído: Trabalhos que são feitos.
+* Falha: Trabalhos que falharam.
+
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+Percentil completo
+ a| 
+O progresso concluído do trabalho de volume em massa como percentagem.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+mensagem
+ a| 
+Retorna o status do trabalho de volume em massa quando o trabalho for concluído.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+atributos
+ a| 
+Atributos JSON; atualiza o que está na tarefa de volume em massa.
+ a| 
+Objeto JSON
+ a| 
+Nenhum
+ a| 
+Não
+
+|===
+
+
+== Valores de retorno
+
+Este método tem os seguintes valores de retorno:
+
+|===
+
+
+| Nome | Descrição | Tipo 
+
+
+ a| 
+estado
+ a| 
+Status da sessão solicitada. Estado devolvido:
+
+* preparar
+* ativo
+* concluído
+* falha
+
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+atributos
+ a| 
+Retorna atributos que foram especificados na chamada de método. Os valores são retornados independentemente de terem sido alterados ou não.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+url
+ a| 
+O URL para acessar o servidor da Web do nó; fornecido somente se a sessão ainda estiver ativa.
+ a| 
+cadeia de carateres
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "UpdateBulkVolumeStatus",
+   "params": {
+          "key": "0b2f532123225febda2625f55dcb0448",
+	      "status": "running"
+      },
+   "id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+   "id" : 1,
+   "result": {
+	  "status" : "running",
+	  "url" : "https://10.10.23.47:8443/"
+    }
+}
+----
+
+
+== Novo desde a versão
+
+9,6
+
+
+
+== Encontre mais informações
+
+* xref:reference_element_api_startbulkvolumeread.adoc[StartBulkVolumeRead]
+* xref:reference_element_api_startbulkvolumewrite.adoc[StartBulkVolumeWrite]
+

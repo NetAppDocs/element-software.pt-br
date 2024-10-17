@@ -1,0 +1,45 @@
+---
+permalink: storage/task_data_manage_vol_access_group_delete_an_initiator.html 
+sidebar: sidebar 
+keywords: initiator delete, deleted multiple initiators 
+summary: Você pode excluir um iniciador depois que ele não for mais necessário. Quando você exclui um iniciador, o sistema o remove de qualquer grupo de acesso de volume associado. Quaisquer conexões usando o iniciador permanecem válidas até que a conexão seja redefinida. 
+---
+= Eliminar um iniciador
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode excluir um iniciador depois que ele não for mais necessário. Quando você exclui um iniciador, o sistema o remove de qualquer grupo de acesso de volume associado. Quaisquer conexões usando o iniciador permanecem válidas até que a conexão seja redefinida.
+
+.Passos
+. Clique em *Management* > *Initiators*.
+. Execute as etapas para excluir um único iniciador ou vários iniciadores:
++
+[cols="25,75"]
+|===
+| Opção | Passos 
+
+
+ a| 
+Eliminar um único iniciador
+ a| 
+.. Clique no ícone *ações* do iniciador que deseja excluir.
+.. Clique em *Excluir*.
+.. Confirme a ação.
+
+
+
+
+ a| 
+Eliminar vários iniciadores
+ a| 
+.. Marque as caixas de seleção ao lado dos iniciadores que deseja excluir.
+.. Clique no botão *ações em massa*.
+.. No menu resultante, selecione *Excluir*.
+.. Confirme a ação.
+
+
+|===
+

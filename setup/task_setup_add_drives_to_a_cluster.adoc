@@ -1,0 +1,37 @@
+---
+permalink: setup/task_setup_add_drives_to_a_cluster.html 
+sidebar: sidebar 
+keywords:  
+summary: Quando você adiciona um nó ao cluster ou instala novas unidades em um nó existente, as unidades são registradas automaticamente conforme disponível. Você deve adicionar as unidades ao cluster usando a IU ou a API do Element antes que elas possam participar do cluster. 
+---
+= Adicionar unidades a um cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando você adiciona um nó ao cluster ou instala novas unidades em um nó existente, as unidades são registradas automaticamente conforme disponível. Você deve adicionar as unidades ao cluster usando a IU ou a API do Element antes que elas possam participar do cluster.
+
+As unidades não são exibidas na lista de unidades disponíveis quando existem as seguintes condições:
+
+* As unidades estão no estado Ativo, Remoção, eliminação ou Falha.
+* O nó do qual a unidade faz parte está no estado pendente.
+
+
+.Passos
+. Na interface do usuário Element, selecione *Cluster* > *Drives*.
+. Clique em *Available* para ver a lista de unidades disponíveis.
+. Execute um dos seguintes procedimentos:
++
+** Para adicionar unidades individuais, clique no ícone *ações* da unidade que deseja adicionar e clique em *Adicionar*.
+** Para adicionar várias unidades, marque as caixas de seleção das unidades a serem adicionadas, clique em *ações em massa* e clique em *Adicionar*.
++
+....
+== Find more information
+* https://docs.netapp.com/us-en/element-software/index.html[SolidFire and Element Software Documentation]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+....
+
+
+

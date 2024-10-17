@@ -1,0 +1,39 @@
+---
+permalink: storage/task_data_protection_clone_multiple_volumes.html 
+sidebar: sidebar 
+keywords: multiple volumes, clone, create 
+summary: Você pode criar vários clones de volume em uma única operação para criar uma cópia pontual dos dados em um grupo de volumes. 
+---
+= Clonar vários volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar vários clones de volume em uma única operação para criar uma cópia pontual dos dados em um grupo de volumes.
+
+Ao clonar um volume, o sistema cria um snapshot do volume e cria um novo volume a partir dos dados no snapshot. Você pode montar e gravar no novo clone de volume. Clonar vários volumes é um processo assíncrono e leva uma quantidade variável de tempo, dependendo do tamanho e número dos volumes que estão sendo clonados.
+
+O tamanho do volume e a carga atual do cluster afetam o tempo necessário para concluir uma operação de clonagem.
+
+.Passos
+. Clique em *Management* > *volumes*.
+. Clique na guia *Ativo*.
+. Use as caixas de seleção para selecionar vários volumes, criando um grupo de volumes.
+. Clique em *ações em massa*.
+. Clique em *Clone* no menu resultante.
+. Insira um *prefixo de nome de volume novo* na caixa de diálogo *Clone vários volumes*.
++
+O prefixo é aplicado a todos os volumes do grupo.
+
+. *Opcional:* Selecione uma conta diferente à qual o clone pertencerá.
++
+Se você não selecionar uma conta, o sistema atribuirá os novos volumes à conta de volume atual.
+
+. *Opcional:* Selecione um método de acesso diferente para os volumes no clone.
++
+Se não selecionar um método de acesso, o sistema utiliza o acesso de volume atual.
+
+. Clique em *Iniciar clonagem*.
+

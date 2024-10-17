@@ -1,0 +1,20 @@
+---
+permalink: storage/task_data_protection_delete_a_snapshot_schedule.html 
+sidebar: sidebar 
+keywords: snapshot schedule, delete 
+summary: Pode eliminar uma agenda de instantâneos. Depois de excluir a programação, ela não executa nenhum instantâneo agendado futuro. Todos os snapshots que foram criados pela programação permanecem no sistema de storage. 
+---
+= Eliminar uma agenda de instantâneos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode eliminar uma agenda de instantâneos. Depois de excluir a programação, ela não executa nenhum instantâneo agendado futuro. Todos os snapshots que foram criados pela programação permanecem no sistema de storage.
+
+. Clique em *proteção de dados* > *horários*.
+. Clique no ícone *ações* da programação que deseja excluir.
+. No menu resultante, clique em *Excluir*.
+. Confirme a ação.
+

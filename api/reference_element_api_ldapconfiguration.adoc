@@ -1,0 +1,132 @@
+---
+permalink: api/reference_element_api_ldapconfiguration.html 
+sidebar: sidebar 
+keywords: object,objects,ldapConfiguration 
+summary: O objeto ldapConfiguration contém informações sobre a configuração LDAP no sistema de armazenamento. Você pode recuperar informações LDAP com o método da API GetLdapConfiguration. 
+---
+= LdapConfiguration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto ldapConfiguration contém informações sobre a configuração LDAP no sistema de armazenamento. Você pode recuperar informações LDAP com o `GetLdapConfiguration` método API.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+AuthType
+ a| 
+Identifica qual método de autenticação de usuário usar. Valores possíveis:
+
+* DirectBind
+* SearchAndBind
+
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+ativado
+ a| 
+Identifica se o sistema está ou não configurado para LDAP. Valores possíveis:
+
+* verdadeiro
+* falso
+
+ a| 
+booleano
+
+
+
+ a| 
+GroupSearchBaseDN
+ a| 
+O DN base da árvore para iniciar a pesquisa de grupo (o sistema executará uma pesquisa de subárvore a partir daqui).
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+GroupSearchCustomFilter
+ a| 
+O filtro de pesquisa personalizado usado.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+GroupSearchType
+ a| 
+Controla o filtro de pesquisa de grupo padrão usado. Valores possíveis:
+
+* NoGroups: Sem suporte a grupos.
+* ActiveDirectory: Associação aninhada de todos os grupos AD de um usuário.
+* MemberDN: Grupos de estilo MemberDN (nível único).
+
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+SearchBindDN
+ a| 
+Um DN totalmente qualificado para iniciar sessão para efetuar uma pesquisa LDAP para o utilizador (necessita de acesso de leitura ao diretório LDAP).
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+ServerURIs
+ a| 
+Uma lista separada por vírgulas de URIs de servidor LDAP (por exemplo, `ldap://1.2.3.4` e `ldaps://1.2.3.4:123`.)
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+Placa de utilizador
+ a| 
+Uma string que é usada para formar um DN de usuário totalmente qualificado.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+UserSearchBaseDN
+ a| 
+O DN base da árvore usado para iniciar a pesquisa (fará uma pesquisa de subárvore aqui).
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+UserSearchFilter
+ a| 
+O filtro LDAP utilizado.
+ a| 
+cadeia de carateres
+
+|===
+
+
+== Encontre mais informações
+
+xref:reference_element_api_getldapconfiguration.adoc[GetLdapConfiguration]

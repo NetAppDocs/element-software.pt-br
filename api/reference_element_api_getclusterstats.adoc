@@ -1,0 +1,98 @@
+---
+permalink: api/reference_element_api_getclusterstats.html 
+sidebar: sidebar 
+keywords: cluster,stats,statistics,get,getting,getclusterstats 
+summary: Você pode usar o método GetClusterStats para recuperar medições de atividade de alto nível para o cluster. Os valores retornados são cumulativos a partir da criação do cluster. 
+---
+= GetClusterStats
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode utilizar o `GetClusterStats` método para recuperar medições de atividade de alto nível para o cluster. Os valores retornados são cumulativos a partir da criação do cluster.
+
+
+
+== Parâmetros
+
+Este método não tem parâmetros de entrada.
+
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+ClusterStats
+ a| 
+Informações de atividade do cluster.
+ a| 
+xref:reference_element_api_clusterstats.adoc[ClusterStats]
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "GetClusterStats",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "clusterStats": {
+      "actualIOPS": 9376,
+      "averageIOPSize": 4198,
+      "clientQueueDepth": 8,
+      "clusterUtilization": 0.09998933225870132,
+      "latencyUSec": 52,
+      "normalizedIOPS": 15000,
+      "readBytes": 31949074432,
+      "readBytesLastSample": 30883840,
+      "readLatencyUSec": 27,
+      "readLatencyUSecTotal": 182269319,
+      "readOps": 1383161,
+      "readOpsLastSample": 3770,
+      "samplePeriodMsec": 500,
+      "servicesCount": 3,
+      "servicesTotal": 3,
+      "timestamp": "2017-09-09T21:15:39.809332Z",
+      "unalignedReads": 0,
+      "unalignedWrites": 0,
+      "writeBytes": 8002002944,
+      "writeBytesLastSample": 7520256,
+      "writeLatencyUSec": 156,
+      "writeLatencyUSecTotal": 231848965,
+      "writeOps": 346383,
+      "writeOpsLastSample": 918
+    }
+  }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

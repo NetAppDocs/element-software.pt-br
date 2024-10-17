@@ -1,0 +1,51 @@
+---
+permalink: api/reference_element_api_error.html 
+sidebar: sidebar 
+keywords: objects,object,error 
+summary: O objeto de erro contém um código de erro e uma mensagem se ocorrer um erro durante uma chamada de método. Todos os erros gerados pelo sistema têm um código de erro 500. 
+---
+= erro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto de erro contém um código de erro e uma mensagem se ocorrer um erro durante uma chamada de método. Todos os erros gerados pelo sistema têm um código de erro 500.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+código
+ a| 
+O código numérico utilizado para identificar o erro. Todos os erros gerados pelo sistema retornam um código de 500.
+ a| 
+número inteiro
+
+
+
+ a| 
+nome
+ a| 
+O identificador exclusivo para o erro específico que ocorreu. Cada método retorna um conjunto documentado de erros, embora você deve estar preparado para lidar com erros não reconhecidos também.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+mensagem
+ a| 
+Uma descrição do erro, possivelmente com detalhes adicionais.
+ a| 
+cadeia de carateres
+
+|===

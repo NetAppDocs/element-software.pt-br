@@ -1,0 +1,27 @@
+---
+permalink: storage/task_data_protection_edit_members_of_group_snapshot.html 
+sidebar: sidebar 
+keywords: group snapshot members, edit 
+summary: Você pode editar as configurações de retenção para membros de um instantâneo de grupo existente. 
+---
+= Editando membros do instantâneo do grupo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode editar as configurações de retenção para membros de um instantâneo de grupo existente.
+
+. Clique em *proteção de dados* > *instantâneos*.
+. Clique na guia *Membros*.
+. Clique no ícone ações do membro instantâneo do grupo que deseja editar.
+. No menu resultante, selecione *Editar*.
+. Para alterar a configuração de replicação para o instantâneo, selecione uma das seguintes opções:
++
+** Clique em *manter para sempre* para manter o instantâneo no sistema indefinidamente.
+** Clique em *Definir período de retenção* e use as caixas de rotação de data para escolher um período de tempo para o sistema reter o instantâneo.
+
+
+. Clique em *Salvar alterações*.
+

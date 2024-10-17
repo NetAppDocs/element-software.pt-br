@@ -1,0 +1,108 @@
+---
+permalink: api/reference_element_api_testhardwareconfig.html 
+sidebar: sidebar 
+keywords: node,test,testing,hardware,config,configuration,testhardwareconfig 
+summary: Você pode usar o método TestHardwareConfig para executar testes de hardware em um nó. As opções de teste incluem verificação de configurações de hardware, versões de firmware e se todas as unidades estão presentes. 
+---
+= TestHardwareConfig
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `TestHardwareConfig` método para executar testes de hardware em um nó. As opções de teste incluem verificação de configurações de hardware, versões de firmware e se todas as unidades estão presentes.
+
+
+
+== Parâmetros
+
+
+NOTE: Esses testes não se destinam a detetar falhas de hardware.
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+limpo
+ a| 
+Inicia o teste de configuração de hardware com um cache limpo. Valores possíveis:
+
+* Verdadeiro: Exclui o arquivo de resultados de teste em cache e reexecuta os testes.
+* False: Recupera os resultados do teste em cache.
+
+ a| 
+booleano
+ a| 
+falso
+ a| 
+Não
+
+
+
+ a| 
+força
+ a| 
+O parâmetro force deve ser incluído neste método para redefinir o nó com êxito.
+ a| 
+booleano
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+detalhes
+ a| 
+Detalhes da configuração do hardware.
+ a| 
+Objeto JSON
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "TestHardwareConfig",
+   "params": {
+      "force": true
+     },
+   "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Devido ao tamanho deste exemplo de resposta, ele está documentado em um tópico suplementar.
+
+
+
+== Novo desde a versão
+
+9,6
+
+
+
+== Encontre mais informações
+
+xref:reference_element_api_response_example_testhardwareconfig.adoc[TestHardwareConfig]

@@ -1,0 +1,44 @@
+---
+permalink: storage/task_troubleshoot_power_down_a_cluster.html 
+sidebar: sidebar 
+keywords: cluster, power down, mvip 
+summary: Você pode desativar todo um cluster depois de entrar em Contato com o suporte da NetApp e concluir as etapas preliminares. 
+---
+= Desligue um cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Execute o procedimento a seguir para desligar todo um cluster.
+
+.Passos
+. (Opcional) entre em Contato com o suporte da NetApp para obter assistência para concluir as etapas preliminares.
+. Verifique se todas as e/S pararam.
+. Desligar todas as sessões iSCSI:
++
+.. Navegue até o endereço de IP virtual de gerenciamento (MVIP) no cluster para abrir a IU do Element.
+.. Observe os nós listados na lista de nós.
+.. Execute o método Shutdown API com a opção Halt especificada em cada ID do nó no cluster.
+
+
+
+
+[NOTE]
+====
+Ao reiniciar o cluster, você deve seguir determinadas etapas para verificar se todos os nós estão online:
+
+. Verifique se todas as falhas críticas de gravidade e `volumesOffline` cluster foram resolvidas.
+. Aguarde 10 a 15 minutos para que o cluster se assente.
+. Comece a trazer os hosts para acessar os dados.
+
+
+Se você quiser permitir mais tempo ao ligar os nós e verificar se eles estão em boas condições após a manutenção, entre em Contato com o suporte técnico para obter assistência com o atraso da sincronização de dados para evitar a sincronização desnecessária de bin.
+
+====
+
+
+== Encontre mais informações
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/How_to_gracefully_shut_down_and_power_on_a_NetApp_Solidfire_HCI_storage_cluster["Como desligar e ligar graciosamente um cluster de storage NetApp SolidFire/HCI"^]

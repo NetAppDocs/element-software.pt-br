@@ -1,0 +1,106 @@
+---
+permalink: api/reference_element_api_listpendingnodes.html 
+sidebar: sidebar 
+keywords: cluster,list,listing,pending,nodes,node,listpendingnodes 
+summary: Você pode usar o método ListPendingNodes para listar os nós de storage pendentes no sistema. Os nós pendentes são nós de storage que estão sendo executados e configurados para ingressar no cluster de armazenamento, mas ainda não foram adicionados usando o método da API AddNodes. 
+---
+= ListPendingNodes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `ListPendingNodes` método para listar os nós de storage pendentes no sistema. Os nós pendentes são nós de storage que estão sendo executados e configurados para ingressar no cluster de armazenamento, mas ainda não foram adicionados usando o método da API AddNodes.
+
+
+
+== Endereços de gerenciamento IPv4 e IPv6
+
+Observe que `ListPendingNodes` não lista os nós pendentes que têm diferentes tipos de endereço para o endereço IP de gerenciamento (MIP) e o endereço IP virtual de gerenciamento (MVIP). Por exemplo, se um nó pendente tiver um MVIP IPv6 e um MIP IPv4, `ListPendingNodes` não incluirá o nó como parte do resultado.
+
+
+
+== Parâmetros
+
+Este método não tem parâmetros de entrada.
+
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+PendingNodes
+ a| 
+Lista de nós pendentes no cluster.
+ a| 
+xref:reference_element_api_pendingnode.adoc[PendingNode] array
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "ListPendingNodes",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id": 3,
+  "result": {
+    "pendingNodes": [
+      {
+        "assignedNodeID": 0,
+        "cip": "10.26.65.101",
+        "cipi": "Bond10G",
+        "compatible": true,
+        "mip": "172.26.65.101",
+        "mipi": "Bond1G",
+        "name": "VWC-EN101",
+        "pendingNodeID": 1,
+        "platformInfo": {
+          "chassisType": "R620",
+          "cpuModel": "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
+          "nodeMemoryGB": 72,
+          "nodeType": "SF3010"
+        },
+        "sip": "10.26.65.101",
+        "sipi": "Bond10G",
+        "softwareVersion": "9.0.0.1554",
+        "uuid": "4C4C4544-0048-4410-8056-C7C04F395931"
+      }
+    ]
+  }
+}
+----
+
+
+== Novo desde a versão
+
+9,6
+
+
+
+== Encontre mais informações
+
+xref:reference_element_api_addnodes.adoc[AddNodes]

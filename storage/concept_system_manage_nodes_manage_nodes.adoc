@@ -1,0 +1,22 @@
+---
+permalink: storage/concept_system_manage_nodes_manage_nodes.html 
+sidebar: sidebar 
+keywords: nodes, manage, cluster, capacity rule, pairs, stranded nodes 
+summary: Você pode gerenciar o storage SolidFire e os nós Fibre Channel na página nós da guia Cluster. 
+---
+= Gerenciar nós
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode gerenciar o storage SolidFire e os nós Fibre Channel na página nós da guia Cluster.
+
+Se um nó recém-adicionado representar mais de 50% da capacidade total do cluster, parte da capacidade desse nó será inutilizável ("encalhado"), de modo que esteja em conformidade com a regra de capacidade. Este continua a ser o caso até que mais armazenamento seja adicionado. Se um nó muito grande for adicionado que também desobedeça à regra de capacidade, o nó anteriormente encalhado não ficará mais encalhado, enquanto o nó recém-adicionado fica encalhado. A capacidade deve ser sempre adicionada em pares para evitar que isso aconteça. Quando um nó fica preso, uma falha de cluster apropriada é lançada.
+
+
+
+== Encontre mais informações
+
+xref:task_system_manage_nodes_adding_a_node_to_a_cluster.adoc[Adicione um nó a um cluster]

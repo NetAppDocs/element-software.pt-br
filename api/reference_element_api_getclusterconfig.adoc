@@ -1,0 +1,90 @@
+---
+permalink: api/reference_element_api_getclusterconfig.html 
+sidebar: sidebar 
+keywords: cluster,configuration,get,getting,config,getclusterconfig 
+summary: Você pode usar o método da API GetClusterConfig para retornar informações sobre a configuração do cluster que o nó usa para se comunicar com seu cluster. 
+---
+= GetClusterConfig
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `GetClusterConfig` método API para retornar informações sobre a configuração do cluster que o nó usa para se comunicar com seu cluster.
+
+
+
+== Parâmetros
+
+Este método não tem parâmetros de entrada.
+
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+cluster
+ a| 
+Informações de configuração do cluster que o nó usa para se comunicar com o cluster.
+ a| 
+xref:reference_element_api_cluster.adoc[cluster]
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "GetClusterConfig",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "cluster": {
+      "cipi": "Bond10G",
+      "cluster": "ClusterName",
+      "ensemble": [
+        "1:10.30.65.139",
+        "2:10.30.65.140",
+        "3:10.30.65.141"
+      ],
+      "fipsDriveConfiguration": true,
+      "mipi": "Bond1G",
+      "name": "xxx-en142",
+      "nodeID": 4,
+      "pendingNodeID": 0,
+      "role": "Storage",
+      "sipi": "Bond10G",
+      "state": "Active",
+      "version": "9.1.0"
+    }
+  }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

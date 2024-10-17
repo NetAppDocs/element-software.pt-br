@@ -1,0 +1,125 @@
+---
+permalink: api/reference_element_api_setloginbanner.html 
+sidebar: sidebar 
+keywords: terms,use,banner,configure,set,setting,setloginbanner,login 
+summary: Você pode usar o método SetLoginBanner para configurar o banner termos de uso que os usuários veem quando fazem login na interface da Web do Element. 
+---
+= SetLoginBanner
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `SetLoginBanner` método para configurar o banner termos de uso que os usuários veem quando fazem login na interface da Web do Element.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+banner
+ a| 
+O texto desejado do banner termos de uso. O comprimento máximo permitido é de 4.096 carateres.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+ativado
+ a| 
+O status do banner termos de uso. Valores possíveis:
+
+* `true`: O banner termos de uso é exibido no login da interface da Web.
+* `false`: O banner termos de uso não é exibido no login da interface da Web.
+
+ a| 
+booleano
+ a| 
+Nenhum
+ a| 
+Não
+
+|===
+
+
+== Valores de retorno
+
+Este método tem os seguintes valores de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+banner
+ a| 
+O texto atual do banner termos de uso. Este valor pode conter texto mesmo quando o banner está desativado.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+ativado
+ a| 
+O status do banner termos de uso. Valores possíveis:
+
+* Verdadeiro: O banner termos de uso é exibido no login da interface da Web.
+* Falso: O banner termos de uso não é exibido no login da interface da Web.
+
+ a| 
+booleano
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id": 3920,
+  "method": "SetLoginBanner",
+  "params": {
+    "banner": "Welcome to NetApp!",
+    "enabled": true
+  }
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id": 3920,
+  "result": {
+    "loginBanner": {
+      "banner": "Welcome to NetApp!",
+      "enabled": true
+    }
+  }
+}
+----
+
+
+== Novo desde a versão
+
+10,0

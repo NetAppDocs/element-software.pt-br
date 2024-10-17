@@ -1,0 +1,57 @@
+---
+permalink: storage/concept_monitor_understand_cluster_fullness_levels.html 
+sidebar: sidebar 
+keywords: cluster fullness levels, understanding, fullness levels 
+summary: 'O cluster que executa o software Element gera falhas de cluster para avisar o administrador de storage quando o cluster está sem capacidade. Existem três níveis de preenchimento do cluster, todos exibidos na IU do NetApp Element: Aviso, erro e crítico.' 
+---
+= Entenda os níveis de plenitude do cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O cluster que executa o software Element gera falhas de cluster para avisar o administrador de storage quando o cluster está sem capacidade. Existem três níveis de preenchimento do cluster, todos exibidos na IU do NetApp Element: Aviso, erro e crítico.
+
+O sistema usa o código de erro BlockClusterFull para avisar sobre a plenitude do armazenamento do bloco de cluster. Você pode visualizar os níveis de gravidade de preenchimento do cluster na guia Alertas da IU do elemento.
+
+A lista a seguir inclui informações sobre os níveis de gravidade BlockClusterFull:
+
+* *Aviso*
++
+Este é um aviso configurável pelo cliente que aparece quando a capacidade de bloco do cluster está se aproximando do nível de gravidade do erro. Por padrão, esse nível é definido em três por cento abaixo do nível de erro e pode ser ajustado através da IU e API do elemento. Você precisa adicionar mais capacidade ou liberar capacidade o mais rápido possível.
+
+* *Erro*
++
+Quando o cluster estiver nesse estado, se um nó for perdido, não haverá capacidade suficiente no cluster para reconstruir a proteção de dados Double Helix. A criação de novos volumes, os clones e os snapshots são bloqueados enquanto o cluster está nesse estado. Este não é um estado seguro ou recomendado para que qualquer cluster esteja dentro. Você deve adicionar mais capacidade ou liberar capacidade imediatamente.
+
+* *Crítica*
++
+Esse erro crítico ocorreu porque o cluster é 100% consumido. Ele está em um estado somente leitura e nenhuma nova conexão iSCSI pode ser feita ao cluster. Quando esta fase for alcançada, você deve liberar ou adicionar mais capacidade imediatamente.
+
+
+
+O sistema usa o código de erro MetadataClusterFull para avisar sobre a plenitude do armazenamento de metadados do cluster. Você pode visualizar a plenitude do armazenamento de metadados do cluster na seção capacidade do cluster na página Visão geral da guia relatórios na IU do elemento.
+
+A lista a seguir inclui informações sobre os níveis de gravidade MetadataClusterFull:
+
+* *Aviso*
++
+Este é um aviso configurável pelo cliente que aparece quando a capacidade de metatdata do cluster está se aproximando do nível de gravidade do erro. Por padrão, esse nível é definido em três por cento abaixo do nível de erro e pode ser ajustado através da API Element. Você precisa adicionar mais capacidade ou liberar capacidade o mais rápido possível.
+
+* *Erro*
++
+Quando o cluster estiver nesse estado, se um nó for perdido, não haverá capacidade suficiente no cluster para reconstruir a proteção de dados Double Helix. A criação de novos volumes, os clones e os snapshots são bloqueados enquanto o cluster está nesse estado. Este não é um estado seguro ou recomendado para que qualquer cluster esteja dentro. Você deve adicionar mais capacidade ou liberar capacidade imediatamente.
+
+* *Crítica*
++
+Esse erro crítico ocorreu porque o cluster é 100% consumido. Ele está em um estado somente leitura e nenhuma nova conexão iSCSI pode ser feita ao cluster. Quando esta fase for alcançada, você deve liberar ou adicionar mais capacidade imediatamente.
+
+
+
+
+NOTE: O seguinte se aplica aos limites de cluster de dois nós:
+
+* O erro de preenchimento de metadados está 20% abaixo do crítico.
+* O erro de preenchimento do bloco está na unidade de bloco 1 (incluindo capacidade ociosa) abaixo da crítica; o que significa que há duas unidades de bloco que valem a capacidade abaixo da crítica.
+

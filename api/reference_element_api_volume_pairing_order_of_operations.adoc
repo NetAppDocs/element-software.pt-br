@@ -1,0 +1,37 @@
+---
+permalink: api/reference_element_api_volume_pairing_order_of_operations.html 
+sidebar: sidebar 
+keywords: volume,pairing,order,operations,volumes,pairing,pair,pairs 
+summary: Você deve criar um par de cluster entre dois clusters correspondentes antes que os volumes possam ser emparelhados. 
+---
+= Ordem de operações de emparelhamento de volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve criar um par de cluster entre dois clusters correspondentes antes que os volumes possam ser emparelhados.
+
+Use o seguinte conjunto de métodos de API para estabelecer uma conexão de cluster:
+
+* xref:reference_element_api_startvolumepairing.adoc[StartVolumePairing]:
++
+Este método de API cria e retorna uma chave de emparelhamento de volume que é usada para criar um par de volumes. A chave contém informações que são usadas para estabelecer comunicações entre volumes.
+
+* xref:reference_element_api_completevolumepairing.adoc[CompleteVolumePairing]:
++
+Este método usa a chave de emparelhamento criada com o xref:reference_element_api_startvolumepairing.adoc[StartVolumePairing] método API para criar um par de volumes. Emita o xref:reference_element_api_completevolumepairing.adoc[CompleteVolumePairing]método API com os parâmetros volumeID e volumePairingKey para o volume de destino.
+
+
+
+Apenas um dos volumes emparelhados pode ser identificado como um volume de destino de replicação. Use o xref:reference_element_api_modifyvolumepair.adoc[ModifyVolumePair]método API para estabelecer a direção da replicação de dados do volume identificando qual volume é o destino. Os dados são replicados do volume de origem para o volume de destino.
+
+
+
+== Encontre mais informações
+
+* xref:reference_element_api_startvolumepairing.adoc[StartVolumePairing]
+* xref:reference_element_api_completevolumepairing.adoc[CompleteVolumePairing]
+* xref:reference_element_api_modifyvolumepair.adoc[ModifyVolumePair]
+

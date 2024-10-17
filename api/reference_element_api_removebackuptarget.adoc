@@ -1,0 +1,77 @@
+---
+permalink: api/reference_element_api_removebackuptarget.html 
+sidebar: sidebar 
+keywords: backup,target,targets,remove,delete,removing,deleting,removebackuptarget 
+summary: Você pode usar o método RemoveBackupTarget para remover destinos de backup. 
+---
+= RemoveBackupTarget
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `RemoveBackupTarget` método para remover destinos de backup.
+
+
+
+== Parâmetro
+
+Este método tem o seguinte parâmetro de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+BackupTargetID
+ a| 
+ID de destino exclusivo do alvo a remover.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valores de retorno
+
+Este método não tem valores de retorno.
+
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "RemoveBackupTarget",
+   "params": {
+        "backupTargetID" : 1
+   },
+    "id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+   "id": 1,
+   "result": {}
+}
+----
+
+
+== Novo desde a versão
+
+9,6

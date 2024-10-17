@@ -1,0 +1,43 @@
+---
+permalink: storage/task_intro_view_api_activity_in_real_time.html 
+sidebar: sidebar 
+keywords: solidfire api, element api, element os, element, viewing the API log, viewing API calls 
+summary: O sistema Element usa a API NetApp Element como base para seus recursos e funcionalidades. A IU do Element permite visualizar vários tipos de atividade da API em tempo real no sistema conforme você usa a interface. Com o log da API, você pode visualizar a atividade da API do sistema iniciada pelo usuário e em segundo plano, bem como chamadas de API feitas na página que você está visualizando no momento. 
+---
+= Ver atividade da API
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O sistema Element usa a API NetApp Element como base para seus recursos e funcionalidades. A IU do Element permite visualizar vários tipos de atividade da API em tempo real no sistema conforme você usa a interface. Com o log da API, você pode visualizar a atividade da API do sistema iniciada pelo usuário e em segundo plano, bem como chamadas de API feitas na página que você está visualizando no momento.
+
+Você pode usar o log da API para identificar quais métodos de API são usados para certas tarefas e ver como usar os métodos e objetos da API para criar aplicativos personalizados.
+
+Para obter informações sobre cada método, link:../api/index.html["Referência da API do Element Software"]consulte .
+
+. Na barra de navegação da IU do Element, clique em *API Log*.
+. Para modificar o tipo de atividade da API exibida na janela Registro da API, execute as seguintes etapas:
++
+.. Selecione *Requests* para exibir o tráfego de solicitação de API.
+.. Selecione *respostas* para exibir o tráfego de resposta da API.
+.. Filtre os tipos de tráfego de API selecionando um dos seguintes:
++
+*** *Usuário iniciado*: Tráfego de API por suas atividades durante esta sessão de IU da Web.
+*** * Inquérito de fundo*: Tráfego de API gerado pela atividade do sistema em segundo plano.
+*** *Página atual*: Tráfego de API gerado por tarefas na página que você está visualizando atualmente.
+
+
+
+
+
+
+
+
+== Encontre mais informações
+
+* link:../api/index.html["Gerenciamento de storage com a API Element"]
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in do NetApp Element para vCenter Server"^]
+

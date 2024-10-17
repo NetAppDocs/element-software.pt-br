@@ -1,0 +1,80 @@
+---
+permalink: api/reference_element_api_restartnetworking.html 
+sidebar: sidebar 
+keywords: node,restarting,restart,networking,network,service,services,restartnetworking 
+summary: Você pode usar o método RestartNetworking para reiniciar os serviços de rede em um nó. 
+---
+= RestartNetworking
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `RestartNetworking` método para reiniciar os serviços de rede em um nó.
+
+CUIDADO:
+
+Esse método reinicia todos os serviços de rede em um nó, causando perda temporária de conetividade de rede.
+
+
+
+== Parâmetro
+
+Este método tem o seguinte parâmetro de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+força
+ a| 
+Defina como verdadeiro para reiniciar os serviços de rede em um nó.
+ a| 
+booleano
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valores de retorno
+
+Este método não tem valores de retorno.
+
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "RestartNetworking",
+   "params": {
+              "force" : true
+             },
+   "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{ "id" : 1,
+  "result" : {}
+}
+----
+
+
+== Novo desde a versão
+
+9,6

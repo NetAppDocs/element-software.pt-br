@@ -1,0 +1,23 @@
+---
+permalink: storage/task_snapmirror_perform_failback_to_element.html 
+sidebar: sidebar 
+keywords: failback, perform a failbacl, Element, snapmirror 
+summary: Quando o problema no lado principal tiver sido atenuado, você deve ressincronizar o volume de origem original e fazer o failover de volta para o software NetApp Element. As etapas que você executa variam dependendo se o volume de origem original ainda existe ou se você precisa fazer o failback para um volume recém-criado. 
+---
+= Execute um failback para o elemento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando o problema no lado principal tiver sido atenuado, você deve ressincronizar o volume de origem original e fazer o failover de volta para o software NetApp Element. As etapas que você executa variam dependendo se o volume de origem original ainda existe ou se você precisa fazer o failback para um volume recém-criado.
+
+
+
+== Encontre mais informações
+
+* xref:task_snapmirror_perform_failback_when_source_volume_exists.adoc[Execute um failback quando o volume de origem ainda existir]
+* xref:task_snapmirror_performing_failback_when_source_volume_no_longer_exists.adoc[Execute um failback quando o volume de origem não existir mais]
+* xref:concept_snapmirror_failback_scenarios.adoc[Cenários de failback do SnapMirror]
+

@@ -1,0 +1,27 @@
+---
+permalink: storage/task_data_protection_use_group_snapshots_for_data_protection.html 
+sidebar: sidebar 
+keywords: group snapshots, data protection, set of volumes, backup, rollback 
+summary: Você pode criar um snapshot de grupo de um conjunto relacionado de volumes para preservar uma cópia pontual dos metadados para cada volume. Você pode usar o snapshot de grupo no futuro como um backup ou reversão para restaurar o estado do grupo de volumes para um estado anterior. 
+---
+= Uso de snapshots de grupo para tarefa de proteção de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar um snapshot de grupo de um conjunto relacionado de volumes para preservar uma cópia pontual dos metadados para cada volume. Você pode usar o snapshot de grupo no futuro como um backup ou reversão para restaurar o estado do grupo de volumes para um estado anterior.
+
+
+
+== Encontre mais informações
+
+* xref:task_data_protection_create_a_group_snapshot.adoc[Criar um instantâneo de grupo]
+* xref:task_data_protection_edit_group_snapshots.adoc[Editar instantâneos de grupo]
+* xref:task_data_protection_edit_members_of_group_snapshot.adoc[Editar membros do instantâneo do grupo]
+* xref:task_data_protection_delete_a_group_snapshot.adoc[Eliminar um instantâneo de grupo]
+* xref:task_data_protection_roll_back_volumes_to_a_group_snapshot.adoc[Reverter volumes para um instantâneo de grupo]
+* xref:task_data_protection_clone_multiple_volumes.adoc[Clonar vários volumes]
+* xref:task_data_protection_clone_multiple_volumes_from_a_group_snapshot.adoc[Clonar vários volumes de um snapshot de grupo]
+

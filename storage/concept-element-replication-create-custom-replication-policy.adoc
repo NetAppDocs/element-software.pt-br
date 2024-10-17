@@ -1,0 +1,73 @@
+---
+permalink: storage/concept-element-replication-create-custom-replication-policy.html 
+sidebar: sidebar 
+keywords: ontap, cli, create, custom, replication, policy, relationship, 
+summary: Você pode criar uma política de replicação personalizada se a política padrão para um relacionamento não for adequada. 
+---
+= Crie uma política de replicação personalizada
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar uma política padrão ou personalizada ao criar uma relação de replicação. Para uma política de replicação unificada personalizada, você deve definir uma ou mais _regras_ para determinar quais cópias snapshot são transferidas durante a inicialização e atualização.
+
+Você pode criar uma política de replicação personalizada se a política padrão para um relacionamento não for adequada. Você pode querer compactar dados em uma transferência de rede, por exemplo, ou modificar o número de tentativas que o SnapMirror faz para transferir cópias snapshot.
+
+.Sobre esta tarefa
+O _policy type_ da diretiva de replicação determina o tipo de relação que ela suporta. A tabela abaixo mostra os tipos de política disponíveis.
+
+[cols="2*"]
+|===
+
+
+| Tipo de política | Tipo de relação 
+
+
+ a| 
+espelho assíncrono
+ a| 
+SnapMirror DR
+
+
+
+ a| 
+espelho-cofre
+ a| 
+Replicação unificada
+
+|===
+.Passo
+. Criar uma política de replicação personalizada:
++
+`snapmirror policy create -vserver _SVM_ -policy policy -type async-mirror|mirror-vault -comment _comment_ -tries _transfer_tries_ -transfer-priority low|normal -is-network-compression-enabled true|false`
+
++
+Para obter a sintaxe completa do comando, consulte a página man.
+
++
+A partir do ONTAP 9.5, você pode especificar a programação para criar uma agenda comum de cópia de snapshot para relacionamentos síncronos do SnapMirror usando o `-common-snapshot-schedule` parâmetro. Por padrão, o agendamento comum de cópia snapshot para relacionamentos síncronos do SnapMirror é de uma hora. Você pode especificar um valor de 30 minutos a duas horas para a programação da cópia snapshot para relacionamentos síncronos do SnapMirror.
+
++
+O exemplo a seguir cria uma política de replicação personalizada para o SnapMirror DR que permite a compactação de rede para transferências de dados:
+
++
+[listing]
+----
+cluster_dst::> snapmirror policy create -vserver svm1 -policy DR_compressed -type async-mirror -comment “DR with network compression enabled” -is-network-compression-enabled true
+----
++
+O exemplo a seguir cria uma política de replicação personalizada para replicação unificada:
+
++
+[listing]
+----
+cluster_dst::> snapmirror policy create -vserver svm1 -policy my_unified -type mirror-vault
+----
+
+
+.Depois de terminar
+Para os tipos de política "merror-Vault", você deve definir regras que determinam quais cópias snapshot são transferidas durante a inicialização e atualização.
+
+Use o `snapmirror policy show` comando para verificar se a política SnapMirror foi criada. Para obter a sintaxe completa do comando, consulte a página man.

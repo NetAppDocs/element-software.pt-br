@@ -1,0 +1,90 @@
+---
+permalink: api/reference_element_api_getsnmpacl.html 
+sidebar: sidebar 
+keywords: snmp,acl,get,getting,getsnmpacl 
+summary: Você pode usar o método GetSnmpACL para obter as permissões de acesso SNMP atuais nos nós de cluster. 
+---
+= GetSnmpACL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `GetSnmpACL` método para obter as permissões de acesso SNMP atuais nos nós de cluster.
+
+
+
+== Parâmetros
+
+Este método não tem parâmetros de entrada.
+
+
+
+== Valores de retorno
+
+Este método tem os seguintes valores de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+redes
+ a| 
+Lista de redes e que tipo de acesso têm aos servidores SNMP em execução nos nós de cluster. Este valor está presente se o SNMP v3 estiver desativado.
+ a| 
+xref:reference_element_api_network_snmp.adoc[rede] array
+
+
+
+ a| 
+UsmUsers
+ a| 
+Lista de usuários e o tipo de acesso que eles têm aos servidores SNMP em execução nos nós de cluster. Este valor está presente se o SNMP v3 estiver ativado.
+ a| 
+xref:reference_element_api_usmuser.adoc[UsmUser] array
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+"method": "GetSnmpACL",
+"params": {},
+"id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id" : 1,
+  "result" : {
+     "usmUsers"  : [
+       {
+          "name": "jdoe",
+          "access": "rouser",
+          "secLevel": "priv",
+          "password": "mypassword",
+          "passphrase": "mypassphrase",
+       }
+     ]
+   }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

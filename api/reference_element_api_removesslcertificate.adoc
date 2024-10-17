@@ -1,0 +1,59 @@
+---
+permalink: api/reference_element_api_removesslcertificate.html 
+sidebar: sidebar 
+keywords: ssl,certificate,cert,remove,removing,cluster,removesslcertificate 
+summary: Você pode usar o método RemoveSSLCertificate para remover o certificado SSL do usuário e a chave privada para os nós de storage no cluster. Depois que o certificado e a chave privada forem removidos, os nós de storage serão configurados para usar o certificado padrão e a chave privada. 
+---
+= RemoveSSLCertificate
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `RemoveSSLCertificate` método para remover o certificado SSL do usuário e a chave privada para os nós de storage no cluster. Depois que o certificado e a chave privada forem removidos, os nós de storage serão configurados para usar o certificado padrão e a chave privada.
+
+
+
+== Parâmetros
+
+Este método não tem parâmetros de entrada.
+
+
+
+== Valores de retorno
+
+Este método não tem valores de retorno.
+
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+    "method" : "RemoveSSLCertificate",
+    "params" : {},
+    "id" : 3
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+    "id" : 3,
+    "result" : {}
+}
+----
+
+
+== Novo desde a versão
+
+10,0

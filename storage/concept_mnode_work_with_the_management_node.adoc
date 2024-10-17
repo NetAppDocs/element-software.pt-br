@@ -1,0 +1,19 @@
+---
+permalink: storage/concept_mnode_work_with_the_management_node.html 
+sidebar: sidebar 
+keywords: management node,mNode 
+summary: 'Você pode usar o nó de gerenciamento (mNode) para atualizar serviços do sistema, gerenciar ativos e configurações de cluster, executar testes e utilitários do sistema, configurar o Active IQ para monitoramento do sistema e ativar o acesso ao suporte NetApp para solução de problemas.' 
+---
+= Trabalhe com o nó de gerenciamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o nó de gerenciamento (mNode) para atualizar serviços do sistema, gerenciar ativos e configurações do cluster, executar testes e utilitários do sistema, configurar o Active IQ para monitoramento do sistema e ativar o acesso ao suporte NetApp para solução de problemas.
+
+
+NOTE: Como prática recomendada, associe apenas um nó de gerenciamento a uma instância do VMware vCenter e evite definir os mesmos recursos de storage e computação ou instâncias do vCenter em vários nós de gerenciamento.
+
+Consulte link:../mnode/task_mnode_work_overview.html["documentação do nó de gerenciamento"] para obter mais informações.

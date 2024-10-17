@@ -1,0 +1,83 @@
+---
+permalink: concepts/concept_intro_clusters.html 
+sidebar: sidebar 
+keywords: element, solidfire, cluster, what is, authoritative  cluster, rule of thirds, stranded capacity, storage efficiency, storage cluster quorum 
+summary: Um cluster é o centro de um sistema de storage SolidFire e é composto por uma coleção de nós. É necessário ter pelo menos quatro nós em um cluster para que as eficiências de storage do SolidFire sejam obtidas. Um cluster aparece na rede como um único grupo lógico e pode ser acessado como armazenamento de bloco. 
+---
+= Clusters
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um cluster é o centro de um sistema de storage SolidFire e é composto por uma coleção de nós. É necessário ter pelo menos quatro nós em um cluster para que as eficiências de storage do SolidFire sejam obtidas. Um cluster aparece na rede como um único grupo lógico e pode ser acessado como armazenamento de bloco.
+
+A criação de um novo cluster inicializa um nó como proprietário de comunicações para um cluster e estabelece comunicações de rede para cada nó no cluster. Este processo é realizado apenas uma vez para cada novo cluster. Você pode criar um cluster usando a IU do Element ou a API.
+
+É possível fazer escalabilidade horizontal de um cluster adicionando nós adicionais. Quando você adiciona um novo nó, não há interrupção do serviço e o cluster usa automaticamente a performance e a capacidade do novo nó.
+
+Os administradores e hosts podem acessar o cluster usando endereços IP virtuais. Qualquer nó no cluster pode hospedar os endereços IP virtuais. O IP virtual de gerenciamento (MVIP) permite o gerenciamento de cluster por meio de uma conexão 1GbE, enquanto o IP virtual de armazenamento (SVIP) permite o acesso do host ao armazenamento por meio de uma conexão 10GbEG. Esses endereços IP virtuais permitem conexões consistentes, independentemente do tamanho ou da composição de um cluster SolidFire. Se um nó que hospeda um endereço IP virtual falhar, outro nó no cluster começará a hospedar o endereço IP virtual.
+
+
+NOTE: A partir do elemento versão 11,0, os nós podem ser configurados com IPv4, IPv6 ou ambos os endereços para sua rede de gerenciamento. Isso se aplica aos nós de storage e aos nós de gerenciamento, com exceção do nó de gerenciamento 11,3 e posterior que não oferece suporte para IPv6. Ao criar um cluster, apenas um único endereço IPv4 ou IPv6 pode ser usado para o MVIP e o tipo de endereço correspondente deve ser configurado em todos os nós.
+
+.Mais sobre clusters
+* <<Clusters de storage autoritativo>>
+* <<Regra dos terços>>
+* <<Capacidade ociosa>>
+* <<Eficiência de storage>>
+* <<Quorum do cluster de storage>>
+
+
+
+
+== Clusters de storage autoritativo
+
+O cluster de armazenamento autorizado é o cluster de armazenamento que o NetApp Hybrid Cloud Control usa para autenticar usuários.
+
+Se o seu nó de gerenciamento tiver apenas um cluster de storage, ele será o cluster autoritativo. Se o nó de gerenciamento tiver dois ou mais clusters de storage, um desses clusters será atribuído como o cluster autoritativo e somente os usuários desse cluster poderão fazer login no controle de nuvem híbrida da NetApp. Para descobrir qual cluster é o cluster autorizado, você pode usar a `GET /mnode/about` API. Na resposta, o endereço IP `token_url` no campo é o endereço IP virtual de gerenciamento (MVIP) do cluster de armazenamento autorizado. Se você tentar fazer login no Controle de nuvem híbrida do NetApp como um usuário que não está no cluster autoritativo, a tentativa de login falhará.
+
+Muitos recursos de controle de nuvem híbrida da NetApp foram desenvolvidos para funcionar com vários clusters de storage, mas a autenticação e a autorização têm limitações. A limitação em torno da autenticação e autorização é que o usuário do cluster autorizado pode executar ações em outros clusters vinculados ao Controle de nuvem híbrida NetApp mesmo que não seja um usuário nos outros clusters de armazenamento.
+
+Antes de prosseguir com o gerenciamento de vários clusters de storage, você deve garantir que os usuários definidos nos clusters autoritativos sejam definidos em todos os outros clusters de storage com as mesmas permissões. Pode gerir utilizadores a partir do link:../storage/concept_system_manage_manage_cluster_administrator_users.html["Interface do usuário do software Element"].
+
+Consulte link:../mnode/task_mnode_manage_storage_cluster_assets.html["criar e gerenciar ativos de cluster de storage"] para obter mais informações sobre como trabalhar com ativos de cluster de storage de nós de gerenciamento.
+
+
+
+== Regra dos terços
+
+Quando você mistura tipos de nós de storage em um cluster de storage da NetApp SolidFire, nenhum nó de storage pode conter mais de 33% da capacidade total do cluster de storage.
+
+
+
+== Capacidade ociosa
+
+Se um nó recém-adicionado representar mais de 50% da capacidade total do cluster, parte da capacidade desse nó será inutilizável ("encalhado"), de modo que esteja em conformidade com a regra de capacidade. Esse continua sendo o caso até que mais capacidade de storage seja adicionada. Se um nó muito grande for adicionado que também desobedeça à regra de capacidade, o nó anteriormente encalhado não ficará mais encalhado, enquanto o nó recém-adicionado fica encalhado. A capacidade deve ser sempre adicionada em pares para evitar que isso aconteça. Quando um nó fica preso, uma falha de cluster apropriada é lançada.
+
+
+
+== Eficiência de storage
+
+Os clusters de storage do NetApp SolidFire utilizam deduplicação, compactação e thin Provisioning para reduzir a quantidade de storage físico necessária para armazenar um volume.
+
+* *Compressão*
++
+A compactação reduz a quantidade de storage físico necessária para um volume, combinando blocos de dados em grupos de compactação, cada um dos quais é armazenado como um único bloco.
+
+* *Desduplicação*
++
+A deduplicação reduz a quantidade de storage físico necessária para um volume descartando blocos de dados duplicados.
+
+* * Provisionamento thin*
++
+Um volume ou LUN com thin Provisioning é aquele para o qual o storage não é reservado com antecedência. Em vez disso, o storage é alocado dinamicamente, conforme necessário. O espaço livre é liberado de volta ao sistema de armazenamento quando os dados no volume ou LUN são excluídos
+
+
+
+
+
+== Quorum do cluster de storage
+
+O software Element cria um cluster de storage a partir de nós selecionados, que mantém um banco de dados replicado da configuração do cluster. É necessário um mínimo de três nós para participar do conjunto de cluster para manter o quorum para resiliência de cluster.

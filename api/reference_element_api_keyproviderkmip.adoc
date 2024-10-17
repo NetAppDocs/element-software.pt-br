@@ -1,0 +1,69 @@
+---
+permalink: api/reference_element_api_keyproviderkmip.html 
+sidebar: sidebar 
+keywords: key provider,KMIP,keys 
+summary: 'O objeto keyProviderKmip descreve um provedor de chave KMIP (Key Management Interoperability Protocol). Um provedor de chaves é um mecanismo e um local para recuperar chaves de autenticação para uso com recursos de cluster, como criptografia em repouso.' 
+---
+= KeyProviderKmip
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto keyProviderKmip descreve um provedor de chave KMIP (Key Management Interoperability Protocol). Um provedor de chaves é um mecanismo e um local para recuperar chaves de autenticação para uso com recursos de cluster, como criptografia em repouso.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+KeyProviderID
+ a| 
+O ID do provedor de chaves KMIP. Este é um valor exclusivo atribuído pelo cluster durante a criação do provedor de chaves que não pode ser alterado.
+ a| 
+número inteiro
+
+
+
+ a| 
+KeyProviderIsActive
+ a| 
+Verdadeiro se o provedor de chaves KMIP estiver ativo. Um provedor é considerado ativo se houver chaves pendentes que foram criadas, mas ainda não excluídas e, portanto, se presume que ainda estão em uso.
+ a| 
+booleano
+
+
+
+ a| 
+KeyProvider Name (Nome do fornecedor)
+ a| 
+O nome do provedor de chaves KMIP.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+KeyServerIDs
+ a| 
+Um ID de servidor de chave associado a esse provedor. O servidor deve ser adicionado antes que esse provedor possa se tornar ativo. O servidor não pode ser removido enquanto este fornecedor está ativo. Apenas um ID de servidor é suportado para cada provedor.
+ a| 
+array inteiro
+
+
+
+ a| 
+KmipCapabilities
+ a| 
+Os recursos deste provedor de chaves KMIP, incluindo detalhes sobre a biblioteca subjacente, conformidade com FIPS, provedor de SSL, etc.
+ a| 
+cadeia de carateres
+
+|===

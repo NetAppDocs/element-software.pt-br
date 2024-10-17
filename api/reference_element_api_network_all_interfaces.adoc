@@ -1,0 +1,69 @@
+---
+permalink: api/reference_element_api_network_all_interfaces.html 
+sidebar: sidebar 
+keywords: object,objects,network 
+summary: 'O objeto de rede (todas as interfaces) coleta informações sobre a configuração da interface de rede para um nó de armazenamento. Você pode usar os métodos GetConfig e GetNetworkConfig para obter essas informações para um nó de armazenamento.' 
+---
+= rede (todas as interfaces)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto de rede (todas as interfaces) coleta informações sobre a configuração da interface de rede para um nó de storage. Você pode usar os `GetConfig` métodos e `GetNetworkConfig` para obter essas informações para um nó de storage.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+
+
+| Nome | Descrição | Tipo 
+
+
+ a| 
+Bond10G
+ a| 
+Informações de configuração para a interface ligada Bond10G.
+ a| 
+xref:reference_element_api_network_bonded_interfaces.adoc[rede (interfaces ligadas)]
+
+
+
+ a| 
+Bond1G
+ a| 
+Informações de configuração para a interface ligada Bond1G.
+ a| 
+xref:reference_element_api_network_bonded_interfaces.adoc[rede (interfaces ligadas)]
+
+
+
+ a| 
+eth0-5
+ a| 
+Um objeto para cada interface Ethernet no nó de storage, descrevendo as informações de configuração da interface. Esses objetos são numerados de 0 a 5 para corresponder ao nome da interface.
+ a| 
+xref:reference_element_api_network_ethernet_interfaces.adoc[Rede (interfaces Ethernet)]
+
+
+
+ a| 
+lo
+ a| 
+Informações de configuração para a interface loopback.
+ a| 
+xref:reference_element_api_network_local_interfaces.adoc[rede (interfaces locais)]
+
+|===
+
+
+== Encontre mais informações
+
+* xref:reference_element_api_getconfig.adoc[GetConfig]
+* xref:reference_element_api_getnetworkconfig.adoc[GetNetworkConfig]
+

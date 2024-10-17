@@ -1,0 +1,51 @@
+---
+permalink: storage/task_data_manage_volumes_purge_a_volume.html 
+sidebar: sidebar 
+keywords: volumes, purge a volume 
+summary: Quando um volume é purgado, ele é removido permanentemente do sistema. Todos os dados no volume são perdidos. 
+---
+= Purgue um volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando um volume é purgado, ele é removido permanentemente do sistema. Todos os dados no volume são perdidos.
+
+O sistema limpa automaticamente os volumes eliminados oito horas após a eliminação. No entanto, se você quiser limpar um volume antes da hora programada, você pode fazê-lo.
+
+
+NOTE: Se você limpar um grande número de volumes de uma só vez, ou se os volumes que você limpa tiverem muitos snapshots associados, o processo de limpeza pode falhar e retornar o erro "xDBConnectionLoss", que seria exibido no log da API na IU da Web Element. Se isso acontecer, tente novamente a purga com menos volumes.
+
+. Selecione *Management* > *volumes*.
+. Clique no botão *Deleted*.
+. Execute as etapas para limpar um único volume ou vários volumes.
++
+|===
+
+
+| Opção | Passos 
+
+
+ a| 
+Purgue um único volume
+ a| 
+.. Clique no ícone ações do volume que deseja limpar.
+.. Clique em *Purge*.
+.. Confirme a ação.
+
+
+
+
+ a| 
+Purgue vários volumes
+ a| 
+.. Selecione os volumes que deseja limpar.
+.. Clique em *ações em massa*.
+.. No menu resultante, selecione *Purge*.
+.. Confirme a ação.
+
+
+|===
+

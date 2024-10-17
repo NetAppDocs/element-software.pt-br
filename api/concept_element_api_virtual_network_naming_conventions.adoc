@@ -1,0 +1,26 @@
+---
+permalink: api/concept_element_api_virtual_network_naming_conventions.html 
+sidebar: sidebar 
+keywords: storage,system,naming,convention,virtual,network 
+summary: Os sistemas de armazenamento NetApp Element usam números crescentes monotonicamente como identificadores exclusivos para todos os objetos no sistema. 
+---
+= Convenções de nomenclatura de rede virtual
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os sistemas de armazenamento NetApp Element usam números crescentes monotonicamente como identificadores exclusivos para todos os objetos no sistema.
+
+Quando você cria um novo volume, o novo volumeID é um incremento de exatamente 1. Essa convenção é válida para redes virtuais em clusters de storage que executam o software Element. A primeira rede virtual criada em um cluster Element tem um VirtualNetworkID de 1. Esse ID não é a mesma coisa que um número de tag VLAN.
+
+Você pode usar o VirtualNetworkID e o VirtualNetworkTag (VLAN tag) alternadamente, onde observado nos métodos da API.
+
+
+
+== Encontre mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentação para versões anteriores dos produtos NetApp SolidFire e Element"^]
+

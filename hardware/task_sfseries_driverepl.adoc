@@ -1,0 +1,200 @@
+---
+permalink: hardware/task_sfseries_driverepl.html 
+sidebar: sidebar 
+keywords: SSDs, drives, replacement, sf-series, nodes 
+summary: Você pode trocar a quente uma unidade de estado sólido com falha por uma unidade de substituição. 
+---
+= Substitua unidades para nós de storage da série SF
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode trocar a quente uma unidade de estado sólido com falha por uma unidade de substituição.
+
+.O que você vai precisar
+* Você tem uma unidade de substituição.
+* Você tem uma pulseira de descarga eletrostática (ESD) ou tomou outras precauções antiestáticas.
+* Você entrou em Contato com o suporte da NetApp para verificar se o SSD precisa ser substituído e para obter ajuda com o procedimento de resolução adequado.
++
+Você precisará da etiqueta de serviço ou número de série quando ligar para o suporte da NetApp. O suporte trabalhará com você para obter uma unidade de substituição de acordo com o seu Contrato de nível de Serviço.
+
+
+
+.Sobre esta tarefa
+As instruções se aplicam aos seguintes modelos de nós de storage da SolidFire:
+
+* SF2405
+* SF4805
+* SF9605
+* SF9608
+* SF19210
+* SF38410
+
+
+[NOTE]
+====
+Dependendo da versão do software Element, os seguintes nós não são suportados:
+
+* A partir dos nós de storage Element 12,7, SF2405 e SF9608.
+* A partir dos nós de storage Element 12,0, SF3010, SF6010 e SF9010.
+
+
+====
+A figura a seguir mostra o posicionamento das unidades em um chassi de SF9605U:
+
+image::../media/sf_drives.gif[Esta figura mostra as unidades no chassi do SolidFire.]
+
+
+NOTE: A figura acima é um exemplo. O SF9608 tem um layout de unidade diferente que inclui apenas oito unidades numeradas de uma a oito, da esquerda para a direita.
+
+O slot 0 contém a unidade de metadados para o nó. Se você estiver substituindo a unidade no slot 0, deve anexar o adesivo incluído na caixa de transporte na unidade de substituição, para que você possa identificá-la separadamente do resto.
+
+[NOTE]
+====
+Siga estas práticas recomendadas ao manusear unidades:
+
+* Evite descargas eletrostáticas (ESD) mantendo a unidade no saco ESD até que esteja pronto para instalá-la.
+* Não insira uma ferramenta de metal ou faca no saco ESD.
+* Abra o saco ESD à mão ou corte a parte superior com uma tesoura.
+* Guarde o saco ESD e quaisquer materiais de embalagem caso tenha de devolver uma unidade mais tarde.
+* Utilize sempre uma pulseira antiestática ligada à terra a uma superfície não pintada no chassis.
+* Utilize sempre as duas mãos ao remover, instalar ou transportar uma unidade.
+* Nunca force uma unidade no chassis.
+* Não empilhar unidades umas sobre as outras.
+* Utilize sempre embalagens aprovadas ao enviar unidades.
+
+
+====
+Aqui está uma visão geral de alto nível dos passos:
+
+* <<Remova a unidade do cluster>>
+* <<Substitua a unidade do chassi>>
+* <<Adicione a unidade ao cluster>>
+
+
+
+
+== Remova a unidade do cluster
+
+O sistema SolidFire coloca uma unidade em um estado com falha se o autodiagnóstico da unidade disser ao nó que falhou ou se a comunicação com a unidade parar por cinco minutos e meio ou mais. O sistema exibe uma lista das unidades com falha. Você deve remover uma unidade com falha da lista de unidades com falha no software NetApp Element.
+
+.Passos
+. Na IU do elemento, selecione *Cluster* > *Drives*.
+. Selecione *Failed* para ver a lista de unidades com falha.
+. Observe o número do slot da unidade com falha.
++
+Você precisa dessas informações para localizar a unidade com falha no chassi.
+
+. Remova a unidade com falha usando um dos seguintes métodos:
++
+[cols="2*"]
+|===
+| Opção | Passos 
+
+
+ a| 
+Para remover unidades individuais
+ a| 
+.. Selecione *ações* para a unidade que deseja remover.
+.. Selecione *Remover*.
+
+
+
+
+ a| 
+Para remover várias unidades
+ a| 
+.. Selecione todas as unidades que deseja remover e selecione *ações em massa*.
+.. Selecione *Remover*.
+
+
+|===
+
+
+
+
+== Substitua a unidade do chassi
+
+Depois de remover uma unidade com falha da lista de unidades com falha na IU do elemento, você estará pronto para substituir fisicamente a unidade com falha do chassi.
+
+.Passos
+. Desembale a unidade de substituição e coloque-a numa superfície plana e sem estática perto do rack.
++
+Guarde os materiais de embalagem para quando devolver a unidade com falha ao NetApp.
+
+. Faça corresponder o número do slot da unidade com falha da IU do elemento com o número no chassi.
++
+A figura a seguir é um exemplo para mostrar a numeração dos slots da unidade:
+
++
+image::../media/sf_series_drive_numbers.gif[Esta figura mostra a numeração de unidades para nós de storage do SolidFire.]
+
++
+[cols="2*"]
+|===
+| Item | Descrição 
+
+
+ a| 
+1
+ a| 
+Números da ranhura da unidade
+
+|===
+. Prima o círculo vermelho na unidade que pretende remover para soltar a unidade.
++
+O trinco abre-se.
+
+. Deslize a unidade para fora do chassi e coloque-a em uma superfície plana e livre de estática.
+. Prima o círculo vermelho na unidade de substituição antes de a deslizar para a ranhura.
+. Insira a unidade de substituição e pressione o círculo vermelho para fechar o trinco.
+. Notifique o suporte da NetApp sobre a substituição da unidade.
++
+O suporte da NetApp fornecerá instruções para retornar a unidade com falha.
+
+
+
+
+
+== Adicione a unidade ao cluster
+
+Depois de instalar uma nova unidade no chassis, esta regista-se conforme disponível. Você deve adicionar a unidade ao cluster usando a IU do Element antes que ela possa participar do cluster.
+
+.Passos
+. Na IU do elemento, clique em *Cluster* > *Drives*.
+. Clique em *Available* para ver a lista de unidades disponíveis.
+. Escolha uma das seguintes opções para adicionar unidades:
++
+[cols="2*"]
+|===
+| Opção | Passos 
+
+
+ a| 
+Para adicionar unidades individuais
+ a| 
+.. Selecione o botão *ações* para a unidade que você deseja adicionar.
+.. Selecione *Adicionar*.
+
+
+
+
+ a| 
+Para adicionar várias unidades
+ a| 
+.. Marque as caixas de seleção das unidades a serem adicionadas e selecione *ações em massa*.
+.. Selecione *Adicionar*.
+
+
+|===
+
+
+
+
+== Encontre mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentação para versões anteriores dos produtos NetApp SolidFire e Element"^]
+

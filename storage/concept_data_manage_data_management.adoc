@@ -1,0 +1,27 @@
+---
+permalink: storage/concept_data_manage_data_management.html 
+sidebar: sidebar 
+keywords: virtual volumes, volumes, manage 
+summary: 'Você pode gerenciar os dados em um cluster executando o software Element na guia Gerenciamento na IU do Element. As funções de gerenciamento de cluster disponíveis incluem a criação e gerenciamento de volumes de dados, contas de usuários, grupos de acesso a volume, iniciadores e políticas de qualidade do serviço (QoS).' 
+---
+= Gerenciar volumes e volumes virtuais
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode gerenciar os dados em um cluster executando o software Element na guia Gerenciamento na IU do Element. As funções de gerenciamento de cluster disponíveis incluem a criação e o gerenciamento de volumes de dados, grupos de acesso a volumes, iniciadores e políticas de qualidade do serviço (QoS).
+
+* link:task_data_manage_volumes_work_with_volumes_task.html["Trabalhe com volumes"]
+* link:concept_data_manage_vvol_work_virtual_volumes.html["Trabalhe com volumes virtuais"]
+* link:concept_data_manage_vol_access_group_work_with_volume_access_groups_and_initiators.html["Trabalhar com grupos de acesso de volume e iniciadores"]
+
+
+
+
+== Para mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in do NetApp Element para vCenter Server"^]
+

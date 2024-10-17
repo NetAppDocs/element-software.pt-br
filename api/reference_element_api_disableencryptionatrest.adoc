@@ -1,0 +1,73 @@
+---
+permalink: api/reference_element_api_disableencryptionatrest.html 
+sidebar: sidebar 
+keywords: element, api, encryption, disable, disabling, at rest, rest, DisableEncryptionAtRest 
+summary: Você pode usar o método DisableEncryptionAtRest para remover a criptografia que foi aplicada anteriormente ao cluster usando o método EnableEncryptionAtRest. Este método de desativação é assíncrono e retorna uma resposta antes de a criptografia ser desativada. Você pode usar o método GetClusterInfo para poll o sistema para ver quando o processo foi concluído. 
+---
+= DisableEncryptionAtRest
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `DisableEncryptionAtRest` método para remover a criptografia que foi aplicada anteriormente ao cluster usando o `EnableEncryptionAtRest` método. Este método de desativação é assíncrono e retorna uma resposta antes de a criptografia ser desativada. Você pode usar o `GetClusterInfo` método para poll o sistema para ver quando o processo foi concluído.
+
+
+TIP: Para ver o status atual da criptografia em repouso e/ou criptografia de software em repouso no cluster, use o link:../api/reference_element_api_getclusterinfo.html["obtenha o método de informações do cluster"^]. Pode utilizar a `GetSoftwareEncryptionAtRestInfo` link:../api/reference_element_api_getsoftwareencryptionatrestinfo.html["método para obter informações que o cluster usa para criptografar dados em repouso"^].
+
+
+NOTE: Você não pode usar este método para desativar a criptografia de software em repouso. Para desativar a encriptação de software em repouso, tem de link:reference_element_api_createcluster.html["crie um novo cluster"]desativar a encriptação de software em repouso.
+
+
+
+== Parâmetros
+
+Este método não tem parâmetros de entrada.
+
+
+
+== Valores de retorno
+
+Este método não tem valores de retorno.
+
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "DisableEncryptionAtRest",
+   "params": {},
+   "id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+   "id" : 1,
+  "result" : {}
+}
+----
+
+
+== Novo desde a versão
+
+9,6
+
+[discrete]
+== Encontre mais informações
+
+* link:api/reference_element_api_getclusterinfo.html["GetClusterInfo"]
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentação para versões anteriores dos produtos NetApp SolidFire e Element"^]
+

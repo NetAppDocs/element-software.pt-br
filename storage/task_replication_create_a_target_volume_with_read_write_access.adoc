@@ -1,0 +1,25 @@
+---
+permalink: storage/task_replication_create_a_target_volume_with_read_write_access.html 
+sidebar: sidebar 
+keywords: target volume, create, read, write access 
+summary: 'O processo de replicação envolve dois endpoints: A origem e o volume de destino. Quando você cria o volume de destino, o volume é automaticamente definido para o modo de leitura/gravação para aceitar os dados durante a replicação.' 
+---
+= Crie um volume de destino com acesso de leitura ou gravação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O processo de replicação envolve dois endpoints: A origem e o volume de destino. Quando você cria o volume de destino, o volume é automaticamente definido para o modo de leitura/gravação para aceitar os dados durante a replicação.
+
+. Selecione *Management* > *volumes*.
+. Clique em *criar volume*.
+. Na caixa de diálogo criar um novo volume, insira o Nome do volume.
+. Insira o tamanho total do volume, selecione um tamanho de bloco para o volume e selecione a conta que deve ter acesso ao volume.
+. Clique em *criar volume*.
+. Na janela ativa, clique no ícone ações do volume.
+. Clique em *Editar*.
+. Altere o nível de acesso à conta para destino de replicação.
+. Clique em *Salvar alterações*.
+

@@ -1,0 +1,29 @@
+---
+permalink: storage/task_intro_use_basic_options_in_the_element_software_ui.html 
+sidebar: sidebar 
+keywords: user interface, UI, API commands, SolidFire system 
+summary: 'A interface de usuário da Web do software NetApp Element (Element UI) permite monitorar e executar tarefas comuns em seu sistema SolidFire.' 
+---
+= Use opções básicas na IU do software Element
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A interface do usuário da Web do software NetApp Element (Element UI) permite monitorar e executar tarefas comuns no sistema SolidFire.
+
+As opções básicas incluem a visualização de comandos API ativados pela atividade da IU e o fornecimento de feedback.
+
+* link:task_intro_view_api_activity_in_real_time.html["Ver atividade da API"]
+* link:reference_intro_icon_reference.html["Ícones na interface do elemento"]
+* link:task_intro_provide_feedback.html["Fornecer feedback"]
+
+
+
+
+== Para mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in do NetApp Element para vCenter Server"^]
+

@@ -1,0 +1,44 @@
+---
+permalink: storage/concept_troubleshoot_drives.html 
+sidebar: sidebar 
+keywords: troubleshoot, drives, ssd, swappable, solid-state drives 
+summary: 'Você pode substituir uma unidade de estado sólido (SSD) com falha por uma unidade de substituição. Os SSDs para nós de storage do SolidFire são de substituição a quente. Se você suspeitar que um SSD falhou, entre em Contato com o suporte da NetApp para verificar a falha e orientá-lo sobre o procedimento de resolução adequado. O suporte da NetApp também trabalha com você para obter uma unidade de substituição de acordo com seu contrato de nível de serviço.' 
+---
+= Solucionar problemas de unidades
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode substituir uma unidade de estado sólido (SSD) com falha por uma unidade de substituição. Os SSDs para nós de storage do SolidFire são de substituição a quente. Se você suspeitar que um SSD falhou, entre em Contato com o suporte da NetApp para verificar a falha e orientá-lo sobre o procedimento de resolução adequado. O suporte da NetApp também trabalha com você para obter uma unidade de substituição de acordo com seu contrato de nível de serviço.
+
+Como trocar, neste caso, significa que você pode remover uma unidade com falha de um nó ativo e substituí-la por uma nova unidade SSD do NetApp. Não é recomendável que você remova unidades que não tenham falha em um cluster ativo.
+
+Você deve manter as peças sobressalentes no local sugeridas pelo suporte da NetApp para permitir a substituição imediata da unidade em caso de falha.
+
+
+NOTE: Para fins de teste, se você estiver simulando uma falha de unidade puxando uma unidade de um nó, você deve esperar 30 segundos antes de inserir a unidade novamente no slot da unidade.
+
+Se uma unidade falhar, o Double Helix redistribui os dados na unidade pelos nós restantes no cluster. Várias falhas de unidade no mesmo nó não são um problema, pois o software Element protege contra duas cópias de dados que residem no mesmo nó. Uma unidade com falha resulta nos seguintes eventos:
+
+* Os dados são migrados para fora da unidade.
+* A capacidade geral do cluster é reduzida pela capacidade da unidade.
+* A proteção de dados da Double Helix garante que haja duas cópias válidas dos dados.
+
+
+
+IMPORTANT: Os sistemas de storage SolidFire não suportam a remoção de uma unidade se isso resultar em uma quantidade insuficiente de storage para migrar dados.
+
+
+
+== Para mais informações
+
+* xref:task_troubleshoot_remove_failed_drives.adoc[Remover unidades com falha do cluster]
+* xref:concept_troubleshoot_basic_mdss_drive_troubleshooting.adoc[Resolução de problemas básicos da unidade MDSS]
+* xref:task_troubleshoot_remove_mdss_drives.adoc[Remova as unidades MDSS]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2844771["Substituição de unidades para nós de storage do SolidFire"]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2846859["Substituição de unidades para nós de storage da série H600S"]
+* link:../hardware/concept_h410s_h610s_info.html["Informações sobre hardware H410S e H610S"]
+* link:../hardware/concept_sfseries_info.html["Informações sobre o hardware da série SF"]
+

@@ -1,0 +1,47 @@
+---
+permalink: storage/task_system_manage_fips_identify_nodes_ready_for_fips_drives.html 
+sidebar: sidebar 
+keywords: fips, security, federal information processing standards, 140-2 
+summary: Você deve verificar se todos os nós no cluster de storage estão prontos para dar suporte a unidades FIPS usando o método da API GetFipsReport do software NetApp Element. 
+---
+= Identificar se os nós estão prontos para o recurso unidades FIPS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve verificar se todos os nós no cluster de storage estão prontos para dar suporte a unidades FIPS usando o método da API GetFipsReport do software NetApp Element.
+
+O relatório resultante mostra um dos seguintes Estados:
+
+* Nenhum: O nó não é capaz de dar suporte ao recurso de unidades FIPS.
+* Parcial: O nó é capaz de FIPS, mas nem todas as unidades são unidades FIPS.
+* Pronto: O nó é compatível com FIPS e todas as unidades são unidades FIPS ou nenhuma unidade está presente.
+
+
+.Passos
+. Usando a API Element, verifique se os nós e as unidades do cluster de storage são capazes de unidades FIPS inserindo:
++
+`GetFipsReport`
+
+. Reveja os resultados, observando quaisquer nós que não exibiram um status de Pronto.
+. Para todos os nós que não exibiram o status Pronto, verifique se a unidade é capaz de suportar o recurso unidades FIPS:
++
+** Usando a API Element, digite: `GetHardwareList`
+** Observe o valor do *DriveEncryptionCapabilityType*. Se for "fips", o hardware poderá suportar o recurso unidades FIPS.
++
+Consulte os detalhes sobre `GetFipsReport` ou `ListDriveHardware` na link:../api/index.html["Referência da API do Element"].
+
+
+
+. Se a unidade não puder suportar o recurso unidades FIPS, substitua o hardware por hardware FIPS (nó ou unidades).
+
+
+
+
+== Encontre mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in do NetApp Element para vCenter Server"^]
+

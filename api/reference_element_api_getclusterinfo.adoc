@@ -1,0 +1,103 @@
+---
+permalink: api/reference_element_api_getclusterinfo.html 
+sidebar: sidebar 
+keywords: cluster,get,info,getting,getclusterinfo 
+summary: Você pode usar o método GetClusterInfo para retornar informações de configuração sobre o cluster. 
+---
+= GetClusterInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `GetClusterInfo` método para retornar informações de configuração sobre o cluster.
+
+
+
+== Parâmetros
+
+Este método não tem parâmetros de entrada.
+
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+ClusterInfo
+ a| 
+Informações do cluster.
+ a| 
+xref:reference_element_api_clusterinfo.adoc[ClusterInfo]
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "GetClusterInfo",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+    "id": 1,
+    "result": {
+        "clusterInfo": {
+            "attributes": {},
+            "defaultProtectionScheme": "doubleHelix",
+            "enabledProtectionSchemes": [
+                "doubleHelix"
+            ],
+            "encryptionAtRestState": "disabled",
+            "ensemble": [
+                "10.10.10.32",
+                "10.10.10.34",
+                "10.10.10.35",
+                "10.10.10.36",
+                "10.10.10.37"
+            ],
+            "mvip": "10.10.11.225",
+            "mvipInterface": "team1G",
+            "mvipNodeID": 3,
+            "mvipVlanTag": "0",
+            "name": "ClusterName",
+            "repCount": 2,
+            "softwareEncryptionAtRestState": "enabled",
+            "supportedProtectionSchemes": [
+                "doubleHelix"
+            ],
+            "svip": "10.10.10.111",
+            "svipInterface": "team10G",
+            "svipNodeID": 3,
+            "svipVlanTag": "0",
+            "uniqueID": "psmp",
+            "uuid": "2f575d0c-36fe-406d-9d10-dbc1c306ade7"
+        }
+    }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

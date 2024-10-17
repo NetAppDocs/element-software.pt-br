@@ -1,0 +1,84 @@
+---
+permalink: api/reference_element_api_listactiveauthsessions.html 
+sidebar: sidebar 
+keywords: active,sessions,authentication session,list 
+summary: Você pode usar o método ListActiveAuthSessions para listar todas as sessões autenticadas ativas. Apenas os utilizadores com direitos de acesso administrativo podem chamar este método. 
+---
+= ListActiveAuthSessions
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `ListActiveAuthSessions` método para listar todas as sessões autenticadas ativas. Apenas os utilizadores com direitos de acesso administrativo podem chamar este método.
+
+
+
+== Parâmetros
+
+Este método não tem parâmetros de entrada.
+
+
+
+== Valores de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+sessões
+ a| 
+Informações de sessão para as sessões de autenticação.
+ a| 
+link:reference_element_api_authsessioninfo.html["AuthSessionInfo"]
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+  "method": "ListActiveAuthSessions"
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+"sessions": [
+      {
+        "accessGroupList": [
+          "administrator"
+        ],
+        "authMethod": "Cluster",
+        "clusterAdminIDs": [
+          1
+        ],
+        "finalTimeout": "2020-03-14T19:21:24Z",
+        "idpConfigVersion": 0,
+        "lastAccessTimeout": "2020-03-11T19:51:24Z",
+        "sessionCreationTime": "2020-03-11T19:21:24Z",
+        "sessionID": "b12bfc64-f233-44df-8b9f-6fb6c011abf7",
+        "username": "admin"
+      }
+    ]
+}
+----
+
+
+== Novo desde a versão
+
+12,0

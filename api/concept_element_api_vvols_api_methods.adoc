@@ -1,0 +1,35 @@
+---
+permalink: api/concept_element_api_vvols_api_methods.html 
+sidebar: sidebar 
+keywords: virtual,volume,vvol,API,method 
+summary: 'Os métodos de API de volume virtual do software Element permitem gerenciar volumes virtuais (vols). Você pode visualizar os vols existentes com esses métodos de API, bem como criar, modificar e excluir contentores de armazenamento de volume virtual. Embora você não possa usar esses métodos para operar em volumes normais, você pode usar os métodos de API de volume normal para listar informações sobre vols.' 
+---
+= Métodos de API de volume virtual
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os métodos de API de volume virtual do software Element permitem gerenciar volumes virtuais (VVols). Você pode visualizar os vols existentes com esses métodos de API, bem como criar, modificar e excluir contentores de armazenamento de volume virtual. Embora você não possa usar esses métodos para operar em volumes normais, você pode usar os métodos de API de volume normal para listar informações sobre vols.
+
+* xref:reference_element_api_createstoragecontainer.adoc[CreateStorageContainer]
+* xref:reference_element_api_deletestoragecontainers.adoc[Delegados do StorageContainers]
+* xref:reference_element_api_getstoragecontainerefficiency.adoc[GetStorageContainerEfficiência]
+* xref:reference_element_api_getvirtualvolumecount.adoc[GetVirtualVolumeCount]
+* xref:reference_element_api_listprotocolendpoints.adoc[ListProtocolEndpoints]
+* xref:reference_element_api_liststoragecontainers.adoc[ListStorageContainers]
+* xref:reference_element_api_listvirtualvolumebindings.adoc[ListVirtualVolumeBindings]
+* xref:reference_element_api_listvirtualvolumehosts.adoc[ListVirtualVolumeHosts]
+* xref:reference_element_api_listvirtualvolumes.adoc[ListVirtualVolumes]
+* xref:reference_element_api_listvirtualvolumetasks.adoc[ListVirtualVolumeTasks]
+* xref:reference_element_api_modifystoragecontainer.adoc[ModifyStorageContainer]
+
+
+
+
+== Encontre mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentação para versões anteriores dos produtos NetApp SolidFire e Element"^]
+

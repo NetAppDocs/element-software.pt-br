@@ -1,0 +1,31 @@
+= Encontre mais informações
+:allow-uri-read: 
+
+
+Os sistemas de armazenamento NetApp SolidFire usam o processo de retorno à imagem de fábrica (RTFI) para gravar uma imagem de software em um novo nó ou restaurar um nó ao seu estado original de fábrica. O processo RTFI apaga com segurança todos os dados e configurações existentes (se houver) e instala uma imagem de software NetApp Element não configurada. O processo RTFI está disponível para todos os nós SolidFire.
+
+Os sistemas SolidFire usam um processo RTFI para todas as instalações de software Element. Isso inclui instalações manuais internas executadas por desenvolvedores, instalações automáticas por testes de estrutura automatizados, instalações de campo por engenheiros de serviço e clientes e instalações executadas por vários integradores e parceiros. O mesmo processo RTFI é usado em todos os nós SolidFire, independentemente do tipo de chassi ou nó em uso, para corrigir automaticamente quaisquer problemas.
+
+O público-alvo deste guia são os integradores que instalam, configuram, usam ou solucionam problemas relacionados ao storage.
+
+* Linux: Você tem alguma experiência com sistemas Linux.
+* Rede: Você tem familiaridade com redes de servidores e armazenamento em rede, incluindo endereços IP, máscaras de rede e gateways.
+
+
+
+WARNING: O processo RTFI é destrutivo para dados e apaga com segurança todos os dados e detalhes de configuração do nó e instala um novo sistema operacional. Verifique se o nó usado para o processo RTFI não está ativo como parte de um cluster.
+
+Implante e instale a imagem da RTFI International Organization for Standardization (ISO) e execute o processo RTFI:
+
+* xref:task_rtfi_deployment_and_install_options.adoc[Opções de implantação e instalação RTFI]
+* xref:task_rtfi_process.adoc[Execute o processo RTFI]
+* xref:task_rtfi_options_menu.adoc[Menu de opções RTFI]
+
+
+
+
+== Encontre mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentação para versões anteriores dos produtos NetApp SolidFire e Element"^]
+

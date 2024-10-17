@@ -1,0 +1,119 @@
+---
+permalink: api/reference_element_api_initiator.html 
+sidebar: sidebar 
+keywords: object,objects,initiator 
+summary: O objeto iniciador contém informações sobre um iniciador iSCSI ou Fibre Channel. Um objeto iniciador pode conter identificadores IQN ou WWPN. Você pode usar o método ListInitiators para obter uma lista de todos os iniciadores conhecidos no sistema. Você usa objetos de iniciador para configurar o acesso do iniciador SCSI a um conjunto de volumes por meio de grupos de acesso de volume. Um iniciador só pode ser membro de um grupo de acesso de volume de cada vez. Você pode restringir o acesso do iniciador a uma ou mais VLANs especificando um ou mais virtualNetworkIDs usando os métodos CreateInitiators e ModifyInitiators. Se você não especificar nenhuma rede virtual, o iniciador poderá acessar todas as redes. 
+---
+= iniciador
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto iniciador contém informações sobre um iniciador iSCSI ou Fibre Channel. Um objeto iniciador pode conter identificadores IQN ou WWPN. Você pode usar o `ListInitiators` método para obter uma lista de todos os iniciadores conhecidos no sistema. Você usa objetos de iniciador para configurar o acesso do iniciador SCSI a um conjunto de volumes por meio de grupos de acesso de volume. Um iniciador só pode ser membro de um grupo de acesso de volume de cada vez. Você pode restringir o acesso do iniciador a uma ou mais VLANs especificando um ou mais virtualNetworkIDs usando os `CreateInitiators` métodos e. `ModifyInitiators` Se você não especificar nenhuma rede virtual, o iniciador poderá acessar todas as redes.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+alias
+ a| 
+O nome amigável atribuído ao iniciador, se houver.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+atributos
+ a| 
+Um conjunto de atributos JSON atribuídos a este iniciador. Vazio se nenhum atributo for atribuído.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+ChapUsername
+ a| 
+O nome de usuário exclusivo CHAP para este iniciador.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+ID do inicializador
+ a| 
+O identificador numérico do iniciador.
+ a| 
+número inteiro
+
+
+
+ a| 
+InitiatorName
+ a| 
+O nome do iniciador, no formato IQN ou WWPN.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+InitiatorSecret
+ a| 
+O segredo CHAP usado para autenticar o iniciador.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+RequireChap
+ a| 
+Verdadeiro se CHAP é necessário para este iniciador.
+ a| 
+booleano
+
+
+
+ a| 
+TargetSecret
+ a| 
+O segredo CHAP usado para autenticar o destino (ao usar autenticação CHAP mútua).
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+VirtualNetworkIDs
+ a| 
+A lista de identificadores de rede virtual associados a este iniciador. Se um ou mais forem definidos, este iniciador só poderá iniciar sessão nas redes virtuais especificadas. Se nenhuma rede virtual estiver definida, este iniciador pode fazer login em todas as redes.
+ a| 
+número inteiro
+
+
+
+ a| 
+Grupos de acessórios de volume
+ a| 
+Uma lista de IDs de grupo de acesso ao volume a que este iniciador pertence.
+ a| 
+array inteiro
+
+|===
+
+
+== Encontre mais informações
+
+xref:reference_element_api_listinitiators.adoc[ListInitiators]

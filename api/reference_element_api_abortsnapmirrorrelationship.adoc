@@ -1,0 +1,90 @@
+---
+permalink: api/reference_element_api_abortsnapmirrorrelationship.html 
+sidebar: sidebar 
+keywords:  
+summary: A IU da Web do software Element usa o método de amoraSpelrorRelacionship para interromper as transferências SnapMirror que foram iniciadas, mas ainda não estão completas. 
+---
+= RebortSnapMirrorRelacionship
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A IU da Web do software Element usa o `AbortSnapMirrorRelationship` método para interromper as transferências SnapMirror iniciadas, mas ainda não concluídas.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+O ID do ponto de extremidade do sistema de armazenamento ONTAP remoto que se comunica com o cluster de armazenamento Element.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+Destinaçãovolume
+ a| 
+O volume de destino na relação SnapMirror.
+ a| 
+xref:reference_element_api_snapmirrorvolumeinfo.adoc[SnapMirrorVolumeInfo]
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+ClearCheckpoint
+ a| 
+Determina se deve ou não limpar o ponto de verificação de reinício. Valores possíveis:
+
+* verdadeiro
+* falso
+
+ a| 
+booleano
+ a| 
+falso
+ a| 
+Não
+
+|===
+
+
+== Valores de retorno
+
+Este método tem os seguintes valores de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+SnapMirrorRelacionship
+ a| 
+Um objeto contendo informações sobre a relação abortada do SnapMirror.
+ a| 
+xref:reference_element_api_snapmirrorrelationship.adoc[SnapMirrorRelacionship]
+
+|===
+
+
+== Novo desde a versão
+
+10,1

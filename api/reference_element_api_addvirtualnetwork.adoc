@@ -1,0 +1,206 @@
+---
+permalink: api/reference_element_api_addvirtualnetwork.html 
+sidebar: sidebar 
+keywords: addvirtualnetwork,cluster,add,adding,virtual,network 
+summary: Você pode usar o método AddVirtualNetwork para adicionar uma nova rede virtual a uma configuração de cluster. 
+---
+= AddVirtualNetwork
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `AddVirtualNetwork` método para adicionar uma nova rede virtual a uma configuração de cluster.
+
+Quando você adiciona uma rede virtual, uma interface para cada nó é criada e cada interface requer um endereço IP de rede virtual. O número de endereços IP que você especificar como parâmetro para este método de API deve ser igual ou maior que o número de nós no cluster. O volume do sistema provisiona endereços de rede virtuais e os atribui automaticamente a nós individuais. Não é necessário atribuir endereços de rede virtuais aos nós manualmente.
+
+
+NOTE: O método AddVirtualNetwork é usado apenas para criar uma nova rede virtual. Se você quiser fazer alterações em uma rede virtual existente, use o xref:reference_element_api_modifyvirtualnetwork.adoc[ModifyVirtualNetwork] método.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+Destinatários Blocks
+ a| 
+Intervalo exclusivo de endereços IP a incluir na rede virtual. Membros necessários para o objeto:
+
+* Início: O início do intervalo de endereços IP. (string)
+* Tamanho: O número de endereços IP a incluir no bloco. (número inteiro)
+
+ a| 
+Array de objetos JSON
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+atributos
+ a| 
+Lista de pares nome-valor no formato de objeto JSON.
+ a| 
+Objeto JSON
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+gateway
+ a| 
+O endereço IP de um gateway da rede virtual. Este parâmetro é válido somente se o parâmetro namespace estiver definido como true.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+nome
+ a| 
+Um nome definido pelo usuário para a nova rede virtual.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+namespace
+ a| 
+Quando definido como verdadeiro, ativa a funcionalidade de VLANs de armazenamento roteáveis criando e configurando um namespace e a rede virtual contida por ele.
+ a| 
+booleano
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+máscara de rede
+ a| 
+Máscara de rede exclusiva para a rede virtual que está sendo criada.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+svip
+ a| 
+Endereço IP de armazenamento exclusivo para a rede virtual que está sendo criada.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+VirtualNetworkTag
+ a| 
+Uma tag de rede virtual (VLAN) exclusiva. Os valores suportados são de 1 a 4094.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+*Observação:* os parâmetros de rede virtual devem ser exclusivos de cada rede virtual quando você define o namespace como false.
+
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+
+
+| Nome | Descrição | Tipo 
+
+
+ a| 
+VirtualNetworkID
+ a| 
+O ID de rede virtual da nova rede virtual.
+ a| 
+número inteiro
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+  "method": "AddVirtualNetwork",
+  "params": {
+    "virtualNetworkTag": 2010,
+    "name": "network1",
+    "addressBlocks" : [
+        { "start": "192.86.5.1", "size": 10 },
+        { "start": "192.86.5.50", "size": 20 }
+    ],
+    "netmask" : "255.255.192.0",
+    "gateway" : "10.0.1.254",
+    "svip" : "192.86.5.200",
+    "attributes" : {}
+    "namespace" : true
+  },
+"id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+   "id": 1,
+   "result":
+      {
+        "virtualNetworkID": 5
+   }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

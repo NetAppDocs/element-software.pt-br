@@ -1,0 +1,41 @@
+---
+permalink: storage/concept_system_manage_nodes_cluster_capacity_in_a_mixed_node_environment.html 
+sidebar: sidebar 
+keywords: nodes, mixed environment, capacity, cluster capacity, mixed nodes, encrypted, non-encrypted, threshold 
+summary: Você pode misturar diferentes tipos de nós em um cluster. As séries SF 2405, 3010, 4805, 6010, 9605, 9010, 19210, 38410 e H podem coexistir em um cluster. 
+---
+= Capacidade de cluster em um ambiente de nó misto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode misturar diferentes tipos de nós em um cluster. As séries SF 2405, 3010, 4805, 6010, 9605, 9010, 19210, 38410 e H podem coexistir em um cluster.
+
+O H-Series consiste em H610S-1, H610S-2, H610S-4 e H410S nós. Esses nós são capazes de 10GbE e 25GbE.
+
+É melhor não misturar nós não criptografados e criptografados. Em um cluster de nós mistos, nenhum nó pode ser maior que 33% da capacidade total do cluster. Por exemplo, em um cluster com quatro nós SF-Series 4805, o maior nó que pode ser adicionado sozinho é um SF-Series 9605. O limite de capacidade do cluster é calculado com base na perda potencial do nó maior nessa situação.
+
+Dependendo da versão do software Element, os seguintes nós de storage da série SF não são compatíveis:
+
+[cols="40,40"]
+|===
+| Começando com... | Nó de armazenamento não suportado... 
+
+
+| Elemento 12,7  a| 
+* SF2405
+* SF9608
+
+
+
+
+| Elemento 12,0  a| 
+* SF3010
+* SF6010
+* SF9010
+
+
+|===
+Se você tentar atualizar um desses nós para uma versão de elemento não suportado, você verá um erro informando que esse nó não é suportado pelo elemento 12.x.

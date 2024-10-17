@@ -1,0 +1,136 @@
+---
+permalink: api/reference_element_api_gethardwareconfig.html 
+sidebar: sidebar 
+keywords: node,hardware,config,configuration,get,getting,gethardwareconfig 
+summary: Você pode usar o método GetHardwareConfig para obter as informações de configuração de hardware para um nó. 
+---
+= GetHardwareConfig
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `GetHardwareConfig` método para obter as informações de configuração de hardware para um nó. Estes dados de configuração destinam-se a utilização interna. Para obter um inventário de componentes de hardware de sistema ativo mais útil, use o `GetHardwareInfo` método.
+
+
+
+== Parâmetros
+
+Este método não tem parâmetros de entrada.
+
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+| HardwareConfig | Lista de informações de hardware e configurações atuais. | Objeto JSON 
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "GetHardwareConfig",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+As respostas para este método são semelhantes ao exemplo a seguir.
+
+[listing]
+----
+{
+    "id": 1,
+    "result": {
+        "hardwareConfig": {
+            "biosRevision": "1.0",
+            "biosVendor": [
+                "NetApp",
+                "SolidFire"
+            ],
+            "biosVersion": "1.1.2",
+            "blockDriveSizeBytes": 300069052416,
+            "blockDrives": [
+                "/dev/slot0",
+                "/dev/slot1",
+                "/dev/slot2",
+                "/dev/slot3",
+                "/dev/slot4",
+                "/dev/slot5",
+                "/dev/slot6",
+                "/dev/slot7",
+                "/dev/slot8",
+                "/dev/slot9"
+            ],
+            "blockServiceFormat": "Standard",
+            "bmcFirmwareRevision": "1.6",
+            "bmcIpmiVersion": "2.0",
+            "chassisType": "R620",
+            "cpuCores": 6,
+            "cpuCoresEnabled": 6,
+            "cpuModel": "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
+            "cpuThreads": 12,
+            "driveSizeBytesInternal": 400088457216,
+            "fibreChannelFirmwareRevision": "",
+            "fibreChannelModel": "",
+            "fibreChannelPorts": {},
+            "idracVersion": "1.06.06",
+            "ignoreFirmware": [],
+            "memoryGB": 72,
+            "memoryMhz": 1333,
+            "networkDriver": [
+                "bnx2x"
+            ],
+            "nicPortMap": {
+                "PortA": "eth2",
+                "PortB": "eth3",
+                "PortC": "eth0",
+                "PortD": "eth1"
+            },
+            "nodeType": "SF3010",
+            "numCpu": 2,
+            "numDrives": 10,
+            "numDrivesInternal": 1,
+            "nvramTempMonitorEnable": false,
+            "rootDrive": "/dev/sdimm0",
+            "scsiBusExternalDriver": "mpt3sas",
+            "scsiBusInternalDriver": "ahci",
+            "sliceDriveSizeBytes": 299988156416,
+            "sliceDrives": [
+                "/dev/sdimm0p4"
+            ],
+            "slotOffset": 0,
+            "solidfireDefaults": {
+                "bufferCacheGB": 12,
+                "configuredIops": 50000,
+                "cpuDmaLatency": -1,
+                "driveWriteThroughputMBPerSleep": 10,
+                "maxDriveWriteThroughputMBPerSec": 175,
+                "maxIncomingSliceSyncs": 10,
+                "postCallbackThreadCount": 8,
+                "sCacheFileCapacity": 100000000,
+                "sliceFileLogFileCapacity": 5000000000
+            }
+        }
+    }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

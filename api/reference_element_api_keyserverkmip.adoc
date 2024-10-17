@@ -1,0 +1,96 @@
+---
+permalink: api/reference_element_api_keyserverkmip.html 
+sidebar: sidebar 
+keywords: KMIP,key server,keys 
+summary: 'O objeto keyServerKmip descreve um servidor de chave KMIP (Key Management Interoperability Protocol), que é um local para recuperar chaves de autenticação para uso com recursos de cluster, como criptografia em repouso.' 
+---
+= KeyServerKmip
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto keyServerKmip descreve um servidor de chave KMIP (Key Management Interoperability Protocol), que é um local para recuperar chaves de autenticação para uso com recursos de cluster, como criptografia em repouso.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+KeyProviderID
+ a| 
+Se este servidor de chaves KMIP for atribuído a um provedor, esse membro conterá a ID do provedor de chaves KMIP ao qual está atribuído. Caso contrário, este membro é nulo.
+ a| 
+número inteiro
+
+
+
+ a| 
+KeyServerID
+ a| 
+A ID do servidor de chaves KMIP. Este é um valor exclusivo atribuído pelo cluster durante a criação do servidor de chaves. Este valor não pode ser alterado.
+ a| 
+número inteiro
+
+
+
+ a| 
+KmipAssignedProviderIsActive
+ a| 
+Se esse servidor de chave KMIP for atribuído a um provedor (keyProviderID não é nulo), esse membro indica se esse provedor está ativo (fornecendo chaves que estão atualmente em uso). Caso contrário, este membro é nulo.
+ a| 
+booleano
+
+
+
+ a| 
+KmipCaCertificate
+ a| 
+O certificado de chave pública da CA raiz do servidor de chaves externo. Isso é usado para verificar o certificado apresentado pelo servidor de chaves externo na comunicação TLS. Para clusters de servidores-chave em que servidores individuais usam CAs diferentes, esse membro contém uma cadeia concatenada dos certificados raiz de todas as CAs.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+KmipClientCertificate
+ a| 
+Um certificado PKCS nº 10 X,509 codificado em formato PEM Base64 usado pelo cliente KMIP de armazenamento de elementos.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+KmipKeyServerHostnames
+ a| 
+Os nomes de host ou endereços IP associados a este servidor de chaves KMIP.
+ a| 
+array de cadeia de carateres
+
+
+
+ a| 
+KmipKeyServerName
+ a| 
+O nome do servidor de chaves KMIP. Este nome é usado apenas para fins de exibição e não precisa ser exclusivo.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+KmipKeyServerPort
+ a| 
+O número da porta associada a este servidor de chaves KMIP (normalmente 5696).
+ a| 
+número inteiro
+
+|===

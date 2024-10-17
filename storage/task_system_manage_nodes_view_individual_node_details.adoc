@@ -1,0 +1,44 @@
+---
+permalink: storage/task_system_manage_nodes_view_individual_node_details.html 
+sidebar: sidebar 
+keywords: nodes, view, details, vlan, mip, cip, sip, virtual id 
+summary: Você pode exibir detalhes de nós individuais, como tags de serviço, detalhes da unidade e gráficos para estatísticas de utilização e unidade. A página nós da guia Cluster fornece a coluna versão onde você pode exibir a versão do software de cada nó. 
+---
+= Exibir detalhes do nó
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode exibir detalhes de nós individuais, como tags de serviço, detalhes da unidade e gráficos para estatísticas de utilização e unidade. A página nós da guia Cluster fornece a coluna versão onde você pode exibir a versão do software de cada nó.
+
+.Passos
+. Clique em *Cluster* > *nodes*.
+. Para exibir os detalhes de um nó específico, clique no ícone *ações* de um nó.
+. Clique em *Ver detalhes*.
+. Revise os detalhes do nó:
++
+** *Node ID*: O ID gerado pelo sistema para o nó.
+** *Nome do nó*: O nome do host para o nó.
+** *disponível 4K IOPS*: O IOPS configurado para o nó.
+** *Função do nó*: A função que o nó tem no cluster. Valores possíveis:
++
+*** Mestre de cluster: O nó que executa tarefas administrativas em todo o cluster e contém o MVIP e o SVIP.
+*** Nó do ensemble: Um nó que participa do cluster. Existem 3 ou 5 nós de ensemble dependendo do tamanho do cluster.
+*** Fibre Channel: Um nó no cluster.
+
+
+** *Tipo de nó*: O tipo de modelo do nó.
+** *Unidades ativas*: O número de unidades ativas no nó.
+** *IP de gerenciamento*: O endereço IP de gerenciamento (MIP) atribuído ao nó para tarefas de administração de rede 1GbE ou 10GbE.
+** *IP do cluster*: O endereço IP do cluster (CIP) atribuído ao nó usado para a comunicação entre nós no mesmo cluster.
+** *IP de armazenamento*: O endereço IP de armazenamento (SIP) atribuído ao nó usado para descoberta de rede iSCSI e todo o tráfego de rede de dados.
+** *ID VLAN de gerenciamento*: O ID virtual para a rede local de gerenciamento.
+** *Storage VLAN ID*: O ID virtual para a rede local de armazenamento.
+** *Versão*: A versão do software em execução em cada nó.
+** *Porta de replicação*: A porta usada em nós para replicação remota.
+** *Etiqueta de serviço*: O número exclusivo da etiqueta de serviço atribuído ao nó.
+
+
+

@@ -1,0 +1,133 @@
+---
+permalink: api/reference_element_api_getvolumeefficiency.html 
+sidebar: sidebar 
+keywords: volume,volumes,get,getting,stats,measurements,efficiency,GetVolumeEfficiency 
+summary: Você pode usar o método GetVolumeEfficiency para obter informações sobre um volume. Somente o volume que você dá como parâmetro neste método API é usado para calcular a capacidade. 
+---
+= Eficiência GetVolumeEfficiência
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `GetVolumeEfficiency` método para obter informações sobre um volume. Somente o volume que você dá como parâmetro neste método API é usado para calcular a capacidade.
+
+
+
+== Parâmetro
+
+Este método tem o seguinte parâmetro de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+VolumeID
+ a| 
+Especifica o volume para o qual a capacidade é calculada.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valores de retorno
+
+Este método tem os seguintes valores de retorno:
+
+|===
+
+
+| Nome | Descrição | Tipo 
+
+
+ a| 
+compactação
+ a| 
+A quantidade de espaço que está sendo salva pela compactação de dados em um único volume. Indicado como uma relação, onde 1 significa que os dados foram armazenados sem serem compatados.
+ a| 
+flutuação
+
+
+
+ a| 
+deduplicação
+ a| 
+A quantidade de espaço que está sendo salva em um único volume não duplicando dados. Indicado como uma relação.
+ a| 
+flutuação
+
+
+
+ a| 
+Volumes
+ a| 
+Os volumes que não puderam ser consultados para dados de eficiência. Os volumes ausentes podem ser causados por coleta de lixo (GC) ter menos de uma hora de idade, perda temporária da rede ou serviços reiniciados desde o ciclo GC.
+ a| 
+array inteiro
+
+
+
+ a| 
+Provisionamento excessivo
+ a| 
+A proporção de espaço utilizado com a quantidade de espaço alocado para armazenar dados. Indicado como uma relação.
+ a| 
+flutuação
+
+
+
+ a| 
+timestamp
+ a| 
+A última vez que os dados de eficiência foram coletados após GC.
+ a| 
+String de dados ISO 8601
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "GetVolumeEfficiency",
+   "params": {
+      "volumeID": 606
+   },
+   "id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+   "id": 1,
+   "result": {
+       "compression": 2.001591240821456,
+       "deduplication": 1,
+       "missingVolumes": [],
+       "thinProvisioning": 1.009861932938856,
+       "timestamp": "2014-03-10T16:06:33Z"
+   }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

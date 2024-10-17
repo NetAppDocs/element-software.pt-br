@@ -1,0 +1,70 @@
+---
+permalink: api/reference_element_api_listactivenodes.html 
+sidebar: sidebar 
+keywords: cluster,list,listing,active,node,nodes,listactivenodes 
+summary: Você pode usar o método ListActiveNodes para retornar a lista de nós ativos atualmente que estão no cluster. 
+---
+= ListActiveNodes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `ListActiveNodes` método para retornar a lista de nós ativos atualmente que estão no cluster.
+
+
+
+== Parâmetros
+
+Este método não tem parâmetros de entrada.
+
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+nós
+ a| 
+Lista de nós ativos no cluster.
+ a| 
+xref:reference_element_api_node.adoc[nó] array
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "ListActiveNodes",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Devido ao tamanho deste exemplo de resposta, ele está documentado em um tópico suplementar.
+
+
+
+== Novo desde a versão
+
+9,6
+
+
+
+== Encontre mais informações
+
+xref:reference_element_api_response_example_listactivenodes.adoc[ListActiveNodes]

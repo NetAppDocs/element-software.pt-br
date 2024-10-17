@@ -1,0 +1,67 @@
+---
+permalink: storage/concept_troubleshoot_basic_mdss_drive_troubleshooting.html 
+sidebar: sidebar 
+keywords: mdss drives, troubleshoot, multi-drive slice service 
+summary: Você pode recuperar unidades de metadados adicionando-as de volta ao cluster no caso de uma ou ambas as unidades de metadados falharem. Você pode executar a operação de recuperação na IU do NetApp Element se o recurso MDSS já estiver ativado no nó. 
+---
+= Resolução de problemas básicos da unidade MDSS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+É possível recuperar unidades de metadados (ou slice) adicionando-as de volta ao cluster no caso de uma ou ambas as unidades de metadados falharem. Você pode executar a operação de recuperação na IU do NetApp Element se o recurso MDSS já estiver ativado no nó.
+
+Se uma ou ambas as unidades de metadados em um nó sofrer uma falha, o serviço de fatia será encerrado e os dados de ambas as unidades serão copiados para diferentes unidades no nó.
+
+Os cenários a seguir descrevem possíveis cenários de falha e fornecem recomendações básicas para corrigir o problema:
+
+
+
+== Falha na unidade de corte do sistema
+
+* Neste cenário, o slot 2 é verificado e retornado a um estado disponível.
+* A unidade de corte do sistema tem de ser preenchida novamente antes de o serviço de corte poder ser colocado novamente online.
+* Deve substituir a unidade de corte do sistema, quando a unidade de corte do sistema ficar disponível, adicione a unidade e a unidade de ranhura 2 ao mesmo tempo.
+
+
+
+NOTE: Você não pode adicionar a unidade no slot 2 por si só como uma unidade de metadados. Você deve adicionar ambas as unidades de volta ao nó ao mesmo tempo.
+
+
+
+== Falha no slot 2
+
+* Neste cenário, a unidade de corte do sistema é verificada e devolvida a um estado disponível.
+* Deve substituir o slot 2 por um sobressalente, quando o slot 2 estiver disponível, adicione a unidade de corte do sistema e a unidade de slot 2 ao mesmo tempo.
+
+
+
+
+== Falha na unidade de corte do sistema e na ranhura 2
+
+* Deve substituir a unidade de corte do sistema e a ranhura 2 por uma unidade sobressalente. Quando ambas as unidades estiverem disponíveis, adicione a unidade de corte do sistema e a unidade de slot 2 ao mesmo tempo.
+
+
+
+
+== Ordem de operações
+
+* Substitua a unidade de hardware com falha por uma unidade sobressalente (substitua ambas as unidades se ambas tiverem falhado).
+* Adicione unidades de volta ao cluster quando elas tiverem sido preenchidas novamente e estiverem em um estado disponível.
+
+
+
+
+== Verifique as operações
+
+* Verifique se as unidades no slot 0 (ou interno) e no slot 2 estão identificadas como unidades de metadados na lista unidades ativas.
+* Verifique se todo o equilíbrio de cortes foi concluído (não existem mais mensagens de cortes em movimento no registo de eventos durante, pelo menos, 30 minutos).
+
+
+
+
+== Para mais informações
+
+xref:task_troubleshoot_add_mdss_drives.adoc[Adicione unidades MDSS]

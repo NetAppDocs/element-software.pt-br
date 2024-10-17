@@ -1,0 +1,163 @@
+---
+permalink: storage/concept_system_manage_manage_cluster_administrator_users.html 
+sidebar: sidebar 
+keywords: element, solidfire, cluster admin, account, create, change, configure, administrator access, edit permissions, change passwords 
+summary: Você pode gerenciar contas de administrador de cluster para um sistema de storage SolidFire. As funções de gerenciamento de administrador de cluster disponíveis incluem a criação, exclusão e edição de contas de administrador de cluster, alteração da senha do administrador de cluster e configuração de configurações LDAP para gerenciar o acesso do sistema para os usuários. 
+---
+= Gerenciar contas de usuários de administrador de cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode gerenciar contas de administrador de cluster para um sistema de armazenamento SolidFire criando, excluindo e editando contas de administrador de cluster, alterando a senha do administrador de cluster e configurando configurações LDAP para gerenciar o acesso do sistema para os usuários.
+
+
+
+== Tipos de conta de administrador de cluster de storage
+
+Existem dois tipos de contas de administrador que podem existir em um cluster de storage que executa o software NetApp Element: A conta de administrador de cluster principal e uma conta de administrador de cluster.
+
+* * Conta de administrador de cluster principal*
++
+Esta conta de administrador é criada quando o cluster é criado. Esta conta é a conta administrativa primária com o mais alto nível de acesso ao cluster. Essa conta é análoga a um usuário root em um sistema Linux. Pode alterar a palavra-passe desta conta de administrador.
+
+* *Conta de administrador de cluster*
++
+Você pode dar a uma conta de administrador de cluster um intervalo limitado de acesso administrativo para executar tarefas específicas dentro de um cluster. As credenciais atribuídas a cada conta de administrador de cluster são usadas para autenticar solicitações de API e IU de elementos no sistema de storage.
+
+
+
+
+NOTE: É necessária uma conta de administrador de cluster local (não LDAP) para aceder a nós ativos num cluster através da IU por nó. As credenciais da conta não são necessárias para acessar um nó que ainda não faz parte de um cluster.
+
+
+
+== Exibir detalhes do administrador do cluster
+
+. Para criar uma conta de administrador de cluster (não LDAP) em todo o cluster, execute as seguintes ações:
++
+.. Clique em *Users* > *Cluster Admins*.
+
+
+. Na página Administradores de cluster da guia usuários, você pode exibir as seguintes informações.
++
+** *ID*: Número sequencial atribuído à conta de administrador do cluster.
+** *Nome de usuário*: O nome dado à conta de administrador do cluster quando ela foi criada.
+** *Access*: As permissões de usuário atribuídas à conta de usuário. Valores possíveis:
++
+*** leia
+*** relatórios
+*** nós
+*** unidades
+*** volumes
+*** contas
+*** ClusterAdmins
+*** administrador
+*** SupportAdmin
+
+
+
+
++
+
+NOTE: Todas as permissões estão disponíveis para o tipo de acesso do administrador.
+
++
+** *Type*: O tipo de administrador de cluster. Valores possíveis:
++
+*** Cluster
+*** LDAP
+
+
+** *Atributos*: Se a conta de administrador de cluster foi criada usando a API Element, essa coluna mostrará os pares nome-valor que foram definidos usando esse método.
++
+link:../api/index.html["Referência da API do software NetApp Element"]Consulte .
+
+
+
+
+
+
+
+== Crie uma conta de administrador de cluster
+
+Você pode criar novas contas de administrador de cluster com permissões para permitir ou restringir o acesso a áreas específicas do sistema de armazenamento. Ao definir permissões de conta de administrador de cluster, o sistema concede direitos somente de leitura para quaisquer permissões que você não atribua ao administrador do cluster.
+
+Se pretender criar uma conta de administrador de cluster LDAP, certifique-se de que o LDAP está configurado no cluster antes de começar.
+
+link:task_system_manage_enable_ldap_authentication.html["Ative a autenticação LDAP com a interface do usuário Element"]
+
+Mais tarde, você pode alterar o Privileges de contas de administrador de cluster para geração de relatórios, nós, unidades, volumes, contas e acesso em nível de cluster. Quando você ativa uma permissão, o sistema atribui acesso de gravação para esse nível. O sistema concede ao usuário administrador acesso somente leitura para os níveis que você não selecionou.
+
+Você também pode remover mais tarde qualquer conta de usuário de administrador de cluster criada por um administrador de sistema. Não é possível remover a conta de administrador do cluster principal criada quando o cluster foi criado.
+
+. Para criar uma conta de administrador de cluster (não LDAP) em todo o cluster, execute as seguintes ações:
++
+.. Clique em *Users* > *Cluster Admins*.
+.. Clique em *Create Cluster Admin*.
+.. Selecione o tipo de usuário *Cluster*.
+.. Introduza um nome de utilizador e uma palavra-passe para a conta e confirme a palavra-passe.
+.. Selecione permissões de usuário para aplicar à conta.
+.. Marque a caixa de seleção para concordar com o Contrato de Licença de Usuário final.
+.. Clique em *Create Cluster Admin*.
+
+
+. Para criar uma conta de administrador de cluster no diretório LDAP, execute as seguintes ações:
++
+.. Clique em *Cluster* > *LDAP*.
+.. Certifique-se de que a Autenticação LDAP está ativada.
+.. Clique em *testar autenticação do usuário* e copie o nome distinto que aparece para o usuário ou um dos grupos dos quais o usuário é membro para que você possa colá-lo mais tarde.
+.. Clique em *Users* > *Cluster Admins*.
+.. Clique em *Create Cluster Admin*.
+.. Selecione o tipo de utilizador LDAP.
+.. No campo Nome distinto, siga o exemplo na caixa de texto para inserir um nome distinto completo para o usuário ou grupo. Alternativamente, cole-o do nome distinto que você copiou anteriormente.
++
+Se o nome distinto fizer parte de um grupo, qualquer usuário que seja membro desse grupo no servidor LDAP terá permissões dessa conta de administrador.
+
++
+Para adicionar usuários ou grupos de administrador de cluster LDAP, o formato geral do nome de usuário é "'LDAP: Nome distinto completo>".
+
+.. Selecione permissões de usuário para aplicar à conta.
+.. Marque a caixa de seleção para concordar com o Contrato de Licença de Usuário final.
+.. Clique em *Create Cluster Admin*.
+
+
+
+
+
+
+== Editar permissões de administrador do cluster
+
+Você pode alterar o Privileges da conta de administrador do cluster para geração de relatórios, nós, unidades, volumes, contas e acesso em nível de cluster. Quando você ativa uma permissão, o sistema atribui acesso de gravação para esse nível. O sistema concede ao usuário administrador acesso somente leitura para os níveis que você não selecionou.
+
+. Clique em *Users* > *Cluster Admins*.
+. Clique no ícone ações do administrador do cluster que deseja editar.
+. Clique em *Editar*.
+. Selecione permissões de usuário para aplicar à conta.
+. Clique em *Salvar alterações*.
+
+
+
+
+== Alterar senhas para contas de administrador de cluster
+
+Você pode usar a IU do elemento para alterar as senhas do administrador do cluster.
+
+. Clique em *Users* > *Cluster Admins*.
+. Clique no ícone ações do administrador do cluster que deseja editar.
+. Clique em *Editar*.
+. No campo alterar palavra-passe, introduza uma nova palavra-passe e confirme-a.
+. Clique em *Salvar alterações*.
+
+
+
+
+== Encontre mais informações
+
+* link:task_system_manage_enable_ldap_authentication.html["Ative a autenticação LDAP com a interface do usuário Element"]
+* link:concept_system_manage_manage_ldap.html["Desativar LDAP"]
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in do NetApp Element para vCenter Server"^]
+

@@ -1,0 +1,135 @@
+---
+permalink: api/reference_element_api_gethardwareinfo.html 
+sidebar: sidebar 
+keywords: node,hardware,info,get,getting,gethardwareinfo 
+summary: Você pode usar o método GetHardwareInfo para obter informações e status de hardware para um único nó. As informações de hardware geralmente incluem fabricantes, fornecedores, versões, unidades e outras informações de identificação associadas. 
+---
+= GetHardwareInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `GetHardwareInfo` método para obter informações e status de hardware em tempo real para um único nó. As informações de hardware geralmente incluem fabricantes, fornecedores, versões, unidades e outras informações de identificação associadas.
+
+
+
+== Parâmetro
+
+Este método tem o seguinte parâmetro de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+força
+ a| 
+Defina este parâmetro "force" como true para ser executado em todos os nós no cluster.
+ a| 
+booleano
+ a| 
+falso
+ a| 
+Não
+
+|===
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+HardwareInfo
+ a| 
+Informações de hardware para o nó.
+ a| 
+xref:reference_element_api_hardwareinfo.adoc[HardwareInfo]
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "GetHardwareInfo",
+   "params": {
+   },
+"id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "hardwareInfo": {
+      "bus": {
+        "core_DMI:0200": {
+          "description": "Motherboard",
+          "physid": "0",
+          "product": "0A47AA",
+          "serial": "..AB123456C12354.",
+          "version": "C07"
+        }
+      },
+      "driveHardware": [
+        {
+          "canonicalName": "sdh",
+          "connected": true,
+          "dev": 2160,
+          "devPath": "/dev/disk/by-path/pci-0000:41:00.0-sas-0x500056b37789abf0-lun-0",
+          "driveEncryptionCapability": "fips",
+          "driveType": "Block",
+          "lifeRemainingPercent": 92,
+          "lifetimeReadBytes": 175436696911872,
+          "lifetimeWriteBytes": 81941097349120,
+          "name": "scsi-SATA_INTEL_SSDSC2BB3BTWL12345686300AAA",
+          "path": "/dev/sdh",
+          "pathLink": "/dev/disk/by-path/pci-0000:41:00.0-sas-0x500056b37789abf0-lun-0",
+          "powerOnHours": 17246,
+          "product": "INTEL SSDAA2AA300A4",
+          "reallocatedSectors": 0,
+          "reserveCapacityPercent": 100,
+          "scsiCompatId": "scsi-SATA_INTEL_SSDSC2BB3BTWL12345686300AAA",
+          "scsiState": "Running",
+          "securityAtMaximum": false,
+          "securityEnabled": false,
+          "securityFrozen": false,
+          "securityLocked": false,
+          "securitySupported": true,
+          "serial": "AAAA33710886300AAA",
+          "size": 300069052416,
+          "slot": 1,
+          "smartSsdWriteCapable": false,
+          "uuid": "aea178b9-c336-6bab-a61d-87b615e8120c",
+          "vendor": "Intel",
+          "version": "D2010370"
+        },
+      ...
+      ]
+    }
+  }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

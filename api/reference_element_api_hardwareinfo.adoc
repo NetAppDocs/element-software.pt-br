@@ -1,0 +1,200 @@
+---
+permalink: api/reference_element_api_hardwareinfo.html 
+sidebar: sidebar 
+keywords: object,objects,hardwareInfo 
+summary: O objeto hardwareInfo contém informações detalhadas sobre o hardware e o status de cada nó no cluster. Você pode recuperar essas informações com o método da API GetHardwareInfo. 
+---
+= HardwareInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto hardwareInfo contém informações detalhadas sobre o hardware e o status de cada nó no cluster. Você pode recuperar essas informações com o `GetHardwareInfo` método API.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+BoardSerial
+ a| 
+O número de série da placa DMI.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+bus
+ a| 
+Informações do barramento de Mídia da motherboard.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+ChassisSerial
+ a| 
+O número de série do chassis.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+Hardware de condução
+ a| 
+Uma lista de informações para cada unidade no nó.
+ a| 
+Array de objetos JSON
+
+
+
+ a| 
+FibreChannelPorts
+ a| 
+Uma lista de portas Fibre Channel no nó.
+ a| 
+array inteiro
+
+
+
+ a| 
+HardwareConfig
+ a| 
+Informações sobre configuração periférica da motherboard.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+KernelCrashDumpState
+ a| 
+A configuração de despejo de falha do kernel do sistema operacional.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+memória
+ a| 
+Informações de firmware e hardware de memória do sistema.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+rede
+ a| 
+Descrições do hardware de cada uma das interfaces de rede do nó.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+NetworkInterfaces
+ a| 
+O status das interfaces de rede do nó.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+NodeSlot
+ a| 
+Para plataformas HCI, a letra correspondente ao slot do chassi em que esse nó está ("A", "B", "C" ou "D"). Para plataformas de armazenamento, esse valor é nulo.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+NVRAM
+ a| 
+Estatísticas do NVRAM para o nó.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+origem
+ a| 
+O fornecedor da placa-mãe.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+plataforma
+ a| 
+Uma descrição da plataforma do chassis.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+série
+ a| 
+O número de série do produto.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+armazenamento
+ a| 
+Informações do controlador de armazenamento.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+SystemMemory
+ a| 
+Informações sobre o uso da memória do sistema operacional e o desempenho.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+sistema
+ a| 
+O tipo de chassi de nó.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+uuid
+ a| 
+O ID exclusivo do nó.
+ a| 
+UUID
+
+|===
+
+
+== Encontre mais informações
+
+xref:reference_element_api_gethardwareinfo.adoc[GetHardwareInfo]

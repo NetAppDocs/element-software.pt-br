@@ -1,0 +1,33 @@
+---
+permalink: storage/task_replication_pair_clusters.html 
+sidebar: sidebar 
+keywords: pair clusters, replication, connect clusters, data protection 
+summary: 'É necessário emparelhar dois clusters como primeira etapa para usar a funcionalidade de replicação em tempo real. Depois de emparelhar e conectar dois clusters, é possível configurar volumes ativos em um cluster para serem replicados continuamente para um segundo cluster, fornecendo proteção contínua de dados (CDP).' 
+---
+= Emparelhe clusters para replicação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+É necessário emparelhar dois clusters como primeira etapa para usar a funcionalidade de replicação em tempo real. Depois de emparelhar e conectar dois clusters, é possível configurar volumes ativos em um cluster para serem replicados continuamente para um segundo cluster, fornecendo proteção contínua de dados (CDP).
+
+.O que você vai precisar
+* Você deve ter o Privileges do administrador de cluster para um ou ambos os clusters sendo emparelhados.
+* Todos os mips e SIPs dos nós são roteados entre si.
+* Menos de 2000 ms de latência de ida e volta entre clusters.
+* Ambos os clusters de armazenamento devem ter nomes de cluster exclusivos, MVIPs, SVIPs e todos os endereços IP dos nós.
+* A diferença entre as versões do software Element nos clusters não é maior que uma versão principal. Se a diferença for maior, um dos clusters deve ser atualizado para executar a replicação de dados.
+
+
+
+NOTE: O emparelhamento de cluster requer conetividade total entre nós na rede de gerenciamento. A replicação requer conectividade entre os nós individuais na rede do cluster de storage.
+
+É possível emparelhar um cluster com até quatro outros clusters para replicar volumes. Também é possível emparelhar clusters no grupo de clusters uns com os outros.
+
+
+
+== Encontre mais informações
+
+xref:reference_prereq_network_port_requirements.adoc[Requisitos de porta de rede]

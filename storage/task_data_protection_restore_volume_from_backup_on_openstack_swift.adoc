@@ -1,0 +1,36 @@
+---
+permalink: storage/task_data_protection_restore_volume_from_backup_on_openstack_swift.html 
+sidebar: sidebar 
+keywords: volume restore, openstack swift object store 
+summary: Você pode restaurar um volume de um backup em um armazenamento de objetos OpenStack Swift. 
+---
+= Restaurar um volume do backup em um armazenamento de objetos OpenStack Swift
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode restaurar um volume de um backup em um armazenamento de objetos OpenStack Swift.
+
+. Clique em *Reporting* > *Event Log*.
+. Localize o evento de backup que criou o backup que você precisa restaurar.
+. Na coluna *Detalhes* do evento, clique em *Mostrar Detalhes*.
+. Copie as informações do manifesto para a área de transferência.
+. Clique em *Management* > *volumes*.
+. Clique no ícone ações do volume que deseja restaurar.
+. No menu resultante, clique em *Restaurar de*.
+. Na caixa de diálogo *Restauração integrada* em *Restaurar de*, selecione *Swift*.
+. Selecione a opção que corresponde ao backup em *Data Format*:
++
+** * Nativo*: Um formato compactado legível apenas pelos sistemas de armazenamento SolidFire.
+** *Uncompressed*: Um formato não comprimido compatível com outros sistemas.
+
+
+. Insira um URL a ser usado para acessar o armazenamento de objetos no campo *URL*.
+. Introduza um nome de utilizador para a conta no campo *Nome de utilizador*.
+. Introduza a chave de autenticação da conta no campo *Authentication Key* (chave de autenticação).
+. Digite o nome do contentor no qual o backup é armazenado no campo *container*.
+. Cole as informações do manifesto no campo *MANIFEST*.
+. Clique em *Start Write* (Iniciar gravação).
+

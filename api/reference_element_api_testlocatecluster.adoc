@@ -1,0 +1,94 @@
+---
+permalink: api/reference_element_api_testlocatecluster.html 
+sidebar: sidebar 
+keywords: test,testing,cluster,locate,configuration,TestLocateCluster 
+summary: Você pode usar o método TestLocateCluster para validar que o nó pode localizar o cluster especificado na configuração do cluster. A saída valida que o cluster foi criado e lista os nós no conjunto de cluster. 
+---
+= TestLocateCluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `TestLocateCluster` método para validar que o nó pode localizar o cluster especificado na configuração do cluster. A saída valida que o cluster foi criado e lista os nós no conjunto de cluster.
+
+
+
+== Parâmetros
+
+Este método não tem parâmetros de entrada.
+
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+detalhes
+ a| 
+Informações sobre o sucesso ou falha da operação de teste.
+ a| 
+Objeto JSON
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "TestLocateCluster",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+   "id": 1,
+   "result": {
+      "details": {
+         "complete": true,
+         "ensemble": {
+            "nodes": [
+               {
+                 "IP": "10.10.5.94",
+                 "nodeID": 1
+               },
+               {
+                 "IP": "10.10.5.107",
+                 "nodeID": 2
+               },
+               {
+                 "IP": "10.10.5.108",
+                 "nodeID": 3
+               }
+            ]
+         },
+         "version": "5.749"
+      },
+      "duration": "0.0384478sec",
+      "result": "Passed"
+   }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

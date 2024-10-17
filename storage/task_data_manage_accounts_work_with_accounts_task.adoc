@@ -1,0 +1,134 @@
+---
+permalink: storage/task_data_manage_accounts_work_with_accounts_task.html 
+sidebar: sidebar 
+keywords: element, solidfire, accounts, create, delete, change, chap, view, edit 
+summary: Nos sistemas de storage da SolidFire, os locatários podem usar contas para permitir que os clientes se conetem a volumes em um nó. Uma conta contém a autenticação CHAP necessária para acessar os volumes atribuídos a ela. Quando você cria um volume, ele é atribuído a uma conta específica. 
+---
+= Trabalhar com contas usando CHAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nos sistemas de storage da SolidFire, os locatários podem usar contas para permitir que os clientes se conetem a volumes em um cluster. Uma conta contém a autenticação CHAP (Challenge-Handshake Authentication Protocol) necessária para acessar os volumes atribuídos a ela. Quando você cria um volume, ele é atribuído a uma conta específica.
+
+Uma conta pode ter até dois mil volumes atribuídos a ela, mas um volume pode pertencer a apenas uma conta.
+
+
+
+== Algoritmos CHAP
+
+A partir do Element 12,7, os algoritmos CHAP seguros compatíveis com FIPS SHA1, SHA-256 e SHA3-256 são suportados. Com o elemento 12,7, quando um iniciador iSCSI de host está criando uma sessão iSCSI com um destino iSCSI de elemento, ele solicita uma lista de algoritmos CHAP para usar. O destino iSCSI Element escolhe o primeiro algoritmo que suporta a partir da lista solicitada pelo iniciador iSCSI do host. Para confirmar que o destino iSCSI Element escolhe o algoritmo mais seguro, você deve configurar o iniciador iSCSI do host para enviar uma lista de algoritmos solicitados da maioria dos seguros, por exemplo, SHA3-256, para o menos seguro, por exemplo, SHA1 ou MD5. Quando os algoritmos SHA não são solicitados pelo iniciador iSCSI do host, o destino iSCSI do elemento escolhe MD5, assumindo que a lista de algoritmos proposta do host contém MD5. Talvez seja necessário atualizar a configuração do iniciador iSCSI do host para habilitar o suporte aos algoritmos seguros.
+
+Durante uma atualização do Element 12,7, se você já atualizou a configuração do iniciador iSCSI do host para enviar uma solicitação de sessão com uma lista que inclui algoritmos SHA, à medida que os nós de storage reiniciam, os novos algoritmos seguros são ativados e sessões iSCSI novas ou reconetadas são estabelecidas usando o protocolo mais seguro. Todas as sessões iSCSI existentes passam de MD5 para SHA durante a atualização. Se você não atualizar a configuração do iniciador iSCSI do host para solicitar SHA, as sessões iSCSI existentes continuarão a usar o MD5. Posteriormente, depois de atualizar os algoritmos CHAP do iniciador iSCSI do host, as sessões iSCSI devem passar gradualmente de MD5 para SHA ao longo do tempo com base em atividades de manutenção que resultem em reconexões de sessão iSCSI.
+
+Por exemplo, o iniciador iSCSI de host padrão no Red Hat Enterprise Linux (RHEL) 8,3 tem a `node.session.auth.chap_algs = SHA3-256,SHA256,SHA1,MD5` configuração comentada, o que resulta no iniciador iSCSI usando apenas MD5. Descomentando esta configuração no host e reiniciando o iniciador iSCSI aciona sessões iSCSI desse host para começar a usar o SHA3-256.
+
+Se necessário, você pode usar o https://docs.netapp.com/us-en/element-software/api/reference_element_api_listiscsisessions.html["Listagens"] método API para ver os algoritmos CHAP que estão sendo usados para cada sessão.
+
+
+
+== Crie uma conta
+
+Você pode criar uma conta para permitir o acesso a volumes.
+
+Cada nome de conta no sistema deve ser exclusivo.
+
+. Selecione *Gestão* > *Contas*.
+. Clique em *criar conta*.
+. Introduza um *Nome de utilizador*.
+. Na seção *CHAP Settings*, insira as seguintes informações:
++
+
+NOTE: Deixe os campos de credencial em branco para gerar automaticamente qualquer senha.
+
++
+** *Segredo do Iniciador* para autenticação de sessão de nó CHAP.
+** *Segredo alvo* para autenticação de sessão de nó CHAP.
+
+
+. Clique em *criar conta*.
+
+
+
+
+== Ver detalhes da conta
+
+Você pode visualizar a atividade de desempenho de contas individuais em um formato gráfico.
+
+As informações do gráfico fornecem informações de e/S e taxa de transferência para a conta. Os níveis de atividade média e pico são mostrados em incrementos de períodos de relatório de 10 segundos. Essas estatísticas incluem atividade para todos os volumes atribuídos à conta.
+
+. Selecione *Gestão* > *Contas*.
+. Clique no ícone ações de uma conta.
+. Clique em *Ver detalhes*.
+
+
+Aqui estão alguns dos detalhes:
+
+* *Status*: O status da conta. Valores possíveis:
++
+** Ativo: Uma conta ativa.
+** Bloqueado: Uma conta bloqueada.
+** Removido: Uma conta que foi excluída e eliminada.
+
+
+* *Volumes ativos*: O número de volumes ativos atribuídos à conta.
+* *Compression*: A pontuação de eficiência de compressão para os volumes atribuídos à conta.
+* *Desduplicação*: A pontuação de eficiência de desduplicação para os volumes atribuídos à conta.
+* *Provisionamento fino*: A pontuação de eficiência de provisionamento fino para os volumes atribuídos à conta.
+* *Eficiência geral*: A pontuação geral de eficiência para os volumes atribuídos à conta.
+
+
+
+
+== Edite uma conta
+
+Você pode editar uma conta para alterar o status, alterar os segredos CHAP ou modificar o nome da conta.
+
+Modificar as configurações CHAP em uma conta ou remover iniciadores ou volumes de um grupo de acesso pode fazer com que os iniciadores percam o acesso aos volumes inesperadamente. Para verificar se o acesso ao volume não será perdido inesperadamente, efetue sempre logout de sessões iSCSI que serão afetadas por uma alteração de conta ou grupo de acesso e verifique se os iniciadores podem se reconetar aos volumes depois que quaisquer alterações nas configurações do iniciador e nas configurações do cluster tiverem sido concluídas.
+
+
+IMPORTANT: Os volumes persistentes associados a serviços de gerenciamento são atribuídos a uma nova conta criada durante a instalação ou atualização. Se você estiver usando volumes persistentes, não modifique ou exclua a conta associada.
+
+. Selecione *Gestão* > *Contas*.
+. Clique no ícone ações de uma conta.
+. No menu resultante, selecione *Editar*.
+. *Opcional:* edite o *Nome de usuário*.
+. *Opcional:* clique na lista suspensa *Status* e selecione um status diferente.
++
+
+IMPORTANT: Alterar o status para *bloqueado* termina todas as conexões iSCSI para a conta e a conta não está mais acessível. Os volumes associados à conta são mantidos; no entanto, os volumes não são detetáveis iSCSI.
+
+. *Opcional:* em *Configurações CHAP*, edite as credenciais *segredo do Iniciador* e *segredo do alvo* usadas para autenticação de sessão de nó.
++
+
+NOTE: Se você não alterar as credenciais *CHAP Settings*, elas permanecerão as mesmas. Se você deixar os campos de credenciais em branco, o sistema gera novas senhas.
+
+. Clique em *Salvar alterações*.
+
+
+
+
+== Eliminar uma conta
+
+Você pode excluir uma conta quando ela não for mais necessária.
+
+Exclua e limpe quaisquer volumes associados à conta antes de excluir a conta.
+
+
+IMPORTANT: Os volumes persistentes associados a serviços de gerenciamento são atribuídos a uma nova conta criada durante a instalação ou atualização. Se você estiver usando volumes persistentes, não modifique ou exclua a conta associada.
+
+. Selecione *Gestão* > *Contas*.
+. Clique no ícone ações da conta que deseja excluir.
+. No menu resultante, selecione *Excluir*.
+. Confirme a ação.
+
+
+
+
+== Encontre mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in do NetApp Element para vCenter Server"^]
+

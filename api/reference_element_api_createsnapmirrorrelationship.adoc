@@ -1,0 +1,140 @@
+---
+permalink: api/reference_element_api_createsnapmirrorrelationship.html 
+sidebar: sidebar 
+keywords: SnapMirror,relationship,relationships,create,creating,CreateSnapMirrorRelationship 
+summary: A IU da Web do Element usa o método CreateSnapMirrorRelationship para criar uma relação de proteção de dados estendida do SnapMirror entre um endpoint de origem e destino. 
+---
+= CreateSnapMirrorRelacionship
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A IU da Web do Element usa o `CreateSnapMirrorRelationship` método para criar uma relação de proteção de dados estendida do SnapMirror entre um endpoint de origem e destino.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+O ID do ponto de extremidade do sistema de armazenamento ONTAP remoto que se comunica com o cluster de armazenamento Element.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+Sourcevolume
+ a| 
+O volume de origem na relação.
+ a| 
+xref:reference_element_api_snapmirrorvolumeinfo.adoc[SnapMirrorVolumeInfo]
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+Destinaçãovolume
+ a| 
+O volume de destino na relação.
+ a| 
+xref:reference_element_api_snapmirrorvolumeinfo.adoc[SnapMirrorVolumeInfo]
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+RelationshipType
+ a| 
+O tipo de relacionamento. Em sistemas de storage que executam o software Element, esse valor é sempre ""extended_data_protection"".
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+Nome da política
+ a| 
+Especifica o nome da política ONTAP SnapMirror para a relação. Se não for especificado, o nome da política padrão é MirrorLatest.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+ScheduleName
+ a| 
+O nome do cronograma pré-existente do cron no sistema ONTAP que é usado para atualizar o relacionamento do SnapMirror. Se nenhum agendamento for designado, as atualizações do SnapMirror não serão agendadas e devem ser atualizadas manualmente.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+MaxTransferRate
+ a| 
+Especifica a taxa máxima de transferência de dados entre os volumes em kilobytes por segundo. O valor padrão, 0, é ilimitado e permite que o relacionamento SnapMirror utilize totalmente a largura de banda de rede disponível.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Não
+
+|===
+
+
+== Valores de retorno
+
+Este método tem os seguintes valores de retorno:
+
+|===
+
+
+| Nome | Descrição | Tipo 
+
+
+ a| 
+SnapMirrorRelacionship
+ a| 
+Informações sobre a relação SnapMirror recém-criada.
+ a| 
+xref:reference_element_api_snapmirrorrelationship.adoc[SnapMirrorRelacionship]
+
+|===
+
+
+== Novo desde a versão
+
+10,1

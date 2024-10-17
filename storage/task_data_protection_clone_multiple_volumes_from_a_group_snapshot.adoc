@@ -1,0 +1,34 @@
+---
+permalink: storage/task_data_protection_clone_multiple_volumes_from_a_group_snapshot.html 
+sidebar: sidebar 
+keywords: multiple volumes, group snapshot, clone, create, data protection 
+summary: Você pode clonar um grupo de volumes a partir de um snapshot de grupo pontual. Esta operação requer que um instantâneo de grupo dos volumes já exista, porque o instantâneo de grupo é usado como base para criar os volumes. Depois de criar os volumes, você pode usá-los como qualquer outro volume no sistema. 
+---
+= Clonar vários volumes de um snapshot de grupo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode clonar um grupo de volumes a partir de um snapshot de grupo pontual. Esta operação requer que um instantâneo de grupo dos volumes já exista, porque o instantâneo de grupo é usado como base para criar os volumes. Depois de criar os volumes, você pode usá-los como qualquer outro volume no sistema.
+
+O tamanho do volume e a carga atual do cluster afetam o tempo necessário para concluir uma operação de clonagem.
+
+. Clique em *proteção de dados* > *instantâneos de grupo*.
+. Clique no ícone ações do instantâneo de grupo que você deseja usar para os clones de volume.
+. No menu resultante, selecione *Clone volumes a partir de Group Snapshot*.
+. Insira um *prefixo de nome de volume novo* na caixa de diálogo *Clone volumes a partir de instantâneo de grupo*.
++
+O prefixo é aplicado a todos os volumes criados a partir do instantâneo do grupo.
+
+. *Opcional:* Selecione uma conta diferente à qual o clone pertencerá.
++
+Se você não selecionar uma conta, o sistema atribuirá os novos volumes à conta de volume atual.
+
+. *Opcional:* Selecione um método de acesso diferente para os volumes no clone.
++
+Se não selecionar um método de acesso, o sistema utiliza o acesso de volume atual.
+
+. Clique em *Iniciar clonagem*.
+

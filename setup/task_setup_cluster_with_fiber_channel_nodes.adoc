@@ -1,0 +1,31 @@
+---
+permalink: setup/task_setup_cluster_with_fibre_channel_nodes.html 
+sidebar: sidebar 
+keywords: element, solidfire, fibre channel, setup, node, cluster 
+summary: Compreender a sequência de configuração de um cluster com nós de storage. 
+---
+= Configuração de um cluster com nós Fibre Channel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode configurar um cluster com nós Fibre Channel e gerenciá-lo usando o software Element após a instalação e os nós de cabo em uma unidade de rack e ligá-los. Em seguida, você pode instalar e configurar componentes adicionais em seu sistema de storage.
+
+.Passos
+. link:../setup/concept_setup_fc_configure_a_fibre_channel_node.html["Configurar um nó Fibre Channel"]
+. link:../setup/task_setup_fc_create_a_new_cluster_with_fibre_channel_nodes.html["Criar um novo cluster com nós Fibre Channel"]
+. link:../setup/task_setup_fc_add_fibre_channel_nodes_to_a_cluster.html["Adicionar nós Fibre Channel a um cluster"]
+. link:../setup/concept_setup_fc_set_up_zones_for_fibre_channel_nodes.html["Configure zonas para nós Fibre Channel"]
+. link:../setup/task_setup_create_a_volume_access_group_for_fibre_channel_clients.html["Crie um grupo de acesso por volume para clientes Fibre Channel"]
+. link:../setup/task_setup_determine_which_solidfire_components_to_install.html["Determine quais componentes do SolidFire instalar"]
+. link:../setup/task_setup_gh_redirect_set_up_a_management_node.html["Configure um nó de gerenciamento"]
+
+
+
+
+== Encontre mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+

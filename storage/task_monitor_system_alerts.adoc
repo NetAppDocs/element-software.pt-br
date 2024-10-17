@@ -1,0 +1,106 @@
+---
+permalink: storage/task_monitor_system_alerts.html 
+sidebar: sidebar 
+keywords: system alerts, view, cluster faults, system errors 
+summary: Pode visualizar alertas para obter informações sobre avarias ou erros do cluster no sistema. Os alertas podem ser informações, avisos ou erros e são um bom indicador de quão bem o cluster está funcionando. A maioria dos erros resolve-se automaticamente. 
+---
+= Ver alertas do sistema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode visualizar alertas para obter informações sobre avarias ou erros do cluster no sistema. Os alertas podem ser informações, avisos ou erros e são um bom indicador de quão bem o cluster está funcionando. A maioria dos erros resolve-se automaticamente.
+
+Você pode usar o método ListClusterFaults API para automatizar o monitoramento de alertas. Isso permite que você seja notificado sobre todos os alertas que ocorrem.
+
+. Na IU do elemento, selecione *Reporting* > *Alerts*.
++
+O sistema atualiza os alertas na página a cada 30 segundos.
+
++
+Para cada evento, você verá as seguintes informações:
+
++
+|===
+
+
+| Item | Descrição 
+
+
+ a| 
+ID
+ a| 
+ID exclusiva associada a um alerta de cluster.
+
+
+
+ a| 
+Gravidade
+ a| 
+O grau de importância do alerta. Valores possíveis:
+
+** Aviso: Um problema menor que em breve pode exigir atenção. Atualizações do sistema ainda são permitidas.
+** Erro: Uma falha que pode causar degradação no desempenho ou perda de alta disponibilidade (HA). Erros geralmente não devem afetar o serviço de outra forma.
+** Crítico: Uma falha grave que afeta o serviço. O sistema não consegue atender a solicitações de e/S de API ou cliente. Operar neste estado pode levar a uma perda potencial de dados.
+** BestPractice: Uma prática recomendada de configuração do sistema não está sendo usada.
+
+
+
+
+ a| 
+Tipo
+ a| 
+O elemento que afeta a avaria. Pode ser nó, unidade, cluster, serviço ou volume.
+
+
+
+ a| 
+Nó
+ a| 
+ID do nó para o nó a que esta avaria se refere. Incluído para falhas de nó e unidade, caso contrário definido como - (traço).
+
+
+
+ a| 
+ID da unidade
+ a| 
+ID da unidade para a unidade à qual esta avaria se refere. Incluído para falhas de condução, caso contrário definido para - (tablier).
+
+
+
+ a| 
+Código de erro
+ a| 
+Um código descritivo que indica o que causou a falha.
+
+
+
+ a| 
+Detalhes
+ a| 
+Uma descrição da avaria com detalhes adicionais.
+
+
+
+ a| 
+Data
+ a| 
+A data e a hora em que a avaria foi registada.
+
+|===
+. Clique em *Mostrar Detalhes* para obter um alerta individual para visualizar informações sobre o alerta.
+. Para ver os detalhes de todos os alertas na página, clique na coluna Detalhes.
++
+Depois que o sistema resolver um alerta, todas as informações sobre o alerta, incluindo a data em que foi resolvido, são movidas para a área resolvida.
+
+
+
+
+
+== Encontre mais informações
+
+* xref:reference_monitor_cluster_fault_codes.adoc[Códigos de falha do cluster]
+* link:../api/index.html["Gerencie o storage com a API Element"]
+

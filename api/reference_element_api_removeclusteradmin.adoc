@@ -1,0 +1,79 @@
+---
+permalink: api/reference_element_api_removeclusteradmin.html 
+sidebar: sidebar 
+keywords: cluster,admin,remove,removing,removeclusteradmin 
+summary: 'Você pode usar o método RemoveClusterAdmin para remover um administrador de cluster, um administrador de cluster LDAP ou um administrador de cluster de provedor de identidade (IDP) de terceiros. Não é possível remover a conta de administrador de cluster "admin".' 
+---
+= RemoveClusterAdmin
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `RemoveClusterAdmin` método para remover um administrador de cluster, um administrador de cluster LDAP ou um administrador de cluster de provedor de identidade (IDP) de terceiros. Não é possível remover a conta de administrador de cluster "admin".
+
+
+
+== Parâmetro
+
+Quando um administrador de cluster de IDP é removido que tenha sessões autenticadas associadas a um IDP de provedor de identidade de terceiros, essas sessões farão logout ou possivelmente sofrerão uma perda de direitos de acesso dentro de sua sessão atual. A perda de direitos de acesso dependerá se o administrador de cluster IDP removido correspondia a um dos vários administradores de cluster IDP de atributos SAML de um determinado usuário. O conjunto restante de administradores de cluster IDP correspondentes resulta em um conjunto reduzido de direitos de acesso agregado. Outros tipos de usuários de administrador de cluster são desconetados quando seus administradores de cluster são removidos.
+
+Este método tem o seguinte parâmetro de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+ClausterAdminID
+ a| 
+ClusterAdminID para que o administrador do cluster seja removido.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valores de retorno
+
+Este método não tem valores de retorno.
+
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "RemoveClusterAdmin",
+   "params": {
+     "clusterAdminID"  : 2
+   },
+   "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+ "id" : 1
+ "result" : { }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

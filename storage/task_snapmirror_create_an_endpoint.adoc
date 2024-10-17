@@ -1,0 +1,42 @@
+---
+permalink: storage/task_snapmirror_create_an_endpoint.html 
+sidebar: sidebar 
+keywords: element, endpoints, create, snapmirror, ui 
+summary: Você deve criar um ponto de extremidade do SnapMirror na IU do NetApp Element antes de criar um relacionamento. 
+---
+= Crie um endpoint SnapMirror
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve criar um ponto de extremidade do SnapMirror na IU do NetApp Element antes de criar um relacionamento.
+
+Um ponto de extremidade do SnapMirror é um cluster do ONTAP que serve como destino de replicação para um cluster que executa o software Element. Antes de criar uma relação do SnapMirror, primeiro você cria um endpoint do SnapMirror.
+
+Você pode criar e gerenciar até quatro pontos de extremidade SnapMirror em um cluster de storage que executa o software Element.
+
+
+NOTE: Se um endpoint existente foi originalmente criado usando a API e as credenciais não foram salvas, você pode ver o endpoint na IU do elemento e verificar sua existência, mas ele não pode ser gerenciado usando a IU do elemento. Esse endpoint só pode ser gerenciado usando a API Element.
+
+Para obter detalhes sobre métodos de API, link:../api/index.html["Gerencie o storage com a API Element"]consulte .
+
+.O que você vai precisar
+* Você deve ter habilitado o SnapMirror na IU do Element para o cluster de storage.
+* Você conhece as credenciais do ONTAP para o endpoint.
+
+
+.Passos
+. Clique em *proteção de dados* > *SnapMirror Endpoints*.
+. Clique em *Create Endpoint*.
+. Na caixa de diálogo *criar um novo ponto final*, insira o endereço IP de gerenciamento de cluster do sistema ONTAP.
+. Insira as credenciais de administrador do ONTAP associadas ao endpoint.
+. Rever detalhes adicionais:
++
+** LIFs: Lista as interfaces lógicas ONTAP entre clusters usadas para se comunicar com o elemento.
+** Status: Mostra o status atual do endpoint SnapMirror. Os valores possíveis são: Conetado, desconetado e não gerenciado.
+
+
+. Clique em *Create Endpoint*.
+

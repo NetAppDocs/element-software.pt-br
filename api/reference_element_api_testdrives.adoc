@@ -1,0 +1,101 @@
+---
+permalink: api/reference_element_api_testdrives.html 
+sidebar: sidebar 
+keywords: drive,drives,test,testing,validating,hardware,testdrives 
+summary: Você pode usar o método TestDrives para executar uma validação de hardware em todas as unidades no nó. Este método deteta falhas de hardware nas unidades e relata qualquer um dos resultados dos testes de validação. 
+---
+= TestDrives
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `TestDrives` método para executar uma validação de hardware em todas as unidades no nó. Este método deteta falhas de hardware nas unidades e relata qualquer um dos resultados dos testes de validação.
+
+
+
+== Parâmetros
+
+Você só pode usar o `TestDrives` método em nós que não são "ativos" em um cluster.
+
+
+NOTE: Este teste demora aproximadamente 10 minutos.
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+força
+ a| 
+Defina como verdadeiro para testar as unidades no nó.
+ a| 
+booleano
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+minutos
+ a| 
+Especifica o número de minutos para o teste ser executado.
+ a| 
+número inteiro
+ a| 
+10
+ a| 
+Não
+
+|===
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+detalhes
+ a| 
+Informações sobre o sucesso ou falha da operação de teste.
+ a| 
+Objeto JSON
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "TestDrives",
+   "params": {
+              "force": true,
+              "minutes" : 10
+             },
+   "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma tabela contendo resultados de teste para cada unidade no nó.
+
+
+
+== Novo desde a versão
+
+9,6

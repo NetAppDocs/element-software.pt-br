@@ -1,0 +1,107 @@
+---
+permalink: api/reference_element_api_clusterpair.html 
+sidebar: sidebar 
+keywords: objects,object,clusterPair 
+summary: O objeto clusterPair contém informações sobre clusters emparelhados com o cluster local. Você pode recuperar uma lista de objetos clusterPair para o cluster local com o método ListClusterPairs. 
+---
+= Exclusivo par
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto clusterPair contém informações sobre clusters emparelhados com o cluster local. Você pode recuperar uma lista de objetos clusterPair para o cluster local com o método ListClusterPairs.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+Nome exclusivo
+ a| 
+O nome do outro cluster no par.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+ClausterPairID
+ a| 
+Um ID exclusivo dado a cada cluster no par.
+ a| 
+número inteiro
+
+
+
+ a| 
+Mostrar mensagens com a etiqueta PairUID
+ a| 
+O identificador universalmente exclusivo para o par de cluster.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+UUID
+ a| 
+Identificador exclusivo para o cluster remoto no par de cluster.
+ a| 
+número inteiro
+
+
+
+ a| 
+latência
+ a| 
+A latência, em milissegundos, entre clusters.
+ a| 
+número inteiro
+
+
+
+ a| 
+mvip
+ a| 
+O endereço IP da conexão de gerenciamento para clusters emparelhados.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+estado
+ a| 
+O status da conexão entre os clusters emparelhados. Valores possíveis:
+
+* Não configurado
+* Ligado
+* Mal configurado
+* Desligado
+
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+versão
+ a| 
+A versão do elemento do outro cluster no par.
+ a| 
+cadeia de carateres
+
+|===
+
+
+== Encontre mais informações
+
+xref:reference_element_api_listclusterpairs.adoc[ListClusterPairs]

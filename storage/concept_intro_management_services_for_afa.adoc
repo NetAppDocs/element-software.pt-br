@@ -1,0 +1,14 @@
+---
+permalink: storage/concept_intro_management_services_for_afa.html 
+sidebar: sidebar 
+keywords: management services, aff 
+summary: Os serviços de gerenciamento fornecem recursos de gerenciamento central e estendido para storage all-flash SolidFire. Esses serviços incluem telemetria do sistema Active IQ, log e atualizações de serviço, bem como o serviço QSSIOC para o plug-in Element para vCenter. 
+---
+= Serviços de gerenciamento para storage all-flash SolidFire
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os serviços de gerenciamento fornecem recursos de gerenciamento central e estendido para storage all-flash SolidFire. Esses serviços incluem telemetria do sistema Active IQ, log e atualizações de serviço, bem como o serviço QSSIOC para o plug-in Element para vCenter.

@@ -1,0 +1,44 @@
+---
+permalink: storage/task_data_protection_create_a_group_snapshot.html 
+sidebar: sidebar 
+keywords: group snapshot, create, volumes, schedule, automate group snapshots 
+summary: Você pode criar um snapshot de um grupo de volumes e também criar uma programação de snapshot de grupo para automatizar snapshots de grupo. Um snapshot de um único grupo pode consistentemente snapshot de até 32 volumes de uma só vez. 
+---
+= Criando um instantâneo de grupo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar um snapshot de um grupo de volumes e também criar uma programação de snapshot de grupo para automatizar snapshots de grupo. Um snapshot de um único grupo pode consistentemente snapshot de até 32 volumes de uma só vez.
+
+.Passos
+. Clique em *Management* > *volumes*.
+. Use as caixas de seleção para selecionar vários volumes para um grupo de volumes.
+. Clique em *ações em massa*.
+. Clique em *Group Snapshot*.
+. Insira um novo nome de instantâneo de grupo na caixa de diálogo criar instantâneo de grupo de volumes.
+. *Opcional:* Selecione a caixa de seleção *incluir cada membro de instantâneo de grupo na replicação quando emparelhado* para garantir que cada instantâneo seja capturado na replicação quando o volume pai for emparelhado.
+. Selecione uma opção de retenção para o instantâneo do grupo:
++
+** Clique em *manter para sempre* para manter o instantâneo no sistema indefinidamente.
+** Clique em *Definir período de retenção* e use as caixas de rotação de data para escolher um período de tempo para o sistema reter o instantâneo.
+
+
+. Para fazer um instantâneo único e imediato, execute as seguintes etapas:
++
+.. Clique em *Take Group Snapshot Now*.
+.. Clique em *Create Group Snapshot*.
+
+
+. Para agendar a execução do instantâneo em um momento futuro, execute as seguintes etapas:
++
+.. Clique em *Create Group Snapshot Schedule*.
+.. Introduza um *novo nome do programa*.
+.. Selecione um *tipo de agendamento* na lista.
+.. *Opcional:* Selecione a caixa de seleção *Agendamento recorrente* para repetir o snapshot agendado periodicamente.
+.. Clique em *Create Schedule*.
+
+
+

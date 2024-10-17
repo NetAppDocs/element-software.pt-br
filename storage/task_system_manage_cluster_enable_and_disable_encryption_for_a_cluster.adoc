@@ -1,0 +1,78 @@
+---
+permalink: storage/task_system_manage_cluster_enable_and_disable_encryption_for_a_cluster.html 
+sidebar: sidebar 
+keywords: enable, disable, encryption at rest, cluster, sed, hardware-based, encryption settings, software-based 
+summary: Com clusters do SolidFire, é possível criptografar todos os dados armazenados no cluster usando criptografia baseada em software ou hardware em repouso. 
+---
+= Ative e desative a criptografia em repouso para um cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Com clusters do SolidFire, é possível criptografar todos os dados em repouso armazenados em unidades de cluster. Você pode ativar a proteção de unidades com autocriptografia (SED) em todo o cluster usando link:../concepts/concept_solidfire_concepts_security.html["criptografia baseada em hardware ou software em repouso"]o .
+
+Você pode habilitar a criptografia de hardware em repouso usando a IU ou API do Element. A ativação do recurso de criptografia de hardware em repouso não afeta o desempenho ou a eficiência do cluster. Você pode ativar a criptografia de software em repouso usando apenas a API Element.
+
+A criptografia baseada em hardware em repouso não é ativada por padrão durante a criação do cluster e pode ser ativada e desativada a partir da IU do Element.
+
+
+WARNING: Para clusters de storage all-flash do SolidFire, a criptografia de software em repouso deve ser ativada durante a criação do cluster e não pode ser desativada após a criação do cluster.
+
+.O que você vai precisar
+* Tem o administrador de cluster Privileges para ativar ou alterar as definições de encriptação.
+* Para criptografia baseada em hardware em repouso, você garantiu que o cluster esteja em estado íntegro antes de alterar as configurações de criptografia.
+* Se você estiver desabilitando a criptografia, dois nós devem estar participando de um cluster para acessar a chave para desativar a criptografia em uma unidade.
+
+
+
+
+== Verifique a criptografia no status de repouso
+
+Para ver o status atual da criptografia em repouso e/ou criptografia de software em repouso no cluster, use o link:../api/reference_element_api_getclusterinfo.html["GetClusterInfo"^] método. Você pode usar o link:../api/reference_element_api_getsoftwareencryptionatrestinfo.html["GetSoftwareEncryptionAtRestInfo"^] método para obter informações que o cluster usa para criptografar dados em repouso.
+
+
+NOTE: O painel da IU do software Element no `https://<MVIP>/` momento mostra apenas a criptografia em repouso para criptografia baseada em hardware.
+
+.Opções
+* <<Ative a criptografia baseada em hardware em repouso>>
+* <<Ative a criptografia baseada em software em repouso>>
+* <<Desative a criptografia baseada em hardware em repouso>>
+
+
+
+
+== Ative a criptografia baseada em hardware em repouso
+
+
+NOTE: Para ativar a encriptação em repouso utilizando uma configuração de gestão de chaves externas, tem de ativar a encriptação em repouso através do link:../api/reference_element_api_enableencryptionatrest.html["API"]. Ativar o uso do botão UI do elemento existente reverterá para o uso de chaves geradas internamente.
+
+. Na IU do elemento, selecione *Cluster* > *Settings*.
+. Selecione *Ativar encriptação em repouso*.
+
+
+
+
+== Ative a criptografia baseada em software em repouso
+
+
+NOTE: A encriptação de software em repouso não pode ser desativada depois de ativada no cluster.
+
+. Durante a criação do cluster, execute o link:../api/reference_element_api_createcluster.html["criar método de cluster"] com `enableSoftwareEncryptionAtRest` definido como `true`.
+
+
+
+
+== Desative a criptografia baseada em hardware em repouso
+
+. Na IU do elemento, selecione *Cluster* > *Settings*.
+. Selecione *Desativar criptografia em repouso*.
+
+
+[discrete]
+== Encontre mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentação para versões anteriores dos produtos NetApp SolidFire e Element"^]
+

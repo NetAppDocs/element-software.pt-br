@@ -1,0 +1,172 @@
+---
+permalink: api/reference_element_api_addaccount.html 
+sidebar: sidebar 
+keywords: addaccount,add,adding,account,accounts 
+summary: 'Você pode usar o AddAccount para adicionar uma nova conta ao sistema. Você também pode usar esse método para criar novos volumes na nova conta à medida que a conta é criada. As configurações do protocolo de autenticação Challenge-Handshake (CHAP) que você especificar para a conta aplicam-se a todos os volumes de propriedade da conta.' 
+---
+= Contagem de endereços
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar `AddAccount` para adicionar uma nova conta ao sistema. Você também pode usar esse método para criar novos volumes na nova conta à medida que a conta é criada. As definições CHAP (Challenge-Handshake Authentication Protocol) especificadas para a conta aplicam-se a todos os volumes pertencentes à conta.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+`attributes`
+ a| 
+Lista de pares nome-valor no formato de objeto JSON.
+ a| 
+Objeto JSON
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+`enableChap`
+ a| 
+Especifica se as credenciais da conta CHAP podem ser usadas por um iniciador para acessar volumes.
+ a| 
+booleano
+ a| 
+verdadeiro
+ a| 
+Não
+
+
+
+ a| 
+`initiatorSecret`
+ a| 
+O segredo CHAP a ser usado para o iniciador. Este segredo deve ter 12 a 16 carateres de comprimento e deve ser impenetrável. O segredo CHAP iniciador deve ser único e não pode ser o mesmo que o segredo CHAP alvo. Se não for especificado, um segredo aleatório é criado.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+`targetSecret`
+ a| 
+O segredo CHAP a ser usado para o alvo (autenticação CHAP mútua). Este segredo deve ter 12 a 16 carateres de comprimento e deve ser impenetrável. O segredo CHAP alvo deve ser único e não pode ser o mesmo que o segredo CHAP iniciador. Se não for especificado, um segredo aleatório é criado.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+`username`
+ a| 
+O nome de usuário exclusivo para esta conta. (Tem de ter entre 1 e 64 carateres).
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valor de retorno
+
+Este método tem os seguintes valores de retorno:
+
+|===
+
+
+| Nome | Descrição | Tipo 
+
+
+ a| 
+conta
+ a| 
+Um objeto contendo informações sobre a conta recém-criada.
+ a| 
+xref:reference_element_api_account.adoc[conta]
+
+
+
+ a| 
+ID Contabilística
+ a| 
+O ID do objeto de conta recém-criado.
+ a| 
+número inteiro
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+	"method": "AddAccount",
+    "params": {
+     "username"  : "bobsmith",
+     "initiatorSecret" : "168[#5A757ru268)",
+     "targetSecret" : "tlt&lt;,8TUYa7bC",
+     "attributes" : {
+       "billingcode" : 2345
+     }
+   },
+   "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "account": {
+      "accountID": 90,
+      "attributes": {
+        "billingcode": 2345
+      },
+      "initiatorSecret": "168[#5A757ru268)",
+      "status": "active",
+      "storageContainerID": "00000000-0000-0000-0000-000000000000",
+      "targetSecret": "tlt&lt;,8TUYa7bC",
+      "username": "bobsmith",
+      "volumes": [],
+      "enableChap": true
+    },
+    "accountID": 90
+  }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

@@ -1,0 +1,19 @@
+---
+permalink: storage/concept_data_protection_volume_snapshot_backup_operations.html 
+sidebar: sidebar 
+keywords: volume snapshot, backup operations, back up volume snapshot, cluster, object store 
+summary: Você pode usar o recurso de backup integrado para fazer backup de um instantâneo de volume. É possível fazer backup de snapshots de um cluster do SolidFire para um armazenamento de objetos externo ou para outro cluster do SolidFire. Ao fazer backup de um snapshot em um armazenamento de objetos externo, você deve ter uma conexão com o armazenamento de objetos que permita operações de leitura/gravação. 
+---
+= Fazer backup de um instantâneo de volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o recurso de backup integrado para fazer backup de um instantâneo de volume. É possível fazer backup de snapshots de um cluster do SolidFire para um armazenamento de objetos externo ou para outro cluster do SolidFire. Ao fazer backup de um snapshot em um armazenamento de objetos externo, você deve ter uma conexão com o armazenamento de objetos que permita operações de leitura/gravação.
+
+* link:task_data_protection_back_up_a_volume_snapshot_to_an_amazon_s3_object_store["Faça backup de um snapshot de volume em um armazenamento de objetos do Amazon S3"]
+* link:task_data_protection_back_up_a_volume_snapshot_to_openstack_swift["Fazer backup de um snapshot de volume para um armazenamento de objetos OpenStack Swift"]
+* link:task_data_protection_back_up_volume_to_solidfire["Fazer backup de um snapshot de volume em um cluster SolidFire"]
+

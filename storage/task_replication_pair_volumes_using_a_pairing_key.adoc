@@ -1,0 +1,74 @@
+---
+permalink: storage/task_replication_pair_volumes_using_a_pairing_key.html 
+sidebar: sidebar 
+keywords: volume pairings, pairing key, replication 
+summary: Se não tiver credenciais de administrador de cluster para um cluster remoto, pode emparelhar um volume com outro volume num cluster remoto utilizando uma chave de emparelhamento. 
+---
+= Emparelhe volumes utilizando uma tecla de emparelhamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se não tiver credenciais de administrador de cluster para um cluster remoto, pode emparelhar um volume com outro volume num cluster remoto utilizando uma chave de emparelhamento.
+
+.O que você vai precisar
+* Certifique-se de que os clusters que contêm os volumes estão emparelhados.
+* Certifique-se de que existe um volume no painel remoto a utilizar para o emparelhamento.
++
+
+NOTE: Pode atribuir uma origem e um destino de replicação após o processo de emparelhamento. Uma origem ou destino de replicação pode ser um volume em um par de volumes. Você deve criar um volume de destino que não contenha dados e tenha as caraterísticas exatas do volume de origem, como tamanho, configuração de tamanho de bloco para os volumes (512e ou 4K) e configuração de QoS. Se você atribuir um volume existente como destino de replicação, os dados nesse volume serão sobrescritos. O volume de destino pode ser maior ou igual em tamanho ao volume de origem, mas não pode ser menor.
+
+
+
+.Passos
+. Selecione *Management* > *volumes*.
+. Clique no ícone *ações* para o volume que deseja emparelhar.
+. Clique em *Emparelhar*.
+. Na caixa de diálogo *Emparelhar volume*, selecione *Iniciar emparelhamento*.
+. Selecione *não* para indicar que não tem acesso ao cluster remoto.
+. Selecione um *Replication Mode* na lista:
++
+** *Tempo real (assíncrono)*: As gravações são confirmadas para o cliente depois que são confirmadas no cluster de origem.
+** *Tempo real (Synchronous)*: As gravações são confirmadas para o cliente depois que são confirmadas nos clusters de origem e de destino.
+** *Somente snapshots*: Somente snapshots criados no cluster de origem são replicados. As gravações ativas do volume de origem não são replicadas.
+
+
+. Clique em *Generate Key*.
++
+
+NOTE: Esta ação gera uma chave de texto para emparelhamento e cria um par de volume não configurado no cluster local. Se não concluir o procedimento, terá de eliminar manualmente o par de volumes.
+
+. Copie a chave de emparelhamento para a área de transferência do computador.
+. Torne a tecla de emparelhamento acessível ao administrador do cluster no local do cluster remoto.
++
+
+NOTE: A tecla de emparelhamento de volume deve ser tratada de forma segura e não utilizada de forma a permitir o acesso acidental ou não seguro.
+
++
+
+IMPORTANT: Não modifique nenhum dos carateres da chave de emparelhamento. A chave se torna inválida se for modificada.
+
+. Na IU do elemento de cluster remoto, selecione *Management* > *volumes*.
+. Clique no ícone ações do volume que deseja emparelhar.
+. Clique em *Emparelhar*.
+. Na caixa de diálogo *Emparelhar volume*, selecione *Complete Pairing*.
+. Cole a chave de emparelhamento do outro cluster na caixa *chave de emparelhamento*.
+. Clique em *Complete Pairing*.
++
+Depois de confirmar o emparelhamento, os dois clusters iniciam o processo de ligação dos volumes para emparelhamento. Durante o processo de emparelhamento, você pode ver mensagens na coluna *Status do volume* da janela *pares de volume*. O par de volumes é exibido `PausedMisconfigured` até que a origem e o destino do par de volumes sejam atribuídos.
+
++
+Depois de concluir o emparelhamento com êxito, recomenda-se que atualize a tabela volumes para remover a opção *Emparelhar* da lista *ações* para o volume emparelhado. Se você não atualizar a tabela, a opção *Pair* permanecerá disponível para seleção. Se você selecionar a opção *Emparelhar* novamente, uma nova guia será aberta e, como o volume já está emparelhado, o sistema informará uma `StartVolumePairing Failed: xVolumeAlreadyPaired` mensagem de erro na janela *Emparelhar volume* da página IU do elemento.
+
+
+
+
+
+== Encontre mais informações
+
+* xref:reference_replication_volume_pairing_messages.adoc[Mensagens de emparelhamento de volume]
+* xref:reference_replication_volume_pairing_warnings.adoc[Avisos de emparelhamento de volume]
+* xref:task_replication_assign_replication_source_and_target_to_paired_volumes.adoc[Atribua uma origem de replicação e um destino a volumes emparelhados]
+

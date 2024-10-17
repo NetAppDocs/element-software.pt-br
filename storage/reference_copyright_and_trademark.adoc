@@ -1,0 +1,12 @@
+---
+permalink: storage/reference_copyright_and_trademark.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Direitos autorais, marca registrada e tradução automática
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+

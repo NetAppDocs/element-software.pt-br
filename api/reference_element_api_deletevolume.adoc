@@ -1,0 +1,160 @@
+---
+permalink: api/reference_element_api_deletevolume.html 
+sidebar: sidebar 
+keywords: volume,volumes,delete,deleting,DeleteVolume 
+summary: 'Você pode usar o método Deletevolume para marcar um volume ativo para exclusão. Quando marcado, o volume é purgado (permanentemente excluído) após o intervalo de limpeza decorrer.' 
+---
+= Deletevolume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `DeleteVolume` método para marcar um volume ativo para exclusão. Quando marcado, o volume é purgado (permanentemente excluído) após o intervalo de limpeza decorrer.
+
+Depois de fazer uma solicitação para excluir um volume, todas as conexões iSCSI ativas para o volume são imediatamente encerradas e nenhuma conexão adicional é permitida enquanto o volume está neste estado. Um volume marcado não é retornado nas solicitações de descoberta de destino.
+
+Quaisquer instantâneos de um volume marcado para exclusão não são afetados. Os instantâneos são mantidos até que o volume seja purgado do sistema. Se um volume estiver marcado para exclusão e tiver uma operação de leitura de volume em massa ou gravação de volume em massa em andamento, a operação de leitura ou gravação de volume em massa será interrompida.
+
+Se o volume que eliminar estiver emparelhado com um volume, a replicação entre os volumes emparelhados será suspensa e nenhum dado será transferido para ele ou para ele enquanto estiver num estado eliminado. O volume remoto com o qual o volume excluído foi emparelhado entra em um estado PausedMisconfigured e os dados não são mais enviados a ele ou a partir do volume excluído. Até que o volume excluído seja purgado, ele pode ser restaurado e as transferências de dados são retomadas. Se o volume excluído for purgado do sistema, o volume com o qual foi emparelhado entra em um estado StoppedMisconfigurado e o status de emparelhamento de volume é removido. O volume purgado fica permanentemente indisponível.
+
+
+
+== Parâmetro
+
+Este método tem o seguinte parâmetro de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+VolumeID
+ a| 
+A ID do volume a eliminar.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valores de retorno
+
+Este método tem os seguintes valores de retorno:
+
+|===
+
+
+| Nome | Descrição | Tipo 
+
+
+ a| 
+volume
+ a| 
+Objeto contendo informações sobre o volume excluído.
+ a| 
+xref:reference_element_api_volume.adoc[volume]
+
+
+
+ a| 
+VolumeID
+ a| 
+A volumeID do volume eliminado.
+ a| 
+número inteiro
+
+
+
+ a| 
+curva
+ a| 
+A curva é um conjunto de pares chave-valor. As chaves são os tamanhos de e/S em bytes. Os valores representam o custo da realização de uma IOP em um tamanho de e/S específico. A curva é calculada em relação a uma operação de 4096 bytes definida em 100 IOPS.
+ a| 
+Objeto JSON
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "DeleteVolume",
+   "params": {
+      "volumeID"  : 5
+   },
+   "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "volume": {
+      "access": "readWrite",
+      "accountID": 1,
+      "attributes": {
+        "name1": "value1",
+        "name2": "value2",
+        "name3": "value3"
+      },
+      "blockSize": 4096,
+      "createTime": "2016-03-28T16:16:13Z",
+      "deleteTime": "2016-03-31T22:59:42Z",
+      "enable512e": true,
+      "iqn": "iqn.2010-01.com.solidfire:jyay.1459181777648.5",
+      "name": "1459181777648",
+      "purgeTime": "2016-04-01T06:59:42Z",
+      "qos": {
+        "burstIOPS": 150,
+        "burstTime": 60,
+        "curve": {
+          "4096": 100,
+          "8192": 160,
+          "16384": 270,
+          "32768": 500,
+          "65536": 1000,
+          "131072": 1950,
+          "262144": 3900,
+          "524288": 7600,
+          "1048576": 15000
+        },
+        "maxIOPS": 100,
+        "minIOPS": 60
+      },
+      "scsiEUIDeviceID": "6a79617900000005f47acc0100000000",
+      "scsiNAADeviceID": "6f47acc1000000006a79617900000005",
+      "sliceCount": 1,
+      "status": "deleted",
+      "totalSize": 1000341504,
+      "virtualVolumeID": null,
+      "volumeAccessGroups": [
+        1
+      ],
+      "volumeID": 5,
+      "volumePairs": []
+    }
+  }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

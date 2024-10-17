@@ -1,0 +1,22 @@
+---
+permalink: storage/concept_system_manage_drives_managing_drives.html 
+sidebar: sidebar 
+keywords: drives, manage, cluster, element ui, remove drives 
+summary: Cada nó contém uma ou mais unidades físicas que são usadas para armazenar uma parte dos dados do cluster. O cluster utiliza a capacidade e o desempenho da unidade após a unidade ter sido adicionada com sucesso a um cluster. Você pode usar a IU do Element para gerenciar unidades. 
+---
+= Gerenciar unidades
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cada nó contém uma ou mais unidades físicas que são usadas para armazenar uma parte dos dados do cluster. O cluster utiliza a capacidade e o desempenho da unidade após a unidade ter sido adicionada com sucesso a um cluster. Você pode usar a IU do Element para gerenciar unidades.
+
+
+
+== Para mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in do NetApp Element para vCenter Server"^]
+

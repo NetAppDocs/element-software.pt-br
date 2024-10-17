@@ -1,0 +1,183 @@
+---
+permalink: storage/reference_monitor_event_types.html 
+sidebar: sidebar 
+keywords: event types, monitor, event log 
+summary: O sistema relata vários tipos de eventos; cada evento é uma operação concluída pelo sistema. Os eventos podem ser de rotina, eventos normais ou eventos que exigem atenção do administrador. A coluna tipos de eventos na página Registro de eventos indica em qual parte do sistema o evento ocorreu. 
+---
+= Tipos de eventos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O sistema relata vários tipos de eventos; cada evento é uma operação concluída pelo sistema. Os eventos podem ser de rotina, eventos normais ou eventos que exigem atenção do administrador. A coluna tipos de eventos na página Registro de eventos indica em qual parte do sistema o evento ocorreu.
+
+
+NOTE: O sistema não Registra comandos de API somente leitura no log de eventos.
+
+A lista a seguir descreve os tipos de eventos que aparecem no log de eventos:
+
+* *ApiEvent*
++
+Eventos iniciados por um usuário por meio de uma API ou IU da Web que modificam as configurações.
+
+* *BinAssignmentsEvent*
++
+Eventos relacionados à atribuição de compartimentos de dados. Os compartimentos são essencialmente contentores que armazenam dados e são mapeados no cluster.
+
+* *BinSyncEvent*
++
+Eventos do sistema relacionados a uma reatribuição de dados entre serviços de bloco.
+
+* *BsCheckEvent*
++
+Eventos do sistema relacionados a verificações de serviço de bloqueio.
+
+* *BsKillEvent*
++
+Eventos do sistema relacionados às terminações de serviço de bloqueio.
+
+* *BulkOpEvent*
++
+Eventos relacionados a operações realizadas em um volume inteiro, como backup, restauração, snapshot ou clone.
+
+* *CloneEvent*
++
+Eventos relacionados à clonagem de volumes.
+
+* *ClusterMasterEvent*
++
+Eventos que aparecem após a inicialização do cluster ou após alterações de configuração no cluster, como adicionar ou remover nós.
+
+* [[csum_event]]*cSumEvent*
++
+Eventos relacionados com a deteção de uma incompatibilidade de checksum durante a validação de soma de verificação de ponta a ponta.
+
++
+Os serviços que detetam uma incompatibilidade de soma de verificação são automaticamente interrompidos e não reiniciados depois de gerar este evento.
+
+* *DataEvent*
++
+Eventos relacionados à leitura e escrita de dados.
+
+* *DbEvent*
++
+Eventos relacionados ao banco de dados global mantido por nós de ensemble no cluster.
+
+* *DriveEvent*
++
+Eventos relacionados às operações de acionamento.
+
+* *CriptoporAtRestEvent*
++
+Eventos relacionados ao processo de criptografia em um cluster.
+
+* *EnsembleEvent*
++
+Eventos relacionados ao aumento ou diminuição do número de nós em um ensemble.
+
+* *FibreChannelEvent*
++
+Eventos relacionados com a configuração e as conexões com os nós.
+
+* *GcEvent*
++
+Eventos relacionados a processos são executados a cada 60 minutos para recuperar o storage em unidades de bloco. Esse processo também é conhecido como coleta de lixo.
+
+* *IeEvent*
++
+Erro interno do sistema.
+
+* *InstallEvent*
++
+Eventos de instalação automática de software. O software está sendo instalado automaticamente em um nó pendente.
+
+* *ISCSIEvent*
++
+Eventos relacionados com problemas iSCSI no sistema.
+
+* *LimitEvent*
++
+Eventos relacionados ao número de volumes ou volumes virtuais em uma conta ou no cluster que se aproxima do máximo permitido.
+
+* *ManutençãoModeEvent*
++
+Eventos relacionados ao modo de manutenção do nó, como desabilitar o nó.
+
+* [[Network_Event]]*networkEvent*
++
+Eventos relacionados ao relatório de erros de rede para cada interface de placa de interface de rede física (NIC).
+
++
+Esses eventos são acionados quando qualquer contagem de erros para uma interface excede um limite padrão de 1000 durante um intervalo de monitoramento de 10 minutos. Esses eventos se aplicam a erros de rede, como falhas recebidas, erros de verificação de redundância cíclica (CRC), erros de comprimento, erros de sobrecarga e erros de quadro.
+
+* *PlatformHardwareEvent*
++
+Eventos relacionados a problemas detetados em dispositivos de hardware.
+
+* *RemoteClusterEvent*
++
+Eventos relacionados com o emparelhamento remoto do cluster.
+
+* *AgendadorEvent*
++
+Eventos relacionados a instantâneos programados.
+
+* *ServiceEvent*
++
+Eventos relacionados com o estado do serviço do sistema.
+
+* *SliceEvent*
++
+Eventos relacionados ao Slice Server, como a remoção de uma unidade ou volume de metadados.
+
++
+Existem três tipos de eventos de reatribuição de cortes, que incluem informações sobre o serviço em que um volume é atribuído:
+
++
+** inversão: alterando o serviço primário para um novo serviço primário
++
+[listing]
+----
+sliceID oldPrimaryServiceID->newPrimaryServiceID
+----
+** movendo: mudando o serviço secundário para um novo serviço secundário
++
+[listing]
+----
+sliceID {oldSecondaryServiceID(s)}->{newSecondaryServiceID(s)}
+----
+** eliminação: removendo um volume de um conjunto de serviços
++
+[listing]
+----
+sliceID {oldSecondaryServiceID(s)}
+----
+
+
+* *SnmpTrapEvent*
++
+Eventos relacionados a traps SNMP.
+
+* *StatEvent*
++
+Eventos relacionados com estatísticas do sistema.
+
+* *TsEvent*
++
+Eventos relacionados com o serviço de transporte do sistema.
+
+* *UnexpectedException*
++
+Eventos relacionados a exceções inesperadas do sistema.
+
+* *UreEvent*
++
+Eventos relacionados a erros de leitura irrecuperáveis que ocorrem durante a leitura a partir do dispositivo de armazenamento.
+
+* *VasaProviderEvent*
++
+Eventos relacionados a um provedor VASA (vSphere APIs for Storage Awareness).
+
+

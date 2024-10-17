@@ -1,0 +1,25 @@
+---
+permalink: storage/concept_per_node_work_with_utilities.html 
+sidebar: sidebar 
+keywords: troubleshooting network issues, using per-node utilities, storage node UI 
+summary: Você pode usar os utilitários por nó para solucionar problemas de rede se as ferramentas de monitoramento padrão na IU do software NetApp Element não lhe fornecerem informações suficientes para solucionar problemas. Os utilitários por nó fornecem informações e ferramentas específicas que podem ajudá-lo a solucionar problemas de rede entre nós ou com o nó de gerenciamento. 
+---
+= Trabalhar com utilitários por nó para nós de storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar os utilitários por nó para solucionar problemas de rede se as ferramentas de monitoramento padrão na IU do software NetApp Element não lhe fornecerem informações suficientes para solucionar problemas. Os utilitários por nó fornecem informações e ferramentas específicas que podem ajudá-lo a solucionar problemas de rede entre nós ou com o nó de gerenciamento.
+
+
+
+== Encontre mais informações
+
+* xref:task_per_node_access_settings.adoc[Acesse as configurações por nó usando a IU por nó]
+* xref:reference_per_node_network_settings_details.adoc[Detalhes das definições de rede a partir da IU por nó]
+* xref:reference_per_node_cluster_settings_details.adoc[Detalhes das configurações do cluster a partir da IU por nó]
+* xref:task_per_node_run_system_tests.adoc[Execute testes do sistema usando a IU por nó]
+* xref:task_per_node_run_system_utilities.adoc[Execute utilitários do sistema usando a IU por nó]
+

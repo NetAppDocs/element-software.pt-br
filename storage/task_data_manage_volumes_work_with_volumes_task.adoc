@@ -1,0 +1,31 @@
+---
+permalink: storage/task_data_manage_volumes_work_with_volumes_task.html 
+sidebar: sidebar 
+keywords: volumes, work, storage, iscsi, fc, cluster data management, overview of functions 
+summary: O sistema SolidFire provisiona o storage usando volumes. Os volumes são dispositivos de bloco acessados pela rede por clientes iSCSI ou Fibre Channel. Na página volumes na guia Gerenciamento, você pode criar, modificar, clonar e excluir volumes em um nó. Você também pode exibir estatísticas sobre largura de banda de volume e uso de e/S. 
+---
+= Trabalhe com volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O sistema SolidFire provisiona o storage usando volumes. Os volumes são dispositivos de bloco acessados pela rede por clientes iSCSI ou Fibre Channel. Na página volumes na guia Gerenciamento, você pode criar, modificar, clonar e excluir volumes em um nó. Você também pode exibir estatísticas sobre largura de banda de volume e uso de e/S.
+
+
+
+== Encontre mais informações
+
+* link:concept_data_manage_volumes_quality_of_service_policies.html["Gerenciar políticas de qualidade de serviço"]
+* link:task_data_manage_volumes.html#create-a-volume["Crie um volume"]
+* link:task_data_manage_volumes.html#view-volume-details["Ver detalhes individuais do desempenho do volume"]
+* link:task_data_manage_volumes.html#edit-active-volumes["Editar volumes ativos"]
+* link:task_data_manage_volumes.html#delete-a-volume["Eliminar um volume"]
+* link:task_data_manage_volumes.html#restore-a-deleted-volume["Restaurar um volume excluído"]
+* link:task_data_manage_volumes.html#purge-a-volume["Purgue um volume"]
+* link:task_data_manage_volumes.html#clone-a-volume["Clonar um volume"]
+* link:task_data_manage_volumes_assign_luns_to_fibre_channel_volumes.html["Atribuir LUNs a volumes Fibre Channel"]
+* link:task_data_manage_volumes_apply_a_qos_policy.html["Aplique uma política de QoS a volumes"]
+* link:task_data_manage_volumes_remove_a_qos_policy_association_of_a_volume.html["Remova a associação de política de QoS de um volume"]
+

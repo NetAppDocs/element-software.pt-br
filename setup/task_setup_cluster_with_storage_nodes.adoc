@@ -1,0 +1,30 @@
+---
+permalink: setup/task_setup_cluster_with_storage_nodes.html 
+sidebar: sidebar 
+keywords: element, solidfire, install, setup, node, cluster 
+summary: Compreender a sequência de configuração de um cluster com nós de storage. 
+---
+= Configuração de um cluster com nós de storage do Element
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode configurar um cluster com nós de storage e gerenciá-lo usando o software Element após a instalação e os nós de cabo em uma unidade de rack e ligá-los. Em seguida, você pode instalar e configurar componentes adicionais em seu sistema de storage.
+
+.Passos
+. link:concept_setup_configure_a_storage_node.html["Configurar um nó de storage"]
+. link:task_setup_create_a_storage_cluster.html["Crie um cluster de armazenamento"]
+. link:task_post_deploy_access_the_element_software_user_interface.html["Faça login na interface do usuário do software Element"]
+. link:task_setup_add_drives_to_a_cluster.html["Adicionar unidades ao cluster"]
+. link:task_setup_determine_which_solidfire_components_to_install.html["Determine quais componentes do SolidFire instalar"]
+. link:task_setup_gh_redirect_set_up_a_management_node.html["Configure um nó de gerenciamento"]
+
+
+
+
+== Encontre mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+

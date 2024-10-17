@@ -1,0 +1,29 @@
+---
+permalink: storage/task_replication_pair_volumes.html 
+sidebar: sidebar 
+keywords: volume pairings, replication, cluster, cluster pair 
+summary: Depois de estabelecer uma conexão entre clusters em um par de cluster, é possível emparelhar um volume em um cluster com um volume no outro cluster do par. Quando é estabelecida uma relação de emparelhamento de volume, tem de identificar qual o volume que é o destino de replicação. 
+---
+= Emparelhar volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de estabelecer uma conexão entre clusters em um par de cluster, é possível emparelhar um volume em um cluster com um volume no outro cluster do par. Quando é estabelecida uma relação de emparelhamento de volume, tem de identificar qual o volume que é o destino de replicação.
+
+É possível emparelhar dois volumes para replicação em tempo real armazenados em diferentes clusters de storage em um par de cluster conectado. Depois de emparelhar dois clusters, é possível configurar volumes ativos em um cluster para serem replicados continuamente para um segundo cluster, fornecendo proteção contínua de dados (CDP). Você também pode atribuir um volume para ser a origem ou destino da replicação.
+
+Os emparelhamentos de volume são sempre um-para-um. Depois de um volume fazer parte de um emparelhamento com um volume noutro cluster, não é possível emparelhá-lo novamente com qualquer outro volume.
+
+.O que você vai precisar
+* Você estabeleceu uma conexão entre clusters em um par de cluster.
+* Você tem Privileges de administrador de cluster para um ou ambos os clusters sendo emparelhados.
+
+
+.Passos
+. xref:task_replication_create_a_target_volume_with_read_write_access.adoc[Crie um volume de destino com acesso de leitura ou gravação]
+. xref:task_replication_pair_volumes_using_volume_id_or_pairing_key.adoc[Emparelhe volumes utilizando uma ID de volume ou uma tecla de emparelhamento]
+. xref:task_replication_assign_replication_source_and_target_to_paired_volumes.adoc[Atribua uma origem de replicação e um destino a volumes emparelhados]
+

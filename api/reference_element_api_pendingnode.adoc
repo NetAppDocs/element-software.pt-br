@@ -1,0 +1,160 @@
+---
+permalink: api/reference_element_api_pendingnode.html 
+sidebar: sidebar 
+keywords: object,objects,pendingNode 
+summary: O objeto pendingNode contém informações sobre um nó que pode ser adicionado a um cluster. Use o método ListPendingNodes API para retornar uma lista dessas informações para todos os nós pendentes. Você pode adicionar qualquer um dos nós listados a um cluster usando o método da API AddNodes. 
+---
+= PendingNode
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto pendingNode contém informações sobre um nó que pode ser adicionado a um cluster. Use o `ListPendingNodes` método API para retornar uma lista dessas informações para todos os nós pendentes. Você pode adicionar qualquer um dos nós listados a um cluster usando o `AddNodes` método API.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+cipi
+ a| 
+O endereço IP do cluster atribuído ao nó.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+ActiveNodeKey
+ a| 
+Uma chave única que permite que o nó se junte ao cluster automaticamente após uma instalação bem-sucedida do software.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+AssignedNodeID
+ a| 
+O ID do nó atribuído para o nó.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+AsyncHandle
+ a| 
+O identificador do método assíncrono que você pode usar para consultar o status da operação.
+ a| 
+número inteiro
+
+
+
+ a| 
+Nome do chassisName
+ a| 
+Identifica exclusivamente um chassi; idêntico para todos os nós em um único chassi.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+cip
+ a| 
+O endereço IP do cluster atribuído ao nó.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+mip
+ a| 
+O endereço IP de gerenciamento atribuído ao nó.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+NodeSlot
+ a| 
+Para plataformas HCI, a letra correspondente ao slot do chassi em que esse nó está ("A", "B", "C" ou "D"). Para plataformas de armazenamento, esse valor é nulo.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+PendingActiveNodeID
+ a| 
+O ID do nó pendente do nó.
+ a| 
+número inteiro
+
+
+
+ a| 
+PlatformInfo
+ a| 
+Informações de hardware para o nó. Membros:
+
+* ChassisType: A plataforma de hardware do nó.
+* CpuModel: O modelo de CPU da plataforma de hardware.
+* NodeMemoryGB: A quantidade de memória instalada na plataforma física em GB.
+* NodeType: O nome do modelo do nó.
+* PlatformConfigVersion: A versão do software configurada para esse hardware de nó.
+
+ a| 
+Objeto JSON
+
+
+
+ a| 
+função
+ a| 
+A função do nó no cluster. Valores possíveis:
+
+* Gerenciamento
+* Armazenamento
+* Computação
+* Testemunha
+
+ a| 
+
+
+
+ a| 
+sip
+ a| 
+O endereço IP de armazenamento (iSCSI) atribuído ao nó.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+Software versão
+ a| 
+A versão atual do software Element em execução no nó.
+ a| 
+cadeia de carateres
+
+|===
+
+
+== Encontre mais informações
+
+* xref:reference_element_api_addnodes.adoc[AddNodes]
+* xref:reference_element_api_listpendingnodes.adoc[ListPendingNodes]
+

@@ -1,0 +1,92 @@
+---
+permalink: api/reference_element_api_getpendingoperation.html 
+sidebar: sidebar 
+keywords: get,getting,pending,operation,getpendingoperation 
+summary: Você pode usar o método GetPendingOperation para detetar uma operação em um nó que está atualmente em andamento. Este método também pode ser usado para relatar quando uma operação for concluída. 
+---
+= GetPendingOperation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `GetPendingOperation` método para detetar uma operação em um nó que está atualmente em andamento. Este método também pode ser usado para relatar quando uma operação for concluída.
+
+
+
+== Parâmetros
+
+Este método não tem parâmetros de entrada.
+
+
+
+== Valores de retorno
+
+Este método tem os seguintes valores de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+pendente
+ a| 
+Valores possíveis:
+
+* Verdadeiro: A operação ainda está em andamento.
+* falso:
++
+A operação já não está em curso.
+
+
+ a| 
+booleano
+
+
+
+ a| 
+operação
+ a| 
+Nome da operação que está em andamento ou concluída.
+ a| 
+cadeia de carateres
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "GetPendingOperation",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+   "id" : 1,
+   "result" : {
+      "pendingOperation" : {
+         "pending" : "true",
+         "operation" : "TestDrivesInternal",
+      }
+   }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

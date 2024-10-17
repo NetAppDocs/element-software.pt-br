@@ -1,0 +1,99 @@
+---
+permalink: api/reference_element_api_secureerasedrives.html 
+sidebar: sidebar 
+keywords: drive,drives,secure,erase,reset,resetting,encryption,key,secureerasedrives 
+summary: 'Pode utilizar o método SecureEraseDrives para remover quaisquer dados residuais de unidades que tenham o estado "disponível". Você pode usar esse método ao substituir uma unidade que se aproxima do fim de sua vida útil que continha dados confidenciais. Este método usa um comando Security Erase Unit para gravar um padrão predeterminado na unidade e redefinir a chave de criptografia na unidade. Este método assíncrono pode levar vários minutos para ser concluído.' 
+---
+= SecureEraseDrives
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `SecureEraseDrives` método para remover quaisquer dados residuais de unidades que tenham um status de "disponível". Você pode usar esse método ao substituir uma unidade que se aproxima do fim de sua vida útil que continha dados confidenciais. Este método usa um comando Security Erase Unit para gravar um padrão predeterminado na unidade e redefinir a chave de criptografia na unidade. Este método assíncrono pode levar vários minutos para ser concluído.
+
+
+
+== Parâmetro
+
+Este método tem o seguinte parâmetro de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+unidades
+ a| 
+Lista de IDs de unidade para apagar com segurança.
+ a| 
+array inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+AsyncHandle
+ a| 
+Valor do manípulo utilizado para obter o resultado da operação.
+ a| 
+número inteiro
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "SecureEraseDrives",
+   "params": {
+     "drives"  : [3, 4, 5]
+   },
+   "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+   "id" : 1
+   "result" : {
+     "asyncHandle" : 1
+   }
+}
+----
+
+
+== Novo desde a versão
+
+9,6
+
+
+
+== Encontre mais informações
+
+* xref:reference_element_api_getasyncresult.adoc[GetAsyncResult]
+* xref:reference_element_api_listdrives.adoc[ListDrives]
+

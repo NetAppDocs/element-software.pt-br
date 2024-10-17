@@ -1,0 +1,36 @@
+---
+permalink: storage/concept_system_monitoring_and_troubleshooting.html 
+sidebar: sidebar 
+keywords: trouble, troubleshoot, monitor, element, alert, event 
+summary: Deve monitorizar o sistema para fins de diagnóstico e obter informações sobre as tendências de desempenho e os Estados de várias operações do sistema. Talvez seja necessário substituir nós ou SSDs para fins de manutenção. 
+---
+= Solucionar problemas do sistema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Deve monitorizar o sistema para fins de diagnóstico e obter informações sobre as tendências de desempenho e os Estados de várias operações do sistema. Talvez seja necessário substituir nós ou SSDs para fins de manutenção.
+
+* link:task_monitor_information_about_system_events.html["Ver informações sobre eventos do sistema"]
+* link:reference_monitor_status_of_running_tasks.html["Exibir o status das tarefas em execução"]
+* link:task_monitor_system_alerts.html["Ver alertas do sistema"]
+* link:task_monitor_node_performance_activity.html["Visualizar a atividade de performance do nó"]
+* link:task_monitor_volume_performance.html["Ver o desempenho do volume"]
+* link:task_monitor_iscsi_sessions.html["Ver sessões iSCSI"]
+* link:task_monitor_fibre_channel_sessions.html["Ver sessões Fibre Channel"]
+* link:concept_troubleshoot_drives.html["Solucionar problemas de unidades"]
+* link:concept_troubleshoot_nodes.html["Solucionar problemas de nós"]
+* link:concept_per_node_work_with_utilities.html["Trabalhar com utilitários por nó para nós de storage"]
+* link:concept_mnode_work_with_the_management_node.html["Trabalhe com o nó de gerenciamento"]
+* link:concept_monitor_understand_cluster_fullness_levels.html["Entenda os níveis de plenitude do cluster"]
+
+
+
+
+== Para mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in do NetApp Element para vCenter Server"^]
+

@@ -1,0 +1,239 @@
+---
+sidebar: sidebar 
+permalink: mnode/task_mnode_enable_node_troubleshooting_sessions.html 
+summary: A partir do Element 12,5, você pode habilitar a conta de usuário sfreeonly no nó de gerenciamento para solucionar problemas de componentes do sistema sem a ajuda do suporte da NetApp. Você também pode ativar e abrir o acesso a túnel de suporte remoto para o suporte do NetApp para solução de problemas avançada. 
+keywords: netapp, sfreadonly, connect to support, support tunnel, rst, mnode, management node 
+---
+= Acessando nós de storage usando SSH para solução de problemas básica
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+A partir do elemento 12,5, você pode usar a conta do sistema sfreeign somente nos nós de storage para solução de problemas básica. Você também pode ativar e abrir o acesso a túnel de suporte remoto para o suporte do NetApp para solução de problemas avançada.
+
+A conta de sistema spreadonly permite o acesso para executar comandos básicos de solução de problemas de rede e sistema Linux, `ping` incluindo .
+
+
+WARNING: A menos que seja aconselhado pelo suporte NetApp, quaisquer alterações a este sistema não são suportadas, anulando o seu contrato de suporte e pode resultar em instabilidade ou inacessibilidade de dados.
+
+.Antes de começar
+* *Permissões de gravação*: Verifique se você tem permissões de gravação no diretório de trabalho atual.
+* *(Opcional) gere o seu próprio par de chaves*: Execute `ssh-keygen` a partir da distribuição Windows 10, MacOS ou Linux. Esta é uma ação única para criar um par de chaves de usuário e pode ser reutilizada para futuras sessões de solução de problemas. Você pode querer usar certificados associados a contas de funcionários, o que também funcionaria nesse modelo.
+* *Ativar capacidade SSH no nó de gerenciamento*: Para habilitar a funcionalidade de acesso remoto no modo de gerenciamento, link:task_mnode_ssh_management.html["este tópico"]consulte . Para os serviços de gerenciamento 2,18 e posteriores, o recurso de acesso remoto é desativado no nó de gerenciamento por padrão.
+* *Ativar capacidade SSH no cluster de armazenamento*: Para ativar a funcionalidade de acesso remoto nos nós do cluster de armazenamento, link:https://docs.netapp.com/us-en/element-software/storage/task_system_manage_cluster_enable_and_disable_support_access.html["este tópico"]consulte .
+* *Configuração do firewall*: Se o nó de gerenciamento estiver atrás de um servidor proxy, as seguintes portas TCP serão necessárias no arquivo sshd.config:
++
+[cols="15,25,60"]
+|===
+| Porta de TCP | Descrição | Direção da ligação 
+
+
+| 443 | Chamadas de API/HTTPS para reencaminhamento de portas via túnel de suporte aberto para a interface da Web | Nó de gerenciamento para nós de storage 
+
+
+| 22 | Acesso SSH ao login | Nó de gerenciamento para nós de storage ou de nós de storage para nó de gerenciamento 
+|===
+
+
+.Opções de resolução de problemas
+* <<Solucionar problemas de um nó de cluster>>
+* <<Solucione problemas de um nó de cluster com o suporte do NetApp>>
+* <<Solucionar problemas de um nó que não faz parte do cluster>>
+
+
+
+
+== Solucionar problemas de um nó de cluster
+
+Você pode executar a solução de problemas básica usando a conta do sistema spreadonly:
+
+.Passos
+. SSH para o nó de gerenciamento usando suas credenciais de login de conta que você selecionou ao instalar a VM do nó de gerenciamento.
+. No nó de gerenciamento, vá para `/sf/bin`.
+. Encontre o script apropriado para o seu sistema:
++
+** SignSshKeys.ps1
+** SignSshKeys.py
+** SignSshKeys.sh
++
+[NOTE]
+====
+O SignSshKeys.ps1 depende do PowerShell 7 ou posterior e o SignSshKeys.py depende do Python 3.6.0 ou posterior e do https://docs.python-requests.org/["solicita o módulo"^].
+
+O `SignSshKeys` script grava `user` os arquivos , `user.pub` e `user-cert.pub` no diretório de trabalho atual, que são usados posteriormente pelo `ssh` comando. No entanto, quando um arquivo de chave pública é fornecido ao script, apenas um `<public_key>` arquivo (com `<public_key>` substituído pelo prefixo do arquivo de chave pública passado para o script) é gravado no diretório.
+
+====
+
+
+. Execute o script no nó de gerenciamento para gerar o keychain SSH. O script permite o acesso SSH usando a conta do sistema sfrreadonly em todos os nós do cluster.
++
+[listing]
+----
+SignSshKeys --ip [ip address] --user [username] --duration [hours] --publickey [public key path]
+----
++
+.. Substitua o valor entre parênteses [ ] (incluindo os colchetes) para cada um dos seguintes parâmetros:
++
+
+NOTE: Você pode usar o parâmetro de formulário abreviado ou completo.
+
++
+*** *--ip | -i [endereço ip]*: Endereço IP do nó de destino para a API ser executada.
+*** *--user | -u [username]*: Usuário de cluster usado para executar a chamada API.
+*** *(Opcional) --duração | -d [horas]*: A duração de uma chave assinada deve permanecer válida como um inteiro em horas. O padrão é 24 horas.
+*** *(Opcional) --publickey | -k [caminho da chave pública]*: O caminho para uma chave pública, se o usuário optar por fornecer uma.
+
+
+.. Compare sua entrada com o seguinte comando de exemplo. Neste exemplo, `10.116.139.195` é o IP do nó de armazenamento, `admin` é o nome de usuário do cluster e a duração da validade da chave é de duas horas:
++
+[listing]
+----
+sh /sf/bin/SignSshKeys.sh --ip 10.116.139.195 --user admin --duration 2
+----
+.. Executar o comando.
+
+
+. SSH para os IPs do nó:
++
+[listing]
+----
+ssh -i user sfreadonly@[node_ip]
+----
++
+Você poderá executar comandos básicos de solução de problemas de rede e sistema Linux, como `ping` , e outros comandos somente leitura.
+
+. (Opcional) desative link:task_mnode_ssh_management.html["funcionalidade de acesso remoto"] novamente após a conclusão da solução de problemas.
++
+
+NOTE: O SSH permanece habilitado no nó de gerenciamento se você não o desabilitar. A configuração ativada por SSH persiste no nó de gerenciamento por meio de atualizações e atualizações até que seja desabilitada manualmente.
+
+
+
+
+
+== Solucione problemas de um nó de cluster com o suporte do NetApp
+
+O suporte da NetApp pode executar uma solução de problemas avançada com uma conta de sistema que permite que um técnico execute diagnósticos de elementos mais profundos.
+
+.Passos
+. SSH para o nó de gerenciamento usando suas credenciais de login de conta que você selecionou ao instalar a VM do nó de gerenciamento.
+. Execute o comando rst com o número da porta enviado pelo suporte NetApp para abrir o túnel de suporte:
++
+`rst -r  sfsupport.solidfire.com -u element -p <port_number>`
+
++
+O suporte da NetApp fará login no nó de gerenciamento usando o túnel de suporte.
+
+. No nó de gerenciamento, vá para `/sf/bin`.
+. Encontre o script apropriado para o seu sistema:
++
+** SignSshKeys.ps1
+** SignSshKeys.py
+** SignSshKeys.sh
++
+[NOTE]
+====
+O SignSshKeys.ps1 depende do PowerShell 7 ou posterior e o SignSshKeys.py depende do Python 3.6.0 ou posterior e do https://docs.python-requests.org/["solicita o módulo"^].
+
+O `SignSshKeys` script grava `user` os arquivos , `user.pub` e `user-cert.pub` no diretório de trabalho atual, que são usados posteriormente pelo `ssh` comando. No entanto, quando um arquivo de chave pública é fornecido ao script, apenas um `<public_key>` arquivo (com `<public_key>` substituído pelo prefixo do arquivo de chave pública passado para o script) é gravado no diretório.
+
+====
+
+
+. Execute o script para gerar o keychain SSH com a `--sfadmin` bandeira. O script habilita o SSH em todos os nós.
++
+[listing]
+----
+SignSshKeys --ip [ip address] --user [username] --duration [hours] --sfadmin
+----
++
+[NOTE]
+====
+Para SSH quanto `--sfadmin` a um nó em cluster, você deve gerar o keychain SSH usando um `--user` `supportAdmin` com acesso no cluster.
+
+Para configurar `supportAdmin` o acesso para contas de administrador de cluster, você pode usar a IU ou APIs do Element:
+
+** link:../storage/concept_system_manage_manage_cluster_administrator_users.html#view-cluster-admin-details["Configure o acesso "supportAdmin" usando a IU do Element"]
+** Configure `supportAdmin` o acesso usando APIs e adicionando `"supportAdmin"` como o `"access"` tipo na solicitação de API:
++
+*** link:../api/reference_element_api_addclusteradmin.html["Configure o acesso "supportAdmin" para uma nova conta"]
+*** link:../api/reference_element_api_modifyclusteradmin.html["Configure o acesso "supportAdmin" para uma conta existente"]
++
+Para obter o `clusterAdminID`, você pode usar a link:../api/reference_element_api_listclusteradmins.html["ListClusterAdmins"] API.
+
+
+
+
+
+Para adicionar `supportAdmin` acesso, você deve ter Privileges administrador de cluster ou administrador.
+
+====
++
+.. Substitua o valor entre parênteses [ ] (incluindo os colchetes) para cada um dos seguintes parâmetros:
++
+
+NOTE: Você pode usar o parâmetro de formulário abreviado ou completo.
+
++
+*** *--ip | -i [endereço ip]*: Endereço IP do nó de destino para a API ser executada.
+*** *--user | -u [username]*: Usuário de cluster usado para executar a chamada API.
+*** *(Opcional) --duração | -d [horas]*: A duração de uma chave assinada deve permanecer válida como um inteiro em horas. O padrão é 24 horas.
+
+
+.. Compare sua entrada com o seguinte comando de exemplo. Neste exemplo, `192.168.0.1` é o IP do nó de armazenamento, `admin` é o nome de usuário do cluster, a duração da validade da chave é de duas horas e `--sfadmin` permite o acesso do nó de suporte da NetApp para solução de problemas:
++
+[listing]
+----
+sh /sf/bin/SignSshKeys.sh --ip 192.168.0.1 --user admin --duration 2 --sfadmin
+----
+.. Executar o comando.
+
+
+. SSH para os IPs do nó:
++
+[listing]
+----
+ssh -i user sfadmin@[node_ip]
+----
+. Para fechar o túnel de suporte remoto, introduza o seguinte:
++
+`rst --killall`
+
+. (Opcional) desative link:task_mnode_ssh_management.html["funcionalidade de acesso remoto"] novamente após a conclusão da solução de problemas.
++
+
+NOTE: O SSH permanece habilitado no nó de gerenciamento se você não o desabilitar. A configuração ativada por SSH persiste no nó de gerenciamento por meio de atualizações e atualizações até que seja desabilitada manualmente.
+
+
+
+
+
+== Solucionar problemas de um nó que não faz parte do cluster
+
+Você pode executar a solução de problemas básica de um nó que ainda não foi adicionado a um cluster. Você pode usar a conta do sistema sfradonly para esse fim com ou sem a ajuda do suporte da NetApp. Se você tiver um nó de gerenciamento configurado, poderá usá-lo para SSH e executar o script fornecido para essa tarefa.
+
+. A partir de uma máquina Windows, Linux ou Mac que tenha um cliente SSH instalado, execute o script apropriado para o seu sistema fornecido pelo suporte da NetApp.
+. SSH para o IP do nó:
++
+[listing]
+----
+ssh -i user sfreadonly@[node_ip]
+----
+. (Opcional) desative link:task_mnode_ssh_management.html["funcionalidade de acesso remoto"] novamente após a conclusão da solução de problemas.
++
+
+NOTE: O SSH permanece habilitado no nó de gerenciamento se você não o desabilitar. A configuração ativada por SSH persiste no nó de gerenciamento por meio de atualizações e atualizações até que seja desabilitada manualmente.
+
+
+
+[discrete]
+== Encontre mais informações
+
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in do NetApp Element para vCenter Server"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["Página de recursos do NetApp HCI"^]
+

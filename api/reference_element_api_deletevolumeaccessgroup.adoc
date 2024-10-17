@@ -1,0 +1,112 @@
+---
+permalink: api/reference_element_api_deletevolumeaccessgroup.html 
+sidebar: sidebar 
+keywords: volume,access,group,groups,delete,deleting,DeleteVolumeAccessGroup 
+summary: Pode utilizar DeleteVolumeAccessGroup para eliminar um grupo de acesso ao volume. 
+---
+= DeleteVolumeAccessGroup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode utilizar `DeleteVolumeAccessGroup` para eliminar um grupo de acesso ao volume.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+VolumeAccessGroupID
+ a| 
+O ID do grupo de acesso ao volume a ser eliminado.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+DeleteOrphanInitiators
+ a| 
+Especifica se deseja excluir ou não objetos do iniciador. Valores possíveis:
+
+* Verdadeiro: Excluir objetos do iniciador depois que eles são removidos de um grupo de acesso de volume.
+* Falso: Não exclua objetos do iniciador depois que forem removidos de um grupo de acesso de volume. Este é o padrão.
+
+ a| 
+booleano
+ a| 
+falso
+ a| 
+Não
+
+
+
+ a| 
+força
+ a| 
+A adição desse sinalizador forçará o grupo de acesso ao volume a ser excluído, mesmo que ele tenha uma ID ou Etiqueta de rede virtual. Valores possíveis:
+
+* Verdadeiro: O grupo de acesso ao volume será excluído.
+* Falso: Padrão. Não exclua o grupo de acesso ao volume se ele tiver uma ID ou Etiqueta de rede virtual.
+
+ a| 
+booleano
+ a| 
+falso
+ a| 
+Não
+
+|===
+
+
+== Valores de retorno
+
+Este método não tem valores de retorno.
+
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "DeleteVolumeAccessGroup",
+   "params": {
+          "force": true,
+	  "volumeAccessGroupID"  : 3
+   },
+   "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+   "id" : 1,
+   "result": {}
+}
+----
+
+
+== Novo desde a versão
+
+9,6

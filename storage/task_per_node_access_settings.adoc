@@ -1,0 +1,30 @@
+---
+permalink: storage/task_per_node_access_settings.html 
+sidebar: sidebar 
+keywords: nodes, accessing node settings, accessing node settings with per-node UI 
+summary: Você pode acessar as configurações de rede, configurações de cluster e testes e utilitários do sistema na interface de usuário por nó depois de inserir o IP do nó de gerenciamento e autenticar. 
+---
+= Acesse as configurações por nó usando a IU por nó
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode acessar as configurações de rede, configurações de cluster e testes e utilitários do sistema na interface de usuário por nó depois de inserir o IP do nó de gerenciamento e autenticar.
+
+Se você quiser modificar as configurações de um nó em um estado Ativo que faz parte de um cluster, você deve fazer login como um usuário administrador de cluster.
+
+
+TIP: Você deve configurar ou modificar um nó de cada vez. Você deve garantir que as configurações de rede especificadas estejam tendo o efeito esperado e que a rede esteja estável e com bom desempenho antes de fazer modificações em outro nó.
+
+. Abra a IU por nó usando um dos seguintes métodos:
++
+** Introduza o endereço IP de gestão seguido de :442 numa janela do navegador e inicie sessão utilizando um nome de utilizador e uma palavra-passe de administrador.
+** Na IU do elemento, selecione *Cluster* > *nodes* e clique no link de endereço IP de gerenciamento do nó que deseja configurar ou modificar. Na janela do navegador que se abre, você pode editar as configurações do nó.
+
+
++
+image::../media/per_node_ui_hcc_skin.png[Página de configurações de rede da IU por nó]
+
+

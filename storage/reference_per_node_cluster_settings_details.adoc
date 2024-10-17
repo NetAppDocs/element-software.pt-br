@@ -1,0 +1,74 @@
+---
+permalink: storage/reference_per_node_cluster_settings_details.html 
+sidebar: sidebar 
+keywords: nodes, changing cluster settings, per-node UI 
+summary: Você pode verificar as configurações do cluster para um nó de armazenamento após a configuração do cluster e modificar o nome do host do nó. 
+---
+= Detalhes das configurações do cluster a partir da IU por nó
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode verificar as configurações do cluster para um nó de armazenamento após a configuração do cluster e modificar o nome do host do nó.
+
+A lista a seguir descreve as configurações de cluster para um nó de armazenamento indicado na página *Configurações de cluster* da interface  IP por nó(https://<node[]>:442/hcc/nó/configurações de cluster).
+
+* *Função*
++
+Função que o nó tem no cluster. Valores possíveis:
+
++
+** Storage: Nó de storage ou Fibre Channel.
+** Gerenciamento: O nó é um nó de gerenciamento.
+
+
+* *Nome do anfitrião*
++
+Nome do nó.
+
+* *Cluster*
++
+Nome do cluster.
+
+* *Cluster Membership*
++
+Estado do nó. Valores possíveis:
+
++
+** Disponível: O nó não tem nome de cluster associado e ainda não faz parte de um cluster.
+** Pendente: O nó está configurado e pode ser adicionado a um cluster designado. A autenticação não é necessária para acessar o nó.
+** PendingActive: O sistema está em processo de instalação de software compatível no nó. Quando concluído, o nó se moverá para o estado Ativo.
+** Ativo: O nó está participando de um cluster. A autenticação é necessária para modificar o nó.
+
+
+* *Versão*
++
+Versão do software Element em execução no nó.
+
+* *Conjunto*
++
+Nós que fazem parte do conjunto de banco de dados.
+
+* *ID do nó*
++
+ID atribuída quando um nó é adicionado ao cluster.
+
+* *Interface de cluster*
++
+Interface de rede usada para comunicação de cluster.
+
+* *Interface de Gestão*
++
+Interface de rede de gerenciamento. Este padrão é Bond1G, mas também pode usar Bond10G.
+
+* *Interface de armazenamento*
++
+Interface de rede de storage usando Bond10G.
+
+* *Capacidade de encriptação*
++
+Indica se o nó suporta ou não criptografia de unidade.
+
+

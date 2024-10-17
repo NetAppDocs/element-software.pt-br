@@ -1,0 +1,31 @@
+---
+permalink: storage/task_snapmirror_add_labels_to_snapshots.html 
+sidebar: sidebar 
+keywords: element, ui, snapmirror, labels, retention, policies, group, snapshots 
+summary: Os rótulos do SnapMirror especificam a política de retenção de snapshot no endpoint do SnapMirror. Você pode adicionar rótulos a snapshots e snapshots de grupo. 
+---
+= Adicione etiquetas SnapMirror a instantâneos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os rótulos do SnapMirror especificam a política de retenção de snapshot no endpoint do SnapMirror. Você pode adicionar rótulos a snapshots e snapshots de grupo.
+
+Você pode exibir rótulos disponíveis a partir de uma caixa de diálogo relacionamento SnapMirror existente ou do Gerenciador do sistema NetApp ONTAP.
+
+
+IMPORTANT: Quando você adiciona um rótulo a um instantâneo de grupo, todos os rótulos existentes a snapshots individuais são substituídos.
+
+.O que você vai precisar
+* O SnapMirror está ativado no cluster.
+* O rótulo que você deseja adicionar já existe no ONTAP.
+
+
+.Passos
+. Clique na página *proteção de dados* > *instantâneos* ou *instantâneos de grupo*.
+. Clique no ícone *ações* para o instantâneo ou instantâneo de grupo ao qual deseja adicionar um rótulo SnapMirror.
+. Na caixa de diálogo *Editar captura Instantânea*, insira o texto no campo *Etiqueta SnapMirror*. O rótulo deve corresponder a um rótulo de regra na política aplicada à relação SnapMirror.
+. Clique em *Salvar alterações*.
+

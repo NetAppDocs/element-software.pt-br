@@ -1,0 +1,193 @@
+---
+permalink: api/reference_element_api_nodestats.html 
+sidebar: sidebar 
+keywords: object,objects,nodestats 
+summary: O objeto nodeStats contém medições de atividade de alto nível para um nó. Você pode usar os métodos da API GetNodeStats e ListNodeStats para obter alguns ou todos os objetos nodeStats. 
+---
+= NodeStats
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto nodeStats contém medições de atividade de alto nível para um nó. Você pode usar os `GetNodeStats` métodos e `ListNodeStats` API para obter alguns ou todos os objetos nodeStats.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+contar
+ a| 
+O número total de amostras no objeto nodeStats.
+ a| 
+número inteiro
+
+
+
+ a| 
+cpu
+ a| 
+Uso de CPU, em %.
+ a| 
+número inteiro
+
+
+
+ a| 
+CpuTotal
+ a| 
+Monotonicamente aumentando o valor da utilização da CPU.
+ a| 
+número inteiro
+
+
+
+ a| 
+CBytesIn
+ a| 
+Bytes na interface do cluster.
+ a| 
+número inteiro
+
+
+
+ a| 
+CBytesOut
+ a| 
+Bytes na interface do cluster.
+ a| 
+número inteiro
+
+
+
+ a| 
+SBytesIn
+ a| 
+Bytes na interface de armazenamento.
+ a| 
+número inteiro
+
+
+
+ a| 
+SBytesOut
+ a| 
+Bytes na interface de armazenamento.
+ a| 
+número inteiro
+
+
+
+ a| 
+MBytesIn
+ a| 
+Bytes na interface de gerenciamento.
+ a| 
+número inteiro
+
+
+
+ a| 
+MBytesOut
+ a| 
+Bytes na interface de gerenciamento.
+ a| 
+número inteiro
+
+
+
+ a| 
+NetworkUtilizationCluster
+ a| 
+Utilização da interface de rede (em %) para a interface de rede do cluster.
+ a| 
+número inteiro
+
+
+
+ a| 
+NetworkUtilizationStorage
+ a| 
+Utilização da interface de rede (em %) para a interface de rede de storage.
+ a| 
+número inteiro
+
+
+
+ a| 
+ReadLatencyUSecTotal
+ a| 
+Valor monotonicamente crescente do tempo total gasto realizando operações de leitura para o nó.
+ a| 
+número inteiro
+
+
+
+ a| 
+ReadOps
+ a| 
+Aumento monotonicamente do valor total de operações de leitura para um nó.
+ a| 
+número inteiro
+
+
+
+ a| 
+SLoadHistograma
+ a| 
+Dados de histograma que ilustram a carga do serviço de corte ao longo do tempo.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+timestamp
+ a| 
+A hora atual no formato UTC-0.
+ a| 
+String de data ISO 8601
+
+
+
+ a| 
+UsedMemory
+ a| 
+Uso total de memória em bytes.
+ a| 
+número inteiro
+
+
+
+ a| 
+WriteLatencyUSecTotal
+ a| 
+Valor monotonicamente crescente do tempo total gasto realizando operações de gravação no nó.
+ a| 
+número inteiro
+
+
+
+ a| 
+WriteOps
+ a| 
+Monotonicamente aumentando o valor total de operações de gravação para um nó.
+ a| 
+número inteiro
+
+|===
+
+
+== Encontre mais informações
+
+* xref:reference_element_api_getnodestats.adoc[GetNodeStats]
+* xref:reference_element_api_listnodestats.adoc[ListNodeStats]
+

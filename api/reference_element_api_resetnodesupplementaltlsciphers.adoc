@@ -1,0 +1,61 @@
+---
+permalink: api/reference_element_api_resetnodesupplementaltlsciphers.html 
+sidebar: sidebar 
+keywords: tls,cipher,reset,supplemental,resetnodesupplementaltlsciphers,restore,restoring,node,supplemental 
+summary: Você pode usar o método ResetNodeSupplementalTlsCiphers para restaurar a lista de cifras TLS suplementares para o padrão. Você pode usar esse comando em nós de gerenciamento. 
+---
+= ResetNodeSuplementosTlsCiphers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `ResetNodeSupplementalTlsCiphers` método para restaurar a lista de cifras TLS suplementares para o padrão. Você pode usar esse comando em nós de gerenciamento.
+
+
+
+== Parâmetro
+
+
+NOTE: Você deve chamar esse método para o nó de gerenciamento. Por exemplo:
+
+[listing]
+----
+https://<management node IP>:442/json-rpc/10.0
+----
+Este método não tem parâmetros de entrada.
+
+
+
+== Valores de retorno
+
+Este método não tem valores de retorno.
+
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+  "method": "ResetNodeSupplementalTlsCiphers",
+  "params": {},
+  "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id" : 1,
+  "result" : {}
+}
+----

@@ -1,0 +1,37 @@
+---
+permalink: storage/task_system_manage_fips_check_the_fips_drive_status.html 
+sidebar: sidebar 
+keywords: fips, security, federal information processing standards, 140-2, drive, enable 
+summary: Você pode verificar se o recurso unidades FIPS está ativado no cluster usando o método da API GetFeatureStatus do software NetApp Element, que mostra se o status de unidades FIPS ativadas é verdadeiro ou falso. 
+---
+= Verifique o status da unidade FIPS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode verificar se o recurso unidades FIPS está ativado no cluster usando o método de API do software NetApp Element `GetFeatureStatus`, que mostra se o status de unidades FIPS ativadas é verdadeiro ou falso.
+
+. Usando a API Element, verifique o recurso unidades FIPS no cluster inserindo:
++
+`GetFeatureStatus`
+
+. Revise os resultados da `GetFeatureStatus` chamada de API. Se o valor de unidades FIPS ativadas for verdadeiro, o recurso unidades FIPS será ativado.
++
+[listing]
+----
+{"enabled": true,
+"feature": "FipsDrives"
+}
+----
+
+
+
+
+== Encontre mais informações
+
+* link:../api/index.html["Gerencie o storage com a API Element"]
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in do NetApp Element para vCenter Server"^]
+

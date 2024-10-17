@@ -1,0 +1,134 @@
+---
+permalink: api/reference_element_api_removeinitiatorsfromvolumeaccessgroup.html 
+sidebar: sidebar 
+keywords: initiators,initiator,volume,access,group,remove,removing,removeinitiatorsfromvolumeaccessgroup 
+summary: Você pode usar o método RemoveInitiatorsFromVolumeAccessGroup para remover iniciadores de um grupo de acesso de volume especificado. 
+---
+= RemoveInitiatorsFromVolumeAccessGroup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `RemoveInitiatorsFromVolumeAccessGroup` método para remover iniciadores de um grupo de acesso de volume especificado.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+VolumeAccessGroupID
+ a| 
+O ID do grupo de acesso ao volume do qual os iniciadores são removidos.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+iniciadores
+ a| 
+Lista de IDs ou nomes de iniciadores (IQNs e WWPNs) a incluir no grupo de acesso de volume. Se você passar uma lista de nomes de iniciadores, os iniciadores serão criados se eles ainda não existirem. Se você passar uma lista de IDs de iniciador, o método retornará um erro se algum dos iniciadores ainda não existir. Passar nomes de iniciador é obsoleto; você deve usar IDs de iniciador sempre que possível.
+ a| 
+array inteiro (recomendado) ou array de cadeia de carateres (obsoleto)
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+DeleteOrphanInitiators
+ a| 
+Especifica se os objetos do iniciador devem ser excluídos após serem removidos de um grupo de acesso de volume ou não. Valores possíveis:
+
+* Verdadeiro: Excluir objetos do iniciador depois que eles são removidos de um grupo de acesso de volume.
+* Falso: Não exclua objetos do iniciador depois que forem removidos de um grupo de acesso de volume. Este é o padrão.
+
+ a| 
+booleano
+ a| 
+falso
+ a| 
+Não
+
+|===
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+VolumeAccessGroup
+ a| 
+Um objeto contendo informações sobre o grupo de acesso de volume recém-modificado.
+ a| 
+xref:reference_element_api_volumeaccessgroup.adoc[VolumeAccessGroup]
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id": 13171,
+  "method": "RemoveInitiatorsFromVolumeAccessGroup",
+  "params": {
+    "initiators": [114,115],
+    "volumeAccessGroupID": 96
+  }
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id": 13171,
+  "result": {
+    "volumeAccessGroup": {
+      "attributes": {},
+      "deletedVolumes": [
+        327
+      ],
+      "initiatorIDs": [],
+      "initiators": [],
+      "name": "test",
+      "volumeAccessGroupID": 96,
+      "volumes": [
+        346
+      ]
+    }
+  }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

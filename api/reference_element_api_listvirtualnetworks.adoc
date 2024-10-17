@@ -1,0 +1,184 @@
+---
+permalink: api/reference_element_api_listvirtualnetworks.html 
+sidebar: sidebar 
+keywords: virtual,network,networks,listing,list,listvirtualnetworks 
+summary: Você pode usar o método ListVirtualNetworks para listar todas as redes virtuais configuradas para o cluster. 
+---
+= ListVirtualNetworks
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode utilizar o `ListVirtualNetworks` método para listar todas as redes virtuais configuradas para o cluster.
+
+Pode utilizar este método para verificar as definições de rede virtual no cluster. Não existem parâmetros necessários para este método. No entanto, para filtrar os resultados, você pode passar um ou mais valores virtualNetworkID ou virtualNetworkTag.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+VirtualNetworkID
+ a| 
+ID de rede para filtrar a lista para uma única rede virtual.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+VirtualNetworkTag
+ a| 
+Tag de rede para filtrar a lista para uma única rede virtual.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+VirtualNetworkIDs
+ a| 
+IDs de rede a incluir na lista.
+ a| 
+array inteiro
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+VirtualNetworkTags
+ a| 
+Etiqueta de rede a incluir na lista.
+ a| 
+array inteiro
+ a| 
+Nenhum
+ a| 
+Não
+
+|===
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+
+
+| Nome | Descrição | Tipo 
+
+
+ a| 
+VirtualNetworks
+ a| 
+Objeto contendo endereços IP de rede virtual.
+ a| 
+xref:reference_element_api_virtualnetwork.adoc[VirtualNetwork]
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+  "method": "ListVirtualNetworks",
+  "params": {
+     "virtualNetworkIDs": [5,6]
+   },
+"id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "virtualNetworks": [
+   {
+    "addressBlocks": [
+   {
+    "available": "11000000",
+    "size": 8,
+    "start": "10.26.250.207"
+   }
+ ],
+    "attributes": null,
+    "gateway": "10.26.250.254",
+    "name": "2250",
+    "namespace": false,
+    "netmask": "255.255.255.0",
+    "svip": "10.26.250.200",
+    "virtualNetworkID": 2250
+   },
+   {
+     "addressBlocks": [
+   {
+     "available": "11000000",
+     "size": 8,
+     "start": "10.26.241.207"
+   }
+  ],
+     "attributes": null,
+     "gateway": "10.26.241.254",
+     "name": "2241",
+     "namespace": false,
+     "netmask": "255.255.255.0",
+     "svip": "10.26.241.200",
+     "virtualNetworkID": 2241
+   },
+  {
+     "addressBlocks": [
+  {
+     "available": "11000000",
+     "size": 8,
+     "start": "10.26.240.207"
+   }
+  ],
+     "attributes": null,
+     "gateway": "10.26.240.254",
+     "name": "2240",
+     "namespace": false,
+     "netmask": "255.255.255.0",
+     "svip": "10.26.240.200",
+     "virtualNetworkID": 2240
+    },
+   {
+  }
+ ]
+}
+----
+
+
+== Novo desde a versão
+
+9,6

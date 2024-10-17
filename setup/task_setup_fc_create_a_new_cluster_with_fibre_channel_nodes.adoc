@@ -1,0 +1,53 @@
+---
+permalink: setup/task_setup_fc_create_a_new_cluster_with_fibre_channel_nodes.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode criar um novo cluster depois de configurar os nós de Fibre Channel individuais. Quando você cria um cluster, uma conta de usuário de administrador de cluster é criada automaticamente para você. O administrador do cluster tem permissão para gerenciar todos os atributos do cluster e pode criar outras contas de administrador de cluster. 
+---
+= Criar um novo cluster com nós Fibre Channel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar um novo cluster depois de configurar os nós de Fibre Channel individuais. Quando você cria um cluster, uma conta de usuário de administrador de cluster é criada automaticamente para você. O administrador do cluster tem permissão para gerenciar todos os atributos do cluster e pode criar outras contas de administrador de cluster.
+
+Durante a nova configuração do nó, os endereços 1G ou 10G Management IP (MIP) são atribuídos a cada nó. Você deve usar um dos endereços IP de nó criados durante a configuração para abrir a página criar um novo cluster. O endereço IP que você usa depende da rede escolhida para o gerenciamento de cluster.
+
+.O que você vai precisar
+Você configurou os nós de Fibre Channel individuais.
+
+.Passos
+. Em uma janela do navegador, insira um endereço MIP de nó.
+. Em criar um novo cluster, insira as seguintes informações:
++
+** VIP de gerenciamento: IP virtual roteável na rede 1GbE ou 10GbE para tarefas de gerenciamento de rede.
+** ISCSI (armazenamento) VIP: IP virtual na rede 10GbE para armazenamento e deteção iSCSI.
++
+
+NOTE: Não é possível alterar o SVIP depois de criar o cluster.
+
+** Nome de usuário: O nome de usuário do administrador de cluster principal para acesso autenticado ao cluster. Tem de guardar o nome de utilizador para referência futura.
++
+
+NOTE: Você pode usar letras maiúsculas e minúsculas, carateres especiais e números para o nome de usuário.
+
+** Senha: Senha para acesso autenticado ao cluster. Tem de guardar o nome de utilizador para referência futura. A proteção de dados bidirecional é ativada por padrão. Não é possível alterar esta definição.
+
+
+. Leia o Contrato de Licença de Usuário final e clique em *Aceito*.
+. *Opcional*: Na lista de nós, verifique se as caixas de seleção para nós que não devem ser incluídos no cluster não estão selecionadas.
+. Clique em *Create Cluster*.
++
+O sistema pode levar vários minutos para criar o cluster, dependendo do número de nós no cluster. Em uma rede configurada corretamente, um pequeno cluster de cinco nós deve levar menos de um minuto. Depois que o cluster é criado, a janela criar um novo cluster é redirecionada para o endereço de URL MVIP do cluster e exibe a IU da Web.
+
+
+
+
+
+== Encontre mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in do NetApp Element para vCenter Server"^]
+

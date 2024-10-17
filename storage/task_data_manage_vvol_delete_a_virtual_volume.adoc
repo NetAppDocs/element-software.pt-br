@@ -1,0 +1,26 @@
+---
+permalink: storage/task_data_manage_vvol_delete_a_virtual_volume.html 
+sidebar: sidebar 
+keywords: virtual volume, delete, vvols, use Element UI to delete a vvol 
+summary: Embora os volumes virtuais sempre devam ser excluídos da camada de gerenciamento do VMware, a funcionalidade para você excluir volumes virtuais é habilitada da IU do Element. Você só deve excluir um volume virtual da IU do Element quando for absolutamente necessário, como quando o vSphere não consegue limpar volumes virtuais no storage do SolidFire. 
+---
+= Eliminar um volume virtual
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Embora os volumes virtuais sempre devam ser excluídos da camada de gerenciamento do VMware, a funcionalidade para você excluir volumes virtuais é habilitada da IU do Element. Você só deve excluir um volume virtual da IU do Element quando for absolutamente necessário, como quando o vSphere não consegue limpar volumes virtuais no storage do SolidFire.
+
+. Selecione *Vols* > *volumes virtuais*.
+. Clique no ícone ações do volume virtual que você deseja excluir.
+. No menu resultante, selecione *Excluir*.
++
+
+IMPORTANT: Você deve excluir um volume virtual da camada de gerenciamento do VMware para garantir que o volume virtual esteja devidamente desvinculado antes da exclusão. Você só deve excluir um volume virtual da IU do Element quando for absolutamente necessário, como quando o vSphere não consegue limpar volumes virtuais no storage do SolidFire. Se você excluir um volume virtual da IU do elemento, o volume será removido imediatamente.
+
+. Confirme a ação.
+. Atualize a lista de volumes virtuais para confirmar que o volume virtual foi removido.
+. *Opcional*: Selecione *Reporting* > *Event Log* para confirmar que a purga foi bem-sucedida.
+

@@ -1,0 +1,25 @@
+---
+permalink: concepts/concept_solidfire_concepts_volume_access_groups.html 
+sidebar: sidebar 
+keywords: volume access groups, volumes, access volumes 
+summary: Os grupos de acesso de volume no armazenamento NetApp SolidFire permitem que os IQNs do iniciador iSCSI ou WWPNs do Fibre Channel acessem uma coleção de volumes. Cada IQN que você adicionar a um grupo de acesso pode acessar cada volume no grupo sem usar a autenticação CHAP. Cada WWPN que você adicionar a um grupo de acesso permite o acesso à rede Fibre Channel aos volumes no grupo de acesso. 
+---
+= Grupos de acesso de volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ao criar e usar grupos de acesso de volume, você pode controlar o acesso a um conjunto de volumes. Quando você associa um conjunto de volumes e um conjunto de iniciadores a um grupo de acesso de volume, o grupo de acesso concede a esses iniciadores acesso a esse conjunto de volumes.
+
+Os grupos de acesso de volume no armazenamento NetApp SolidFire permitem que os IQNs do iniciador iSCSI ou WWPNs do Fibre Channel acessem uma coleção de volumes. Cada IQN que você adicionar a um grupo de acesso pode acessar cada volume no grupo sem usar a autenticação CHAP. Cada WWPN que você adicionar a um grupo de acesso permite o acesso à rede Fibre Channel aos volumes no grupo de acesso.
+
+Os grupos de acesso ao volume têm os seguintes limites:
+
+* Um máximo de 128 iniciadores por grupo de acesso de volume.
+* Um máximo de 64 grupos de acesso por volume.
+* Um grupo de acesso pode ser composto por um máximo de 2000 volumes.
+* Um IQN ou WWPN pode pertencer a apenas um grupo de acesso de volume.
+* Para clusters Fibre Channel, um único volume pode pertencer a um máximo de quatro grupos de acesso.
+

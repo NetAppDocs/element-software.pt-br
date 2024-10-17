@@ -1,0 +1,168 @@
+---
+permalink: api/reference_element_api_event.html 
+sidebar: sidebar 
+keywords: object,objects,event 
+summary: O objeto evento contém detalhes de eventos que ocorrem durante uma chamada de método API ou enquanto o sistema está executando uma operação. 
+---
+= evento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto evento contém detalhes de eventos que ocorrem durante uma chamada de método API ou enquanto o sistema está executando uma operação.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+detalhes
+ a| 
+Informações adicionais sobre o evento.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+ID de acesso
+ a| 
+O driveID da unidade que comunica a avaria. 0 se não aplicável.
+ a| 
+número inteiro
+
+
+
+ a| 
+IDs de acesso
+ a| 
+Uma lista das IDs de acesso das unidades que relatam a falha. Uma lista vazia, se não aplicável.
+ a| 
+array inteiro
+
+
+
+ a| 
+ID do evento
+ a| 
+ID exclusivo associado a cada evento.
+ a| 
+número inteiro
+
+
+
+ a| 
+EventInfoType
+ a| 
+O tipo de avaria.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+mensagem
+ a| 
+Uma descrição de string do evento que ocorreu.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+NodeID
+ a| 
+O nodeID do nó que relata a falha. 0 se não aplicável.
+ a| 
+número inteiro
+
+
+
+ a| 
+ID do serviço
+ a| 
+O serviceID do serviço que relata a falha. 0 se não aplicável.
+ a| 
+número inteiro
+
+
+
+ a| 
+gravidade
+ a| 
+Gravidade o evento está relatando.
+ a| 
+número inteiro
+
+
+
+ a| 
+TimeOfPublish
+ a| 
+A hora em que o log de eventos do cluster recebeu o evento, no formato UTC-0.
+ a| 
+String de data ISO 8601
+
+
+
+ a| 
+TimeOfReport
+ a| 
+A hora em que o evento ocorreu no cluster, no formato UTC-0.
+ a| 
+String de data ISO 8601
+
+|===
+*Nota:* pode haver uma ligeira diferença entre timeOfReport e timeOfPublish se o evento ocorreu e não foi capaz de ser publicado imediatamente.
+
+
+
+== Tipos de eventos
+
+A lista a seguir descreve os possíveis tipos de eventos que o membro eventInfoType pode conter:
+
+* ApiEvent: Eventos iniciados através da API ou UI da Web que modificam as configurações.
+* BinAssignmentsEvent: Eventos relacionados à atribuição de dados para contentores internos.
+* BinSyncEvent: Eventos relacionados a uma reatribuição de dados entre serviços de bloco.
+* BsCheckEvent: Eventos relacionados a verificações de serviço de bloqueio.
+* BsKillEvent: Eventos relacionados a terminações de serviço de bloqueio.
+* BulkOpEvent: Eventos que operam em um volume inteiro, como backup de volume, restauração, snapshot ou clone.
+* CloneEvent: Eventos relacionados à clonagem de volumes.
+* ClusterMasterEvent: Eventos de alteração de configuração de cluster, como adicionar ou remover nós.
+* DataEvent: Eventos relacionados à leitura e escrita de dados.
+* DbEvent: Eventos relacionados ao banco de dados do nó ensemble.
+* DriveEvent: Eventos relacionados com as operações de condução.
+* CrypptionAtRestEvent: Eventos relacionados à criptografia de dados armazenados.
+* EnsembleEvent: Eventos relacionados ao aumento ou diminuição do tamanho do ensemble.
+* FibreChannelEvent: Eventos relacionados à configuração ou conexões do nó Fibre Channel.
+* GcEvent: Eventos relacionados à coleta de lixo. Esses processos são executados a cada 60 minutos para recuperar storage em unidades de bloco.
+* IeEvent: Eventos relacionados a erros internos do sistema.
+* InstallEvent: Eevnts relacionados à instalação automática de software em nós de storage pendentes.
+* ISCSIEvent: Eventos relacionados a problemas de conexão iSCSI ou configuração.
+* LimitEvent: Eventos relacionados ao número de volumes ou volumes virtuais em uma conta ou no cluster que está próximo do máximo permitido.
+* NetworkEvent: Eventos relacionados à rede virtual.
+* PlatformHardwareEvent: Eventos relacionados a problemas detetados em dispositivos de hardware.
+* RemoteClusterEvent: Eventos relacionados ao emparelhamento remoto de cluster.
+* Scheduler Event: Eventos relacionados a instantâneos programados.
+* ServiceEvent: Eventos relacionados ao status do serviço do sistema.
+* StatEvent: Eventos relacionados às estatísticas do sistema.
+* SliceEvent: Eventos relacionados ao armazenamento de metadados.
+* SnmpTrapEvent: Eventos relacionados a traps SNMP.
+* TsEvent: Eventos de serviço de transporte do sistema.
+* UnexpectedException: Eventos relacionados a erros inesperados.
+* VasaProviderEvent: Eventos relacionados a um provedor VMware VASA.
+
+
+
+
+== Encontre mais informações
+
+xref:reference_element_api_listevents.adoc[ListEvents]

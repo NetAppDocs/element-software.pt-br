@@ -1,0 +1,83 @@
+---
+permalink: api/reference_element_api_clearclusterfaults.html 
+sidebar: sidebar 
+keywords: cluster,clear,clearing,fault,faults,support bundles,ClearClusterFaults 
+summary: Você pode usar o método ClearClusterFaults para limpar informações sobre falhas atuais e detetadas anteriormente. As avarias resolvidas e não resolvidas podem ser apagadas. 
+---
+= ClearClusterFaults
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode utilizar o `ClearClusterFaults` método para limpar informações sobre avarias atuais e detetadas anteriormente. As avarias resolvidas e não resolvidas podem ser apagadas.
+
+
+
+== Parâmetro
+
+Este método tem o seguinte parâmetro de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+FaultTypes
+ a| 
+Determina os tipos de avarias a eliminar. Valores possíveis:
+
+* corrente:
++
+Avarias detetadas atualmente e que não foram resolvidas.
+
+* Resolvido: Avarias que foram detetadas e resolvidas anteriormente.
+* Todos: Avarias atuais e resolvidas. O estado da avaria pode ser determinado pelo campo "resolvido" do objeto de avaria.
+
+ a| 
+cadeia de carateres
+ a| 
+resolvido
+ a| 
+Não
+
+|===
+
+
+== Valores de retorno
+
+Este método não tem valores de retorno.
+
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "ClearClusterFaults",
+   "params": {},
+  "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id" : 1,
+    "result" : {}
+}
+----
+
+
+== Novo desde a versão
+
+9,6

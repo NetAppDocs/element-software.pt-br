@@ -1,0 +1,293 @@
+---
+permalink: api/reference_element_api_clusterstats.html 
+sidebar: sidebar 
+keywords: objects,clusterStats 
+summary: O objeto clusterStats contém dados estatísticos para um cluster. Muitas das estatísticas relacionadas ao volume contidas no objeto são médias para todos os volumes no cluster. Você pode usar o método GetClusterStats para recuperar essas informações para um cluster. 
+---
+= ClusterStats
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto clusterStats contém dados estatísticos para um cluster. Muitas das estatísticas relacionadas ao volume contidas no objeto são médias para todos os volumes no cluster. Você pode usar o método GetClusterStats para recuperar essas informações para um cluster.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Cálculo | Tipo 
+
+
+ a| 
+IOPS actualIOPS
+ a| 
+IOPS atual de todo o cluster nos últimos 500 milissegundos.
+ a| 
+Ponto no tempo
+ a| 
+número inteiro
+
+
+
+ a| 
+AverageIOPSize
+ a| 
+Tamanho médio em bytes de e/S recentes para o cluster nos últimos 500 milissegundos.
+ a| 
+Ponto no tempo
+ a| 
+número inteiro
+
+
+
+ a| 
+ClientQueueDepth
+ a| 
+O número de operações de leitura e gravação pendentes no cluster.
+ a| 
+N/A.
+ a| 
+número inteiro
+
+
+
+ a| 
+ClusterUtilização
+ a| 
+A porcentagem do IOPS máximo do cluster que está sendo utilizado atualmente. Isso é computado como clusterUtilização: NormalizedIOPS / maxIOPS (de GetClusterCapacity).
+ a| 
+N/A.
+ a| 
+flutuação
+
+
+
+ a| 
+LatencyUSec
+ a| 
+O tempo médio, em microssegundos, para concluir as operações para um cluster nos últimos 500 milissegundos.
+ a| 
+Ponto no tempo
+ a| 
+número inteiro
+
+
+
+ a| 
+NormalizedIOPS
+ a| 
+Número médio de IOPS para todo o cluster nos últimos 500 milissegundos.
+ a| 
+Ponto no tempo
+ a| 
+número inteiro
+
+
+
+ a| 
+ReadBytes
+ a| 
+O total de bytes cumulativos lidos a partir do cluster desde a criação do cluster.
+ a| 
+Monotonicamente crescente
+ a| 
+número inteiro
+
+
+
+ a| 
+ReadBytesLastSample
+ a| 
+O número total de bytes lidos do cluster durante o último período de amostra.
+ a| 
+Ponto no tempo
+ a| 
+número inteiro
+
+
+
+ a| 
+ReadLatencySU
+ a| 
+O tempo médio, em microssegundos, para concluir as operações de leitura para o cluster nos últimos 500 milissegundos.
+ a| 
+Ponto no tempo
+ a| 
+número inteiro
+
+
+
+ a| 
+ReadLatencyUSecTotal
+ a| 
+O tempo total gasto em operações de leitura desde a criação do cluster.
+ a| 
+Monotonicamente crescente
+ a| 
+número inteiro
+
+
+
+ a| 
+ReadOps
+ a| 
+O total de operações de leitura cumulativas para o cluster desde a criação do cluster.
+ a| 
+Monotonicamente crescente
+ a| 
+número inteiro
+
+
+
+ a| 
+ReadOpsLastSample
+ a| 
+O número total de operações de leitura durante o último período da amostra.
+ a| 
+Ponto no tempo
+ a| 
+número inteiro
+
+
+
+ a| 
+SamplePeriodMSec
+ a| 
+A duração do período da amostra, em milissegundos.
+ a| 
+N/A.
+ a| 
+número inteiro
+
+
+
+ a| 
+ServicesCount
+ a| 
+O número de serviços em execução no cluster. Se for igual ao servicesTotal, isso indica que estatísticas válidas foram coletadas de todos os nós.
+ a| 
+Ponto no tempo
+ a| 
+número inteiro
+
+
+
+ a| 
+ServicesTotal
+ a| 
+O número total de serviços esperados em execução no cluster.
+ a| 
+N/A.
+ a| 
+número inteiro
+
+
+
+ a| 
+timestamp
+ a| 
+A hora atual no formato UTC-0.
+ a| 
+N/A.
+ a| 
+String de data ISO 8601
+
+
+
+ a| 
+UnalignedReads
+ a| 
+O total de operações de leitura não alinhadas cumulativas para um cluster desde a criação do cluster.
+ a| 
+Monotonicamente crescente
+ a| 
+número inteiro
+
+
+
+ a| 
+UnalignedWrites
+ a| 
+O total de operações de gravação desalinhadas cumulativas em um cluster desde a criação do cluster.
+ a| 
+Monotonicamente crescente
+ a| 
+número inteiro
+
+
+
+ a| 
+Escreve Bytes
+ a| 
+O total de bytes cumulativos gravados no cluster desde a criação do cluster.
+ a| 
+Monotonicamente crescente
+ a| 
+número inteiro
+
+
+
+ a| 
+WriteBytesLastSample
+ a| 
+O número total de bytes gravados no cluster durante o último período de amostra.
+ a| 
+Monotonicamente crescente
+ a| 
+número inteiro
+
+
+
+ a| 
+Escreva um comentário para writeLatencyUSec
+ a| 
+O tempo médio, em microssegundos, para concluir as operações de gravação em um cluster nos últimos 500 milissegundos.
+ a| 
+Ponto no tempo
+ a| 
+número inteiro
+
+
+
+ a| 
+WriteLatencyUSecTotal
+ a| 
+O tempo total gasto na execução das operações de gravação desde a criação do cluster.
+ a| 
+Monotonicamente crescente
+ a| 
+número inteiro
+
+
+
+ a| 
+WriteOps
+ a| 
+O total de operações de gravação cumulativas no cluster desde a criação do cluster.
+ a| 
+Monotonicamente crescente
+ a| 
+número inteiro
+
+
+
+ a| 
+Escreva um comentário para LastSample
+ a| 
+O número total de operações de gravação durante o último período de amostra.
+ a| 
+Ponto no tempo
+ a| 
+número inteiro
+
+|===
+
+
+== Encontre mais informações
+
+xref:reference_element_api_getclusterstats.adoc[GetClusterStats]

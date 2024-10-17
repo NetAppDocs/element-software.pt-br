@@ -1,0 +1,49 @@
+---
+permalink: storage/task_troubleshoot_remove_failed_drives.html 
+sidebar: sidebar 
+keywords: troubleshoot, failed drives, remove 
+summary: O sistema SolidFire coloca uma unidade em um estado com falha se o autodiagnóstico da unidade disser ao nó que falhou ou se a comunicação com a unidade parar por cinco minutos e meio ou mais. O sistema exibe uma lista das unidades com falha. Você deve remover uma unidade com falha da lista de unidades com falha no software NetApp Element. 
+---
+= Remover unidades com falha do cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O sistema SolidFire coloca uma unidade em um estado com falha se o autodiagnóstico da unidade disser ao nó que falhou ou se a comunicação com a unidade parar por cinco minutos e meio ou mais. O sistema exibe uma lista das unidades com falha. Você deve remover uma unidade com falha da lista de unidades com falha no software NetApp Element.
+
+As unidades na lista *Alerts* são exibidas como *blockServiceUnHealthy* quando um nó está offline. Ao reiniciar o nó, se o nó e suas unidades voltarem online dentro de cinco minutos e meio, as unidades serão atualizadas automaticamente e continuarão como unidades ativas no cluster.
+
+. Na IU do elemento, selecione *Cluster* > *Drives*.
+. Clique em *Failed* para ver a lista de unidades com falha.
+. Observe o número do slot da unidade com falha.
++
+Você precisa dessas informações para localizar a unidade com falha no chassi.
+
+. Remova as unidades com falha usando um dos seguintes métodos:
++
+|===
+
+
+| Opção | Passos 
+
+
+ a| 
+Para remover unidades individuais
+ a| 
+.. Clique em *ações* para a unidade que deseja remover.
+.. Clique em *Remover*.
+
+
+
+
+ a| 
+Para remover várias unidades
+ a| 
+.. Selecione todas as unidades que deseja remover e clique em *ações em massa*.
+.. Clique em *Remover*.
+
+
+|===
+

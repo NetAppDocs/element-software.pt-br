@@ -1,0 +1,188 @@
+---
+permalink: api/reference_element_api_modifyaccount.html 
+sidebar: sidebar 
+keywords: modify,modifying,edit,editing,change,changing,accounts,settings,modifyaccount 
+summary: Você pode usar o método ModifyAccount para modificar uma conta existente. 
+---
+= ModifyAccount
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `ModifyAccount` método para modificar uma conta existente.
+
+Quando você bloqueia uma conta, todas as conexões existentes dessa conta são imediatamente encerradas. Quando você altera as configurações CHAP de uma conta, todas as conexões existentes permanecem ativas e as novas configurações CHAP são usadas em conexões ou reconexões subsequentes. Para limpar os atributos de uma conta, especifique para o parâmetro atributos.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+ID Contabilística
+ a| 
+AccountID para a conta modificar.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+atributos
+ a| 
+Lista de pares nome-valor no formato de objeto JSON.
+ a| 
+Objeto JSON
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+EnableChap
+ a| 
+Especifica se as credenciais da conta CHAP podem ser usadas por um iniciador para acessar volumes.
+ a| 
+booleano
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+InitiatorSecret
+ a| 
+O segredo CHAP a ser usado para o iniciador. Este segredo deve ter 12-16 carateres de comprimento e deve ser impenetrável. O segredo CHAP iniciador deve ser único e não pode ser o mesmo que o segredo CHAP alvo.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+estado
+ a| 
+Status da conta. Valores possíveis:
+
+* Ativo: A conta está ativa e as ligações são permitidas.
+* Bloqueado: A conta está bloqueada e as ligações são recusadas.
+
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+TargetSecret
+ a| 
+O segredo CHAP a ser usado para o alvo (autenticação CHAP mútua). Este segredo deve ter 12-16 carateres de comprimento e deve ser impenetrável. O segredo CHAP alvo deve ser único e não pode ser o mesmo que o segredo CHAP iniciador.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+nome de utilizador
+ a| 
+Usado para alterar o nome de usuário associado à conta. (Tem de ter entre 1 e 64 carateres).
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+|===
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+
+
+| Nome | Descrição | Tipo 
+
+
+ a| 
+conta
+ a| 
+Um objeto contendo informações sobre a conta modificada.
+ a| 
+xref:reference_element_api_account.adoc[conta]
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao exemplo a seguir. Neste exemplo, os atributos são limpos especificando para eles:
+
+[listing]
+----
+{
+   "method": "ModifyAccount",
+   "params": {
+     "accountID"  : 25,
+     "status"   : "locked",
+     "attributes" : {}
+   },
+   "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+    "account": {
+        "storageContainerID": "abcdef01-1234-5678-90ab-cdef01234567",
+        "username": "user1",
+        "accountID": 1,
+        "volumes": [
+        ],
+        "enableChap": true,
+        "initiatorSecret": "txz123456q890",
+        "attributes": {
+        },
+        "status": active",
+        "targetSecret": "rxe123b567890"
+    }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

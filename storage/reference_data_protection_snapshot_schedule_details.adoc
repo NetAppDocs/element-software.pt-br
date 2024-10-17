@@ -1,0 +1,57 @@
+---
+permalink: storage/reference_data_protection_snapshot_schedule_details.html 
+sidebar: sidebar 
+keywords: snapshots, snapshot schedules 
+summary: 'Na página Data Protection /> Schedules (programas de proteção de dados), pode visualizar as seguintes informações na lista de programas de instantâneos.' 
+---
+= Detalhes do agendamento do Snapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Na página proteção de dados > agendas, pode visualizar as seguintes informações na lista de agendas de instantâneos.
+
+* *ID*
++
+A ID gerada pelo sistema para o instantâneo.
+
+* *Tipo*
++
+O tipo de programação. Instantâneo é atualmente o único tipo suportado.
+
+* *Nome*
++
+O nome dado à programação quando foi criada. Os nomes de agendamento instantâneo podem ter até 223 carateres de comprimento e conter carateres a-z, 0-9 e traço (-).
+
+* *Frequência*
++
+A frequência em que o programa é executado. A frequência pode ser definida em horas e minutos, semanas ou meses.
+
+* *Recorrente*
++
+Indicação de se o programa deve ser executado apenas uma vez ou em intervalos regulares.
+
+* *Manualmente em pausa*
++
+Indicação de se o agendamento foi ou não pausado manualmente.
+
+* *IDs de volume*
++
+A ID do volume que a programação usará quando a programação for executada.
+
+* *Último Run*
++
+A última vez que a programação foi executada.
+
+* *Estado da última corrida*
++
+O resultado da última execução do cronograma. Valores possíveis:
+
++
+** Sucesso
+** Falha
+
+
+

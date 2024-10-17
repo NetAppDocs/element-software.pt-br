@@ -1,0 +1,21 @@
+---
+permalink: storage/task_replication_delete_cluster_pair.html 
+sidebar: sidebar 
+keywords: cluster pairs, delete 
+summary: Você pode excluir um par de cluster da IU do elemento de um dos clusters do par. 
+---
+= Excluir um par de cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode excluir um par de cluster da IU do elemento de um dos clusters do par.
+
+. Clique em *proteção de dados* > *pares de cluster*.
+. Clique no ícone ações de um par de cluster.
+. No menu resultante, clique em *Excluir*.
+. Confirme a ação.
+. Execute novamente os passos a partir do segundo cluster no emparelhamento do cluster.
+

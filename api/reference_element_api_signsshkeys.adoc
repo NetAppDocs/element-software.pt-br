@@ -1,0 +1,172 @@
+---
+permalink: api/reference_element_api_signsshkeys.html 
+sidebar: sidebar 
+keywords: ssh, sign key 
+summary: Depois que o ssh é ativado em um nó ou cluster, você pode usar o método SignSshKeys para obter acesso a um shell em um nó como sfadmin ou sfreadonly.sfreadonly é uma nova conta de usuário a partir do elemento 12,5 que permite a solução de problemas inicial em um nó, mas não tem Privileges para fazer comandos elevados. 
+---
+= SignSshKeys
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois que o SSH estiver ativado no cluster usando o link:../api/reference_element_api_enablessh.html["Método EnableSSH"], você poderá usar o `SignSshKeys` método para obter acesso a um shell em um nó.
+
+Começando com o elemento 12,5, `sfreadonly` é uma nova conta de sistema que permite a solução de problemas básicos em um nó. Esta API permite o acesso SSH usando a `sfreadonly` conta do sistema em todos os nós do cluster.
+
+
+WARNING: A menos que seja aconselhado pelo suporte da NetApp, quaisquer alterações no sistema não são suportadas, anulando o contrato de suporte e pode resultar em instabilidade ou inacessibilidade dos dados.
+
+Depois de usar o método, você deve copiar o keychain da resposta, salvá-lo no sistema que estará iniciando a conexão SSH e, em seguida, executar o seguinte comando:
+
+[listing]
+----
+ssh -i <identity_file> sfreadonly@<node_ip>
+----
+ `identity_file` É um arquivo do qual a identidade (chave privada) para autenticação de chave pública é lida e `node_ip` é o endereço IP do nó. Para obter mais informações sobre `identity_file`o , consulte a página man do SSH.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+duração
+ a| 
+Número inteiro de 1 a 24 refletindo o número de horas para a chave assinada ser válido. Se a duração não for especificada, o padrão será usado.
+ a| 
+número inteiro
+ a| 
+1
+ a| 
+Não
+
+
+
+ a| 
+PublicKey
+ a| 
+Se fornecido, esse parâmetro retornará somente a signed_public_key em vez de criar um keychain completo para o usuário.
+
+
+NOTE: Chaves públicas enviadas usando a barra de URL em um navegador com `+` são interpretadas como espaçadas e quebras de assinatura.
+ a| 
+cadeia de carateres
+ a| 
+Nulo
+ a| 
+Não
+
+
+
+ a| 
+sfadmin
+ a| 
+Permite o acesso à conta de shell sfadmin quando você faz a chamada de API com acesso de cluster supportAdmin ou quando o nó não está em um cluster.
+ a| 
+booleano
+ a| 
+Falso
+ a| 
+Não
+
+|===
+
+
+== Valores de retorno
+
+Este método tem os seguintes valores de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+keygen_status
+ a| 
+Contém a identidade na chave assinada, os principais permitidos e as datas de início e fim válidas para a chave.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+chave_privada
+ a| 
+Um valor de chave SSH privada só será retornado se a API estiver gerando um keychain completo para o usuário final.
+
+
+NOTE: O valor é Base64 codificado; você deve decodificar o valor quando ele é gravado em um arquivo para garantir que ele seja lido como uma chave privada válida.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+public_key
+ a| 
+Um valor de chave SSH pública só será retornado se a API estiver gerando um keychain completo para o usuário final.
+
+
+NOTE: Quando você passa um parâmetro public_key para o método API, apenas o `signed_public_key` valor é retornado na resposta.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+signed_public_key
+ a| 
+A chave pública SSH que resulta da assinatura da chave pública, seja ela fornecida pelo usuário ou gerada pela API.
+ a| 
+cadeia de carateres
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+    "method": "SignSshKeys",
+    "params": {
+        "duration": 2,
+        "publicKey":<string>
+    },
+    "id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id": null,
+  "result": {
+    "signedKeys": {
+      "keygen_status": <keygen_status>,
+      "signed_public_key": <signed_public_key>
+    }
+  }
+}
+----
+Neste exemplo, uma chave pública é assinada e retornada válida para a duração (1-24 horas).
+
+
+
+== Novo desde a versão
+
+12,5

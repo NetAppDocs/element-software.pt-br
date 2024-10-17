@@ -1,0 +1,187 @@
+---
+permalink: api/reference_element_api_fault.html 
+sidebar: sidebar 
+keywords: object,objects,fault 
+summary: O objeto de avaria contém informações sobre avarias detetadas no grupo de instrumentos. O método ListClusterFaults retorna informações de falha do cluster. 
+---
+= avaria
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto de avaria contém informações sobre avarias detetadas no grupo de instrumentos. O `ListClusterFaults` método retorna informações de falha do cluster.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+BlocksUpgrade
+ a| 
+A falha bloqueia uma atualização. Valores possíveis:
+
+* Verdadeiro: A falha bloqueia uma atualização.
+* Falso: A falha não bloqueia uma atualização.
+
+ a| 
+booleano
+
+
+
+ a| 
+ClausterFaultID
+ a| 
+O ID exclusivo associado a cada falha do cluster.
+ a| 
+número inteiro
+
+
+
+ a| 
+código
+ a| 
+O código de avaria para a avaria específica detetada. Para obter mais detalhes, consulte códigos de falha do cluster.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+dados
+ a| 
+Informações adicionais específicas para falhas.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+data
+ a| 
+A hora atual no formato UTC-0.
+ a| 
+ISO 8601 string
+
+
+
+ a| 
+detalhes
+ a| 
+A descrição da avaria com detalhes adicionais.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+ID de acesso
+ a| 
+A primeira ID da unidade na lista de IDs de acesso. Se a lista driveIDs estiver vazia (o que significa que não foram devolvidas quaisquer avarias que tratem as unidades), este valor é 0.
+ a| 
+número inteiro
+
+
+
+ a| 
+IDs de acesso
+ a| 
+Uma lista de valores de ID de acesso para as unidades a que esta avaria se refere. Incluído para falhas que lidam com unidades. Se nenhum, este é um array vazio.
+ a| 
+array inteiro
+
+
+
+ a| 
+NodeHardwareFaultID
+ a| 
+O identificador atribuído a uma falha de hardware no cluster.
+ a| 
+número inteiro
+
+
+
+ a| 
+NodeID
+ a| 
+O ID do nó para o nó ao qual esta falha se refere. Incluído para falhas de nó e unidade, caso contrário definido como 0.
+ a| 
+número inteiro
+
+
+
+ a| 
+resolvido
+ a| 
+O estado resolvido da avaria. Valores possíveis:
+
+* Verdadeiro: A avaria já não é detetada.
+* Falso: A avaria continua presente.
+
+ a| 
+booleano
+
+
+
+ a| 
+ResolvedDate
+ a| 
+A data e a hora em que a avaria foi resolvida.
+ a| 
+ISO 8601 string
+
+
+
+ a| 
+ID do serviço
+ a| 
+O serviço associado à avaria. Este valor é "0" (zero) se a avaria não estiver associada a uma assistência.
+ a| 
+número inteiro
+
+
+
+ a| 
+gravidade
+ a| 
+A gravidade da avaria. Valores possíveis:
+
+* Aviso: Um problema menor. O cluster está funcionando e as atualizações são permitidas nesse nível de gravidade.
+* Erro: Uma falha que geralmente não deve afetar o serviço (exceto possível degradação do desempenho ou perda de HA). Alguns recursos podem estar desativados.
+* Crítico: Uma falha grave que está afetando o serviço. O sistema não consegue atender solicitações de API ou e/S do cliente e corre o risco de perda de dados.
+* BestPractice: Falhas desencadeadas pela configuração do sistema sub-ótima.
+
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+tipo
+ a| 
+O tipo de avaria. Valores possíveis:
+
+* Nó: Uma falha que afeta um nó inteiro.
+* Drive: Uma falha que afeta uma unidade individual.
+* Cluster: Uma falha que afeta todo o cluster.
+* Serviço: Uma falha que afeta um serviço no cluster.
+* Volume: Uma avaria que afeta um volume individual.
+
+ a| 
+cadeia de carateres
+
+|===
+
+
+== Encontre mais informações
+
+* xref:reference_element_api_listclusterfaults.adoc[ListClusterFaults]
+* link:../storage/reference_monitor_cluster_fault_codes.html["Códigos de falha do cluster"]
+

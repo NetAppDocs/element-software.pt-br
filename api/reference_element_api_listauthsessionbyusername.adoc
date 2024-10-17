@@ -1,0 +1,122 @@
+---
+permalink: api/reference_element_api_listauthsessionbyusername.html 
+sidebar: sidebar 
+keywords: username,sessions,authentication sessions,list 
+summary: Você pode usar o método ListAuthSessionsByUsername para listar todas as sessões de autenticação para o usuário especificado. Um chamador que não está em grupos de Acesso Administradores / Privileges do Administrador só pode listar suas próprias sessões. Um chamador com ClusterAdmins / Administrator Privileges pode listar sessões pertencentes a qualquer usuário. 
+---
+= ListAuthSessionsByUsername
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `ListAuthSessionsByUsername` método para listar todas as sessões de autenticação para o usuário especificado. Um chamador que não está em grupos de Acesso Administradores / Privileges do Administrador só pode listar suas próprias sessões. Um chamador com ClusterAdmins / Administrator Privileges pode listar sessões pertencentes a qualquer usuário.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+AuthMethod
+ a| 
+Método de autenticação das sessões do usuário a serem listadas. Somente um chamador no ClusterAdmins/Administrator AccessGroup pode fornecer este parâmetro. Os valores possíveis são:
+
+* Especifica o nome de usuário do ClusterAdmin.
+* Especifica o DN LDAP do usuário.
+* * Especifica o UUUID IDP do usuário ou o NameID do usuário. Se o IDP não estiver configurado para retornar qualquer opção, isso especifica um UUID aleatório emitido quando a sessão foi criada.
+
+ a| 
+AuthMethod
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+nome de utilizador
+ a| 
+Identificador exclusivo para o utilizador.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valores de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+
+
+| Nome | Descrição | Tipo 
+
+
+ a| 
+sessões
+ a| 
+Lista de informações da sessão para as sessões de autenticação.
+ a| 
+link:reference_element_api_authsessioninfo.html["AuthSessionInfo"]
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+    "method": "ListAuthSessionsByUsername",
+    "authMethod": "Cluster",
+    "username": "admin"
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+"sessions": [
+      {
+        "accessGroupList": [
+          "administrator"
+        ],
+        "authMethod": "Cluster",
+        "clusterAdminIDs": [
+          1
+        ],
+        "finalTimeout": "2020-03-14T19:21:24Z",
+        "idpConfigVersion": 0,
+        "lastAccessTimeout": "2020-03-11T19:51:24Z",
+        "sessionCreationTime": "2020-03-11T19:21:24Z",
+        "sessionID": "b12bfc64-f233-44df-8b9f-6fb6c011abf7",
+        "username": "admin"
+      }
+    ]
+}
+----
+
+
+== Novo desde a versão
+
+12,0

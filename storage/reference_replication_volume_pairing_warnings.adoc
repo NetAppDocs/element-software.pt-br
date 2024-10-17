@@ -1,0 +1,56 @@
+---
+permalink: storage/reference_replication_volume_pairing_warnings.html 
+sidebar: sidebar 
+keywords: volume warnings, messages, replication, data protection 
+summary: 'A página pares de volume na guia proteção de dados fornece essas mensagens depois de emparelhar volumes. Essas mensagens podem ser exibidas nas extremidades de origem e destino do par (a menos que indicado de outra forma) na exibição da lista de volumes replicando.' 
+---
+= Avisos de emparelhamento de volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A página pares de volume na guia proteção de dados fornece essas mensagens depois de emparelhar volumes. Essas mensagens podem ser exibidas nas extremidades de origem e destino do par (a menos que indicado de outra forma) na exibição de lista de volumes replicáveis.
+
+* *PausedClusterFull*
++
+Como o cluster de destino está cheio, a replicação de origem e a transferência de dados em massa não podem prosseguir. A mensagem é exibida apenas na extremidade de origem do par.
+
+* *PausedExcededMaxSnapshotCount*
++
+O volume de destino já tem o número máximo de instantâneos e não pode replicar instantâneos adicionais.
+
+* *PausedManual*
++
+O volume local foi pausado manualmente. Ele deve ser despausado antes que a replicação seja retomada.
+
+* *PausedManualRemote*
++
+O volume remoto está no modo de pausa manual. É necessária uma intervenção manual para interromper o volume remoto antes de a replicação ser retomada.
+
+* *PausedMisconfigured*
++
+Aguardando uma fonte e destino ativos. Intervenção manual necessária para retomar a replicação.
+
+* *PausedQoS*
++
+A QoS de destino não pôde sustentar a entrada de e/S. A replicação retoma automática. A mensagem é exibida apenas na extremidade de origem do par.
+
+* *PausedSlowLink*
++
+Ligação lenta detetada e interrompida a replicação. A replicação retoma automática. A mensagem é exibida apenas na extremidade de origem do par.
+
+* *PausedVolumeSizeMismatch*
++
+O volume de destino não tem o mesmo tamanho que o volume de origem.
+
+* *PausedXCopy*
++
+Um comando SCSI XCOPY está sendo emitido para um volume de origem. O comando deve ser concluído antes que a replicação possa ser retomada. A mensagem é exibida apenas na extremidade de origem do par.
+
+* *StoppedMisconfigured*
++
+Foi detetado um erro de configuração permanente. O volume remoto foi purgado ou não emparelhado. Não é possível efetuar qualquer ação corretiva; é necessário estabelecer um novo emparelhamento.
+
+

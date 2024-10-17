@@ -1,0 +1,48 @@
+---
+permalink: api/reference_element_api_deletesnapmirrorendpoints.html 
+sidebar: sidebar 
+keywords: SnapMirror,endpoints,endpoint,delete,deleting,DeleteSnapMirrorEndpoints 
+summary: A IU da Web do Element usa DeleteSnapMirrorEndpoints para excluir um ou mais endpoints SnapMirror do sistema. 
+---
+= DeleteSnapMirrorEndpoints
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A IU da Web do Element usa `DeleteSnapMirrorEndpoints` para excluir um ou mais endpoints SnapMirror do sistema.
+
+
+
+== Parâmetro
+
+Este método tem o seguinte parâmetro de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+SnapMirrorEndpointIDs
+ a| 
+Um array de IDs de endpoints SnapMirror para excluir.
+ a| 
+array inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valores de retorno
+
+Este método não tem valores de retorno.
+
+
+
+== Novo desde a versão
+
+10,0

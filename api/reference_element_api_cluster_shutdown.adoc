@@ -1,0 +1,104 @@
+---
+permalink: api/reference_element_api_cluster_shutdown.html 
+sidebar: sidebar 
+keywords: cluster,shutdown,node,shutting,down,shut,restart 
+summary: Pode utilizar o método de encerramento para reiniciar ou desligar os nós num cluster. Você pode encerrar um único nó, vários nós ou todos os nós no cluster usando este método. 
+---
+= Encerramento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `Shutdown` método para reiniciar ou desligar os nós em um cluster. Você pode encerrar um único nó, vários nós ou todos os nós no cluster usando este método.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+nós
+ a| 
+Lista de NodeIDs para os nós a serem reiniciados ou desligados.
+ a| 
+array inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+opção
+ a| 
+Ação a tomar para o cluster. Valores possíveis:
+
+* Reiniciar: Reinicia o cluster.
+* Halt: Executa um desligamento total.
+
+ a| 
+cadeia de carateres
+ a| 
+reinicie
+ a| 
+Não
+
+|===
+
+
+== Valor de retorno
+
+Este método não tem valor de retorno.
+
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "Shutdown",
+   "params": {
+     "nodes": [
+       2,
+       3,
+       4
+     ],
+     "option": "halt"
+   },
+   "id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id" : 1,
+  "result" : {
+     "failed": [],
+     "successful": [
+          6
+      [
+   }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

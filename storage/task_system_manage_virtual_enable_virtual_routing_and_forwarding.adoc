@@ -1,0 +1,33 @@
+---
+permalink: storage/task_system_manage_virtual_enable_virtual_routing_and_forwarding.html 
+sidebar: sidebar 
+keywords: virtual routing, forwarding, enable, vrf, storage networks, create a vlan 
+summary: 'Você pode habilitar o roteamento virtual e o encaminhamento (VRF), o que permite que várias instâncias de uma tabela de roteamento existam em um roteador e funcionem simultaneamente. Esta funcionalidade está disponível apenas para redes de armazenamento.' 
+---
+= Ative o encaminhamento e encaminhamento virtuais
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode ativar o roteamento e encaminhamento virtual (VRF), o que permite que várias instâncias de uma tabela de roteamento existam em um roteador e funcionem simultaneamente. Esta funcionalidade está disponível apenas para redes de armazenamento.
+
+Você pode ativar o VRF apenas no momento da criação de uma VLAN. Se você quiser voltar para não-VRF, você deve excluir e recriar a VLAN.
+
+. Clique em *Cluster* > *Network*.
+. Para ativar o VRF em uma nova VLAN, selecione *Create VLAN*.
++
+.. Insira informações relevantes para o novo VRF/VLAN. Consulte Adicionar uma rede virtual.
+.. Marque a caixa de seleção *Enable VRF* (Ativar VRF*).
+.. *Opcional*: Insira um gateway.
+
+
+. Clique em *Create VLAN*.
+
+
+
+
+== Encontre mais informações
+
+xref:task_system_manage_virtual_add_a_virtual_network.adoc[Adicione uma rede virtual]

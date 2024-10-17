@@ -1,0 +1,31 @@
+---
+permalink: api/concept_element_api_administrator_api_methods.html 
+sidebar: sidebar 
+keywords: API,administration,method,administrator 
+summary: Você pode usar os métodos de API do administrador para criar, modificar, exibir e remover administradores de cluster de storage e atribuir níveis de acesso e Privileges para aqueles com acesso a um cluster de storage. 
+---
+= Métodos da API do administrador
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar os métodos de API do administrador para criar, modificar, exibir e remover administradores de cluster de storage e atribuir níveis de acesso e Privileges para aqueles com acesso a um cluster de storage.
+
+* xref:reference_element_api_addclusteradmin.adoc[AddClusterAdmin]
+* xref:reference_element_api_getcurrentclusteradmin.adoc[GetCurrentClusterAdmin]
+* xref:reference_element_api_getloginbanner.adoc[GetLoginBanner]
+* xref:reference_element_api_listclusteradmins.adoc[ListClusterAdmins]
+* xref:reference_element_api_modifyclusteradmin.adoc[ModifyClusterAdmin]
+* xref:reference_element_api_removeclusteradmin.adoc[RemoveClusterAdmin]
+* xref:reference_element_api_setloginbanner.adoc[SetLoginBanner]
+
+
+
+
+== Encontre mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentação para versões anteriores dos produtos NetApp SolidFire e Element"^]
+

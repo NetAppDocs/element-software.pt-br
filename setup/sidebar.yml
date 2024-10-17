@@ -1,0 +1,37 @@
+---
+section: setup
+title: Configure o armazenamento
+url: "/setup/concept_setup_overview.html"
+entries:
+- title: Configurar um cluster com nós de storage
+  url: "/setup/task_setup_cluster_with_storage_nodes.html"
+  entries:
+  - title: Configurar um nó de storage
+    url: "/setup/concept_setup_configure_a_storage_node.html"
+  - title: Crie um cluster de armazenamento
+    url: "/setup/task_setup_create_a_storage_cluster.html"
+  - title: Faça login na interface do usuário do software Element
+    url: "/setup/task_post_deploy_access_the_element_software_user_interface.html"
+  - title: Adicionar unidades ao cluster
+    url: "/setup/task_setup_add_drives_to_a_cluster.html"
+- title: Configurar um cluster com nós Fibre Channel
+  url: "/setup/task_setup_cluster_with_fibre_channel_nodes.html"
+  entries:
+  - title: Configurar um nó Fibre Channel
+    url: "/setup/concept_setup_fc_configure_a_fibre_channel_node.html"
+  - title: Criar um novo cluster com nós Fibre Channel
+    url: "/setup/task_setup_fc_create_a_new_cluster_with_fibre_channel_nodes.html"
+  - title: Adicionar nós Fibre Channel a um cluster
+    url: "/setup/task_setup_fc_add_fibre_channel_nodes_to_a_cluster.html"
+  - title: Configure zonas para nós Fibre Channel
+    url: "/setup/concept_setup_fc_set_up_zones_for_fibre_channel_nodes.html"
+  - title: Crie um grupo de acesso por volume para clientes Fibre Channel
+    url: "/setup/task_setup_create_a_volume_access_group_for_fibre_channel_clients.html"
+- title: Determine quais componentes do SolidFire instalar
+  url: "/setup/task_setup_determine_which_solidfire_components_to_install.html"
+- title: Configure um nó de gerenciamento
+  url: "/setup/task_setup_gh_redirect_set_up_a_management_node.html"
+- title: Configure o acesso totalmente qualificado à IU da Web do Domain Name
+  url: "/setup/task_setup_configure_fqdn_web_ui_access.html"
+- title: O que se segue?
+  url: "/setup/concept_setup_whats_next.html"

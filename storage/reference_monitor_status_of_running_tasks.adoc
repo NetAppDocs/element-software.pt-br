@@ -1,0 +1,19 @@
+---
+permalink: storage/reference_monitor_status_of_running_tasks.html 
+sidebar: sidebar 
+keywords: running tasks, view progress of 
+summary: Você pode ver o status de progresso e conclusão das tarefas em execução na IU da Web que estão sendo relatadas pelos métodos de API ListSyncJobs e ListBulkVolumeJobs. Você pode acessar a página tarefas em execução na guia relatórios da IU do elemento. 
+---
+= Exibir o status das tarefas em execução
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode ver o status de progresso e conclusão das tarefas em execução na IU da Web que estão sendo relatadas pelos métodos de API ListSyncJobs e ListBulkVolumeJobs. Você pode acessar a página tarefas em execução na guia relatórios da IU do elemento.
+
+Se houver um grande número de tarefas, o sistema pode colocá-las em fila e executá-las em lotes. A página tarefas em execução exibe os serviços que estão sendo sincronizados no momento. Quando uma tarefa é concluída, ela é substituída pela próxima tarefa de sincronização na fila. A sincronização de tarefas pode continuar a aparecer na página tarefas em execução até que não haja mais tarefas a serem concluídas.
+
+
+NOTE: Você pode ver os dados de sincronizações de replicação para volumes em replicação na página tarefas em execução do cluster que contém o volume de destino.

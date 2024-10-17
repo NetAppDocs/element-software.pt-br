@@ -1,0 +1,133 @@
+---
+permalink: api/reference_element_api_getstoragecontainerefficiency.html 
+sidebar: sidebar 
+keywords: volume,virtual,container,volumes,get,getting,efficiency,vvol,GetStorageContainerEfficiency 
+summary: Você pode usar o método GetStorageContainerEfficiency para recuperar informações de eficiência sobre um contentor de storage de volume virtual. 
+---
+= GetStorageContainerEfficiência
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `GetStorageContainerEfficiency` método para recuperar informações de eficiência sobre um contentor de armazenamento de volume virtual.
+
+
+
+== Parâmetros
+
+Este método tem o seguinte parâmetro de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+StorageContainerID
+ a| 
+O ID do recipiente de armazenamento para o qual recuperar informações de eficiência.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valores de retorno
+
+Este método tem os seguintes valores de retorno:
+
+|===
+
+
+| Nome | Descrição | Tipo 
+
+
+ a| 
+compactação
+ a| 
+A quantidade de espaço economizada pela compressão de dados para todos os volumes virtuais no contentor de armazenamento. Indicado como uma relação em que um valor de 1 significa que os dados foram armazenados sem compressão.
+ a| 
+flutuação
+
+
+
+ a| 
+deduplicação
+ a| 
+A quantidade de espaço economizada não duplicando dados para todos os volumes virtuais no contentor de armazenamento. Indicado como uma relação.
+ a| 
+flutuação
+
+
+
+ a| 
+Volumes
+ a| 
+Os volumes virtuais que não puderam ser consultados para obter dados de eficiência. Volumes ausentes podem ser causados pelo ciclo de coleta de lixo (GC) com menos de uma hora de idade, perda temporária de conetividade de rede ou serviços reiniciados desde o ciclo GC.
+ a| 
+array inteiro
+
+
+
+ a| 
+Provisionamento excessivo
+ a| 
+A proporção de espaço utilizado com a quantidade de espaço alocado para armazenar dados. Indicado como uma relação.
+ a| 
+flutuação
+
+
+
+ a| 
+timestamp
+ a| 
+A última vez que os dados de eficiência foram coletados após GC.
+ a| 
+String de dados ISO 8601
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+  "method": "GetStorageContainerEfficiency",
+  "params": {
+    "storageContainerID" : "6c95e24f-9f0b-4793-affb-5a4bc6c3d7e1"
+  },
+  "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "compression": 1,
+    "deduplication": 1,
+    "missingVolumes": [],
+    "thinProvisioning": 1,
+    "timestamp": "2016-04-12T15:39:49Z"
+  }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

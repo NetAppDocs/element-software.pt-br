@@ -1,0 +1,79 @@
+---
+permalink: api/reference_element_api_testkeyproviderkmip.html 
+sidebar: sidebar 
+keywords: KMIP,key provider,testing,test 
+summary: 'Você pode usar o método TestKeyProviderKmip para testar se o provedor de chave KMIP (Key Management Interoperability Protocol) especificado está acessível e funcionando normalmente.' 
+---
+= TestKeyProviderKmip
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `TestKeyProviderKmip` método para testar se o provedor de chaves KMIP (Key Management Interoperability Protocol) especificado está acessível e funcionando normalmente.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+KeyProviderID
+ a| 
+A ID do fornecedor de chaves a testar.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valores de retorno
+
+Este método não tem valores de retorno. O teste é considerado bem-sucedido desde que nenhum erro seja retornado.
+
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+  "method": "TestKeyProviderKmip",
+  "params": {
+    "keyProviderID": 15
+  },
+"id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+   "id": 1,
+   "result":
+      {}
+    }
+}
+----
+
+
+== Novo desde a versão
+
+11,7

@@ -1,0 +1,53 @@
+---
+permalink: storage/task_data_manage_vol_access_group_create_an_initiator.html 
+sidebar: sidebar 
+keywords: initiator, create, fc, iscsi, aliases, chap 
+summary: Você pode criar iniciadores iSCSI ou Fibre Channel e, opcionalmente, atribuí-los aliases. 
+---
+= Crie um iniciador
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar iniciadores iSCSI ou Fibre Channel e, opcionalmente, atribuí-los aliases.
+
+Você também pode atribuir atributos CHAP baseados em initator usando uma chamada de API. Para adicionar um nome de conta CHAP e credenciais por iniciador, você deve usar a `CreateInitiator` chamada API para remover e adicionar acesso CHAP e atributos. O acesso do iniciador pode ser restrito a uma ou mais VLANs especificando um ou mais virtualNetworkIDs por meio das `CreateInitiators` chamadas da API e `ModifyInitiators`. Se nenhuma rede virtual for especificada, o iniciador poderá acessar todas as redes.
+
+Para obter detalhes, consulte as informações de referência da API. link:../api/index.html["Gerencie o storage com a API Element"]
+
+.Passos
+. Clique em *Management* > *Initiators*.
+. Clique em *Create Initiator*.
+. Execute as etapas para criar um único iniciador ou vários iniciadores:
++
+[cols="25,75"]
+|===
+| Opção | Passos 
+
+
+ a| 
+Crie um único iniciador
+ a| 
+.. Clique em *criar um único Iniciador*.
+.. Introduza o IQN ou WWPN para o iniciador no campo *IQN/WWPN*.
+.. Digite um nome amigável para o iniciador no campo *Alias*.
+.. Clique em *Create Initiator*.
+
+
+
+
+ a| 
+Crie vários iniciadores
+ a| 
+.. Clique em *Bulk Create Initiators*.
+.. Insira uma lista de IQNs ou WWPNs na caixa de texto.
+.. Clique em *Adicionar iniciadores*.
+.. Escolha um iniciador da lista resultante e clique no ícone Adicionar correspondente na coluna *Alias* para adicionar um alias para o iniciador.
+.. Clique na marca de seleção para confirmar o novo alias.
+.. Clique em *criar iniciadores*.
+
+
+|===
+

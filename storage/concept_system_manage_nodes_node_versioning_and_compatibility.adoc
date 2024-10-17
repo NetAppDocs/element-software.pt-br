@@ -1,0 +1,32 @@
+---
+permalink: storage/concept_system_manage_nodes_node_versioning_and_compatibility.html 
+sidebar: sidebar 
+keywords: compatibility, node version, clusters, software version, compatible versions, major, minor, micro 
+summary: A compatibilidade do nó é baseada na versão do software Element instalada em um nó. Os clusters de storage baseados no software Element fazem automaticamente uma imagem de um nó para a versão do software Element no cluster se o nó e o cluster não estiverem em versões compatíveis. 
+---
+= Controle de versão e compatibilidade de nós
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A compatibilidade do nó é baseada na versão do software Element instalada em um nó. Os clusters de storage baseados no software Element fazem automaticamente uma imagem de um nó para a versão do software Element no cluster se o nó e o cluster não estiverem em versões compatíveis.
+
+A lista a seguir descreve os níveis de significância da versão do software que compõem o número da versão do software Element:
+
+* *Maior*
++
+O primeiro número designa uma versão de software. Um nó com um número de componente principal não pode ser adicionado a um cluster contendo nós de um número de patch principal diferente, nem um cluster pode ser criado com nós de versões principais mistas.
+
+* *Menor*
++
+O segundo número designa recursos de software menores ou aprimoramentos aos recursos de software existentes que foram adicionados a uma versão principal. Este componente é incrementado dentro de um componente de versão principal para indicar que esta versão incremental não é compatível com quaisquer outras versões incrementais de software Element com um componente menor diferente. Por exemplo, 11,0 não é compatível com 11,1 e 11,1 não é compatível com 11,2.
+
+* *Micro*
++
+O terceiro número designa um patch compatível (versão incremental) para a versão do software Element representada pelos componentes major.minor. Por exemplo, 11.0.1 é compatível com 11,0.2, e 11.0.2 é compatível com 11,0.3.
+
+
+
+Os números de versão maiores e menores devem corresponder para compatibilidade. Os números micro não têm de corresponder para compatibilidade.

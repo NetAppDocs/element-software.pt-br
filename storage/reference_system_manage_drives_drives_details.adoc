@@ -1,0 +1,55 @@
+---
+permalink: storage/reference_system_manage_drives_drives_details.html 
+sidebar: sidebar 
+keywords: drives, details, manage, filter, cluster 
+summary: A página unidades na guia Cluster fornece uma lista das unidades ativas no cluster. Você pode filtrar a página selecionando a partir das guias Ativo, disponível, Remover, Apagar e Falha. 
+---
+= Detalhes da unidade
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A página unidades na guia Cluster fornece uma lista das unidades ativas no cluster. Você pode filtrar a página selecionando a partir das guias Ativo, disponível, Remover, Apagar e Falha.
+
+Quando inicializar um cluster pela primeira vez, a lista de unidades ativas fica vazia. Você pode adicionar unidades que não são atribuídas a um cluster e listadas na guia disponível após a criação de um novo cluster do SolidFire.
+
+Os seguintes elementos aparecem na lista de unidades ativas.
+
+* *ID da unidade*
++
+O número sequencial atribuído à unidade.
+
+* *ID do nó*
++
+O número do nó atribuído quando o nó é adicionado ao cluster.
+
+* *Nome do nó*
++
+O nome do nó que abriga a unidade.
+
+* *Slot*
++
+O número do slot onde a unidade está fisicamente localizada.
+
+* *Capacidade*
++
+O tamanho da unidade, em GB.
+
+* *Série*
++
+O número de série da unidade.
+
+* *Desgaste restante*
++
+O indicador do nível de desgaste.
+
++
+O sistema de armazenamento informa a quantidade aproximada de desgaste disponível em cada unidade de estado sólido (SSD) para gravar e apagar dados. Uma unidade que consumiu 5% dos ciclos de gravação e apagamento projetados relata 95% de desgaste restante. O sistema não atualiza automaticamente as informações de desgaste da unidade; você pode atualizar ou fechar e recarregar a página para atualizar as informações.
+
+* *Tipo*
++
+O tipo de unidade. O tipo pode ser bloco ou metadados.
+
+

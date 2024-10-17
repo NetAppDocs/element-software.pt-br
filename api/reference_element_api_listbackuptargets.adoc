@@ -1,0 +1,84 @@
+---
+permalink: api/reference_element_api_listbackuptargets.html 
+sidebar: sidebar 
+keywords: backup,target,targets,info,list,listing,listbackuptargets 
+summary: Você pode usar o método ListBackupTargets para obter informações sobre todos os destinos de backup criados. 
+---
+= ListBackupTargets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `ListBackupTargets` método para obter informações sobre todos os destinos de backup criados.
+
+
+
+== Parâmetros
+
+Este método não tem parâmetros de entrada.
+
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+BackupTargets
+ a| 
+Objetos retornados para cada destino de backup. Objetos incluídos:
+
+* Atributos: Lista de pares nome-valor no formato de objeto JSON. (Objeto JSON)
+* BackupTargetID: Identificador exclusivo atribuído ao destino de backup. (número inteiro)
+* Nome: Nome do destino da cópia de segurança. (string)
+
+ a| 
+Objeto JSON
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "ListBackupTargets",
+   "params": {},
+   "id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+   "id": 1,
+   "result": {
+     "backupTargets": [
+       {
+        "attributes" : {},
+        "backupTargetID" : 1,
+        "name" : "mytargetbackup"
+       }
+    ]
+  }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

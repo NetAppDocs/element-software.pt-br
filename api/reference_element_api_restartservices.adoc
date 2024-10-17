@@ -1,0 +1,141 @@
+---
+permalink: api/reference_element_api_restartservices.html 
+sidebar: sidebar 
+keywords: restart,service,services,restartservices,restarting,node 
+summary: Você pode usar o método RestartServices para reiniciar os serviços em um nó. 
+---
+= RestartServices
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `RestartServices` método para reiniciar os serviços em um nó.
+
+
+
+== Parâmetros
+
+CUIDADO:
+
+Esse método causa a interrupção temporária dos serviços de nós.
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+força
+ a| 
+Defina como verdadeiro para reiniciar serviços em um nó.
+ a| 
+booleano
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+serviço
+ a| 
+Nome do serviço a ser reiniciado.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+ação
+ a| 
+Ação a executar no serviço (iniciar, parar, reiniciar).
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+|===
+
+
+== Valores de retorno
+
+Este método tem os seguintes valores de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+detalhes
+ a| 
+A saída do procedimento de reinicialização do serviço, incluindo erros (se houver).
+ a| 
+Objeto JSON
+
+
+
+ a| 
+duração
+ a| 
+O tempo, em segundos, levou para reiniciar os serviços para o nó.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+resultado
+ a| 
+Resultados do reinício.
+ a| 
+cadeia de carateres
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "RestartServices",
+   "params": {
+              "force" : true
+              "action" : restart,
+             }
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "details": "solidfire stop/waiting\nsolidfire start/running, process 7284\n",
+    "duration": "00:00:02.541594",
+    "result": "Passed"
+  }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

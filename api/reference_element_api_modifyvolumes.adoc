@@ -1,0 +1,384 @@
+---
+permalink: api/reference_element_api_modifyvolumes.html 
+sidebar: sidebar 
+keywords: volume,volumes,modifying,modify,change,changing,edit,editing,modifyvolumes 
+summary: Pode utilizar o método ModifyVolumes para configurar até 500 volumes existentes de uma só vez. As alterações ocorrem imediatamente. Se ModifyVolumes não modificar qualquer um dos volumes especificados, nenhum dos volumes especificados será alterado. 
+---
+= ModifyVolumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `ModifyVolumes` método para configurar até 500 volumes existentes ao mesmo tempo. As alterações ocorrem imediatamente. Se `ModifyVolumes` não conseguir modificar qualquer um dos volumes especificados, nenhum dos volumes especificados será alterado.
+
+Se você não especificar valores de QoS ao modificar volumes, os valores de QoS para cada volume permanecerão inalterados. Você pode recuperar valores de QoS padrão para um volume recém-criado executando o `GetDefaultQoS` método.
+
+Quando for necessário aumentar os volumes de tamanho que estão sendo replicados, faça isso na seguinte ordem para evitar erros de replicação:
+
+. Aumente o tamanho do volume com o acesso de replicationTarget.
+. Aumente o tamanho da fonte ou do volume com o acesso readWrite.
+
+
+Certifique-se de que os volumes de destino e de origem tenham o mesmo tamanho.
+
+
+NOTE: Se você alterar o status de acesso para bloqueado ou replicationTarget, todas as conexões iSCSI existentes serão encerradas.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+
+
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+acesso
+ a| 
+Acesso permitido para os volumes. Valores possíveis:
+
+* `readOnly`: Só são permitidas operações de leitura.
+* `readWrite`: Leituras e gravações são permitidas.
+* `locked`: Não são permitidas leituras ou gravações. Se não for especificado, o valor de acesso não muda.
+* `replicationTarget`: Identificar um volume como o volume alvo para um conjunto de volumes emparelhado. Se o volume não estiver emparelhado, o estado de acesso é bloqueado. Se um valor não for especificado, o valor de acesso não será alterado.
+
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+ID Contabilística
+ a| 
+O AccountID ao qual os volumes são reatribuídos. Se nenhum for especificado, o nome da conta anterior será usado.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+AssociateWithQoSPolicy
+ a| 
+Associe o volume à política de QoS especificada. Valores possíveis:
+
+* Verdadeiro: Associe o volume à política de QoS especificada no parâmetro QoSPolicyID.
+* False: Não associe o volume à política de QoS especificada no parâmetro QoSPolicyID. Quando falsa, qualquer associação de política existente é removida, independentemente de você especificar uma política de QoS no parâmetro QoSPolicy.
+
+ a| 
+booleano
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+atributos
+ a| 
+Lista de pares nome-valor no formato de objeto JSON.
+ a| 
+Objeto JSON
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+CreateTime
+ a| 
+Uma string de data ISO 8601 para definir como a nova data de criação de volume. Necessário se setCreateTime estiver definido como true.
+ a| 
+ISO 8601 string
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+EnableSnapMirrorReplication
+ a| 
+Determina se o volume pode ser usado para replicação com endpoints SnapMirror. Valores possíveis:
+
+* `true`
+* `false`
+
+ a| 
+booleano
+ a| 
+falso
+ a| 
+Não
+
+
+
+| FifoSize | Especifica o número máximo de instantâneos First-in-First-out (FIFO) suportados pelo volume. Observe que os snapshots FIFO e não FIFO usam o mesmo pool de slots de snapshot disponíveis em um volume. Use esta opção para limitar o consumo de snapshot FIFO dos slots de snapshot disponíveis. Note que não é possível modificar este valor para ser inferior à contagem de instantâneos FIFO atual. | número inteiro | Nenhum | Não 
+
+
+| MinFifoSize | Especifica o número de slots de snapshot que são reservados apenas para snapshots First-in-First-out (FIFO). Como os snapshots FIFO e não FIFO compartilham o mesmo pool, o parâmetro minFfoSize reduz o número total de possíveis snapshots não FIFO pela mesma quantidade. Observe que você não pode modificar esse valor para que ele fique em conflito com a contagem de instantâneos não FIFO atual. | número inteiro | Nenhum | Não 
+
+
+ a| 
+modo
+ a| 
+Modo de replicação de volume. Valores possíveis:
+
+* `asynch`: Aguarda que o sistema reconheça que os dados são armazenados na fonte antes de gravar no destino.
+* `sync`: Não espera que a confirmação da transmissão de dados da origem comece a gravar dados no destino.
+
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+qos
+ a| 
+As novas configurações de qualidade de serviço para os volumes. Se não for especificado, as definições de QoS não são alteradas. Valores possíveis:
+
+* `minIOPS`
+* `maxIOPS`
+* `burstIOPS`
+
+ a| 
+xref:reference_element_api_qos.adoc[QoS]
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+QosPolicyID
+ a| 
+O ID da diretiva cujas configurações de QoS devem ser aplicadas aos volumes especificados. Este parâmetro é mutuamente exclusivo com o parâmetro qos.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+SetCreateTime
+ a| 
+Defina como True (verdadeiro) para alterar a data gravada da criação do volume.
+ a| 
+booleano
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+Totalizar tamanho
+ a| 
+O novo tamanho dos volumes em bytes. 1000000000 é igual a 1GB. O tamanho é arredondado para cima até o megabyte mais próximo em tamanho. Este parâmetro só pode ser utilizado para aumentar o tamanho de um volume.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+VolumeIDs
+ a| 
+Uma lista de volumeIDs para os volumes a serem modificados.
+ a| 
+array inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+
+
+| Nome | Descrição | Tipo 
+
+
+ a| 
+volume
+ a| 
+Um array de objetos contendo informações sobre cada volume recém-modificado.
+ a| 
+xref:reference_element_api_volume.adoc[volume] array
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+  "method": "ModifyVolumes",
+  "params": {
+    "volumeIDs": [2,3],
+    "attributes": {
+      "name1": "value1",
+      "name2": "value2",
+      "name3": "value3"
+    },
+    "qos": {
+      "minIOPS": 50,
+      "maxIOPS": 100,
+      "burstIOPS": 150,
+      "burstTime": 60
+    },
+    "access" : "replicationTarget"
+  },
+  "totalSize": 80000000000,
+  "id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "volumes": [
+      {
+        "access": "replicationTarget",
+        "accountID": 1,
+        "attributes": {
+          "name1": "value1",
+          "name2": "value2",
+          "name3": "value3"
+        },
+        "blockSize": 4096,
+        "createTime": "2016-04-06T17:25:13Z",
+        "deleteTime": "",
+        "enable512e": false,
+        "iqn": "iqn.2010-01.com.solidfire:jo73.2",
+        "name": "doctest1",
+        "purgeTime": "",
+        "qos": {
+          "burstIOPS": 150,
+          "burstTime": 60,
+          "curve": {
+            "4096": 100,
+            "8192": 160,
+            "16384": 270,
+            "32768": 500,
+            "65536": 1000,
+            "131072": 1950,
+            "262144": 3900,
+            "524288": 7600,
+            "1048576": 15000
+          },
+          "maxIOPS": 100,
+          "minIOPS": 50
+        },
+        "scsiEUIDeviceID": "6a6f373300000002f47acc0100000000",
+        "scsiNAADeviceID": "6f47acc1000000006a6f373300000002",
+        "sliceCount": 1,
+        "status": "active",
+        "totalSize": 1000341504,
+        "virtualVolumeID": null,
+        "volumeAccessGroups": [],
+        "volumeID": 2,
+        "volumePairs": []
+      },
+      {
+        "access": "replicationTarget",
+        "accountID": 1,
+        "attributes": {
+          "name1": "value1",
+          "name2": "value2",
+          "name3": "value3"
+        },
+        "blockSize": 4096,
+        "createTime": "2016-04-06T17:26:31Z",
+        "deleteTime": "",
+        "enable512e": false,
+        "iqn": "iqn.2010-01.com.solidfire:jo73.3",
+        "name": "doctest2",
+        "purgeTime": "",
+        "qos": {
+          "burstIOPS": 150,
+          "burstTime": 60,
+          "curve": {
+            "4096": 100,
+            "8192": 160,
+            "16384": 270,
+            "32768": 500,
+            "65536": 1000,
+            "131072": 1950,
+            "262144": 3900,
+            "524288": 7600,
+            "1048576": 15000
+          },
+          "maxIOPS": 100,
+          "minIOPS": 50
+        },
+        "scsiEUIDeviceID": "6a6f373300000003f47acc0100000000",
+        "scsiNAADeviceID": "6f47acc1000000006a6f373300000003",
+        "sliceCount": 1,
+        "status": "active",
+        "totalSize": 1000341504,
+        "virtualVolumeID": null,
+        "volumeAccessGroups": [],
+        "volumeID": 3,
+        "volumePairs": []
+      }
+    ]
+  }
+}
+----
+
+
+== Novo desde a versão
+
+9,6
+
+
+
+== Encontre mais informações
+
+xref:reference_element_api_getdefaultqos.adoc[GetDefaultQoS]

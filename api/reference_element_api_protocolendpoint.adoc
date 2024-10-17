@@ -1,0 +1,93 @@
+---
+permalink: api/reference_element_api_protocolendpoint.html 
+sidebar: sidebar 
+keywords: object,objects,protocolEndpoint 
+summary: O objeto ProtocolEndpoint contém os atributos de um endpoint de protocolo. Você pode recuperar essas informações para todos os endpoints de protocolo no cluster usando o método ListProtocolEndpoints API. 
+---
+= ProtocolEndpoint
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto ProtocolEndpoint contém os atributos de um endpoint de protocolo. Você pode recuperar essas informações para todos os endpoints de protocolo no cluster usando o `ListProtocolEndpoints` método API.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+PrimaryProviderID
+ a| 
+A ID do objeto do provedor de endpoint de protocolo primário para o endpoint de protocolo.
+ a| 
+número inteiro
+
+
+
+ a| 
+ProtocolEndpointID
+ a| 
+A ID exclusiva do endpoint do protocolo.
+ a| 
+UUID
+
+
+
+ a| 
+ProtocolEndpointState
+ a| 
+O estado do ponto de extremidade do protocolo. Valores possíveis:
+
+* Ativo: O ponto final do protocolo está em uso.
+* Start (Iniciar): O ponto final do protocolo está a ser iniciado.
+* Failover: O ponto final do protocolo falhou.
+* Reservado: O ponto final do protocolo é reservado.
+
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+Tipo de fornecedor
+ a| 
+O tipo do provedor do ponto de extremidade do protocolo. Valores possíveis:
+
+* Primário
+* Secundário
+
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+ScsiNAADeviceID
+ a| 
+O identificador de dispositivo SCSI exclusivo globalmente para o ponto de extremidade do protocolo no formato estendido registrado IEEE NAA.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+SecondaryProviderID
+ a| 
+A ID do objeto do provedor de endpoint de protocolo secundário para o endpoint de protocolo.
+ a| 
+número inteiro
+
+|===
+
+
+== Encontre mais informações
+
+xref:reference_element_api_listprotocolendpoints.adoc[ListProtocolEndpoints]

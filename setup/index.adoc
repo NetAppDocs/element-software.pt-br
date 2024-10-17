@@ -1,0 +1,48 @@
+---
+permalink: setup/index.html 
+sidebar: sidebar 
+keywords: set up storage, storage system, set up, configure node, configuring storage node, add drives, fibre channel, create cluster 
+summary: Saiba como configurar o sistema de armazenamento para o seu ambiente. 
+---
+= Configure o armazenamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Saiba como configurar o sistema de armazenamento para o seu ambiente.
+
+* xref:concept_setup_overview.adoc[Configure o armazenamento]
++
+** xref:task_setup_cluster_with_storage_nodes.adoc[Configurar um cluster com nós de storage]
++
+*** xref:concept_setup_configure_a_storage_node.adoc[Configurar um nó de storage]
+*** xref:task_setup_create_a_storage_cluster.adoc[Crie um cluster de armazenamento]
+*** xref:task_post_deploy_access_the_element_software_user_interface.adoc[Faça login na interface do usuário do software Element]
+*** xref:task_setup_add_drives_to_a_cluster.adoc[Adicionar unidades ao cluster]
+
+
+** xref:task_setup_cluster_with_fibre_channel_nodes.adoc[Configurar um cluster com nós Fibre Channel] entradas:
++
+*** xref:concept_setup_fc_configure_a_fibre_channel_node.adoc[Configurar um nó Fibre Channel]
+*** xref:task_setup_fc_add_fibre_channel_nodes_to_a_cluster.adoc[Adicionar nós Fibre Channel a um cluster]
+*** xref:task_setup_fc_create_a_new_cluster_with_fibre_channel_nodes.adoc[Criar um novo cluster com nós Fibre Channel]
+*** xref:concept_setup_fc_set_up_zones_for_fibre_channel_nodes.adoc[Configure zonas para nós Fibre Channel]
+*** xref:task_setup_create_a_volume_access_group_for_fibre_channel_clients.adoc[Crie um grupo de acesso por volume para clientes Fibre Channel]
+
+
+** xref:task_setup_determine_which_solidfire_components_to_install.adoc[Determine quais componentes do SolidFire instalar]
+** xref:/task_setup_gh_redirect_set_up_a_management_node.adoc[Configure um nó de gerenciamento]
+** xref:concept_setup_whats_next.adoc[O que se segue?]
+
+
+
+
+
+
+== Encontre mais informações
+
+* https://www.netapp.com/data-storage/solidfire/["Visão geral do storage all-flash da SolidFire"^]
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+

@@ -1,0 +1,160 @@
+---
+permalink: api/reference_element_api_testconnectsvip.html 
+sidebar: sidebar 
+keywords: storage,connection,svip,test,testing,testconnectsvip 
+summary: Você pode usar o método TestConnectSvip para testar a conexão de armazenamento com o cluster de armazenamento. O teste faz ping no SVIP usando pacotes ICMP e, quando bem-sucedido, se coneta como um iniciador iSCSI. 
+---
+= TestConnectSvip
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `TestConnectSvip` método para testar a conexão de armazenamento com o cluster de armazenamento. O teste faz ping no SVIP usando pacotes ICMP e, quando bem-sucedido, se coneta como um iniciador iSCSI.
+
+
+
+== Parâmetro
+
+Este método tem o seguinte parâmetro de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+svip
+ a| 
+Você pode passar esse valor para testar a conexão de gerenciamento de um SVIP diferente. Não é necessário usar esse valor ao testar a conexão com o cluster de destino.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+|===
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+detalhes
+ a| 
+Informações sobre a operação de teste (objeto JSON):
+
+* `connected`: Indica se o teste pode se conetar ao SVIP (boolean)
+* `svip`: O SVIP testado contra (string)
+* `pingBytes`: Detalhes dos testes de ping com 56 bytes e 9000 bytes (objeto)
++
+** `56`: Resultados do teste de ping de 56 bytes (objeto JSON):
++
+*** `individualResponseTimes`: Lista de tempos de resposta de cada nó do ensemble (string array)
+*** `individualStatus`: Lista de status de ping de cada nó do ensemble (matriz booleana)
+*** `responseTime`: Tempo médio de resposta do ping (string)
+*** `successful`: Indica se o teste de ping foi bem-sucedido (boolean)
+
+
+** `9000`: Resultados do teste de ping 9000 Byte (objeto JSON):
++
+*** `individualResponseTimes`: Lista de tempos de resposta de cada nó do ensemble (string array)
+*** `individualStatus`: Lista de status de ping de cada nó do ensemble (matriz booleana)
+*** `responseTime`: Tempo médio de resposta do ping (string)
+*** `successful`: Indica se o teste de ping foi bem-sucedido (boolean)
+
+
+** `duration`: Duração do tempo necessário para executar o teste (string)
+** `result`: Resultado do teste como um todo (string)
+
+
+
+ a| 
+cadeia de carateres
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "TestConnectSvip",
+   "params": {
+      "svip" : "172.27.62.50"
+      },
+   "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "details": {
+      "connected": true,
+      "pingBytes": {
+           "56": {
+               "individualResponseTimes": [
+                   "00:00:00.000152",
+                   "00:00:00.000132",
+                   "00:00:00.000119",
+                   "00:00:00.000114",
+                   "00:00:00.000112"
+              ],
+              "individualStatus": [
+                  true,
+                  true,
+                  true,
+                  true,
+                  true
+              ],
+              "responseTime": "00:00:00.000126",
+              "successful": true
+           },
+          "9000": {
+                "individualResponseTimes": [
+                    "00:00:00.000295",
+                    "00:00:00.000257",
+                    "00:00:00.000172",
+                    "00:00:00.000172",
+                    "00:00:00.000267"
+              ],
+              "individualStatus": [
+                  true,
+                  true,
+                  true,
+                  true,
+                  true
+             ],
+             "responseTime": "00:00:00.000233",
+             "successful": true
+           }
+        },
+        "svip": "172.27.62.50"
+      },
+      "duration": "00:00:00.421907",
+      "result": "Passed"
+   }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

@@ -1,0 +1,37 @@
+---
+permalink: storage/task_data_protection_edit_group_snapshots.html 
+sidebar: sidebar 
+keywords: group snapshots, edit, replication, retention 
+summary: Você pode editar as configurações de replicação e retenção para snapshots de grupo existentes. 
+---
+= Editar instantâneos de grupo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode editar as configurações de replicação e retenção para snapshots de grupo existentes.
+
+. Clique em *proteção de dados* > *instantâneos de grupo*.
+. Clique no ícone ações do instantâneo do grupo que deseja editar.
+. No menu resultante, selecione *Editar*.
+. *Opcional:* para alterar a configuração de replicação para o instantâneo do grupo:
++
+.. Clique em *Editar* ao lado de *replicação atual*.
+.. Marque a caixa de seleção *incluir cada membro de instantâneo de grupo na replicação quando emparelhado* para garantir que cada instantâneo seja capturado na replicação quando o volume pai estiver emparelhado.
+
+
+. *Opcional:* para alterar a configuração de retenção para o instantâneo de grupo, selecione uma das seguintes opções:
++
+.. Clique em *Editar* ao lado de *retenção atual*.
+.. Selecione uma opção de retenção para o instantâneo do grupo:
++
+*** Clique em *manter para sempre* para manter o instantâneo no sistema indefinidamente.
+*** Clique em *Definir período de retenção* e use as caixas de rotação de data para escolher um período de tempo para o sistema reter o instantâneo.
+
+
+
+
+. Clique em *Salvar alterações*.
+

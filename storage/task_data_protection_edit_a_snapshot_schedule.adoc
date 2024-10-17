@@ -1,0 +1,42 @@
+---
+permalink: storage/task_data_protection_edit_a_snapshot_schedule.html 
+sidebar: sidebar 
+keywords: snapshot schedule, edit, modify 
+summary: Você pode modificar programações de snapshot existentes. Após a modificação, na próxima vez que o agendamento for executado, ele usará os atributos atualizados. Todos os instantâneos criados pela programação original permanecem no sistema de armazenamento. 
+---
+= Editar uma agenda de instantâneos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode modificar programações de snapshot existentes. Após a modificação, na próxima vez que o agendamento for executado, ele usará os atributos atualizados. Todos os instantâneos criados pela programação original permanecem no sistema de armazenamento.
+
+.Passos
+. Clique em *proteção de dados* > *horários*.
+. Clique no ícone *ações* para a programação que deseja alterar.
+. No menu resultante, clique em *Editar*.
+. No campo *IDs de volume CSV*, modifique o ID de volume único ou a lista separada por vírgulas de IDs de volume atualmente incluídas na operação de snapshot.
+. Para pausar ou retomar o agendamento, selecione uma das seguintes opções:
++
+** Para pausar uma programação ativa, selecione *Sim* na lista *Pausar manualmente a programação*.
+** Para retomar um agendamento em pausa, selecione *não* na lista *Pausar manualmente o agendamento*.
+
+
+. Digite um nome diferente para a programação no campo *New Schedule Name*, se desejado.
+. Para alterar a programação a ser executada em diferentes dias da semana ou mês, selecione *tipo de programação* e altere a programação nas opções fornecidas.
+. *Opcional:* Selecione *Agendamento recorrente* para repetir o agendamento de snapshot indefinidamente.
+. *Opcional:* Digite ou modifique o nome do novo snapshot no campo *Nome do novo snapshot*.
++
+Se você deixar o campo em branco, o sistema usará a hora e a data da criação do instantâneo como nome.
+
+. *Opcional:* Selecione a caixa de seleção *incluir instantâneos na replicação quando emparelhado* para garantir que os instantâneos sejam capturados na replicação quando o volume pai estiver emparelhado.
+. Para alterar a configuração de retenção, selecione uma das seguintes opções:
++
+** Clique em *manter para sempre* para manter o instantâneo no sistema indefinidamente.
+** Clique em *Definir período de retenção* e use as caixas de rotação de data para selecionar um período de tempo para que o sistema retenha o instantâneo.
+
+
+. Clique em *Salvar alterações*.
+

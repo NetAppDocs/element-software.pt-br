@@ -1,0 +1,77 @@
+---
+permalink: api/reference_element_api_setloginsessioninfo.html 
+sidebar: sidebar 
+keywords: authentication,login,session,info,timeout,setloginsessioninfo 
+summary: Você pode usar o método SetLoginSessionInfo para definir o período de tempo em que uma autenticação de login para uma sessão é válida. Após o período de início de sessão decorrido sem atividade no sistema, a autenticação expira. São necessárias novas credenciais de início de sessão para um acesso contínuo ao cluster após o período de início de sessão ter decorrido. 
+---
+= SetLoginSessionInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `SetLoginSessionInfo` método para definir o período de tempo em que uma autenticação de login para uma sessão é válida. Após o período de início de sessão decorrido sem atividade no sistema, a autenticação expira. São necessárias novas credenciais de início de sessão para um acesso contínuo ao cluster após o período de início de sessão ter decorrido.
+
+
+
+== Parâmetro
+
+Este método tem o seguinte parâmetro de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+tempo limite
+ a| 
+Período de expiração da autenticação de cluster. Formatada no formato HH:mm:ss. Por exemplo: 01:30:00, 00:90:00 e 00:00:5400 podem ser usados para igualar um período de tempo limite de 90 minutos. O valor mínimo de tempo limite é de 1 minuto. Quando um valor não é fornecido ou está definido como zero, a sessão de login não tem valor de tempo limite.
+ a| 
+cadeia de carateres
+ a| 
+30 minutos
+ a| 
+Não
+
+|===
+
+
+== Valor de retorno
+
+Este método não tem valor de retorno.
+
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+  "method": "SetLoginSessionInfo",
+  "params": {
+    "timeout" : "01:30:00"
+   },
+   "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id" : 1,
+  "result" : {}
+}
+----
+
+
+== Novo desde a versão
+
+9,6

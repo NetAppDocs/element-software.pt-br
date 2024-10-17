@@ -1,0 +1,57 @@
+---
+permalink: api/reference_element_api_request_object_members.html 
+sidebar: sidebar 
+keywords: request,object,members 
+summary: 'Cada solicitação de API de software Element tem as seguintes partes básicas:' 
+---
+= Solicitar membros do objeto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cada solicitação de API de software Element tem as seguintes partes básicas:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+método
+ a| 
+Nome do método a ser invocado.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+parâmetros
+ a| 
+Objeto contendo os parâmetros para o método a ser invocado. Parâmetros nomeados são necessários. Parâmetros posicionais (passados como um array) não são permitidos.
+ a| 
+Objeto JSON
+ a| 
+Não se esqueça de ler o artigo
+ a| 
+Não
+
+
+
+ a| 
+id
+ a| 
+Identificador usado para corresponder a solicitação à resposta, retornado no resultado.
+ a| 
+string ou inteiro
+ a| 
+Não se esqueça de ler o artigo
+ a| 
+Não
+
+|===

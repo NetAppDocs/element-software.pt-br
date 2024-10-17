@@ -1,0 +1,25 @@
+---
+permalink: storage/concept_system_manage_virtual_manage_virtual_networks.html 
+sidebar: sidebar 
+keywords: virtual networks, manage, traffic, clients, vlan tagging 
+summary: A rede virtual no armazenamento SolidFire permite que o tráfego entre vários clientes que estão em redes lógicas separadas seja conetado a um cluster. As conexões com o cluster são segregadas na pilha de rede através do uso da marcação VLAN. 
+---
+= Gerenciar redes virtuais
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A rede virtual no armazenamento SolidFire permite que o tráfego entre vários clientes que estão em redes lógicas separadas seja conetado a um cluster. As conexões com o cluster são segregadas na pilha de rede através do uso da marcação VLAN.
+
+
+
+== Encontre mais informações
+
+* xref:task_system_manage_virtual_add_a_virtual_network.adoc[Adicione uma rede virtual]
+* xref:task_system_manage_virtual_enable_virtual_routing_and_forwarding.adoc[Ative o encaminhamento e encaminhamento virtuais]
+* xref:task_system_manage_virtual_edit_a_virtual_network.adoc[Edite uma rede virtual]
+* xref:task_system_manage_virtual_edit_vrf_vlans.adoc[Editar VRF VLANs]
+* xref:task_system_manage_virtual_delete_a_virtual_network.adoc[Eliminar uma rede virtual]
+

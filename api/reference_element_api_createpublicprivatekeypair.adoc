@@ -1,0 +1,158 @@
+---
+permalink: api/reference_element_api_createpublicprivatekeypair.html 
+sidebar: sidebar 
+keywords: SSL keys,public and private keys,certificate signing request,creating key pair 
+summary: Você pode usar o método CreatePublicPrivateKeyPair para criar chaves SSL públicas e privadas. Você pode usar essas chaves para gerar solicitações de assinatura de certificado. Só pode haver um par de chaves em uso para cada cluster de armazenamento. Antes de usar esse método para substituir chaves existentes, verifique se as chaves não estão mais em uso por nenhum provedor. 
+---
+= CreatePublicPrivateKeyPair
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `CreatePublicPrivateKeyPair` método para criar chaves SSL públicas e privadas. Você pode usar essas chaves para gerar solicitações de assinatura de certificado. Só pode haver um par de chaves em uso para cada cluster de armazenamento. Antes de usar esse método para substituir chaves existentes, verifique se as chaves não estão mais em uso por nenhum provedor.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+Nome comum
+ a| 
+O campo X,509 Nome distinto *Nome Comum* (CN).
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+país
+ a| 
+O campo X,509 Nome distinto *país* (C).
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+EMAILADDRESS
+ a| 
+O campo X,509 Nome distinto *Endereço de e-mail* (CORREIO).
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+localidade
+ a| 
+O campo X,509 Nome distinto *Nome da localidade* (L).
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+organização
+ a| 
+O campo X,509 Nome distinto *Nome da Organização* (o).
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+Unidade organizacional
+ a| 
+O campo Nome da Unidade organizacional* (ou) do nome distinto X,509.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+estado
+ a| 
+O campo X,509 Nome distinto *Estado* ou *Nome da Província* (ST ou SP ou S).
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+|===
+
+
+== Valores de retorno
+
+Este método não tem valores de retorno. Se não houver nenhum erro, a criação de chave é considerada bem-sucedida.
+
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+  "method": "CreatePublicPrivateKeyPair",
+  "params": {
+    "commonName": "Name",
+    "country": "US",
+    "emailAddress" : "email@domain.com"
+   },
+"id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+   "id": 1,
+   "result":
+      {}
+}
+----
+
+
+== Novo desde a versão
+
+11,7

@@ -1,0 +1,245 @@
+---
+permalink: api/reference_element_api_testping.html 
+sidebar: sidebar 
+keywords: ping,test,TestPing 
+summary: Você pode usar o método TestPing para testar a conetividade de rede a todos os nós no cluster em interfaces 1G e 10G usando pacotes ICMP. O teste usa os tamanhos de MTU apropriados para cada pacote com base nas configurações de MTU na configuração de rede. O TestPing não cria uma interface VLAN temporária. 
+---
+= Teste Ping
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `TestPing` método para testar a conetividade de rede a todos os nós no cluster em interfaces 1G e 10G usando pacotes ICMP. O teste usa os tamanhos de MTU apropriados para cada pacote com base nas configurações de MTU na configuração de rede. `TestPing` Não cria uma interface VLAN temporária.
+
+
+
+== Parâmetros
+
+Este método tem o seguinte parâmetro de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+tentativas
+ a| 
+Especifica o número de vezes que o sistema deve repetir o ping de teste.
+ a| 
+número inteiro
+ a| 
+5
+ a| 
+Não
+
+
+
+ a| 
+hosts
+ a| 
+Especifica uma lista separada por vírgulas de endereços ou nomes de host de dispositivos para ping. Se nenhum host for especificado, o método faz o ping dos hosts no cluster de armazenamento.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+interface
+ a| 
+A interface (base) existente a partir da qual os pings devem ser enviados. Valores possíveis:
+
+* `Bond10G`: Enviar pings a partir da interface Bond10G.
+* `Bond1G`: Enviar pings a partir da interface Bond1G.
+
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+PacketSize
+ a| 
+Especifica o número de bytes a enviar no pacote ICMP que é enviado para cada IP. O número de bytes deve ser inferior ao MTU máximo especificado na configuração de rede.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+PingTimeoutMsec
+ a| 
+Especifica o número de milissegundos a aguardar por cada resposta de ping individual.
+ a| 
+número inteiro
+ a| 
+500 milissegundos
+ a| 
+Não
+
+
+
+ a| 
+ProibiçãoFragmentação
+ a| 
+Ativa o sinalizador DF (não fragmentar) para os pacotes ICMP.
+ a| 
+booleano
+ a| 
+falso
+ a| 
+Não
+
+
+
+ a| 
+sourceAddressV4
+ a| 
+O endereço IPv4 de origem a ser usado nos pacotes ping ICMP.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+sourceAddressV6
+ a| 
+O endereço IPv6 de origem a ser usado nos pacotes ping ICMP.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+TotalTimeoutSec
+ a| 
+Especifica o tempo em segundos que o ping deve esperar por uma resposta do sistema antes de emitir a próxima tentativa de ping ou terminar o processo.
+ a| 
+número inteiro
+ a| 
+5
+ a| 
+Não
+
+
+
+ a| 
+VirtualNetworkTag
+ a| 
+O ID da VLAN a ser usado ao enviar os pacotes ping.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Não
+
+|===
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+
+
+| Nome | Descrição | Tipo 
+
+
+ a| 
+detalhes
+ a| 
+Lista de cada IP com o qual o nó foi capaz de se comunicar e as estatísticas de resposta de ping.
+ a| 
+Objeto JSON
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+    "method": "TestPing",
+    "params": {
+        "interface": "Bond1G",
+        "hosts": "192.168.0.1"
+    },
+    "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "details": {
+      "192.168.0.1": {
+        "individualResponseCodes": [
+          "Success",
+          "Success",
+          "Success",
+          "Success",
+          "Success"
+        ],
+        "individualResponseTimes": [
+          "00:00:00.000304",
+          "00:00:00.000123",
+          "00:00:00.000116",
+          "00:00:00.000113",
+          "00:00:00.000111"
+        ],
+        "individualStatus": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "interface": "Bond1G",
+        "responseTime": "00:00:00.000154",
+        "sourceAddressV4": "192.168.0.5",
+        "successful": true
+      }
+    },
+    "duration": "00:00:00.001747",
+    "result": "Passed"
+  }
+}
+----
+
+
+== Novo desde a versão
+
+5,0

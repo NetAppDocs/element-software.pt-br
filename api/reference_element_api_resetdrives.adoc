@@ -1,0 +1,116 @@
+---
+permalink: api/reference_element_api_resetdrives.html 
+sidebar: sidebar 
+keywords: drive,drives,remove,removing,data,reset,resetting,resetdrives,erase 
+summary: Você pode usar o método ResetDrives para inicializar proativamente as unidades e remover todos os dados atualmente residentes em uma unidade. A unidade pode então ser reutilizada em um nó existente ou usada em um nó atualizado. 
+---
+= ResetDrives
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `ResetDrives` método para inicializar proativamente as unidades e remover todos os dados atualmente residentes em uma unidade. A unidade pode então ser reutilizada em um nó existente ou usada em um nó atualizado.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+unidades
+ a| 
+Lista de nomes de dispositivos (não IDs de acesso) a repor.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+força
+ a| 
+Defina como True (verdadeiro) para repor a unidade.
+ a| 
+booleano
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+detalhes
+ a| 
+Detalhes das unidades que estão sendo redefinidas.
+ a| 
+Array de objetos JSON
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "ResetDrives",
+   "params": {
+      "drives" : "slot3",
+      "force" : true
+   },
+   "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+   "details": {
+    "drives": [
+    {
+      "drive": "slot3",
+      "returnCode": 0,
+      "stderr": " * Unlocking /dev/slot9 .[ ok ]\ * Setting master password /dev/slot9 .[ ok ]\ * Secure erasing /dev/slot9 (hdparm) [tries=0/1] ...........................[ ok ]",
+      "stdout": ""
+    }
+   ]
+  },
+  "duration": "00:00:28.501269",
+  "result": "Passed"
+  }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

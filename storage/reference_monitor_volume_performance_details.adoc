@@ -1,0 +1,91 @@
+---
+permalink: storage/reference_monitor_volume_performance_details.html 
+sidebar: sidebar 
+keywords: volume performance 
+summary: Você pode exibir estatísticas de desempenho de volumes na página desempenho de volume da guia relatórios na IU do Element. 
+---
+= Detalhes do desempenho do volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode exibir estatísticas de desempenho de volumes na página desempenho de volume da guia relatórios na IU do Element.
+
+A lista a seguir descreve os detalhes que estão disponíveis para você:
+
+* *ID*
++
+A ID gerada pelo sistema para o volume.
+
+* *Nome*
++
+O nome dado ao volume quando foi criado.
+
+* *Conta*
++
+O nome da conta atribuída ao volume.
+
+* *Grupos de acesso*
++
+O nome do grupo de acesso ao volume ou grupos aos quais o volume pertence.
+
+* * Utilização de volume*
++
+Um valor percentual que descreve quanto o cliente está usando o volume.
+
++
+Valores possíveis:
+
++
+** 0: O cliente não está usando o volume
+** 100: O cliente está usando o máximo
+** >100: O cliente está usando o burst
+
+
+* *Total de IOPS*
++
+O número total de IOPS (leitura e gravação) atualmente sendo executado em relação ao volume.
+
+* *Leia IOPS*
++
+O número total de IOPS de leitura atualmente sendo executado em relação ao volume.
+
+* *Escreva IOPS*
++
+O número total de IOPS de gravação atualmente sendo executado em relação ao volume.
+
+* * Taxa de transferência total*
++
+A quantidade total de throughput (leitura e gravação) que está sendo executada atualmente em relação ao volume.
+
+* *Leia a taxa de transferência*
++
+A quantidade total de taxa de transferência de leitura que está sendo executada atualmente em relação ao volume.
+
+* *Taxa de transferência de gravação*
++
+A quantidade total de taxa de transferência de gravação atualmente sendo executada em relação ao volume.
+
+* *Latência total*
++
+O tempo médio, em microssegundos, para concluir as operações de leitura e gravação em um volume.
+
+* *Latência de leitura*
++
+O tempo médio, em microssegundos, para concluir as operações de leitura para o volume nos últimos 500 milissegundos.
+
+* *Latência de gravação*
++
+O tempo médio, em microssegundos, para concluir as operações de gravação em um volume nos últimos 500 milissegundos.
+
+* *Profundidade da fila*
++
+O número de operações de leitura e gravação pendentes no volume.
+
+* *Tamanho médio de IO*
++
+Tamanho médio em bytes de e/S recentes para o volume nos últimos 500 milissegundos.
+
+

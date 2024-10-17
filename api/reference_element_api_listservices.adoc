@@ -1,0 +1,151 @@
+---
+permalink: api/reference_element_api_listservices.html 
+sidebar: sidebar 
+keywords: storage,cluster,services,list,listing,listservices 
+summary: Você pode usar o método ListServices para listar informações de serviços para nós, unidades, software atual e outros serviços que estão sendo executados no cluster. 
+---
+= ListServices
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `ListServices` método para listar informações de serviços para nós, unidades, software atual e outros serviços que estão sendo executados no cluster.
+
+
+
+== Parâmetros
+
+Este método não tem parâmetros de entrada.
+
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+serviços
+ a| 
+Serviços executados em unidades e nós.
+ a| 
+Objeto JSON
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "ListServices",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+"id": 1,
+"result": {
+	"services": [
+		{
+			"drive": {
+				"assignedService": 22,
+				"asyncResultIDs": [],
+				"attributes": {},
+				"capacity": 300069052416,
+				"customerSliceFileCapacity": 0,
+				"driveID": 5,
+				"driveStatus": "assigned",
+				"driveType": "block",
+				"failCount": 0,
+				"nodeID": 4,
+				"reservedSliceFileCapacity": 0,
+				"serial": "scsi-SATA_INTEL_SSDSC2",
+				"slot": 3
+			},
+			"drives": [
+				{
+					"assignedService": 22,
+					"asyncResultIDs": [],
+					"attributes": {},
+					"capacity": 300069052416,
+					"customerSliceFileCapacity": 0,
+					"driveID": 5,
+					"driveStatus": "assigned",
+					"driveType": "Block",
+					"failCount": 0,
+					"nodeID": 4,
+					"reservedSliceFileCapacity": 0,
+					"serial": "scsi-SATA_INTEL_SSDSC2",
+					"slot": 3
+				}
+			],
+			"node": {
+				"associatedFServiceID": 0,
+				"associatedMasterServiceID": 1,
+				"attributes": {},
+				"cip": "10.117.63.18",
+				"cipi": "Bond10G",
+				"fibreChannelTargetPortGroup": null,
+				"mip": "10.117.61.18",
+				"mipi": "Bond1G",
+				"name": "node4",
+				"nodeID": 4,
+				"nodeSlot": "",
+				"platformInfo": {
+					"chassisType": "R620",
+					"cpuModel": "Intel(R) Xeon(R) CPU",
+					"nodeMemoryGB": 72,
+					"nodeType": "SF3010",
+					"platformConfigVersion": "10.0"
+				},
+				"sip": "10.117.63.18",
+				"sipi": "Bond10G",
+				"softwareVersion": "10.0",
+				"uuid": "4C4C4544-0053",
+				"virtualNetworks": []
+			},
+			"service": {
+				"associatedBV": 0,
+				"associatedTS": 0,
+				"associatedVS": 0,
+				"asyncResultIDs": [
+					1
+				],
+				"driveID": 5,
+				"driveIDs": [
+					5
+				],
+				"firstTimeStartup": true,
+				"ipcPort": 4008,
+				"iscsiPort": 0,
+				"nodeID": 4,
+				"serviceID": 22,
+				"serviceType": "block",
+				"startedDriveIDs": [],
+				"status": "healthy"
+			}
+		}
+	]
+}
+----
+
+
+== Novo desde a versão
+
+9,6

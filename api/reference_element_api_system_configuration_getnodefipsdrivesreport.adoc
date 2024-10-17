@@ -1,0 +1,78 @@
+---
+permalink: api/reference_element_api_system_configuration_getnodefipsdrivesreport.html 
+sidebar: sidebar 
+keywords: individual,fips,feature,support,info,report,get,getting,getnodefipsdrivesreport,drive 
+summary: Você pode usar o método GetNodeFipsDrivesReport para verificar o status da capacidade de criptografia da unidade FIPS 140-2 de um único nó no cluster de armazenamento. É necessário executar esse método em um nó de storage individual. 
+---
+= GetNodeFipsDrivesReport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `GetNodeFipsDrivesReport` método para verificar o status da funcionalidade de criptografia de unidade FIPS 140-2 de um único nó no cluster de storage. É necessário executar esse método em um nó de storage individual.
+
+
+
+== Parâmetro
+
+Este método não tem nenhum parâmetro de entrada.
+
+
+
+== Valores de retorno
+
+Este método tem os seguintes valores de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+FipsDrives
+ a| 
+Um objeto JSON contendo o status do suporte a recursos FIPS 140-2 para esse nó. Valores possíveis:
+
+* Nenhum: O nó não é capaz de FIPS.
+* Parcial: O nó é capaz de FIPS, mas nem todas as unidades no nó são unidades FIPS.
+* Pronto: O nó é compatível com FIPS e todas as unidades no nó são unidades FIPS (ou nenhuma unidade está presente).
+
+ a| 
+cadeia de carateres
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+  "method": "GetNodeFipsDrivesReport",
+  "params": {},
+  "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+    "id": 1,
+    "result": {
+        "fipsDrives": "None"
+    }
+}
+----
+
+
+== Novo desde a versão
+
+11,5

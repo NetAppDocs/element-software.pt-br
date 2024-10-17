@@ -1,0 +1,22 @@
+---
+permalink: storage/concept_intro_fibre_channel_nodes.html 
+sidebar: sidebar 
+keywords: fibre channel nodes, fibre channel switch, clients, protcols, iSCSi protocols, clusters, interconnections, fc, FC, connectivity, fibre channel connectivity, fibre channel nodes, fibre channel protocol 
+summary: Os nós Fibre Channel da SolidFire fornecem conetividade a um switch Fibre Channel, que você pode se conetar a clientes Fibre Channel. Os nós Fibre Channel agem como um conversor de protocolo entre os protocolos Fibre Channel e iSCSI; isso permite adicionar conectividade Fibre Channel a qualquer cluster SolidFire novo ou existente. 
+---
+= Nós Fibre Channel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os nós Fibre Channel da SolidFire fornecem conetividade a um switch Fibre Channel, que você pode se conetar a clientes Fibre Channel. Os nós Fibre Channel agem como um conversor de protocolo entre os protocolos Fibre Channel e iSCSI; isso permite adicionar conectividade Fibre Channel a qualquer cluster SolidFire novo ou existente.
+
+Os nós Fibre Channel têm as seguintes características:
+
+* Os switches Fibre Channel gerenciam o estado da malha, fornecendo interconexões otimizadas.
+* O tráfego entre duas portas flui apenas através dos switches; ele não é transmitido para nenhuma outra porta.
+* A falha de uma porta é isolada e não afeta a operação de outras portas.
+* Vários pares de portas podem se comunicar simultaneamente em uma malha.
+

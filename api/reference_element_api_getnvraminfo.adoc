@@ -1,0 +1,88 @@
+---
+permalink: api/reference_element_api_getnvraminfo.html 
+sidebar: sidebar 
+keywords: nvram,info,get,getting,getnvraminfo 
+summary: Você pode usar o método GetNvramInfo para obter informações de cada nó sobre o cartão NVRAM. 
+---
+= GetNvramInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `GetNvramInfo` método para obter informações de cada nó sobre o cartão NVRAM.
+
+
+
+== Parâmetro
+
+Este método tem o seguinte parâmetro de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+força
+ a| 
+O parâmetro force deve ser incluído neste método para ser executado com sucesso em todos os nós no cluster.
+ a| 
+booleano
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+NvramInfo
+ a| 
+Arrays de eventos e erros detetados no cartão NVRAM.
+ a| 
+Objeto JSON
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+  "method": "GetNvramInfo",
+  "params": {
+      "force": true
+	  },
+  "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Devido ao tamanho deste exemplo de resposta, ele está documentado em um tópico suplementar.
+
+
+
+== Novo desde a versão
+
+9,6
+
+
+
+== Encontre mais informações
+
+xref:reference_element_api_response_example_getnvraminfo.adoc[GetNvramInfo]

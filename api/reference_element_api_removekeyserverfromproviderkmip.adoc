@@ -1,0 +1,79 @@
+---
+permalink: api/reference_element_api_removekeyserverfromproviderkmip.html 
+sidebar: sidebar 
+keywords: KMIP,key server,unassigning,removing,remove,unassign,removekeyserverfromproviderkmip 
+summary: 'Você pode usar o método RemoveKeyServerFromProviderKmip para desatribuir o servidor de chave KMIP (Protocolo de interoperabilidade de Gerenciamento de chaves) especificado do provedor ao qual foi atribuído. Você pode anular a atribuição de um servidor de chaves de seu provedor, a menos que seja o último e seu provedor esteja ativo (fornecendo chaves que estão atualmente em uso). Se o servidor de chaves especificado não for atribuído a um provedor, nenhuma ação será tomada e nenhum erro será retornado.' 
+---
+= RemoveKeyServerFromProviderKmip
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `RemoveKeyServerFromProviderKmip` método para anular a atribuição do servidor de chave KMIP (Key Management Interoperability Protocol) especificado do provedor ao qual foi atribuído. Você pode anular a atribuição de um servidor de chaves de seu provedor, a menos que seja o último e seu provedor esteja ativo (fornecendo chaves que estão atualmente em uso). Se o servidor de chaves especificado não for atribuído a um provedor, nenhuma ação será tomada e nenhum erro será retornado.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+KeyServerID
+ a| 
+A ID do servidor de chaves KMIP a ser desatribuída.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valores de retorno
+
+Este método não tem valores de retorno. A remoção é considerada bem-sucedida, desde que nenhum erro seja retornado.
+
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+  "method": "RemoveKeyServerFromProviderKmip",
+  "params": {
+    "keyServerID": 1
+   },
+"id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+   "id": 1,
+   "result":
+      {}
+    }
+}
+----
+
+
+== Novo desde a versão
+
+11,7

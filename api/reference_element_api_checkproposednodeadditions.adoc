@@ -1,0 +1,121 @@
+---
+permalink: api/reference_element_api_checkproposednodeadditions.html 
+sidebar: sidebar 
+keywords: proposed,node,additions,CheckProposedNodeAdditions,storage,checking 
+summary: Você pode usar o método CheckProposedNodeAdditions para testar um conjunto de nós de armazenamento para ver se você pode adicioná-los a um cluster de armazenamento sem erros ou violações de práticas recomendadas. 
+---
+= CheckProposedNodeAdditions
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `CheckProposedNodeAdditions` método para testar um conjunto de nós de storage para ver se é possível adicioná-los a um cluster de storage sem erros ou violações de práticas recomendadas.
+
+
+
+== Parâmetro
+
+Este método tem o seguinte parâmetro de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+nós
+ a| 
+Uma lista de endereços IP de storage de nós de storage que estão prontos para serem adicionados a um cluster de storage.
+ a| 
+array de cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valores de retorno
+
+Este método tem os seguintes valores de retorno:
+
+|===
+
+
+| Nome | Descrição | Tipo 
+
+
+ a| 
+ProposedClusterValid
+ a| 
+Indica se os nós de storage propostos constituiriam ou não um cluster de storage válido. Valores possíveis:
+
+* verdadeiro
+* falso
+
+ a| 
+booleano
+
+
+
+ a| 
+ProposedClusterErrors
+ a| 
+Erros que ocorreriam se um cluster de storage fosse criado usando os nós de storage propostos. Possíveis códigos de erro:
+
+* `nodesNoCapacity`: Os nós não tinham capacidade utilizável.
+* `nodesTooLarge`: Os nós constituem uma parte muito grande da capacidade do cluster para o esquema de proteção ativa.
+* `nodesConnectFailed`: Não foi possível conetar-se a nós para consultar a configuração de hardware.
+* `nodesQueryFailed`: Não foi possível consultar nós para configuração de hardware.
+* `nodesClusterMember`: Os endereços IP dos nós já estão em uso no cluster.
+* `nonFipsNodeCapable`: Não é possível adicionar um nó que não seja compatível com FIPS ao cluster de armazenamento enquanto o recurso de criptografia da unidade FIPS 140-2 estiver ativado.
+* `nonFipsDrivesCapable`: Não é possível adicionar um nó com unidades que não sejam FIPS ao cluster enquanto o recurso de criptografia de unidade FIPS 140-2 estiver ativado.
+
+ a| 
+array de cadeia de carateres
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+	"method": "CheckProposedNodeAdditions",
+	"params": {
+	"nodes": [
+		"192.168.1.11",
+		"192.168.1.12",
+		"192.168.1.13",
+		"192.168.1.14"
+	]
+},
+	"id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+	"id": 1,
+	"result": {
+		"proposedClusterValid": true,
+		"proposedClusterErrors": [ ]
+	}
+}
+----
+
+
+== Novo desde a versão
+
+11,0

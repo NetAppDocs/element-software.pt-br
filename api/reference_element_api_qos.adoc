@@ -1,0 +1,74 @@
+---
+permalink: api/reference_element_api_qos.html 
+sidebar: sidebar 
+keywords: object,objects,QoS 
+summary: 'O objeto QoS contém informações sobre as configurações de qualidade do serviço (QoS) para volumes. Os volumes criados sem valores de QoS especificados são criados usando os valores padrão. Você pode encontrar valores padrão usando o método GetDefaultQoS.' 
+---
+= QoS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto QoS contém informações sobre as configurações de qualidade do serviço (QoS) para volumes. Os volumes criados sem valores de QoS especificados são criados usando os valores padrão. Você pode encontrar valores padrão usando o `GetDefaultQoS` método.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+IOPS
+ a| 
+Máximo "pico" de 4KB IOPS permitido por curtos períodos de tempo. Permite picos de atividade de e/S sobre o valor máximo de IOPS normal.
+ a| 
+número inteiro
+
+
+
+ a| 
+BurstTime
+ a| 
+O período de tempo burstIOPS é permitido. O valor retornado é representado em segundos. Esse valor é calculado pelo sistema com base em IOPS definido para QoS.
+ a| 
+número inteiro
+
+
+
+ a| 
+curva
+ a| 
+A curva é um conjunto de pares chave-valor. As chaves são tamanhos de e/S em bytes. Os valores representam o custo de executar uma IOP em um tamanho de e/S específico. A curva é calculada em relação a uma operação de 4096 bytes definida em 100 IOPS.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+IOPS máximo
+ a| 
+O máximo desejado de 4KB IOPS permitido por um longo período de tempo.
+ a| 
+número inteiro
+
+
+
+ a| 
+MinIOPS
+ a| 
+O mínimo de 4KB IOPS desejado para garantir. O IOPS permitido só cairá abaixo desse nível se todos os volumes tiverem sido limitados ao seu valor minIOPS e ainda houver capacidade de desempenho insuficiente.
+ a| 
+número inteiro
+
+|===
+
+
+== Encontre mais informações
+
+xref:reference_element_api_getdefaultqos.adoc[GetDefaultQoS]

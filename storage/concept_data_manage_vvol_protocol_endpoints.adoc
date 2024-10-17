@@ -1,0 +1,18 @@
+---
+permalink: storage/concept_data_manage_vvol_protocol_endpoints.html 
+sidebar: sidebar 
+keywords: protocol endpoint, access, cluster, storage node, iscsi supported 
+summary: Os endpoints de protocolo são pontos de acesso usados por um host para tratar do storage em um cluster que executa o software NetApp Element. Os endpoints de protocolo não podem ser excluídos ou modificados por um usuário, não estão associados a uma conta e não podem ser adicionados a um grupo de acesso de volume. 
+---
+= Endpoints do protocolo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os endpoints de protocolo são pontos de acesso usados por um host para tratar do storage em um cluster que executa o software NetApp Element. Os endpoints de protocolo não podem ser excluídos ou modificados por um usuário, não estão associados a uma conta e não podem ser adicionados a um grupo de acesso de volume.
+
+Um cluster que executa o software Element cria automaticamente um ponto de extremidade de protocolo por nó de storage no cluster. Por exemplo, um cluster de armazenamento de seis nós tem seis pontos finais de protocolo mapeados para cada host ESXi. Os pontos de extremidade do protocolo são gerenciados dinamicamente pelo software Element e são criados, movidos ou removidos conforme necessário sem qualquer intervenção. Os endpoints de protocolo são o destino para vários pathing e atuam como um proxy de e/S para LUNs subsidiários. Cada ponto de extremidade do protocolo consome um endereço SCSI disponível, tal como um destino iSCSI padrão. Os endpoints de protocolo aparecem como um dispositivo de armazenamento de bloco único (512 bytes) no cliente vSphere, mas este dispositivo de armazenamento não está disponível para ser formatado ou usado como armazenamento.
+
+ISCSI é o único protocolo suportado. O protocolo Fibre Channel não é suportado.

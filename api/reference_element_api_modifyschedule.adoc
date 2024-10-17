@@ -1,0 +1,349 @@
+---
+permalink: api/reference_element_api_modifyschedule.html 
+sidebar: sidebar 
+keywords: modify,modifying,edit,editing,change,changing,snapshot,schedule,scheduled,delete,pause,modifyschedule 
+summary: Você pode usar ModifySchedule para alterar os intervalos nos quais um instantâneo agendado ocorre. Você também pode excluir ou pausar uma programação usando este método. 
+---
+= ModifySchedule
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar `ModifySchedule` para alterar os intervalos em que ocorre um instantâneo agendado. Você também pode excluir ou pausar uma programação usando este método.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+
+
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+atributos
+ a| 
+Utilize para alterar a frequência da ocorrência do instantâneo. Valores possíveis:
+
+* `Days of Week`
+* `Days of Month`
+* `Time Interval`
+
+ a| 
+Objeto JSON
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+horas
+ a| 
+Número de horas entre instantâneos ou hora em que o instantâneo ocorrerá no modo dias da semana ou dias do mês. Os valores válidos são de 0 a 24.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+nome
+ a| 
+O nome do instantâneo. Se não for introduzido nenhum nome, é utilizada a data e a hora em que o instantâneo do grupo foi tirado. O comprimento máximo permitido do nome é de 244 carateres.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+minutos
+ a| 
+Número de minutos entre instantâneos ou minuto em que o instantâneo ocorrerá no modo dias da semana ou dias do mês. Os valores válidos são de 0 a 59.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+| LastRunStatus | O resultado ou o status da última criação de snapshot agendada. | cadeia de carateres | Nenhum | Não 
+
+
+ a| 
+em pausa
+ a| 
+Indica se o agendamento deve ser pausado ou não. Valores válidos:
+
+* `true`
+* `false`
+
+ a| 
+booleano
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+recorrente
+ a| 
+Indica se a agenda será recorrente ou não. Os valores válidos são:
+
+* `true`
+* `false`
+
+ a| 
+booleano
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+RunNextInterval
+ a| 
+Use para escolher se deseja ou não executar o instantâneo na próxima vez que o agendador estiver ativo. Valores válidos:
+
+* `true`
+* `false`
+
+
+Quando definido como verdadeiro, o instantâneo agendado é executado da próxima vez que o agendador estiver ativo e, em seguida, repõe novamente para falso.
+ a| 
+booleano
+ a| 
+falso
+ a| 
+Não
+
+
+
+ a| 
+ID do scheduleID
+ a| 
+ID exclusivo da programação.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+ScheduleName
+ a| 
+Nome exclusivo para a programação. O comprimento máximo permitido do nome da programação é de 244 carateres.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+ScheduleType
+ a| 
+Indica o tipo de agendamento a ser criado. O único valor suportado é `snapshot`.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+`scheduleInfo`
+ a| 
+O nome exclusivo dado ao agendamento, o período de retenção do instantâneo criado e o ID do volume do volume a partir do qual o instantâneo foi criado. Valores válidos:
+
+* `volumeID`: A ID do volume a ser incluído no instantâneo. (número inteiro)
+* `volumes`: Uma lista de IDs de volume a serem incluídas no instantâneo do grupo. (array inteiro)
+* `name`: O nome do instantâneo a ser usado. (string)
+* `enableRemoteReplication`: Indica se o instantâneo deve ser incluído na replicação remota. (booleano)
+* `retention`: O período de tempo em que o instantâneo será mantido no formato HH:mm:ss. Se estiver vazio, o instantâneo é mantido para sempre. (string)
+* `fifo`: O instantâneo é retido em uma base de primeiro em primeiro em primeiro em primeiro lugar (FIFO). (string)
+* `ensureSerialCreation`: Especifique se uma nova criação de snapshot deve ser permitida se uma replicação de snapshot anterior estiver em andamento. (booleano)
+
+ a| 
+link:reference_element_api_schedule.html["programação"^]
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+SnapMirrorLabel
+ a| 
+O rótulo usado pelo software SnapMirror para especificar a política de retenção de snapshot em um endpoint do SnapMirror.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+ToBeDeleted
+ a| 
+Indica se o agendamento está marcado para exclusão. Valores válidos:
+
+* `true`
+* `false`
+
+ a| 
+booleano
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+StartingDate
+ a| 
+Indica a data da primeira vez que o horário começou ou começará.
+ a| 
+String de data ISO 8601
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+dias úteis
+ a| 
+Os dias do mês em que um snapshot será feito. Os valores válidos são de 1 a 31.
+ a| 
+array inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+dias úteis
+ a| 
+Dia da semana o instantâneo deve ser criado. O dia da semana começa no domingo com o valor de 0 e um deslocamento de 1.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+|===
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+
+
+| Nome | Descrição | Tipo 
+
+
+ a| 
+programação
+ a| 
+Um objeto contendo os atributos de programação modificados.
+ a| 
+xref:reference_element_api_schedule.adoc[programação]
+
+|===
+
+
+== Exemplo de solicitação
+
+[listing]
+----
+{
+  "method": "ModifySchedule",
+  "params": {
+    "scheduleName" : "Chicago",
+    "scheduleID" : 3
+    },
+  "id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "schedule": {
+      "attributes": {
+        "frequency": "Days Of Week"
+            },
+      "hasError": false,
+      "hours": 5,
+      "lastRunStatus": "Success",
+      "lastRunTimeStarted": null,
+      "minutes": 0,
+      "monthdays": [],
+      "paused": false,
+      "recurring": true,
+      "runNextInterval": false,
+      "scheduleID": 3,
+      "scheduleInfo": {
+        "volumeID": "2"
+            },
+      "scheduleName": "Chicago",
+      "scheduleType": "Snapshot",
+      "startingDate": null,
+      "toBeDeleted": false,
+      "weekdays": [
+        {
+          "day": 2,
+          "offset": 1
+      }
+      ]
+    }
+  }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

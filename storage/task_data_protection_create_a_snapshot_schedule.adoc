@@ -1,0 +1,47 @@
+---
+permalink: storage/task_data_protection_create_a_snapshot_schedule.html 
+sidebar: sidebar 
+keywords: snapshot schedule, create, volumes, recurring schedule 
+summary: Você pode agendar um instantâneo de um volume ou volumes para que ocorra automaticamente em intervalos especificados. 
+---
+= Criar uma agenda de instantâneos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode agendar um instantâneo de um volume ou volumes para que ocorra automaticamente em intervalos especificados.
+
+Ao configurar uma programação de instantâneos, você pode escolher entre intervalos de tempo com base em dias da semana ou dias do mês. Você também pode criar uma programação recorrente e especificar os dias, horas e minutos antes do próximo snapshot ocorrer.
+
+Se você agendar um snapshot para ser executado em um período de tempo que não é divisível em 5 minutos, o snapshot será executado no próximo período de tempo que é divisível em 5 minutos. Por exemplo, se você agendar um snapshot para ser executado às 12:42:00 UTC, ele será executado às 12:45:00 UTC. Não é possível programar um instantâneo para ser executado em intervalos inferiores a 5 minutos.
+
+A partir do elemento 12,5, você pode habilitar a criação serial e selecionar para reter os snapshots em uma base FIFO (First-in-First-out) a partir da IU.
+
+* A opção *Enable Serial Creation* especifica que apenas um instantâneo é replicado de cada vez. A criação de um novo snapshot falha quando uma replicação anterior de snapshot ainda está em andamento. Se a caixa de verificação não estiver selecionada, é permitida a criação de instantâneos quando outra replicação de instantâneos ainda estiver em curso.
+* A opção *FIFO* adiciona a capacidade de reter um número consistente dos instantâneos mais recentes. Quando a caixa de verificação está selecionada, os instantâneos são retidos numa base FIFO. Depois que a fila de instantâneos FIFO atinge sua profundidade máxima, o instantâneo FIFO mais antigo é descartado quando um novo instantâneo FIFO é inserido.
+
+
+.Passos
+. Selecione *proteção de dados* > *horários*.
+. Selecione *criar horário*.
+. No campo *IDs de volume CSV*, insira um único ID de volume ou uma lista separada por vírgulas de IDs de volume a incluir na operação de snapshot.
+. Introduza um novo nome de programação.
+. Selecione um tipo de agendamento e defina o agendamento nas opções fornecidas.
+. *Opcional:* Selecione *Agendamento recorrente* para repetir o agendamento de snapshot indefinidamente.
+. *Opcional:* Digite um nome para o novo snapshot no campo *novo Nome do instantâneo*.
++
+Se você deixar o campo em branco, o sistema usará a hora e a data da criação do instantâneo como nome.
+
+. *Opcional:* Selecione a caixa de seleção *incluir instantâneos na replicação quando emparelhado* para garantir que os instantâneos sejam capturados na replicação quando o volume pai estiver emparelhado.
+. *Opcional:* Selecione a caixa de seleção *Ativar criação de Série* para garantir que somente um snapshot seja replicado de cada vez.
+. Para definir a retenção para o instantâneo, selecione uma das seguintes opções:
++
+** *Opcional:* Selecione a caixa de seleção *FIFO (First in First out)* para manter um número consistente dos instantâneos mais recentes.
+** Selecione *Keep Forever* para manter o instantâneo no sistema indefinidamente.
+** Selecione *Definir período de retenção* e use as caixas de rotação de data para escolher um período de tempo para o sistema reter o instantâneo.
+
+
+. Selecione *criar horário*.
+

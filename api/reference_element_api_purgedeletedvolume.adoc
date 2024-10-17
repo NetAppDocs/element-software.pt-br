@@ -1,0 +1,75 @@
+---
+permalink: api/reference_element_api_purgedeletedvolume.html 
+sidebar: sidebar 
+keywords: volume,volumes,purging,purge,deleted,purgedeletedvolume 
+summary: Você pode usar o método PurgeDeletedvolume para limpar imediatamente e permanentemente um volume que foi excluído. Você deve excluir um volume usando Deletevolume antes que ele possa ser purgado. 
+---
+= PurgeDeletedvolume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `PurgeDeletedVolume` método para limpar imediatamente e permanentemente um volume que foi excluído. Você deve excluir um volume usando `DeleteVolume` antes que ele possa ser purgado.
+
+Os volumes são purgados automaticamente após um período de tempo, portanto, o uso desse método normalmente não é necessário.
+
+
+
+== Parâmetro
+
+Este método tem o seguinte parâmetro de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+| VolumeID | A volumeID do volume a ser purgado. | número inteiro | Não | Sim 
+|===
+
+
+== Valores de retorno
+
+Este método não tem valores de retorno.
+
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "PurgeDeletedVolume",
+   "params": {
+      "volumeID"  : 5
+   },
+   "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id" : 1,
+  "result": {}
+}
+----
+
+
+== Novo desde a versão
+
+9,6
+
+
+
+== Encontre mais informações
+
+xref:reference_element_api_deletevolume.adoc[Deletevolume]

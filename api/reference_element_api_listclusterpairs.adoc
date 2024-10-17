@@ -1,0 +1,94 @@
+---
+permalink: api/reference_element_api_listclusterpairs.html 
+sidebar: sidebar 
+keywords: cluster,pair,pairs,paired,list,listing,listclusterpairs 
+summary: Você pode usar o método ListClusterPairs para listar todos os clusters que estão emparelhados com o cluster atual. Este método retorna informações sobre emparelhamentos de cluster ativos e pendentes, como estatísticas sobre o emparelhamento atual, bem como a conetividade e latência do emparelhamento de cluster. 
+---
+= ListClusterPairs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `ListClusterPairs` método para listar todos os clusters emparelhados com o cluster atual. Este método retorna informações sobre emparelhamentos de cluster ativos e pendentes, como estatísticas sobre o emparelhamento atual, bem como a conetividade e latência (em milissegundos) do emparelhamento de cluster.
+
+
+
+== Parâmetro
+
+Este método não tem nenhum parâmetro de entrada:
+
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+ClusterPairs
+ a| 
+Informações sobre cada cluster emparelhado.
+ a| 
+xref:reference_element_api_clusterpair.adoc[Exclusivo par] array
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "ListClusterPairs",
+   "params": {
+      },
+   "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+ "id": 1,
+ "result": {
+   "clusterPairs": [
+     {
+      "clusterName": "cluster2",
+      "clusterPairID": 3,
+      "clusterPairUUID": "9866fbeb-c2f8-4df3-beb9-58a5c4e49c9b",
+      "clusterUUID": 5487,
+      "latency": 1,
+      "mvip": "172.1.1.5",
+      "status": "Connected"
+      "version": "8.0.0.1361"
+     },
+     {
+      "clusterName": "cluster3",
+      "clusterPairID": 2,
+      "clusterPairUUID": "8132a699-ce82-41e0-b406-fb914f976042",
+      "clusterUUID": 1383,
+      "latency": 1,
+      "mvip": "172.1.1.6",
+      "status": "Connected"
+      "version": "8.0.0.1361"
+     }
+   ]
+ }
+----
+
+
+== Novo desde a versão
+
+9,6

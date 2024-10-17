@@ -1,0 +1,191 @@
+---
+permalink: api/reference_element_api_startbulkvolumeread.html 
+sidebar: sidebar 
+keywords: volume,read,session,start,starting,bulk,startbulkvolumeread 
+summary: Pode utilizar o método StartBulkVolumeRead para iniciar uma sessão de leitura de volume em massa num volume especificado. 
+---
+= StartBulkVolumeRead
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `StartBulkVolumeRead` método para iniciar uma sessão de leitura de volume em massa em um volume especificado.
+
+Apenas dois processos de volume em massa podem ser executados simultaneamente em um volume. Ao inicializar a sessão, os dados são lidos de um volume de armazenamento SolidFire para serem armazenados em uma fonte de backup externa. Os dados externos são acessados por um servidor da Web executado em um nó de storage do Element. As informações de interação do servidor para acesso a dados externos são passadas por um script executado no sistema de armazenamento.
+
+No início de uma operação de leitura de volume em massa, um instantâneo do volume é feito e o instantâneo é excluído quando a leitura é concluída. Você também pode ler um instantâneo do volume inserindo a ID do instantâneo como um parâmetro. Quando você lê um instantâneo anterior, o sistema não cria um novo instantâneo do volume nem exclui o instantâneo anterior quando a leitura é concluída.
+
+
+NOTE: Este processo cria um novo instantâneo se a ID de um instantâneo existente não for fornecida. Os instantâneos podem ser criados se a plenitude do cluster estiver na fase 2 ou 3. Os instantâneos não são criados quando a plenitude do cluster está na fase 4 ou 5.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+formato
+ a| 
+O formato dos dados do volume. Pode ser:
+
+* `uncompressed`: Cada byte do volume é retornado sem nenhuma compressão.
+* `native`: Dados opacos são retornados que são menores e mais eficientemente armazenados e gravados em uma gravação de volume em massa subsequente.
+
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+VolumeID
+ a| 
+A ID do volume a ser lido.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+SnapshotID
+ a| 
+O ID de um instantâneo criado anteriormente usado para leituras de volume em massa. Se não for introduzida nenhuma ID, é feito um instantâneo da imagem atual do volume ativo.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+script
+ a| 
+O nome de um script executável. Se nenhum nome de script for dado, a chave e o URL serão necessários para acessar os nós de storage do elemento. O script é executado no nó principal, e a chave e o URL são retornados ao script para que o servidor da Web local possa ser contatado.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+ScriptParameters
+ a| 
+Parâmetros JSON para passar para o script.
+ a| 
+Objeto JSON
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+atributos
+ a| 
+Lista de pares nome-valor no formato de objeto JSON. link:reference_element_api_attributes.html["Saiba mais"].
+ a| 
+Objeto JSON
+ a| 
+Nenhum
+ a| 
+Não
+
+|===
+
+
+== Valores de retorno
+
+Este método tem os seguintes valores de retorno:
+
+|===
+
+
+| Nome | Descrição | Tipo 
+
+
+ a| 
+AsyncHandle
+ a| 
+O ID do processo assíncrono a ser verificado para conclusão.
+ a| 
+número inteiro
+
+
+
+ a| 
+chave
+ a| 
+Tecla opaca que identifica exclusivamente a sessão.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+url
+ a| 
+URL para acessar o servidor da Web do nó.
+ a| 
+cadeia de carateres
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "StartBulkVolumeRead",
+   "params": {
+      "volumeID" : 5,
+      "format"  : "native",
+      "snapshotID" : 2
+   },
+   "id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+      "id" : 1,
+   "result" : {
+      "asyncHandle" : 1,
+      "key" : "11eed8f086539205beeaadd981aad130",
+      "url" : "https://127.0.0.1:44000/"
+   }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

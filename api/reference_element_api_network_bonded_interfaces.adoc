@@ -1,0 +1,609 @@
+---
+permalink: api/reference_element_api_network_bonded_interfaces.html 
+sidebar: sidebar 
+keywords: object,objects,network 
+summary: O objeto de rede contém informações de configuração para interfaces de rede ligadas em um nó de storage. Você pode usar os métodos GetConfig e GetNetworkConfig para obter essas informações para um nó de armazenamento. 
+---
+= rede (interfaces ligadas)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto de rede (interfaces ligadas) contém informações de configuração para interfaces de rede ligadas em um nó de storage. Você pode usar os `GetConfig` métodos e `GetNetworkConfig` para obter essas informações para um nó de storage.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+
+
+| Nome | Descrição | Tipo 
+
+
+ a| 
+endereço
+ a| 
+O endereço IPv4 atribuído a esta interface no nó.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+addressV6
+ a| 
+O endereço de gerenciamento IPv6 atribuído à interface Bond1G no nó.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+bond-downdelay
+ a| 
+Tempo de espera, em milissegundos, antes de desativar um escravo após uma falha de link ter sido detetada.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+bond-fail_over_mac
+ a| 
+A configuração do endereço MAC da interface de rede.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+bond-miimon
+ a| 
+A frequência, em milissegundos, na qual o estado da ligação MII é inspecionado quanto a falhas na ligação.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+modo bond
+ a| 
+O modo de colagem. Valores possíveis:
+
+* ActivePassive (padrão)
+* ALB
+* LACP (recomendado)
+
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+bond-primary_reselecionar
+ a| 
+Especifica quando o escravo de ligação primária é escolhido como escravo ativo. Valores possíveis:
+
+* Sempre
+* Melhor
+* Falha
+
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+escravos-escravos
+ a| 
+A lista de interfaces secundárias para a ligação.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+bond-lacp_rate
+ a| 
+Quando o modo Bond é LACP, a taxa pode mudar para uma das seguintes opções:
+
+* LACP Fast (padrão)
+* LACP lento
+
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+bond-updelay
+ a| 
+O tempo, em milissegundos, para esperar antes de ativar um escravo depois que um link é detetado.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+dns-nameservers
+ a| 
+Uma lista de endereços usados para serviços de nome de domínio, separados por vírgula ou espaço.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+pesquisa dns
+ a| 
+Uma lista separada por espaço ou vírgula de domínios de pesquisa DNS.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+família
+ a| 
+Família de endereços que a interface está configurada para usar. Atualmente "inet" para IPv4 é suportado.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+gateway
+ a| 
+O endereço de rede do roteador IPv4 usado para enviar tráfego da rede local.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+gatewayV6
+ a| 
+O endereço de rede do roteador IPv6 usado para enviar tráfego da rede local Bond1G.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+ipV6PrefixLength
+ a| 
+O comprimento do prefixo de sub-rede para rotas estáticas do tipo "net" para tráfego IPv6 na rede Bond1G.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+MacAddress
+ a| 
+O endereço MAC real atribuído à interface e observado pela rede.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+MaidasPermanentes
+ a| 
+O endereço MAC imutável atribuído pelo fabricante à interface.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+método
+ a| 
+O método utilizado para configurar a interface. Valores possíveis:
+
+* Loopback: Usado para definir a interface de loopback IPv4.
+* Manual: Usado para definir interfaces que não são configuradas automaticamente.
+* dhcp: Pode ser usado para obter um endereço IP via DHCP.
+* Estático: Usado para definir interfaces Ethernet com endereços IPv4 alocados estaticamente.
+
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+mtu
+ a| 
+O maior tamanho de pacote (em bytes) que a interface pode transmitir. Deve ser maior ou igual a 1500; até 9000 é suportado.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+máscara de rede
+ a| 
+A máscara de bits que especifica a sub-rede para a interface.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+rede
+ a| 
+Indica onde o intervalo de endereços IP começa com base na máscara de rede.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+rotas
+ a| 
+Matriz separada por vírgulas de strings de rota a serem aplicadas à tabela de roteamento.
+ a| 
+array de cadeia de carateres
+
+
+
+ a| 
+estado
+ a| 
+O estado da interface. Valores possíveis:
+
+* Para baixo: A interface está inativa.
+* Up: A interface está pronta, mas não tem nenhum link.
+* UpAndRunning: A interface está pronta e um link é estabelecido.
+
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+SymmetricRouteRules
+ a| 
+As regras de roteamento simétrico configuradas no nó.
+ a| 
+array de cadeia de carateres
+
+
+
+ a| 
+UpAndRunning
+ a| 
+Indica se a interface está pronta e tem um link.
+ a| 
+booleano
+
+
+
+ a| 
+VirtualNetworkTag
+ a| 
+O identificador de rede virtual da interface (tag VLAN).
+ a| 
+cadeia de carateres
+
+|===
+
+
+== Modificabilidade dos membros e estados de nós
+
+Esta tabela indica se os parâmetros do objeto podem ou não ser modificados em cada estado de nó possível.
+
+|===
+
+
+| Nome do membro | Estado disponível | Estado pendente | Estado ativo 
+
+
+ a| 
+endereço
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+
+
+
+ a| 
+addressV6
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+
+
+
+ a| 
+bond-downdelay
+ a| 
+Configurado pelo sistema
+ a| 
+N/A.
+ a| 
+N/A.
+
+
+
+ a| 
+bond-fail_over_mac
+ a| 
+Configurado pelo sistema
+ a| 
+N/A.
+ a| 
+N/A.
+
+
+
+ a| 
+bond-miimon
+ a| 
+Configurado pelo sistema
+ a| 
+N/A.
+ a| 
+N/A.
+
+
+
+ a| 
+modo bond
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+ a| 
+bond-primary_reselecionar
+ a| 
+Configurado pelo sistema
+ a| 
+N/A.
+ a| 
+N/A.
+
+
+
+ a| 
+escravos-escravos
+ a| 
+Configurado pelo sistema
+ a| 
+N/A.
+ a| 
+N/A.
+
+
+
+ a| 
+bond-lacp_rate
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+ a| 
+bond-updelay
+ a| 
+Configurado pelo sistema
+ a| 
+N/A.
+ a| 
+N/A.
+
+
+
+ a| 
+dns-nameservers
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+ a| 
+pesquisa dns
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+ a| 
+família
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+ a| 
+gateway
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+ a| 
+gatewayV6
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+ a| 
+ipV6PrefixLength
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+ a| 
+MacAddress
+ a| 
+Configurado pelo sistema
+ a| 
+N/A.
+ a| 
+N/A.
+
+
+
+ a| 
+MaidasPermanentes
+ a| 
+Configurado pelo sistema
+ a| 
+N/A.
+ a| 
+N/A.
+
+
+
+ a| 
+método
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+ a| 
+mtu
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+ a| 
+máscara de rede
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+ a| 
+rede
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+ a| 
+rotas
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+ a| 
+estado
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+ a| 
+SymmetricRouteRules
+ a| 
+Configurado pelo sistema
+ a| 
+N/A.
+ a| 
+N/A.
+
+
+
+ a| 
+UpAndRunning
+ a| 
+Configurado pelo sistema
+ a| 
+N/A.
+ a| 
+N/A.
+
+
+
+ a| 
+VirtualNetworkTag
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+|===
+
+
+== Encontre mais informações
+
+* xref:reference_element_api_getconfig.adoc[GetConfig]
+* xref:reference_element_api_getnetworkconfig.adoc[GetNetworkConfig]
+

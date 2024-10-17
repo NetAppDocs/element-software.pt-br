@@ -1,0 +1,23 @@
+---
+permalink: storage/concept_intro_storage_nodes.html 
+sidebar: sidebar 
+keywords: storage nodes, management nodes, block space, metadata space, data management, storage management, Bond10G, network interface, network, metadata, data storage, storage, drives, network interfaces 
+summary: Um nó de armazenamento SolidFire é um servidor que contém uma coleção de unidades que se comunicam entre si através da interface de rede Bond10G. As unidades no nó contêm espaço de bloco e metadados para storage e gerenciamento de dados. 
+---
+= Nós de storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um nó de armazenamento SolidFire é um servidor que contém uma coleção de unidades que se comunicam entre si através da interface de rede Bond10G. As unidades no nó contêm espaço de bloco e metadados para storage e gerenciamento de dados.
+
+Os nós de storage têm as seguintes características:
+
+* Cada nó tem um nome exclusivo. Se um nome de nó não for especificado por um administrador, o padrão será SF-XXXX, onde XXXX é quatro carateres aleatórios gerados pelo sistema.
+* Cada nó tem seu próprio cache de gravação de memória de acesso aleatório (NVRAM) não volátil de alto desempenho para melhorar o desempenho geral do sistema e reduzir a latência de gravação.
+* Cada nó é conetado a duas redes, armazenamento e gerenciamento, cada um com dois links independentes para redundância e desempenho. Cada nó requer um endereço IP em cada rede.
+* Você pode criar um cluster com novos nós de storage ou adicionar nós de storage a um cluster existente para aumentar a capacidade de storage e a performance.
+* Você pode adicionar ou remover nós do cluster a qualquer momento sem interromper o serviço.
+

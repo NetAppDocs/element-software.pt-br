@@ -1,0 +1,202 @@
+---
+permalink: api/reference_element_api_rollbacktosnapshot.html 
+sidebar: sidebar 
+keywords: rollbacktosnapshot,snapshot,creating,create,roll,back,rollback,roll back,existing 
+summary: Você pode usar o método RollbackToSnapshot para criar um instantâneo existente da imagem de volume ativo. Este método cria um novo instantâneo a partir de um instantâneo existente. 
+---
+= RollbackToSnapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode utilizar o `RollbackToSnapshot` método para criar um instantâneo existente da imagem de volume ativa. Este método cria um novo instantâneo a partir de um instantâneo existente.
+
+O novo instantâneo fica ativo e o instantâneo existente é preservado até ser excluído manualmente. O snapshot ativo anteriormente é excluído, a menos que você defina o parâmetro saveCurrentState como verdadeiro.
+
+*CLUSTER_FULLNESS*
+
+[NOTE]
+====
+* Você pode criar snapshots se a plenitude do cluster estiver na fase 1, 2 ou 3. Não é possível criar instantâneos quando a plenitude do cluster atinge a fase 4 ou 5.
+* Reverter um volume para um instantâneo pode falhar quando a sincronização de cortes estiver em andamento. Tente novamente `RollbackToSnapshot` após a conclusão da sincronização.
+
+
+====
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+VolumeID
+ a| 
+VolumeID para o volume.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+atributos
+ a| 
+Lista de pares nome-valor no formato de objeto JSON.
+ a| 
+Atributos JSON
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+nome
+ a| 
+Nome para o instantâneo. Se nenhum nome for dado, o nome do instantâneo que está sendo revertido é usado com "- copy" anexado ao final do nome.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+SnapshotID
+ a| 
+ID de um instantâneo criado anteriormente no volume dado.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+SaveCurrentState
+ a| 
+Especifica se deseja salvar ou não a imagem de volume ativa anterior. Valores válidos:
+
+* Verdadeiro: A imagem de volume ativo anterior é mantida.
+* Falso: A imagem de volume ativo anterior é eliminada.
+
+ a| 
+booleano
+ a| 
+falso
+ a| 
+Não
+
+|===
+
+
+== Valores de retorno
+
+Este método tem os seguintes valores de retorno:
+
+|===
+
+
+| Nome | Descrição | Tipo 
+
+
+ a| 
+soma de verificação
+ a| 
+Uma pequena representação de cadeia de carateres dos dados no instantâneo armazenado.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+SnapshotID
+ a| 
+Se saveCurrentState foi definido como false, este valor é nulo.
+
+Se saveCurrentState foi definido como true, o ID exclusivo do snapshot recém-criado.
+ a| 
+número inteiro
+
+
+
+ a| 
+snapshot
+ a| 
+Se saveCurrentState foi definido como false, este valor é nulo.
+
+Se saveCurrentState foi definido como true, um objeto contendo informações sobre o snapshot recém-criado.
+ a| 
+xref:reference_element_api_snapshot.adoc[snapshot]
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+ "method": "RollbackToSnapshot",
+ "params": {
+    "volumeID": 1,
+    "snapshotID": 3114,
+    "saveCurrentState": true
+  },
+  "id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "checksum": "0x0",
+    "snapshot": {
+      "attributes": {},
+      "checksum": "0x0",
+      "createTime": "2016-04-04T17:27:32Z",
+      "enableRemoteReplication": false,
+      "expirationReason": "None",
+      "expirationTime": null,
+      "groupID": 0,
+      "groupSnapshotUUID": "00000000-0000-0000-0000-000000000000",
+      "name": "test1-copy",
+      "snapshotID": 1,
+      "snapshotUUID": "30d7e3fe-0570-4d94-a8d5-3cc8097a6bfb",
+      "status": "done",
+      "totalSize": 5000658944,
+      "virtualVolumeID": null,
+      "volumeID": 1
+    },
+    "snapshotID": 1
+  }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

@@ -1,0 +1,19 @@
+---
+permalink: storage/task_replication_validate_the_cluster_pair_connection.html 
+sidebar: sidebar 
+keywords: cluster pair connection, validate 
+summary: Depois que o emparelhamento do cluster estiver concluído, você pode querer verificar a conexão do par de cluster para garantir o sucesso da replicação. 
+---
+= Valide a conexão do par de cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois que o emparelhamento do cluster estiver concluído, você pode querer verificar a conexão do par de cluster para garantir o sucesso da replicação.
+
+. No cluster local, selecione *proteção de dados* > *pares de cluster*.
+. Na janela *pares de cluster*, verifique se o par de cluster está conetado.
+. *Opcional:* navegue de volta para o cluster local e para a janela *pares de cluster* e verifique se o par de cluster está conetado.
+

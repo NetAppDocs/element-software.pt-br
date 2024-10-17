@@ -1,0 +1,79 @@
+---
+permalink: storage/task_snapmirror_transfer_or_one_time_migration_from_ontap_to_element.html 
+sidebar: sidebar 
+keywords: element, ui, transfer, perform, source, volume, snapmirror, dr, disaster, recovery, one-time, migration 
+summary: Em geral, quando você usa o SnapMirror para recuperação de desastres de um cluster de storage SolidFire que executa o software NetApp Element para o software ONTAP, o Element é a origem e o ONTAP o destino. No entanto, em alguns casos, o sistema de storage ONTAP pode servir como origem e elemento como destino. 
+---
+= Faça uma transferência ou migração única do ONTAP para o Element
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Em geral, quando você usa o SnapMirror para recuperação de desastres de um cluster de storage SolidFire que executa o software NetApp Element para o software ONTAP, o Element é a origem e o ONTAP o destino. No entanto, em alguns casos, o sistema de storage ONTAP pode servir como origem e elemento como destino.
+
+* Existem dois cenários:
++
+** Não existe nenhuma relação de recuperação de desastres anterior. Siga todas as etapas deste procedimento.
+** Existe uma relação anterior de recuperação de desastres, mas não entre os volumes que estão sendo usados para essa mitigação. Neste caso, siga apenas os passos 3 e 4 abaixo.
+
+
+
+
+.O que você vai precisar
+* O nó de destino do elemento deve ter sido tornado acessível ao ONTAP.
+* O volume do elemento deve ter sido habilitado para replicação do SnapMirror.
+
+
+Você deve especificar o caminho de destino do elemento no formulário hostip:/LUN/<id_number>, onde lun é a cadeia real "'lun'" e id_number é a ID do volume do elemento.
+
+.Passos
+. Usando o ONTAP, crie a relação com o cluster Element:
++
+[listing]
+----
+snapmirror create -source-path SVM:volume|cluster://SVM/volume
+-destination-path hostip:/lun/name -type XDP -schedule schedule -policy
+    policy
+----
++
+[listing]
+----
+cluster_dst::> snapmirror create -source-path svm_1:volA_dst
+-destination-path 10.0.0.11:/lun/0005 -type XDP -schedule my_daily -policy MirrorLatest
+----
+. Verifique se a relação SnapMirror foi criada usando o comando ONTAP SnapMirror show.
++
+Consulte as informações sobre como criar uma relação de replicação na documentação do ONTAP e para obter a sintaxe de comando completa, consulte a página de manual do ONTAP.
+
+. Usando a `ElementCreateVolume` API, crie o volume de destino e defina o modo de acesso ao volume de destino como SnapMirror:
++
+Crie um volume de elemento usando a API Element
+
++
+[listing]
+----
+{
+   "method": "CreateVolume",
+   "params": {
+        "name": "SMTargetVolumeTest2",
+        "accountID": 1,
+        "totalSize": 100000000000,
+        "enable512e": true,
+        "attributes": {},
+        "qosPolicyID": 1,
+        "enableSnapMirrorReplication": true,
+        "access": "snapMirrorTarget"
+    },
+    "id": 1
+}
+----
+. Inicialize a relação de replicação usando o comando ONTAP `snapmirror initialize`:
++
+[listing]
+----
+snapmirror initialize -source-path hostip:/lun/name
+-destination-path SVM:volume|cluster://SVM/volume
+----
+

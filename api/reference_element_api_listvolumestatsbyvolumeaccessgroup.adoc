@@ -1,0 +1,125 @@
+---
+permalink: api/reference_element_api_listvolumestatsbyvolumeaccessgroup.html 
+sidebar: sidebar 
+keywords: volumes,volume,stats,list,listing,access,group,listvolumestatsbyvolumeaccessgroup,activity 
+summary: Pode utilizar o método ListVolumeStatsByVolumeAccessGroup para listar as medições totais de atividade para todos os volumes que são membros dos grupos de acesso de volume especificados. 
+---
+= ListVolumeStatsByVolumeAccessGroup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode utilizar o `ListVolumeStatsByVolumeAccessGroup` método para listar as medições totais de atividade de todos os volumes que são membros dos grupos de acesso de volume especificados.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+IncludeVirtualVolumes
+ a| 
+Os volumes virtuais são incluídos na resposta por padrão. Para excluir volumes virtuais, defina como false.
+ a| 
+booleano
+ a| 
+verdadeiro
+ a| 
+Não
+
+
+
+ a| 
+Grupos de acessórios de volume
+ a| 
+Um array de VolumeAccessGroupIDs para o qual a atividade de volume é retornada. Se omitido, as estatísticas de todos os grupos de acesso de volume são retornadas.
+ a| 
+array inteiro
+ a| 
+Nenhum
+ a| 
+Não
+
+|===
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+VolumeStats
+ a| 
+Lista de informações de atividade de volume para todos os volumes no grupo de acesso de volume especificado. * Nota:* o membro volumeID é 0 para cada entrada, porque os valores representam a soma de todos os volumes pertencentes à conta.
+ a| 
+xref:reference_element_api_volumestats.adoc[VolumeStats]
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+  "method": "ListVolumeStatsByVolumeAccessGroup",
+    "params": {"volumeAccessGroups": [1]},
+    "id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "volumeStats": [
+      {
+        "accountID": 0,
+        "nonZeroBlocks": 149366393,
+        "readBytes": 3156273328128,
+        "readBytesLastSample": 0,
+        "readOps": 770574543,
+        "readOpsLastSample": 0,
+        "samplePeriodMSec": 500,
+        "timestamp": "2016-10-17T21:04:10.712370Z",
+        "unalignedReads": 0,
+        "unalignedWrites": 0,
+        "volumeAccessGroups": [
+            1
+        ],
+        "volumeID": 0,
+        "volumeSize": 1073741824000,
+        "writeBytes": 1051988406272,
+        "writeBytesLastSample": 0,
+        "writeOps": 256833107,
+        "writeOpsLastSample": 0,
+        "zeroBlocks": 112777607
+      }
+    ]
+  }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

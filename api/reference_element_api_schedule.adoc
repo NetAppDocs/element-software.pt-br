@@ -1,0 +1,220 @@
+---
+permalink: api/reference_element_api_schedule.html 
+sidebar: sidebar 
+keywords: object,objects,schedule 
+summary: O objeto schedule contém informações sobre uma programação criada para criar de forma autônoma um instantâneo de um volume. Você pode recuperar informações de agendamento para todas as programações com o método ListSchedules API. 
+---
+= programação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto schedule contém informações sobre uma programação criada para criar de forma autônoma um instantâneo de um volume. Você pode recuperar informações de agendamento para todas as programações com o `ListSchedules` método API.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+atributos
+ a| 
+Indica a frequência da ocorrência da programação. Valores possíveis:
+
+* Dia da semana
+* Dia do mês
+* Intervalo de tempo
+
+ a| 
+Objeto JSON
+
+
+
+ a| 
+HasError
+ a| 
+Indica se a programação tem ou não erros. Valores possíveis:
+
+* verdadeiro
+* falso
+
+ a| 
+booleano
+
+
+
+ a| 
+horas
+ a| 
+Mostra as horas que decorrerão antes da próxima captura instantânea ser criada. Os valores possíveis são de 0 a 24.
+ a| 
+número inteiro
+
+
+
+ a| 
+LastRunStatus
+ a| 
+Indica o estado do último instantâneo agendado. Valores possíveis:
+
+* Sucesso
+* Falha
+
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+LastRunTimeStart
+ a| 
+Indica a última vez que o agendamento foi iniciado.
+ a| 
+String de data ISO 8601
+
+
+
+ a| 
+minutos
+ a| 
+Mostra os minutos que decorrerão antes da próxima captura instantânea ser criada. Os valores possíveis são de 0 a 59.
+ a| 
+número inteiro
+
+
+
+ a| 
+dias úteis
+ a| 
+Indica os dias do mês em que um instantâneo será feito.
+ a| 
+array
+
+
+
+ a| 
+em pausa
+ a| 
+Indica se o agendamento está ou não em pausa. Valores possíveis:
+
+* verdadeiro
+* falso
+
+ a| 
+booleano
+
+
+
+ a| 
+recorrente
+ a| 
+Indica se a programação é recorrente ou não. Valores possíveis:
+
+* verdadeiro
+* falso
+
+ a| 
+booleano
+
+
+
+ a| 
+RunNextInterval
+ a| 
+Indica se o agendamento será executado na próxima vez que o agendador estiver ativo. Quando verdadeiro, a programação será executada da próxima vez que o agendador estiver ativo e, em seguida, esse valor será definido de volta para falso. Valores possíveis:
+
+* verdadeiro
+* falso
+
+ a| 
+booleano
+
+
+
+ a| 
+ID do scheduleID
+ a| 
+O ID exclusivo da programação.
+ a| 
+número inteiro
+
+
+
+ a| 
+ScheduleInfo
+ a| 
+Inclui o nome exclusivo dado ao agendamento, o período de retenção do instantâneo criado e o ID do volume do volume a partir do qual o instantâneo foi criado.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+ScheduleName
+ a| 
+O nome exclusivo atribuído à programação.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+ScheduleType
+ a| 
+Apenas os tipos de agendamento de instantâneos são suportados neste momento.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+SnapMirrorLabel
+ a| 
+O SnapMirrorLabel a ser aplicado ao Snapshot criado ou Snapshot de grupo, contido no scheduleInfo. Se não estiver definido, este valor é nulo.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+StartingDate
+ a| 
+Indica a data da primeira vez que o horário começou ou começará; formatada em hora UTC.
+ a| 
+String de data ISO 8601
+
+
+
+ a| 
+ToBeDeleted
+ a| 
+Indica se o agendamento está marcado para exclusão. Valores possíveis:
+
+* verdadeiro
+* falso
+
+ a| 
+booleano
+
+
+
+ a| 
+dias úteis
+ a| 
+Indica os dias da semana em que um instantâneo será feito.
+ a| 
+array
+
+|===
+
+
+== Encontre mais informações
+
+xref:reference_element_api_listschedules.adoc[ListSchedules]

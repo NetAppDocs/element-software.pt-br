@@ -1,0 +1,55 @@
+---
+permalink: storage/task_snapmirror_add_labels_to_snapshot_schedules.html 
+sidebar: sidebar 
+keywords: element, ui, snapmirror, labels, schedules, policies 
+summary: Você pode adicionar rótulos SnapMirror a agendas de instantâneos para garantir que uma política SnapMirror seja aplicada. É possível exibir rótulos disponíveis em uma caixa de diálogo de relacionamento do SnapMirror existente ou no Gerenciador de sistemas do NetAppONTAP. 
+---
+= Adicionar etiquetas SnapMirror a agendas de instantâneos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode adicionar rótulos SnapMirror a agendas de instantâneos para garantir que uma política SnapMirror seja aplicada. É possível exibir rótulos disponíveis em uma caixa de diálogo de relacionamento do SnapMirror existente ou no Gerenciador de sistemas do NetAppONTAP.
+
+.O que você vai precisar
+* O SnapMirror deve estar ativado no nível do cluster.
+* O rótulo que você deseja adicionar já existe no ONTAP.
+
+
+.Passos
+. Clique em *proteção de dados* > *horários*.
+. Adicione um rótulo SnapMirror a um agendamento de uma das seguintes maneiras:
++
+[cols="25,75"]
+|===
+| Opção | Passos 
+
+
+ a| 
+Criando uma nova agenda
+ a| 
+.. Selecione *criar horário*.
+.. Introduza todos os outros detalhes relevantes.
+.. Selecione *criar horário*.
+
+
+
+
+ a| 
+Modificação do agendamento existente
+ a| 
+.. Clique no ícone *ações* para a programação à qual deseja adicionar um rótulo e selecione *Editar*.
+.. Na caixa de diálogo resultante, insira o texto no campo *Etiqueta SnapMirror*.
+.. Selecione *Salvar alterações*.
+
+
+|===
+
+
+
+
+== Encontre mais informações
+
+xref:task_data_protection_create_a_snapshot_schedule.adoc[Criar uma agenda de instantâneos]

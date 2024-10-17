@@ -1,0 +1,39 @@
+---
+section: hardware
+title: Instale e mantenha o hardware
+url: "/hardware/index.html"
+entries:
+- title: Informações sobre hardware H410S e H610S
+  url: "/hardware/concept_h410s_h610s_info.html"
+  entries:
+  - title: Instale os nós H410S e H610S
+    url: "/hardware/task_h410s_h610s_install.html"
+  - title: Substitua um nó H410S
+    url: "/hardware/task_h410s_repl.html"
+  - title: Substitua um nó H610S
+    url: "/hardware/task_h610s_repl.html"
+  - title: Substitua as unidades
+    url: "/hardware/task_hseries_driverepl.html"
+  - title: Substitua uma unidade de fonte de alimentação
+    url: "/hardware/task_psu_repl.html"
+- title: Informações sobre o hardware da série SF
+  url: "/hardware/concept_sfseries_info.html"
+  entries:
+  - title: Substitua um chassi
+    url: "/hardware/task_sfseries_chassisrepl.html"
+  - title: Substitua as unidades
+    url: "/hardware/task_sfseries_driverepl.html"
+  - title: Substitua uma unidade de fonte de alimentação
+    url: "/hardware/task_sfseries_psurepl.html"
+- title: Voltar à informação da imagem de fábrica
+  entries:
+  - title: Configure o retorno à imagem de fábrica
+    url: "/hardware/concept_rtfi_configure.html"
+  - title: Opções de implantação e instalação RTFI
+    url: "/hardware/task_rtfi_deployment_and_install_options.html"
+  - title: O processo RTFI
+    url: "/hardware/task_rtfi_process.html"
+  - title: Menu de opções RTFI
+    url: "/hardware/task_rtfi_options_menu.html"
+- title: Versões de firmware compatíveis para nós de storage
+  url: "/hardware/fw_storage_nodes.html"

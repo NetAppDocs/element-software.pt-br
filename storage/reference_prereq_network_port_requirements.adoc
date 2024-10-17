@@ -1,0 +1,553 @@
+---
+permalink: storage/reference_prereq_network_port_requirements.html 
+sidebar: sidebar 
+keywords: network port requirements, TCP ports, firewall, utilities, URL, access attempt, ICMP, MIP, SIP, MVIP, SVIP 
+summary: Talvez seja necessário permitir as seguintes portas TCP através do firewall de borda do data center para que você possa gerenciar o sistema remotamente e permitir que clientes fora do data center se conetem a recursos. Algumas dessas portas podem não ser necessárias, dependendo de como você usa o sistema. 
+---
+= Requisitos de porta de rede
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Talvez seja necessário permitir as seguintes portas TCP e UDP através do firewall de borda do seu data center para que você possa gerenciar o sistema remotamente e permitir que clientes fora do data center se conetem a recursos. Algumas dessas portas podem não ser necessárias, dependendo de como você usa o sistema.
+
+Todas as portas são TCP, salvo indicação em contrário, e todas as portas TCP devem suportar comunicação de handshake triplo entre o servidor de suporte NetApp, o nó de gerenciamento e os nós que executam o software Element. Por exemplo, o host em uma origem de nó de gerenciamento se comunica com o host em um destino MVIP de cluster de armazenamento por meio da porta TCP 443, e o host de destino se comunica de volta ao host de origem por meio de qualquer porta.
+
+
+TIP: Ative o ICMP entre o nó de gerenciamento, nós que executam o software Element e o MVIP do cluster.
+
+As seguintes abreviaturas são usadas na tabela:
+
+* MIP: Endereço IP de gerenciamento, um endereço por nó
+* SIP: Endereço IP de armazenamento, um endereço por nó
+* MVIP: Endereço IP virtual de gerenciamento
+* SVIP: Armazenamento de endereço IP virtual
+
+
+[cols="25,25,15,35"]
+|===
+| Fonte | Destino | Porta | Descrição 
+
+
+ a| 
+Clientes iSCSI
+ a| 
+Cluster de armazenamento MVIP
+ a| 
+443
+ a| 
+(Opcional) UI e acesso à API
+
+
+
+ a| 
+Clientes iSCSI
+ a| 
+Cluster de armazenamento SVIP
+ a| 
+3260
+ a| 
+Comunicações iSCSI do cliente
+
+
+
+ a| 
+Clientes iSCSI
+ a| 
+SIP de nó de storage
+ a| 
+3260
+ a| 
+Comunicações iSCSI do cliente
+
+
+
+ a| 
+Nó de gerenciamento
+ a| 
+`sfsupport.solidfire.com`
+ a| 
+22
+ a| 
+Inverta o túnel SSH para acesso de suporte
+
+
+
+ a| 
+Nó de gerenciamento
+ a| 
+MIP do nó de storage
+ a| 
+22
+ a| 
+Acesso SSH para suporte
+
+
+
+ a| 
+Nó de gerenciamento
+ a| 
+Servidores DNS
+ a| 
+53 TCP/UDP
+ a| 
+Pesquisa DNS
+
+
+
+ a| 
+Nó de gerenciamento
+ a| 
+MIP do nó de storage
+ a| 
+442
+ a| 
+Acesso de interface de usuário e API a atualizações de software Element e nó de storage
+
+
+
+ a| 
+Nó de gerenciamento
+ a| 
+Cluster de armazenamento MVIP
+ a| 
+442
+ a| 
+Acesso de interface de usuário e API a atualizações de software Element e nó de storage
+
+
+
+ a| 
+Nó de gerenciamento
+ a| 
+`monitoring.solidfire.com`
+ a| 
+443
+ a| 
+Geração de relatórios do cluster de storage para o Active IQ
+
+
+
+ a| 
+Nó de gerenciamento
+ a| 
+Cluster de armazenamento MVIP
+ a| 
+443
+ a| 
+Acesso de interface de usuário e API a atualizações de software Element e nó de storage
+
+
+
+ a| 
+Nó de gerenciamento
+ a| 
+repo.NetApp.com
+ a| 
+443
+ a| 
+Fornece acesso aos componentes necessários para instalar/atualizar a implantação no local.
+
+
+
+| Nó de gerenciamento | Nó de storage BMC/IPMI | 623 UDP | Porta RMCP. Isso é necessário para gerenciar sistemas habilitados para IPMI. 
+
+
+ a| 
+Nó de gerenciamento
+ a| 
+Witness Node
+ a| 
+9442
+ a| 
+Serviço de API de configuração por nó
+
+
+
+ a| 
+Nó de gerenciamento
+ a| 
+VCenter Server
+ a| 
+9443
+ a| 
+Registro do vCenter Plug-in. A porta pode ser fechada após a conclusão do registo.
+
+
+
+ a| 
+Servidor SNMP
+ a| 
+Cluster de armazenamento MVIP
+ a| 
+161 UDP
+ a| 
+Polling SNMP
+
+
+
+ a| 
+Servidor SNMP
+| MIP do nó de storage  a| 
+161 UDP
+ a| 
+Polling SNMP
+
+
+
+| Nó de storage BMC/IPMI | Nó de gerenciamento | 623 UDP | Porta RMCP. Isso é necessário para gerenciar sistemas habilitados para IPMI. 
+
+
+ a| 
+MIP do nó de storage
+ a| 
+Servidores DNS
+ a| 
+53 TCP/UDP
+ a| 
+Pesquisa DNS
+
+
+
+ a| 
+MIP do nó de storage
+ a| 
+Nó de gerenciamento
+ a| 
+80
+ a| 
+Atualizações do software Element
+
+
+
+ a| 
+MIP do nó de storage
+ a| 
+Endpoint S3/Swift
+ a| 
+80
+ a| 
+(Opcional) comunicação HTTP para endpoint S3/Swift para backup e recuperação
+
+
+
+ a| 
+MIP do nó de storage
+ a| 
+Servidor NTP
+ a| 
+123 UDP
+ a| 
+NTP
+
+
+
+ a| 
+MIP do nó de storage
+ a| 
+Nó de gerenciamento
+ a| 
+162 UDP
+ a| 
+(Opcional) traps SNMP
+
+
+
+ a| 
+MIP do nó de storage
+ a| 
+Servidor SNMP
+ a| 
+162 UDP
+ a| 
+(Opcional) traps SNMP
+
+
+
+ a| 
+MIP do nó de storage
+ a| 
+Servidor LDAP
+ a| 
+389 TCP/UDP
+ a| 
+Pesquisa LDAP (opcional)
+
+
+
+ a| 
+MIP do nó de storage
+ a| 
+Nó de gerenciamento
+ a| 
+443
+ a| 
+Atualizações de firmware de storage Element
+
+
+
+ a| 
+MIP do nó de storage
+ a| 
+Cluster de armazenamento remoto MVIP
+ a| 
+443
+ a| 
+Comunicação de emparelhamento do cluster de replicação remota
+
+
+
+ a| 
+MIP do nó de storage
+ a| 
+MIP do nó de storage remoto
+ a| 
+443
+ a| 
+Comunicação de emparelhamento do cluster de replicação remota
+
+
+
+ a| 
+MIP do nó de storage
+ a| 
+Endpoint S3/Swift
+ a| 
+443
+ a| 
+(Opcional) comunicação HTTPS para endpoint S3/Swift para backup e recuperação
+
+
+
+ a| 
+MIP do nó de storage
+ a| 
+Nó de gerenciamento
+ a| 
+514 TCP/UDP
+
+10514 TCP/UDP
+ a| 
+Encaminhamento de syslog
+
+
+
+ a| 
+MIP do nó de storage
+ a| 
+Servidor syslog
+ a| 
+514 TCP/UDP
+
+10514 TCP/UDP
+ a| 
+Encaminhamento de syslog
+
+
+
+ a| 
+MIP do nó de storage
+ a| 
+Servidor LDAPS
+ a| 
+636 TCP/UDP
+ a| 
+Pesquisa LDAPS
+
+
+
+ a| 
+MIP do nó de storage
+ a| 
+MIP do nó de storage remoto
+ a| 
+2181
+ a| 
+Comunicação entre clusters para replicação remota
+
+
+
+ a| 
+SIP de nó de storage
+ a| 
+SIP do nó de armazenamento remoto
+ a| 
+2181
+ a| 
+Comunicação entre clusters para replicação remota
+
+
+
+ a| 
+SIP de nó de storage
+ a| 
+SIP de nó de storage
+ a| 
+3260
+ a| 
+ISCSI internó
+
+
+
+ a| 
+SIP de nó de storage
+ a| 
+SIP do nó de armazenamento remoto
+ a| 
+4000 a 4020
+ a| 
+Transferência de dados nó a nó de replicação remota
+
+
+
+ a| 
+PC administrador do sistema
+ a| 
+Nó de gerenciamento
+ a| 
+442
+ a| 
+Acesso HTTPS UI ao nó de gerenciamento
+
+
+
+ a| 
+PC administrador do sistema
+ a| 
+MIP do nó de storage
+ a| 
+442
+ a| 
+Acesso à API e IU HTTPS ao nó de storage
+
+
+
+ a| 
+PC administrador do sistema
+ a| 
+Nó de gerenciamento
+ a| 
+443
+ a| 
+Acesso à API e UI HTTPS ao nó de gerenciamento
+
+
+
+ a| 
+PC administrador do sistema
+ a| 
+Cluster de armazenamento MVIP
+ a| 
+443
+ a| 
+Acesso à IU HTTPS e API ao cluster de armazenamento
+
+
+
+ a| 
+PC administrador do sistema
+ a| 
+Controlador de gerenciamento de placa base (BMC)/interface de gerenciamento de plataforma inteligente (IPMI) séries H410 e H600
+ a| 
+443
+ a| 
+Acesso à API e UI HTTPS ao controle remoto do nó
+
+
+
+ a| 
+PC administrador do sistema
+ a| 
+MIP do nó de storage
+ a| 
+443
+ a| 
+Criação de cluster de storage HTTPS, acesso de IU pós-implantação ao cluster de storage
+
+
+
+ a| 
+PC administrador do sistema
+ a| 
+Nó de storage das séries BMC/IPMI H410 e H600
+ a| 
+623 UDP
+ a| 
+Porta do protocolo de controlo de gestão remota. Isso é necessário para gerenciar sistemas habilitados para IPMI.
+
+
+
+ a| 
+PC administrador do sistema
+ a| 
+Witness Node
+ a| 
+8080
+ a| 
+Witness Node per-node web UI
+
+
+
+ a| 
+VCenter Server
+ a| 
+Cluster de armazenamento MVIP
+ a| 
+443
+ a| 
+Acesso à API do vCenter Plug-in
+
+
+
+ a| 
+VCenter Server
+ a| 
+Plug-in remoto
+ a| 
+8333
+ a| 
+Serviço de plug-in remoto do vCenter
+
+
+
+ a| 
+VCenter Server
+ a| 
+Nó de gerenciamento
+ a| 
+8443
+ a| 
+(Opcional) vCenter Plug-in QoSSIOC Service.
+
+
+
+ a| 
+VCenter Server
+ a| 
+Cluster de armazenamento MVIP
+ a| 
+8444
+ a| 
+Acesso ao fornecedor do vCenter VASA (somente VVols)
+
+
+
+ a| 
+VCenter Server
+ a| 
+Nó de gerenciamento
+ a| 
+9443
+ a| 
+Registro do vCenter Plug-in. A porta pode ser fechada após a conclusão do registo.
+
+|===
+
+
+== Para mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in do NetApp Element para vCenter Server"^]
+

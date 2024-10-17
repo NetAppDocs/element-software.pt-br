@@ -1,0 +1,143 @@
+---
+permalink: api/reference_element_api_getbinassignmentproperties.html 
+sidebar: sidebar 
+keywords: bin assignment,assignment properties,retrieve assignment properties 
+summary: Você pode usar o método GetBinAssignmentProperties para recuperar as propriedades de atribuição de bin no banco de dados. 
+---
+= GetBinAssignmentProperties
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `GetBinAssignmentProperties` método para recuperar as propriedades de atribuição de compartimentos no banco de dados.
+
+
+
+== Parâmetro
+
+Este método tem os parâmetros sem entrada.
+
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+propriedades
+ a| 
+Detalha as propriedades de todas as atribuições de bin atuais no banco de dados.
+ a| 
+BinAssignmentProperties array
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+    "method": "GetBinAssignmentProperties",
+    "params": {
+    },
+    "id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+    "id": 1,
+    "result": {
+        "properties": {
+            "algorithmRuntimeMS": 1105,
+            "areReplicasValid": true,
+            "binCount": 65536,
+            "isBalanced": true,
+            "isStable": true,
+            "isWellCoupled": false,
+            "layout": [
+                {
+                    "protectionDomainName": "1",
+                    "services": [
+                        {
+                            "budget": 7281,
+                            "serviceID": 16
+                        },
+                        {
+                            "budget": 7281,
+                            "serviceID": 19
+                        },
+                        {
+                            "budget": 7281,
+                            "serviceID": 24
+                        }
+                    ]
+                },
+                {
+                    "protectionDomainName": "2",
+                    "services": [
+                        {
+                            "budget": 7281,
+                            "serviceID": 17
+                        },
+                        {
+                            "budget": 7281,
+                            "serviceID": 20
+                        },
+                        {
+                            "budget": 7281,
+                            "serviceID": 22
+                        }
+                    ]
+                },
+                {
+                    "protectionDomainName": "3",
+                    "services": [
+                        {
+                            "budget": 7281,
+                            "serviceID": 18
+                        },
+                        {
+                            "budget": 7281,
+                            "serviceID": 21
+                        },
+                        {
+                            "budget": 7281,
+                            "serviceID": 23
+                        }
+                    ]
+                }
+            ],
+            "numSwaps": 0,
+            "numUpdatingBins": 0,
+            "protectionDomainType": "node",
+            "reason": "Final",
+            "replicationCount": 2,
+            "requestRebalance": false,
+            "serviceStrandedCapacities": [],
+            "timePublished": "2020-04-02T18:34:07.807681Z",
+            "validSchemes": []
+        }
+    }
+}
+----
+
+
+== Novo desde a versão
+
+12,0

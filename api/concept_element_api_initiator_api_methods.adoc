@@ -1,0 +1,28 @@
+---
+permalink: api/concept_element_api_initiator_api_methods.html 
+sidebar: sidebar 
+keywords: initiator,method,methods,API,managing,manage 
+summary: Os métodos de iniciador permitem adicionar, remover, visualizar e modificar objetos do iniciador iSCSI, que lidam com a comunicação entre o sistema de armazenamento e clientes de armazenamento externos. 
+---
+= Métodos da API do iniciador
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os métodos de iniciador permitem adicionar, remover, visualizar e modificar objetos do iniciador iSCSI, que lidam com a comunicação entre o sistema de armazenamento e clientes de armazenamento externos.
+
+* xref:reference_element_api_createinitiators.adoc[CreateInitiators]
+* xref:reference_element_api_deleteinitiators.adoc[Delegados Iniciadores]
+* xref:reference_element_api_listinitiators.adoc[ListInitiators]
+* xref:reference_element_api_modifyinitiators.adoc[Modificadores de Iniciadores]
+
+
+
+
+== Encontre mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentação para versões anteriores dos produtos NetApp SolidFire e Element"^]
+

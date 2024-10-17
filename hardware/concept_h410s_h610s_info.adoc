@@ -1,0 +1,31 @@
+---
+permalink: hardware/concept_h410s_h610s_info.html 
+sidebar: sidebar 
+keywords: h410s, h610s, hardware installation, hardware maintenance 
+summary: Você pode encontrar informações sobre a instalação e a manutenção dos nós de storage da H-series. 
+---
+= Informações sobre hardware H410S e H610S
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode encontrar informações sobre a instalação e a manutenção dos nós de storage da H-series.
+
+Aqui estão os links para o conteúdo de instalação e manutenção:
+
+* link:task_h410s_h610s_install.html["Instalar nós de storage da série H"^]
+* link:task_h410s_repl.html["Substitua um nó H410S"^]
+* link:task_h610s_repl.html["Substitua um nó H610S"^]
+* link:task_hseries_driverepl.html["Substitua as unidades"^]
+* link:task_psu_repl.html["Substitua uma unidade de fonte de alimentação"^]
+
+
+
+
+== Encontre mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentação para versões anteriores dos produtos NetApp SolidFire e Element"^]
+

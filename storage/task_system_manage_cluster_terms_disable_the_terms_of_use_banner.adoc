@@ -1,0 +1,23 @@
+---
+permalink: storage/task_system_manage_cluster_terms_disable_the_terms_of_use_banner.html 
+sidebar: sidebar 
+keywords: terms of use banner, disable 
+summary: Você pode desativar o banner termos de uso. Com o banner desativado, o usuário não é mais solicitado a aceitar os termos de uso ao usar a IU do elemento. 
+---
+= Desative o banner termos de uso
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode desativar o banner termos de uso. Com o banner desativado, o usuário não é mais solicitado a aceitar os termos de uso ao usar a IU do elemento.
+
+* Você deve ter o administrador de cluster Privileges para configurar os termos de uso.
+* Certifique-se de que os termos de uso estejam ativados.
++
+.. Clique em *usuários* > *termos de uso*.
+.. Clique em *Desativar*.
+
+
+

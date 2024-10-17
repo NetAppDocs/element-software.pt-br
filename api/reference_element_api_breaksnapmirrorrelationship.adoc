@@ -1,0 +1,81 @@
+---
+permalink: api/reference_element_api_breaksnapmirrorrelationship.html 
+sidebar: sidebar 
+keywords: SnapMirror,volume,volumes,break,breaking,relationship,ONTAP 
+summary: A IU da Web do Element usa o método BreakSnapMirrorRelacionship para quebrar um relacionamento SnapMirror. Quando um relacionamento SnapMirror é quebrado, o volume de destino é feito leitura-escrita e independente, e pode então divergir da fonte. Você pode restabelecer o relacionamento com o método ResyncSnapMirrorRelationship API. Este método requer que o cluster ONTAP esteja disponível. 
+---
+= BreakSnapMirrorRelacionship
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A IU da Web do Element usa o `BreakSnapMirrorRelationship` método para quebrar um relacionamento do SnapMirror. Quando um relacionamento SnapMirror é quebrado, o volume de destino é feito leitura-escrita e independente, e pode então divergir da fonte. Você pode restabelecer o relacionamento com o `ResyncSnapMirrorRelationship` método API. Este método requer que o cluster ONTAP esteja disponível.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+O ID do ponto de extremidade do sistema de armazenamento ONTAP remoto que se comunica com o cluster de armazenamento Element.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+Destinaçãovolume
+ a| 
+O volume de destino na relação SnapMirror.
+ a| 
+xref:reference_element_api_snapmirrorvolumeinfo.adoc[SnapMirrorVolumeInfo]
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valores de retorno
+
+Este método tem os seguintes valores de retorno:
+
+|===
+
+
+| Nome | Descrição | Tipo 
+
+
+ a| 
+SnapMirrorRelacionship
+ a| 
+Um objeto contendo informações sobre a relação SnapMirror quebrada.
+ a| 
+xref:reference_element_api_snapmirrorrelationship.adoc[SnapMirrorRelacionship]
+
+|===
+
+
+== Novo desde a versão
+
+10,1
+
+
+
+== Encontre mais informações
+
+xref:reference_element_api_breaksnapmirrorvolume.adoc[BreakSnapMirrorvolume]

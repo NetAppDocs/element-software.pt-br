@@ -1,0 +1,52 @@
+---
+permalink: storage/task_system_manage_nodes_adding_a_node_to_a_cluster.html 
+sidebar: sidebar 
+keywords: nodes, add, config, cluster, pending, pairs, capacity, rule 
+summary: Você pode adicionar nós a um cluster quando for necessário mais storage ou após a criação do cluster. Os nós exigem configuração inicial quando são ativados pela primeira vez. Depois que o nó é configurado, ele aparece na lista de nós pendentes e você pode adicioná-lo a um cluster. 
+---
+= Adicione um nó a um cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode adicionar nós a um cluster quando for necessário mais storage ou após a criação do cluster. Os nós exigem configuração inicial quando são ativados pela primeira vez. Depois que o nó é configurado, ele aparece na lista de nós pendentes e você pode adicioná-lo a um cluster.
+
+A versão do software em cada nó em um cluster deve ser compatível. Quando você adiciona um nó a um cluster, o cluster instala a versão do cluster do software NetApp Element no novo nó, conforme necessário.
+
+Você pode adicionar nós de capacidades menores ou maiores a um cluster existente. Você pode adicionar funcionalidades de nós maiores a um cluster para permitir o crescimento de capacidade. Nós maiores adicionados a um cluster com nós menores devem ser adicionados em pares. Isso permite espaço suficiente para que o Double Helix mova os dados caso um dos nós maiores falhe. Você pode adicionar capacidades de nós menores a um cluster de nós maior para melhorar a performance.
+
+
+NOTE: Se um nó recém-adicionado representar mais de 50% da capacidade total do cluster, parte da capacidade desse nó será inutilizável ("encalhado"), de modo que esteja em conformidade com a regra de capacidade. Este continua a ser o caso até que mais armazenamento seja adicionado. Se um nó muito grande for adicionado que também desobedeça à regra de capacidade, o nó anteriormente encalhado não ficará mais encalhado, enquanto o nó recém-adicionado fica encalhado. A capacidade deve ser sempre adicionada em pares para evitar que isso aconteça. Quando um nó fica preso, a falha de cluster strandedCapacity é lançada.
+
+https://www.youtube.com/embed/2smVHWkikXY?rel=0["Vídeo do NetApp: Dimensione de acordo com os seus termos: Expandindo um cluster do SolidFire"^]
+
+Você pode adicionar nós aos dispositivos NetApp HCI.
+
+.Passos
+. Selecione *Cluster* > *nodes*.
+. Clique em *pendente* para ver a lista de nós pendentes.
++
+Quando o processo de adição de nós estiver concluído, eles aparecem na lista ative Nodes. Até então, os nós pendentes aparecem na lista pendente Ativo.
+
++
+O SolidFire instala a versão do software Element do cluster nos nós pendentes quando você os adiciona a um cluster. Isso pode levar alguns minutos.
+
+. Execute um dos seguintes procedimentos:
++
+** Para adicionar nós individuais, clique no ícone *ações* para o nó que você deseja adicionar.
+** Para adicionar vários nós, marque a caixa de seleção dos nós a serem adicionados e, em seguida, *ações em massa*. *Observação:* se o nó que você está adicionando tiver uma versão diferente do software Element que a versão em execução no cluster, o cluster atualiza assincronamente o nó para a versão do software Element que está sendo executada no master do cluster. Depois que o nó é atualizado, ele se adiciona automaticamente ao cluster. Durante esse processo assíncrono, o nó estará em um estado pendingActive.
+
+
+. Clique em *Add*.
++
+O nó aparece na lista de nós ativos.
+
+
+
+
+
+== Encontre mais informações
+
+xref:concept_system_manage_nodes_node_versioning_and_compatibility.adoc[Controle de versão e compatibilidade de nós]

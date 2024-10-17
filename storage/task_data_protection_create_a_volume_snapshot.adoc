@@ -1,0 +1,48 @@
+---
+permalink: storage/task_data_protection_create_a_volume_snapshot.html 
+sidebar: sidebar 
+keywords: volume snapshot, create, active volume, preserve volume 
+summary: Você pode criar um instantâneo de um volume ativo para preservar a imagem do volume a qualquer momento. Você pode criar até 32 snapshots para um único volume. 
+---
+= Criar um instantâneo de volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar um instantâneo de um volume ativo para preservar a imagem do volume a qualquer momento. Você pode criar até 32 snapshots para um único volume.
+
+. Clique em *Management* > *volumes*.
+. Clique no ícone *ações* do volume que deseja usar para o instantâneo.
+. No menu resultante, selecione *Snapshot*.
+. Na caixa de diálogo *Create Snapshot of volume* (criar instantâneo de volume), insira o novo nome do instantâneo.
+. *Opcional:* Selecione a caixa de seleção *incluir instantâneo na replicação quando emparelhado* para garantir que o instantâneo seja capturado na replicação quando o volume pai estiver emparelhado.
+. Para definir a retenção para o instantâneo, selecione uma das seguintes opções:
++
+** Clique em *manter para sempre* para manter o instantâneo no sistema indefinidamente.
+** Clique em *Definir período de retenção* e use as caixas de rotação de data para escolher um período de tempo para o sistema reter o instantâneo.
+
+
+. Para fazer um instantâneo único e imediato, execute as seguintes etapas:
++
+.. Clique em *Take Snapshot Now*.
+.. Clique em **Create Snapshot** (criar instantâneo).
+
+
+. Para agendar a execução do instantâneo em um momento futuro, execute as seguintes etapas:
++
+.. Clique em *criar agendamento instantâneo*.
+.. Introduza um *novo nome do programa*.
+.. Escolha um *tipo de agendamento* na lista.
+.. *Opcional:* Selecione a caixa de seleção *Agendamento recorrente* para repetir o snapshot agendado periodicamente.
+.. Clique em *Create Schedule*.
+
+
+
+
+
+
+== Encontre mais informações
+
+xref:task_data_protection_schedule_a_snapshot_task.adoc[Agendar um instantâneo]

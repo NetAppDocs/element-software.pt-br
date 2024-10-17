@@ -1,0 +1,93 @@
+---
+permalink: storage/reference_per_node_network_settings_details.html 
+sidebar: sidebar 
+keywords: network settings, per-node UI, storage node, ui 
+summary: Você pode alterar as configurações de rede do nó de armazenamento para dar ao nó um novo conjunto de atributos de rede. 
+---
+= Detalhes das definições de rede a partir da IU por nó
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode alterar as configurações de rede do nó de armazenamento para dar ao nó um novo conjunto de atributos de rede.
+
+Pode ver as definições de rede para um nó de armazenamento na página *Definições de rede* quando iniciar sessão no (https://<node[]nó IP>:442/hcc/nó/definições de rede). Pode selecionar as definições *Bond1G* (gestão) ou *Bond10G* (armazenamento). A lista a seguir descreve as configurações que você pode modificar quando um nó de armazenamento está no estado disponível, pendente ou Ativo:
+
+* *Método*
++
+O método utilizado para configurar a interface. Métodos possíveis:
+
++
+** Loopback: Usado para definir a interface de loopback IPv4.
+** Manual: Usado para definir interfaces para as quais nenhuma configuração é feita por padrão.
+** dhcp: Usado para obter um endereço IP via DHCP.
+** Estático: Usado para definir interfaces Ethernet com endereços IPv4 alocados estaticamente.
+
+
+* *Velocidade de ligação*
++
+A velocidade negociada pela NIC virtual.
+
+* *Endereço IPv4*
++
+O endereço IPv4 para a rede eth0.
+
+* *IPv4 Máscara de sub-rede*
++
+Subdivisões de endereços da rede IPv4.
+
+* *Endereço do gateway IPv4*
++
+Endereço de rede do roteador para enviar pacotes para fora da rede local.
+
+* *Endereço IPv6*
++
+O endereço IPv6 para a rede eth0.
+
+* *Endereço do gateway IPv6*
++
+Endereço de rede do roteador para enviar pacotes para fora da rede local.
+
+* *MTU*
++
+Maior tamanho de pacote que um protocolo de rede pode transmitir. Deve ser maior ou igual a 1500. Se você adicionar uma segunda NIC de armazenamento, o valor deve ser 9000.
+
+* *Servidores DNS*
++
+Interface de rede usada para comunicação de cluster.
+
+* *Domínios de pesquisa*
++
+Procure endereços MAC adicionais disponíveis para o sistema.
+
+* *Modo Bond*
++
+Pode ser um dos seguintes modos:
+
++
+** ActivePassive (padrão)
+** ALB
+** LACP
+
+
+* *Status*
++
+Valores possíveis:
+
++
+** UpAndRunning
+** Para baixo
+** Para cima
+
+
+* *Etiqueta de rede virtual*
++
+Tag atribuída quando a rede virtual foi criada.
+
+* *Rotas*
++
+Rotas estáticas para hosts ou redes específicas através da interface associada as rotas são configuradas para usar.
+
+

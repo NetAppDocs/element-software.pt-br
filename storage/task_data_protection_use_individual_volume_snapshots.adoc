@@ -1,0 +1,28 @@
+---
+permalink: storage/task_data_protection_use_individual_volume_snapshots.html 
+sidebar: sidebar 
+keywords: individual volume snapshots, use, volume, snapshot 
+summary: Um instantâneo de volume é uma cópia pontual de um volume. Você pode usar um volume individual em vez de um grupo de volumes para o snapshot. 
+---
+= Use snapshots de volume individuais para proteção de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um instantâneo de volume é uma cópia pontual de um volume. Você pode usar um volume individual em vez de um grupo de volumes para o snapshot.
+
+
+
+== Encontre mais informações
+
+* xref:task_data_protection_create_a_volume_snapshot.adoc[Criar um instantâneo de volume]
+* xref:task_data_protection_edit_snapshot_retention.adoc[Editar retenção de instantâneos]
+* xref:task_data_protection_delete_a_snapshot.adoc[Eliminar um instantâneo]
+* xref:task_data_protection_clone_a_volume_from_a_snapshot.adoc[Clonar um volume de um snapshot]
+* xref:task_data_protection_roll_back_a_volume_to_a_snapshot.adoc[Reverter um volume para um instantâneo]
+* xref:task_data_protection_back_up_a_volume_snapshot_to_an_amazon_s3_object_store.adoc[Fazer backup de um instantâneo de volume para um armazenamento de objetos do Amazon S3]
+* xref:task_data_protection_back_up_a_volume_snapshot_to_openstack_swift.adoc[Fazer backup de um instantâneo de volume para um armazenamento de objetos OpenStack Swift]
+* xref:task_data_protection_back_up_volume_snapshot_to_solidfire.adoc[Fazer backup de um instantâneo de volume para um cluster SolidFire]
+

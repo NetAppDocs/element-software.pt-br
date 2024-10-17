@@ -1,0 +1,118 @@
+---
+permalink: api/reference_element_api_groupsnapshot.html 
+sidebar: sidebar 
+keywords: object,objects,groupSnapshot 
+summary: O objeto groupSnapshot contém informações sobre um instantâneo para um grupo de volumes. Você pode usar o método ListGroupSnapshots API para recuperar informações de snapshot de grupo. 
+---
+= GroupSnapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto groupSnapshot contém informações sobre um instantâneo para um grupo de volumes. Você pode usar o `ListGroupSnapshots` método API para recuperar informações de snapshot de grupo.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+atributos
+ a| 
+Lista de pares nome-valor no formato de objeto JSON.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+CreateTime
+ a| 
+O dia e a hora formatados UTC-0 em que o instantâneo do grupo foi criado.
+ a| 
+String de data ISO 8601
+
+
+
+ a| 
+EnableRemoteReplication
+ a| 
+Identifica se o instantâneo está ativado para replicação remota.
+ a| 
+booleano
+
+
+
+ a| 
+GroupSnapshotID
+ a| 
+A ID exclusiva do instantâneo do grupo.
+ a| 
+número inteiro
+
+
+
+ a| 
+GroupSnapshotUID
+ a| 
+O UUID do instantâneo do grupo.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+membros
+ a| 
+Um array de objetos contendo informações sobre cada membro do instantâneo do grupo.
+ a| 
+xref:reference_element_api_snapshot.adoc[snapshot] array
+
+
+
+ a| 
+nome
+ a| 
+O nome do instantâneo do grupo, ou, se nenhum tiver sido dado, o dia e a hora formatados em UTC no qual o instantâneo foi criado.
+ a| 
+String ou string de data ISO 8601
+
+
+
+ a| 
+RemoteStatuses
+ a| 
+Um array contendo o identificador universal e o status de replicação de cada snapshot remoto no cluster de destino, como visto do cluster de origem.
+ a| 
+xref:reference_element_api_remoteclustersnapshotstatus.adoc[RemoteClusterSnapshotStatus] array
+
+
+
+ a| 
+estado
+ a| 
+Estado atual do instantâneo. Valores possíveis:
+
+* Desconhecido: Ocorreu um erro ao obter o status do instantâneo.
+* Preparação: Este instantâneo está sendo preparado para uso e ainda não é gravável.
+* RemoteSyncing: Este snapshot está sendo replicado de um cluster remoto.
+* Feito: Este snapshot terminou a preparação ou replicação e agora é utilizável.
+* Ativo: Este instantâneo é o ramo ativo.
+* Clonagem: Este instantâneo está envolvido numa operação Copyvolume.
+
+ a| 
+cadeia de carateres
+
+|===
+
+
+== Encontre mais informações
+
+xref:reference_element_api_listgroupsnapshots.adoc[ListGroupSnapshots]

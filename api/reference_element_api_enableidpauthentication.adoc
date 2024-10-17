@@ -1,0 +1,75 @@
+---
+permalink: api/reference_element_api_enableidpauthentication.html 
+sidebar: sidebar 
+keywords: IdP,idp,authentication,enable 
+summary: Você pode usar o método EnableIdpAuthentication para habilitar o suporte à autenticação usando IDPs de terceiros para o cluster. Depois que a autenticação IDP estiver ativada, os administradores LDAP e de cluster não poderão mais acessar o cluster por meio de UIs compatíveis e quaisquer sessões autenticadas ativas serão invalidadas/desconetadas. Apenas os utilizadores autenticados por IDPs de terceiros podem aceder ao cluster através de UIs suportados. 
+---
+= EnableIdpAuthentication
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `EnableIdpAuthentication` método para habilitar o suporte à autenticação usando IDPs de terceiros para o cluster. Depois que a autenticação IDP estiver ativada, os administradores LDAP e de cluster não poderão mais acessar o cluster por meio de UIs compatíveis e quaisquer sessões autenticadas ativas serão invalidadas/desconetadas. Apenas os utilizadores autenticados por IDPs de terceiros podem aceder ao cluster através de UIs suportados.
+
+
+
+== Parâmetros
+
+Este método tem o seguinte parâmetro de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+IdpConfigurationID
+ a| 
+UUID para a configuração de IDP de terceiros. Se houver apenas uma configuração de IDP, o padrão é habilitar essa configuração. Se você tiver apenas um único IdpConfiguration, não será necessário fornecer o parâmetro idpConfigurationID.
+ a| 
+UUID
+ a| 
+Nenhum
+ a| 
+Não
+
+|===
+
+
+== Valores de retorno
+
+Este método não tem valores de retorno.
+
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+  "method": "EnableIdpAuthentication",
+  "params": {
+    "idpConfigurationID": "f983c602-12f9-4c67-b214-bf505185cfed",
+  }
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+"result": {}
+}
+----
+
+
+== Novo desde a versão
+
+12,0

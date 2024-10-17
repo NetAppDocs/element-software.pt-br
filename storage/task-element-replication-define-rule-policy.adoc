@@ -1,0 +1,108 @@
+---
+permalink: storage/task-element-replication-define-rule-policy.html 
+sidebar: sidebar 
+keywords: ontap, cli, define, rule, policy 
+summary: 'Para políticas personalizadas com o tipo de política "mirror-Vault", você deve definir pelo menos uma regra que determina quais cópias snapshot são transferidas durante a inicialização e atualização. Você também pode definir regras para políticas padrão com o tipo de política "mirror-Vault".' 
+---
+= Defina uma regra para uma política
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para políticas personalizadas com o tipo de política "merror-Vault", você deve definir pelo menos uma regra que determina quais cópias snapshot são transferidas durante a inicialização e atualização. Você também pode definir regras para políticas padrão com o tipo de política "merror-Vault".
+
+.Sobre esta tarefa
+Todas as políticas com o tipo de política "merror-Vault" devem ter uma regra que especifique quais cópias snapshot devem ser replicadas. A regra "bimestral", por exemplo, indica que apenas cópias snapshot atribuídas à etiqueta SnapMirror "'bimestral" devem ser replicadas. Você atribui o rótulo SnapMirror ao configurar cópias snapshot do elemento.
+
+Cada tipo de política está associado a uma ou mais regras definidas pelo sistema. Essas regras são atribuídas automaticamente a uma política quando você especifica seu tipo de política. A tabela abaixo mostra as regras definidas pelo sistema.
+
+|===
+
+
+| Regra definida pelo sistema | Usado em tipos de política | Resultado 
+
+
+ a| 
+sm_created
+ a| 
+espelho assíncrono, espelho-cofre
+ a| 
+Uma cópia snapshot criada pelo SnapMirror é transferida na inicialização e atualização.
+
+
+
+ a| 
+diariamente
+ a| 
+espelho-cofre
+ a| 
+Novas cópias snapshot na origem com o rótulo "diário" do SnapMirror são transferidas na inicialização e atualização.
+
+
+
+ a| 
+semanalmente
+ a| 
+espelho-cofre
+ a| 
+Novas cópias snapshot na origem com o rótulo "semanal" do SnapMirror são transferidas na inicialização e atualização.
+
+
+
+ a| 
+mensalmente
+ a| 
+espelho-cofre
+ a| 
+Novas cópias snapshot na origem com o rótulo ""em quarto lugar" do SnapMirror são transferidas na inicialização e atualização.
+
+|===
+Você pode especificar regras adicionais, conforme necessário, para políticas padrão ou personalizadas. Por exemplo:
+
+* Para a política padrão `MirrorAndVault`, você pode criar uma regra chamada "bimestral" para combinar cópias snapshot na origem com o rótulo SnapMirror ""bimestral".
+* Para uma política personalizada com o tipo de política "mirror-Vault", você pode criar uma regra chamada "bi-semporal" para combinar cópias snapshot na origem com o rótulo "bi-semporal" SnapMirror.
+
+
+.Passo
+. Defina uma regra para uma política:
++
+`snapmirror policy add-rule -vserver _SVM_ -policy _policy_for_rule_ -snapmirror-label _snapmirror-label_ -keep _retention_count_`
+
++
+Para obter a sintaxe completa do comando, consulte a página man.
+
++
+O exemplo a seguir adiciona uma regra com o rótulo SnapMirror `bi-monthly` à política padrão `MirrorAndVault`:
+
++
+[listing]
+----
+cluster_dst::> snapmirror policy add-rule -vserver svm1 -policy MirrorAndVault -snapmirror-label bi-monthly -keep 6
+----
++
+O exemplo a seguir adiciona uma regra com o rótulo SnapMirror `bi-weekly` à política personalizada `my_snapvault`:
+
++
+[listing]
+----
+cluster_dst::> snapmirror policy add-rule -vserver svm1 -policy my_snapvault -snapmirror-label bi-weekly -keep 26
+----
++
+O exemplo a seguir adiciona uma regra com o rótulo SnapMirror `app_consistent` à política personalizada `Sync`:
+
++
+[listing]
+----
+cluster_dst::> snapmirror policy add-rule -vserver svm1 -policy Sync -snapmirror-label app_consistent -keep 1
+----
++
+Em seguida, é possível replicar cópias snapshot do cluster de origem que corresponda a este rótulo SnapMirror:
+
++
+[listing]
+----
+cluster_src::> snapshot create -vserver vs1 -volume vol1 -snapshot snapshot1 -snapmirror-label app_consistent
+----
+

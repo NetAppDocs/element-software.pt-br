@@ -1,0 +1,36 @@
+= Encontre mais informações
+:allow-uri-read: 
+
+
+Você pode alterar o certificado SSL padrão e a chave privada do nó de armazenamento no cluster usando a API NetApp Element.
+
+Quando um cluster de software NetApp Element é criado, o cluster cria um certificado SSL (Secure Sockets Layer) exclusivo autoassinado e uma chave privada que é usada para todas as comunicações HTTPS por meio da IU do Element, IU por nó ou APIs. O software Element suporta certificados autoassinados, bem como certificados emitidos e verificados por uma autoridade de certificação (CA) confiável.
+
+Você pode usar os seguintes métodos de API para obter mais informações sobre o certificado SSL padrão e fazer alterações.
+
+* *GetSSLCertificate*
++
+Você pode usar o link:../api/reference_element_api_getsslcertificate.html["Método GetSSLCertificate"] para recuperar informações sobre o certificado SSL instalado atualmente, incluindo todos os detalhes do certificado.
+
+* *SetSSLCertificate*
++
+Você pode usar o link:../api/reference_element_api_setsslcertificate.html["Método SetSSLCertificate"] para definir os certificados SSL de cluster e por nó para o certificado e a chave privada que você fornece. O sistema valida o certificado e a chave privada para impedir que um certificado inválido seja aplicado.
+
+* *RemoveSSLCertificate*
++
+O link:../api/reference_element_api_removesslcertificate.html["Método RemoveSSLCertificate"] remove o certificado SSL e a chave privada atualmente instalados. Em seguida, o cluster gera um novo certificado autoassinado e uma chave privada.
+
+
+
+
+NOTE: O certificado SSL do cluster é aplicado automaticamente a todos os novos nós adicionados ao cluster. Qualquer nó removido do cluster reverte para um certificado autoassinado e todas as informações de chave e certificados definidos pelo usuário são removidas do nó.
+
+
+
+== Encontre mais informações
+
+* link:../mnode/reference_change_mnode_default_ssl_certificate.html["Altere o certificado SSL padrão do nó de gerenciamento"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/What_are_the_requirements_around_setting_custom_SSL_certificates_in_Element_Software%3F["Quais são os requisitos para definir certificados SSL personalizados no Element Software?"^]
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in do NetApp Element para vCenter Server"^]
+

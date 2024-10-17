@@ -1,0 +1,32 @@
+---
+permalink: storage/task_data_protection_back_up_volume_to_amazon_s3.html 
+sidebar: sidebar 
+keywords: volume backup, amazon s3 object store 
+summary: Você pode fazer backup de volumes em armazenamentos de objetos externos compatíveis com o Amazon S3. 
+---
+= Faça backup de um volume em um armazenamento de objetos do Amazon S3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode fazer backup de volumes em armazenamentos de objetos externos compatíveis com o Amazon S3.
+
+. Clique em *Management* > *volumes*.
+. Clique no ícone ações do volume que você deseja fazer backup.
+. No menu resultante, clique em *Backup to*.
+. Na caixa de diálogo *Backup integrado* em *Backup to*, selecione *S3*.
+. Selecione uma opção em *Data Format*:
++
+** * Nativo*: Um formato compactado legível apenas pelos sistemas de armazenamento SolidFire.
+** *Uncompressed*: Um formato não comprimido compatível com outros sistemas.
+
+
+. Insira um nome de host para usar para acessar o armazenamento de objetos no campo *Nome de host*.
+. Insira um ID de chave de acesso para a conta no campo *ID de chave de acesso*.
+. Digite a chave de acesso secreta para a conta no campo *chave de acesso secreta*.
+. Introduza o bucket S3 no qual pretende guardar a cópia de segurança no campo *S3 Bucket*.
+. Digite um nametag para anexar ao prefixo no campo *nametag*.
+. Clique em *Iniciar leitura*.
+

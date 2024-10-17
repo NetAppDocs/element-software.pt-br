@@ -1,0 +1,40 @@
+---
+permalink: storage/reference_replication_cluster_pair_details.html 
+sidebar: sidebar 
+keywords: cluster pairs, replication, data protection 
+summary: A página pares de cluster na guia proteção de dados fornece informações sobre clusters que foram emparelhados ou que estão em processo de emparelhamento. O sistema exibe mensagens de emparelhamento e progresso na coluna Status. 
+---
+= Detalhes do par de cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A página pares de cluster na guia proteção de dados fornece informações sobre clusters que foram emparelhados ou que estão em processo de emparelhamento. O sistema exibe mensagens de emparelhamento e progresso na coluna Status.
+
+* *ID*
++
+Um ID gerado pelo sistema dado a cada par de cluster.
+
+* *Nome do cluster remoto*
++
+O nome do outro cluster no par.
+
+* *MVIP remoto*
++
+O endereço IP virtual de gerenciamento do outro cluster no par.
+
+* *Status*
++
+Estado da replicação do cluster remoto
+
+* *Replicação de volumes*
++
+O número de volumes contidos pelo cluster que são emparelhados para replicação.
+
+* *UUID*
++
+Um ID exclusivo dado a cada cluster no par.
+
+

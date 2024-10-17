@@ -1,0 +1,28 @@
+---
+permalink: storage/reference_system_manage_snmp_snmp_details.html 
+sidebar: sidebar 
+keywords: snmp, overview, reference, mib, settings, trap 
+summary: 'Na página SNMP do separador Cluster (Cluster), pode visualizar as seguintes informações.' 
+---
+= Detalhes SNMP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Na página SNMP do separador Cluster (Cluster), pode visualizar as seguintes informações.
+
+* *MIBs SNMP*
++
+Os ficheiros MIB que estão disponíveis para visualização ou transferência.
+
+* * Configurações gerais do SNMP*
++
+Pode ativar ou desativar o SNMP. Depois de ativar o SNMP, pode escolher qual versão utilizar. Se estiver a utilizar a versão 2, pode adicionar requestores e, se estiver a utilizar a versão 3, pode configurar utilizadores USM.
+
+* * Configurações de intercetação SNMP*
++
+Você pode identificar quais armadilhas você deseja capturar. Você pode definir o host, a porta e a cadeia de carateres da comunidade para cada destinatário da armadilha.
+
+

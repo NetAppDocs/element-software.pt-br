@@ -1,0 +1,60 @@
+---
+permalink: storage/task-element-replication-initialize-replication-relationship.html 
+sidebar: sidebar 
+keywords: ontap, cli, initialize, replication, relationship 
+summary: 'Para todos os tipos de relacionamento, a inicialização executa uma transferência de linha de base: Ele faz uma cópia instantânea do volume de origem, depois transfere essa cópia e todos os blocos de dados que ela faz referência ao volume de destino.' 
+---
+= Inicializar uma relação de replicação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para todos os tipos de relacionamento, a inicialização executa uma _Baseline transfer_: Faz uma cópia snapshot do volume de origem, depois transfere essa cópia e todos os dados bloqueiam que ela faz referência ao volume de destino.
+
+.Antes de começar
+* O nó elemento que contém o volume a ser replicado deve ter sido tornado acessível ao ONTAP.
+* O volume do elemento deve ter sido habilitado para replicação do SnapMirror.
+* Se você estiver usando o tipo de política "merror-Vault", um rótulo SnapMirror deve ter sido configurado para que as cópias snapshot do elemento sejam replicadas.
++
+[NOTE]
+====
+Só pode executar esta tarefa na link:concept_snapmirror_labels.html["IU da Web do software Element"]ou utilizando a link:../api/concept_element_api_snapshots_overview.html["Métodos API"].
+
+====
+
+
+.Sobre esta tarefa
+Você deve especificar o caminho de origem do elemento no formulário `<hostip:>/lun/<name>`, onde "'lun'" é a cadeia de carateres real "'lun'" e `_name_` é o nome do volume do elemento.
+
+A inicialização pode ser demorada. Você pode querer executar a transferência de linha de base em horas fora do pico.
+
+[NOTE]
+====
+Se a inicialização de um relacionamento de uma origem ONTAP para um destino de elemento falhar por qualquer motivo, ele continuará falhando mesmo depois de corrigir o problema (um nome LUN inválido, por exemplo). A solução alternativa é a seguinte:
+
+. Eliminar a relação.
+. Exclua o volume de destino do elemento.
+. Crie um novo volume de destino do elemento.
+. Crie e inicialize uma nova relação da origem do ONTAP para o volume de destino do elemento.
+
+
+====
+.Passo
+. Inicializar uma relação de replicação:
++
+`snapmirror initialize -source-path <hostip:>/lun/<name> -destination-path <SVM:volume|cluster://SVM/volume>`
+
++
+Para obter a sintaxe completa do comando, consulte a página man.
+
++
+O exemplo a seguir inicializa a relação entre o volume de origem `0005` no endereço IP 10.0.0.11 e o volume de `volA_dst` destino no `svm_backup`:
+
++
+[listing]
+----
+cluster_dst::> snapmirror initialize -source-path 10.0.0.11:/lun/0005 -destination-path svm_backup:volA_dst
+----
+

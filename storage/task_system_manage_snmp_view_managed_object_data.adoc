@@ -1,0 +1,31 @@
+---
+permalink: storage/task_system_manage_snmp_view_managed_object_data.html 
+sidebar: sidebar 
+keywords: snmp, view, management information base files, download, mib, statistics, oids 
+summary: 'Você pode visualizar e baixar os arquivos de base de informações de gerenciamento (MIB) usados para definir cada um dos objetos gerenciados. O recurso SNMP oferece suporte ao acesso somente leitura aos objetos definidos no SolidFire-StorageCluster-MIB.' 
+---
+= Exibir dados de objeto gerenciado usando arquivos da base de informações de gerenciamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode exibir e baixar os arquivos da base de informações de gerenciamento (MIB) usados para definir cada um dos objetos gerenciados. O recurso SNMP oferece suporte ao acesso somente leitura aos objetos definidos no SolidFire-StorageCluster-MIB.
+
+Os dados estatísticos fornecidos no MIB mostram a atividade do sistema para o seguinte:
+
+* Estatísticas de cluster
+* Estatísticas de volume
+* Volumes por estatísticas da conta
+* Estatísticas dos nós
+* Outros dados, como relatórios, erros e eventos do sistema
+
+
+O sistema também suporta o acesso ao arquivo MIB que contém os pontos de acesso de nível superior (OIDS) para os produtos SF-Series.
+
+.Passos
+. Clique em *Cluster* > *SNMP*.
+. Em *MIBs SNMP*, clique no arquivo MIB que você deseja baixar.
+. Na janela de download resultante, abra ou salve o arquivo MIB.
+

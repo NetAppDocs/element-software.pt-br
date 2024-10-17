@@ -1,0 +1,208 @@
+---
+permalink: api/reference_element_api_clusterinfo.html 
+sidebar: sidebar 
+keywords: element, api, object, objects, clusterInfo 
+summary: O objeto clusterInfo contém informações que o nó usa para se comunicar com o cluster. Você pode obter essas informações com o método da API GetClusterInfo. 
+---
+= ClusterInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto clusterInfo contém informações que o nó usa para se comunicar com o cluster. Você pode obter essas informações com o método da API GetClusterInfo.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+atributos
+ a| 
+Lista de pares nome-valor no formato de objeto JSON.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+DefaultProtectionScheme
+ a| 
+O esquema de proteção usado por padrão para novos volumes, a menos que um esquema de proteção seja fornecido com a xref:reference_element_api_createvolume.adoc[Createvolume]chamada de método. Este regime de proteçãoão deve estar sempre no conjunto de regimes de proteçãoão ativados.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+EnableProtectionSchemes
+ a| 
+Uma lista de todos os esquemas de proteção que foram ativados neste cluster de armazenamento.
+ a| 
+array de cadeia de carateres
+
+
+
+ a| 
+Criptografia AtRestState
+ a| 
+O estado da funcionalidade encriptação em repouso. Valores possíveis:
+
+* Habilitando: A criptografia em repouso está sendo ativada.
+* Ativado: A encriptação em repouso está ativada.
+* Desativação: A encriptação em repouso está a ser desativada.
+* Desativado: A encriptação em repouso está desativada.
+
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+ensemble
+ a| 
+Os nós que estão participando do cluster.
+ a| 
+array de cadeia de carateres
+
+
+
+ a| 
+mvip
+ a| 
+O endereço IP flutuante (virtual) para o cluster na rede de gerenciamento.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+MvipInterface
+ a| 
+A interface física associada ao endereço MVIP.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+MvipNodeID
+ a| 
+O nó que contém o endereço MVIP principal.
+ a| 
+número inteiro
+
+
+
+ a| 
+MvipVlanTag
+ a| 
+O identificador de VLAN para o endereço MVIP.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+nome
+ a| 
+O nome exclusivo do cluster.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+Recontagem
+ a| 
+O número de réplicas de cada pedaço de dados a armazenar no cluster. O valor válido é "2".
+ a| 
+número inteiro
+
+
+
+ a| 
+Software EncryptionAtRestState
+ a| 
+Estado de criptografia em repouso baseada em software.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+SupportedProtectionSchemes
+ a| 
+Uma lista de todos os esquemas de proteção suportados neste cluster de armazenamento.
+ a| 
+array de cadeia de carateres
+
+
+
+ a| 
+svip
+ a| 
+O endereço IP flutuante (virtual) para o cluster na rede de armazenamento (iSCSI).
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+SvipInterface
+ a| 
+A interface física associada ao endereço SVIP principal.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+SvipNodeID
+ a| 
+O nó que contém o endereço SVIP principal.
+ a| 
+número inteiro
+
+
+
+ a| 
+SvipVlanTag
+ a| 
+O identificador de VLAN para o endereço SVIP principal.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+Uniqueid
+ a| 
+A ID exclusiva para o cluster.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+uuid
+ a| 
+O identificador exclusivo para o cluster.
+ a| 
+UUID
+
+|===
+[discrete]
+== Encontre mais informações
+
+* link:../api/reference_element_api_getclusterinfo.html["GetClusterInfo"]
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]apresentação]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentação para versões anteriores dos produtos NetApp SolidFire e Element"^]
+

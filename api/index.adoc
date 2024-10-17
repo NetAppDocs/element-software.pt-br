@@ -1,0 +1,51 @@
+---
+permalink: api/index.html 
+sidebar: sidebar 
+keywords: element, api, storage, manage, cluster, volumes, json, rpc, https 
+summary: Saiba como gerenciar clusters de storage do NetApp Element usando a API Element. 
+---
+= Gerenciar storage com a API Element
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode gerenciar clusters de storage do Element com a API do software Element.
+
+A API Element é baseada no protocolo JSON-RPC em HTTPS. JSON-RPC é um protocolo RPC simples baseado em texto baseado no formato de intercâmbio de dados JSON leve. Bibliotecas de clientes estão disponíveis para todas as principais linguagens de programação.
+
+* xref:concept_element_api_about_the_api.adoc[Sobre a API do software Element]
+* xref:concept_element_api_common_objects.adoc[Objetos comuns]
+* xref:concept_element_api_common_methods.adoc[Métodos comuns]
+* xref:concept_element_api_account_api_methods.adoc[Métodos de API de conta]
+* xref:concept_element_api_administrator_api_methods.adoc[Métodos da API do administrador]
+* xref:concept_element_api_cluster_api_methods.adoc[Métodos de API de cluster]
+* xref:concept_element_api_create_cluster_api_methods.adoc[Métodos de API de criação de cluster]
+* xref:concept_element_api_drive_api_methods.adoc[Métodos da API da unidade]
+* xref:concept_element_api_fibre_channel_api_methods.adoc[Métodos de API Fibre Channel]
+* xref:concept_element_api_initiator_api_methods.adoc[Métodos da API do iniciador]
+* xref:concept_element_api_ldap_api_methods.adoc[Métodos de API LDAP]
+* xref:concept_element_api_multi_factor_authentication_api_methods.adoc[Métodos de API de autenticação multifator]
+* xref:concept_element_api_session_authentication_api_methods.adoc[Métodos API de autenticação de sessão]
+* xref:concept_element_api_node_api_methods.adoc[Métodos de API de nó]
+* xref:concept_element_api_replication_api_methods.adoc[Métodos de API de replicação]
+* xref:concept_element_api_security_api_methods.adoc[Métodos de API de segurança]
+* xref:concept_element_api_snapmirror_api_methods.adoc[Métodos de API do SnapMirror]
+* xref:concept_element_api_system_configuration_api_methods.adoc[Métodos de API de configuração do sistema]
+* xref:concept_element_api_multitenant_networking_api_methods.adoc[Métodos de API de rede multitenant]
+* xref:concept_element_api_volume_api_methods.adoc[Métodos de API de volume]
+* xref:concept_element_api_volume_access_group_api_methods.adoc[Métodos de API do grupo de acesso ao volume]
+* xref:concept_element_api_volume_snapshot_api_methods.adoc[Métodos de API de instantâneo de volume]
+* xref:concept_element_api_vvols_api_methods.adoc[Métodos de API de volume virtual]
+* xref:reference_element_api_app_b_access_control.adoc[Controle de acesso]
+* xref:concept_element_api_response_examples.adoc[Exemplos de resposta]
+
+
+
+
+== Encontre mais informações
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Página de recursos de storage all-flash da SolidFire"^]
+* http://docs.netapp.com/sfe-122/index.jsp["Centro de Documentação de Software SolidFire e Element"^]
+

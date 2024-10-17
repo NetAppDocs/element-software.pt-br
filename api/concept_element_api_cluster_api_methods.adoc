@@ -1,0 +1,58 @@
+---
+permalink: api/concept_element_api_cluster_api_methods.html 
+sidebar: sidebar 
+keywords: cluster,API,methods,method,manage 
+summary: Os métodos de API de cluster de software Element permitem gerenciar a configuração e a topologia do cluster de storage e dos nós que pertencem a um cluster de storage. 
+---
+= Métodos de API de cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os métodos de API de cluster de software Element permitem gerenciar a configuração e a topologia do cluster de storage e dos nós que pertencem a um cluster de storage.
+
+Alguns métodos de API de cluster operam em nós que fazem parte de um cluster ou que foram configurados para ingressar em um cluster. Você pode adicionar nós a um novo cluster ou a um cluster existente. Os nós que estão prontos para serem adicionados a um cluster estão em um estado "pendente", o que significa que eles foram configurados, mas ainda não foram adicionados ao cluster.
+
+* xref:reference_element_api_addnodes.adoc[AddNodes]
+* xref:reference_element_api_clearclusterfaults.adoc[ClearClusterFaults]
+* xref:reference_element_api_createclusterinterfacepreference.adoc[CreateClusterInterfacePreference]
+* xref:reference_element_api_deleteclusterinterfacepreference.adoc[DeleteClusterInterfacePreference]
+* xref:reference_element_api_enablefeature.adoc[EnableFeature]
+* xref:reference_element_api_getclustercapacity.adoc[GetClusterCapacity]
+* xref:reference_element_api_getclusterfullthreshold.adoc[GetClusterFullThreshold]
+* xref:reference_element_api_getclusterhardwareinfo.adoc[GetClusterHardwareInfo]
+* xref:reference_element_api_getclusterinfo.adoc[GetClusterInfo]
+* xref:reference_element_api_getclusterinterfacepreference.adoc[GetClusterInterfacePreference]
+* xref:reference_element_api_getclustermasternodeid.adoc[GetClusterMasterNodeID]
+* xref:reference_element_api_getclusterstats.adoc[GetClusterStats]
+* xref:reference_element_api_getclusterversioninfo.adoc[GetClusterVersionInfo]
+* xref:reference_element_api_getfeaturestatus.adoc[GetFeatureStatus]
+* xref:reference_element_api_getloginsessioninfo.adoc[GetLoginSessionInfo]
+* xref:reference_element_api_getnodehardwareinfo.adoc[GetNodeHardwareInfo]
+* xref:reference_element_api_getnodestats.adoc[GetNodeStats]
+* xref:reference_element_api_listactivenodes.adoc[ListActiveNodes]
+* xref:reference_element_api_listallnodes.adoc[ListAllNodes]
+* xref:reference_element_api_listclusterfaults.adoc[ListClusterFaults]
+* xref:reference_element_api_listclusterinterfacepreferences.adoc[ListClusterInterfacePreferences]
+* xref:reference_element_api_listevents.adoc[ListEvents]
+* xref:reference_element_api_listnodestats.adoc[ListNodeStats]
+* xref:reference_element_api_listiscsisessions.adoc[Listagens]
+* xref:reference_element_api_listservices.adoc[ListServices]
+* xref:reference_element_api_listpendingnodes.adoc[ListPendingNodes]
+* xref:reference_element_api_listpendingactivenodes.adoc[ListPendingActiveNodes]
+* xref:reference_element_api_modifyclusterfullthreshold.adoc[ModifyClusterFullThreshold]
+* xref:reference_element_api_modifyclusterinterfacepreference.adoc[ModifyClusterInterfacePreference]
+* xref:reference_element_api_removenodes.adoc[RemovesNodes]
+* xref:reference_element_api_setloginsessioninfo.adoc[SetLoginSessionInfo]
+* xref:reference_element_api_cluster_shutdown.adoc[Encerramento]
+
+
+
+
+== Encontre mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentação para versões anteriores dos produtos NetApp SolidFire e Element"^]
+

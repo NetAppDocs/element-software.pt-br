@@ -1,0 +1,30 @@
+---
+permalink: storage/task_snapmirror_enable_on_the_cluster.html 
+sidebar: sidebar 
+keywords: element, snapmirror, enable, cluster, ui, manually enable 
+summary: Você deve habilitar manualmente a funcionalidade do SnapMirror no nível do cluster por meio da IU do NetApp Element. O sistema vem com a funcionalidade SnapMirror desativada por padrão e não é automaticamente ativada como parte de uma nova instalação ou atualização. Ativar o recurso SnapMirror é uma tarefa de configuração única. 
+---
+= Ative o SnapMirror no cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve habilitar manualmente a funcionalidade do SnapMirror no nível do cluster por meio da IU do NetApp Element. O sistema vem com a funcionalidade SnapMirror desativada por padrão e não é automaticamente ativada como parte de uma nova instalação ou atualização. Ativar o recurso SnapMirror é uma tarefa de configuração única.
+
+O SnapMirror só pode ser habilitado para clusters que executam o software Element usado em conjunto com volumes em um sistema NetApp ONTAP. Você deve habilitar a funcionalidade SnapMirror somente se o cluster estiver conetado para uso com o NetApp ONTAP volumes.
+
+.O que você vai precisar
+O cluster de storage deve estar executando o software NetApp Element.
+
+.Passos
+. Clique em *clusters* > *Configurações*.
+. Encontre as configurações específicas do cluster para o SnapMirror.
+. Clique em *Ativar SnapMirror*.
++
+
+NOTE: Ativar a funcionalidade SnapMirror altera permanentemente a configuração do software Element. Pode desativar a funcionalidade SnapMirror e restaurar as predefinições apenas devolvendo o cluster à imagem de fábrica.
+
+. Clique em *Sim* para confirmar a alteração de configuração do SnapMirror.
+

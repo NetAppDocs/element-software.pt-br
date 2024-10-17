@@ -1,0 +1,82 @@
+---
+permalink: storage/task_snapmirror_create_snapmirror_relationship.html 
+sidebar: sidebar 
+keywords: element, relationships, create, snapmirror, ui 
+summary: Você deve criar um relacionamento SnapMirror na IU do NetApp Element. 
+---
+= Crie uma relação SnapMirror
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve criar um relacionamento SnapMirror na IU do NetApp Element.
+
+
+NOTE: Quando um volume ainda não está ativado para o SnapMirror e você seleciona criar uma relação a partir da IU do Element, o SnapMirror é ativado automaticamente nesse volume.
+
+.O que você vai precisar
+O SnapMirror está ativado no volume.
+
+.Passos
+. Clique em *Management* > *volumes*.
+. Clique no ícone *ações* para o volume que deve fazer parte da relação.
+. Clique em *criar uma relação SnapMirror*.
+. Na caixa de diálogo *criar um relacionamento SnapMirror*, selecione um ponto final na lista *ponto final*.
+. Selecione se a relação será criada usando um novo volume ONTAP ou um volume ONTAP existente.
+. Para criar um novo volume ONTAP na IU do Element, clique em *criar novo volume*.
++
+.. Selecione *Storage Virtual Machine* para esta relação.
+.. Selecione *agregar* na lista suspensa.
+.. No campo *volume Name Suffix*, insira um sufixo.
++
+
+NOTE: O sistema deteta o nome do volume de origem e copia-o para o campo *Nome do volume*. O sufixo inserido anexa o nome.
+
+.. Clique em *criar volume de destino*.
+
+
+. Para usar um volume ONTAP existente, clique em *usar volume existente*.
++
+.. Selecione *Storage Virtual Machine* para esta relação.
+.. Selecione o volume que é o destino para esta nova relação.
+
+
+. Na seção *Detalhes do relacionamento*, selecione uma política. Se a política selecionada tiver regras manter, a tabela regras exibirá as regras e os rótulos associados.
+. *Opcional*: Selecione um horário.
++
+Isso determina com que frequência a relação cria cópias.
+
+. *Opcional*: No campo *Limit bandwidth to*, insira a quantidade máxima de largura de banda que pode ser consumida pelas transferências de dados associadas a essa relação.
+. Rever detalhes adicionais:
++
+** *Estado*: Estado da relação atual do volume de destino. Os valores possíveis são:
++
+*** não inicializado: O volume de destino não foi inicializado.
+*** Snapmirror: O volume de destino foi inicializado e está pronto para receber atualizações do SnapMirror.
+*** Desagregação: O volume de destino é leitura/gravação e instantâneos estão presentes.
+
+
+** *Status*: Status atual do relacionamento. Os valores possíveis são ociosos, transferindo, verificando, quiescente, quiesced, enfileirado, preparando, finalizando, abortando e quebrando.
+** *Tempo de atraso*: A quantidade de tempo em segundos que o sistema de destino fica atrás do sistema de origem. O tempo de atraso não deve ser superior ao intervalo de programação de transferência.
+** *Limite de largura de banda*: A quantidade máxima de largura de banda que pode ser consumida pelas transferências de dados associadas a essa relação.
+** *Último transferido*: Carimbo de data/hora do último instantâneo transferido. Clique para obter mais informações.
+** *Nome da política*: O nome da política ONTAP SnapMirror para o relacionamento.
+** *Tipo de política*: Tipo de política ONTAP SnapMirror selecionada para o relacionamento. Os valores possíveis são:
++
+*** async_mirror
+*** mirror_vault
+
+
+** *Nome da programação*: Nome da programação pré-existente no sistema ONTAP selecionado para esta relação.
+
+
+. Para não inicializar neste momento, certifique-se de que a caixa de verificação *Inicializar* não está selecionada.
++
+
+NOTE: A inicialização pode ser demorada. Você pode querer executar isso durante horas fora de pico. A inicialização executa uma transferência de linha de base; ela faz uma cópia instantânea do volume de origem, depois transfere essa cópia e todos os dados bloqueiam que ela faz referência ao volume de destino. Você pode inicializar manualmente ou usar uma programação para iniciar o processo de inicialização (e atualizações subsequentes) de acordo com a programação.
+
+. Clique em *criar relacionamento*.
+. Clique em *proteção de dados* > *relacionamentos SnapMirror* para visualizar esta nova relação SnapMirror.
+

@@ -1,0 +1,34 @@
+---
+permalink: storage/task_replication_pair_volumes_using_volume_id_or_pairing_key.html 
+sidebar: sidebar 
+keywords: volume pairings, pairing key, volume id, replication 
+summary: O processo de emparelhamento envolve o emparelhamento de dois volumes utilizando uma ID de volume ou uma tecla de emparelhamento. 
+---
+= Emparelhe volumes utilizando uma ID de volume ou uma tecla de emparelhamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O processo de emparelhamento envolve o emparelhamento de dois volumes utilizando uma ID de volume ou uma tecla de emparelhamento.
+
+. Emparelhe volumes selecionando um dos seguintes métodos:
++
+** Usando um ID de volume: Use este método se você tiver acesso de administrador de cluster a ambos os clusters nos quais os volumes devem ser emparelhados. Este método usa a ID do volume do volume no cluster remoto para iniciar uma conexão.
+** Usando uma chave de emparelhamento: Use este método se você tiver acesso de administrador de cluster apenas ao cluster de origem. Este método gera uma chave de emparelhamento que pode ser utilizada no cluster remoto para concluir o par de volumes.
++
+
+NOTE: A chave de emparelhamento de volume contém uma versão encriptada das informações de volume e pode conter informações confidenciais. Compartilhe esta chave apenas de forma segura.
+
+
+
+
+
+
+
+== Encontre mais informações
+
+* xref:task_replication_pair_volumes_using_a_volume_id.adoc[Emparelhe volumes usando um ID de volume]
+* xref:task_replication_pair_volumes_using_a_pairing_key.adoc[Emparelhe volumes utilizando uma tecla de emparelhamento]
+

@@ -1,0 +1,98 @@
+---
+permalink: concepts/concept_solidfire_concepts_nodes.html 
+sidebar: sidebar 
+keywords: what is, node, management node, storage node, fibre channel, state, pending, active 
+summary: Nós são o hardware que é agrupado em um cluster a ser acessado como recursos de computação ou storage de bloco. 
+---
+= Nós
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os nós são recursos de hardware ou virtuais agrupados em um cluster para fornecer recursos de computação e storage em bloco.
+
+O software NetApp Element define várias funções de nó para um cluster. Os tipos de funções de nós são os seguintes:
+
+* <<Nó de gerenciamento>>
+* <<Nó de storage>>
+* <<Nó Fibre Channel>>
+
+
+<<estados de operação do nó,estados dos nós>> varia dependendo da associação de cluster.
+
+
+
+== Nó de gerenciamento
+
+Um nó de gerenciamento é uma máquina virtual usada para atualizar e fornecer serviços de sistema, incluindo monitoramento e telemetria, gerenciar ativos e configurações de cluster, executar testes e utilitários do sistema e habilitar o acesso ao suporte NetApp para solução de problemas. link:../concepts/concept_intro_management_node.html["Saiba mais"]
+
+
+
+== Nó de storage
+
+Um nó de armazenamento SolidFire é um servidor que contém uma coleção de unidades que se comunicam entre si através da interface de rede Bond10G. As unidades no nó contêm espaço de bloco e metadados para storage e gerenciamento de dados. Cada nó contém uma imagem de fábrica do software NetApp Element.
+
+Os nós de storage têm as seguintes características:
+
+* Cada nó tem um nome exclusivo. Se um nome de nó não for especificado por um administrador, o padrão será SF-XXXX, onde XXXX é quatro carateres aleatórios gerados pelo sistema.
+* Cada nó tem seu próprio cache de gravação de memória de acesso aleatório (NVRAM) não volátil de alto desempenho para melhorar o desempenho geral do sistema e reduzir a latência de gravação.
+* Cada nó é conetado a duas redes, armazenamento e gerenciamento, cada um com dois links independentes para redundância e desempenho. Cada nó requer um endereço IP em cada rede.
+* Você pode criar um cluster com novos nós de storage ou adicionar nós de storage a um cluster existente para aumentar a capacidade de storage e a performance.
+* Você pode adicionar ou remover nós do cluster a qualquer momento sem interromper o serviço.
+
+
+
+
+== Nó Fibre Channel
+
+Os nós Fibre Channel da SolidFire fornecem conetividade a um switch Fibre Channel, que você pode se conetar a clientes Fibre Channel. Os nós Fibre Channel agem como um conversor de protocolo entre os protocolos Fibre Channel e iSCSI; isso permite adicionar conectividade Fibre Channel a qualquer cluster SolidFire novo ou existente.
+
+Os nós Fibre Channel têm as seguintes características:
+
+* Os switches Fibre Channel gerenciam o estado da malha, fornecendo interconexões otimizadas.
+* O tráfego entre duas portas flui apenas através dos switches; ele não é transmitido para nenhuma outra porta.
+* A falha de uma porta é isolada e não afeta a operação de outras portas.
+* Vários pares de portas podem se comunicar simultaneamente em uma malha.
+
+
+
+
+== estados de operação do nó
+
+[role="lead"]
+Um nó pode estar em um de vários estados, dependendo do nível de configuração.
+
+* *Disponível*
++
+O nó não tem nome de cluster associado e ainda não faz parte de um cluster.
+
+* *Pendente*
++
+O nó é configurado e pode ser adicionado a um cluster designado.
+
++
+A autenticação não é necessária para acessar o nó.
+
+* *Pendente ativo*
++
+O sistema está em processo de instalação do software Element compatível no nó. Quando concluído, o nó se moverá para o estado Ativo.
+
+* *Ativo*
++
+O nó está participando de um cluster.
+
++
+A autenticação é necessária para modificar o nó.
+
+
+
+Em cada um desses estados, alguns campos são lidos somente.
+
+[discrete]
+== Encontre mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in do NetApp Element para vCenter Server"^]
+

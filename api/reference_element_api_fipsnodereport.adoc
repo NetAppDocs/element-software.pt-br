@@ -1,0 +1,60 @@
+---
+permalink: api/reference_element_api_fipsnodereport.html 
+sidebar: sidebar 
+keywords: objects,object,fipsNodeReport 
+summary: O objeto fipsNodeReport contém informações sobre o suporte ao FIPS 140-2 para um único nó no cluster de armazenamento. Você pode recuperar essas informações usando o método GetFipsReport. 
+---
+= FipsNodeReport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto fipsNodeReport contém informações sobre o suporte ao FIPS 140-2 para um único nó no cluster de armazenamento. Você pode recuperar essas informações usando o `GetFipsReport` método.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+NodeID
+ a| 
+A ID do nó que relata as informações.
+ a| 
+número inteiro
+
+
+
+ a| 
+FipsDrives
+ a| 
+Se a criptografia de unidade FIPS 140-2 está ativada ou não para esse nó. Valores possíveis:
+
+* Nenhum: Este nó não é capaz de criptografia de unidade FIPS.
+* Parcial: O nó é capaz de criptografia de unidade FIPS, mas nem todas as unidades presentes são unidades com capacidade para FIPS.
+* Pronto: O nó é capaz de criptografia de unidade FIPS e todas as unidades presentes são unidades com capacidade para FIPS ou não há unidades presentes.
+
+ a| 
+FipsDrivesStatusType
+
+
+
+ a| 
+HttpsEnabled
+ a| 
+Se a criptografia HTTPS FIPS 140-2 está ativada ou não para esse nó. Valores possíveis:
+
+* verdadeiro: ativado
+* falso: desativado
+
+ a| 
+booleano
+
+|===

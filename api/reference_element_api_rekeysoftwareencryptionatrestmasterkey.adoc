@@ -1,0 +1,86 @@
+---
+permalink: api/reference_element_api_rekeysoftwareencryptionatrestmasterkey.html 
+sidebar: sidebar 
+keywords: system, api, element, security, rekey, software encryption at rest 
+summary: 'Você pode usar o método RekeySoftwareEncryptionAtRestMasterKey para rechavear a chave mestra de criptografia em repouso usada para criptografar DEKs (chaves de criptografia de dados).' 
+---
+= RekeySoftwareEncryptionAtRestMasterKey
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `RekeySoftwareEncryptionAtRestMasterKey` método para rechavear a chave mestra de criptografia em repouso usada para criptografar DEKs (chaves de criptografia de dados). Durante a criação do cluster, a criptografia de software em repouso é configurada para usar o gerenciamento de chave interna (IKM). Este método de rechavear pode ser usado após a criação do cluster para usar o IKM ou o EKM (External Key Management).
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada. Se o `keyManagementType` parâmetro não for especificado, a operação de rechavear é executada usando a configuração de gerenciamento de chaves existente. Se o `keyManagementType` for especificado e o provedor de chaves for externo, o `keyProviderID` parâmetro também deve ser usado.
+
+[cols="4*"]
+|===
+| Parâmetro | Descrição | Tipo | Opcional 
+
+
+| KeyManagementType | O tipo de gerenciamento de chaves usado para gerenciar a chave mestra. Os valores possíveis são
+`Internal`: : Rechavear utilizando a gestão de chaves internas.
+`External`: Rechavear utilizando a gestão de chaves externas. Se este parâmetro não for especificado, a operação de rechavear é executada utilizando a configuração de gestão de chaves existente. | cadeia de carateres | Verdadeiro 
+
+
+| KeyProviderID | A ID do fornecedor de chaves a utilizar. Este é um valor único retornado como parte de um dos `CreateKeyProvider` métodos. A ID só é necessária quando `keyManagementType` é `External` e é inválida. | número inteiro | Verdadeiro 
+|===
+
+
+== Valores de retorno
+
+Este método tem os seguintes valores de retorno:
+
+[cols="4*"]
+|===
+| Parâmetro | Descrição | Tipo | Opcional 
+
+
+| AsyncHandle | Determine o estado da operação de rechavear utilizando este `asyncHandle` valor com `GetAsyncResult`. `GetAsyncResult` a saída incluirá um `newKey` campo que contém informações sobre a nova chave mestra e um `keyToDecommission` campo que contém informações sobre a chave antiga. | número inteiro | Falso 
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+ "method": "rekeysoftwareencryptionatrestmasterkey",
+ "params": {
+   "keyManagementType": "external",
+   "keyProviderID": "<ID number>"
+ }
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+    "asyncHandle": 1
+}
+----
+
+
+== Novo desde a versão
+
+12,3
+
+[discrete]
+== Encontre mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentação para versões anteriores dos produtos NetApp SolidFire e Element"^]
+

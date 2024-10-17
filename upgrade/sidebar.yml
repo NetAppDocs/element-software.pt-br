@@ -1,0 +1,24 @@
+---
+section: upgrade
+title: Atualize seu sistema de storage all-flash NetApp SolidFire
+entries:
+- title: Descrição geral da sequência de atualização
+  url: "/upgrade/concept_element_upgrade_overview.html"
+- title: Procedimentos de atualização do sistema
+  entries:
+  - title: Atualizar serviços de gestão
+    url: "/upgrade/task_hcc_update_management_services.html"
+  - title: Execute verificações de integridade do storage Element antes de atualizar
+      o storage
+    url: "/upgrade/task_hcc_upgrade_element_prechecks.html"
+  - title: Atualize o software Element
+    url: "/upgrade/task_hcc_upgrade_element_software.html"
+  - title: Atualize o firmware de armazenamento
+    url: "/upgrade/task_hcc_upgrade_storage_firmware.html"
+  - title: Atualizar um nó de gerenciamento
+    url: "/upgrade/task_hcc_upgrade_management_node.html"
+  - title: Atualize o plug-in Element para o vCenter Server
+    url: "/upgrade/task_vcp_upgrade_plugin.html"
+- title: Atualize seus componentes vSphere para um sistema de storage NetApp SolidFire
+    com o plug-in Element para vCenter Server
+  url: "/upgrade/task_sf_upgrade_all_vsphere.html"

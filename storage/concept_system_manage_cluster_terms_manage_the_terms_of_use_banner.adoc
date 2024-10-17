@@ -1,0 +1,71 @@
+---
+permalink: storage/concept_system_manage_cluster_terms_manage_the_terms_of_use_banner.html 
+sidebar: sidebar 
+keywords: element, terms of use, banner, config, edit, terms of use, disable, enable 
+summary: Você pode ativar, editar ou configurar um banner que contenha uma mensagem para o usuário. 
+---
+= Gerenciar os termos de uso banner
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode ativar, editar ou configurar um banner que contenha uma mensagem para o usuário.
+
+.Opções
+<<Ative o banner termos de uso>> <<Edite o banner termos de uso>> <<Desative o banner termos de uso>>
+
+
+
+== Ative o banner termos de uso
+
+Você pode habilitar um banner de termos de uso que aparece quando um usuário faz login na IU do Element. Quando o usuário clica no banner, uma caixa de diálogo de texto é exibida contendo a mensagem que você configurou para o cluster. O banner pode ser demitido a qualquer momento.
+
+Você deve ter o administrador de cluster Privileges para habilitar a funcionalidade termos de uso.
+
+. Clique em *usuários* > *termos de uso*.
+. No formulário *termos de uso*, insira o texto a ser exibido para a caixa de diálogo termos de uso.
++
+
+NOTE: Não exceda 4096 carateres.
+
+. Clique em *Ativar*.
+
+
+
+
+== Edite o banner termos de uso
+
+Você pode editar o texto que um usuário vê ao selecionar o banner de login dos termos de uso.
+
+.O que você vai precisar
+* Você deve ter o administrador de cluster Privileges para configurar os termos de uso.
+* Certifique-se de que o recurso termos de uso está ativado.
+
+
+.Passos
+. Clique em *usuários* > *termos de uso*.
+. Na caixa de diálogo *termos de uso*, edite o texto que você deseja exibir.
++
+
+NOTE: Não exceda 4096 carateres.
+
+. Clique em *Salvar alterações*.
+
+
+
+
+== Desative o banner termos de uso
+
+Você pode desativar o banner termos de uso. Com o banner desativado, o usuário não é mais solicitado a aceitar os termos de uso ao usar a IU do elemento.
+
+.O que você vai precisar
+* Você deve ter o administrador de cluster Privileges para configurar os termos de uso.
+* Certifique-se de que os termos de uso estejam ativados.
+
+
+.Passos
+. Clique em *usuários* > *termos de uso*.
+. Clique em *Desativar*.
+

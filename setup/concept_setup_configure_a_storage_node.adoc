@@ -1,0 +1,106 @@
+---
+permalink: setup/concept_setup_configure_a_storage_node.html 
+sidebar: sidebar 
+keywords: configuring node,configure storage node,configuring using TUI,configuring using node UI 
+summary: Você deve configurar nós individuais antes de adicioná-los a um cluster. Depois de instalar e ligar um nó em uma unidade de rack e ligá-lo, você pode configurar as configurações de rede do nó usando a interface de usuário por nó ou o terminal de nó. 
+---
+= Configurar um nó de storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve configurar nós individuais antes de adicioná-los a um cluster. Depois de instalar e ligar um nó em uma unidade de rack e ligá-lo, você pode configurar as configurações de rede do nó usando a IU por nó ou a interface do usuário do terminal do nó (TUI). Certifique-se de que tem as informações de configuração de rede necessárias para o nó antes de continuar.
+
+Há duas opções para configurar nós de storage:
+
+* <<Configurar um nó de storage usando a IU por nó,IU por nó>>: Use a IU por nó (https://<node_management_IP>:442[]) para configurar as configurações de rede do nó.
+* <<Configure um nó de storage usando a TUI,TUI>>: Use a interface do usuário do terminal de nó (TUI) para configurar o nó.
+
+
+Não é possível adicionar um nó com endereços IP atribuídos por DHCP a um cluster. Você pode usar o endereço IP DHCP para configurar inicialmente o nó na IU, TUI ou API por nó. Durante esta configuração inicial, você pode adicionar informações de endereço IP estático para que você possa adicionar o nó a um cluster.
+
+Após a configuração inicial, você pode acessar o nó usando o endereço IP de gerenciamento do nó. Em seguida, você pode alterar as configurações do nó, adicioná-lo a um cluster ou usar o nó para criar um cluster. Você também pode configurar um novo nó usando os métodos da API do software Element.
+
+
+NOTE: A partir do elemento versão 11,0, os nós podem ser configurados com IPv4, IPv6 ou ambos os endereços para sua rede de gerenciamento. Isso se aplica aos nós de storage e aos nós de gerenciamento, com exceção do nó de gerenciamento 11,3 e posterior que não oferece suporte para IPv6. Quando você cria um cluster, apenas um único endereço IPv4 ou IPv6 pode ser usado para o MVIP e o tipo de endereço correspondente deve ser configurado em todos os nós.
+
+
+
+== Configurar um nó de storage usando a IU por nó
+
+Você pode configurar nós usando a interface de usuário por nó.
+
+.Sobre esta tarefa
+* Você pode configurar o nó para ter um endereço IPv4 ou IPv6.
+* Você precisa do endereço DHCP exibido na TUI para acessar um nó. Não é possível usar endereços DHCP para adicionar um nó a um cluster.
++
+
+IMPORTANT: Você deve configurar as interfaces de gerenciamento (Bond1G) e armazenamento (Bond10G) para sub-redes separadas. As interfaces Bond1G e Bond10G configuradas para a mesma sub-rede causam problemas de roteamento quando o tráfego de armazenamento é enviado através da interface Bond1G. Se você precisar usar a mesma sub-rede para o tráfego de gerenciamento e armazenamento, configure manualmente o tráfego de gerenciamento para usar a interface Bond10G. Você pode fazer isso para cada nó usando a página *Configurações de cluster* da IU por nó.
+
+
+
+.Passos
+. Em uma janela do navegador, insira o endereço IP DHCP de um nó.
++
+Você deve adicionar a extensão `:442` para acessar o nó; por exemplo https://172.25.103.6:442[], .
+
++
+A guia *Configurações de rede* é aberta com a seção *Bond1G*.
+
+. Introduza as definições de rede de gestão 1G.
+. Clique em *aplicar alterações*.
+. Clique em *Bond10G* para exibir as configurações de rede de armazenamento 10G.
+. Introduza as definições de rede de armazenamento 10G.
+. Clique em *aplicar alterações*.
+. Clique em *Configurações de cluster*.
+. Introduza o nome de anfitrião da rede 10G.
+. Introduza o nome do cluster.
++
+
+IMPORTANT: Esse nome deve ser adicionado à configuração de todos os nós antes que um cluster possa ser criado. Todos os nós de um cluster devem ter nomes de cluster idênticos. Os nomes de cluster diferenciam maiúsculas de minúsculas.
+
+. Clique em *aplicar alterações*.
+
+
+
+
+== Configure um nó de storage usando a TUI
+
+Você pode usar a interface do usuário de terminal (TUI) para executar a configuração inicial para novos nós.
+
+Você deve configurar as interfaces Bond1G (gerenciamento) e Bond10G (armazenamento) para sub-redes separadas. As interfaces Bond1G e Bond10G configuradas para a mesma sub-rede causam problemas de roteamento quando o tráfego de armazenamento é enviado através da interface Bond1G. Se você precisar usar a mesma sub-rede para o tráfego de gerenciamento e armazenamento, configure manualmente o tráfego de gerenciamento para usar a interface Bond10G. Você pode fazer isso para cada nó usando a página *Cluster* > *Nodes* da IU do elemento.
+
+.Passos
+. Conete um teclado e um monitor ao nó e, em seguida, ligue o nó.
++
+O menu principal de armazenamento NetApp da TUI é exibido no terminal tty1.
+
++
+
+NOTE: Se o nó não conseguir alcançar o servidor de configuração, o TUI exibirá uma mensagem de erro. Verifique a conexão do servidor de configuração ou a conexão de rede para resolver o erro.
+
+. Selecione *rede* > *Configuração da rede*.
++
+
+TIP: Para navegar pelo menu, pressione as teclas de seta para cima ou para baixo. Para mover para outro botão ou para os campos a partir dos botões, pressione *Tab*. Para navegar entre campos, use as teclas de seta para cima ou para baixo.
+
+. Selecione *Bond1G (Gerenciamento)* ou *Bond10G (armazenamento)* para configurar as configurações de rede 1G e 10G para o nó.
+. Para os campos modo Bond e Status, pressione *Tab* para selecionar o botão Ajuda e identificar as opções disponíveis.
++
+Todos os nós de um cluster devem ter nomes de cluster idênticos. Os nomes de cluster diferenciam maiúsculas de minúsculas. Se um servidor DHCP estiver sendo executado na rede com endereços IP disponíveis, o endereço 1GbE será exibido no campo Endereço.
+
+. Pressione *Tab* para selecionar o botão *OK* e salvar as alterações.
++
+O nó é colocado em um estado pendente e pode ser adicionado a um cluster existente ou a um novo cluster.
+
+
+
+
+
+== Encontre mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in do NetApp Element para vCenter Server"^]
+

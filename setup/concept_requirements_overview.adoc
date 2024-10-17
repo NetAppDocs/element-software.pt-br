@@ -1,0 +1,26 @@
+---
+permalink: setup/concept_requirements_overview.html 
+sidebar: sidebar 
+keywords:  
+summary: Antes de começar, você deve rever os pré-requisitos. 
+---
+= Requisitos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de começar, você deve revisar os pré-requisitos para implantar o software NetApp Element, incluindo requisitos de rede e porta.
+
+* link:../storage/concept_prereq_networking.html["Requisitos de rede"]
+* link:../storage/concept_prereq_switch_configuration_for_solidfire_clusters.html["Configuração do interrutor"]
+* link:../storage/reference_prereq_network_port_requirements.html["Requisitos de porta de rede"]
+
+
+
+
+== Encontre mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+

@@ -1,0 +1,60 @@
+---
+permalink: api/reference_element_api_listsnapmirrorpolicies.html 
+sidebar: sidebar 
+keywords: snapmirror,policy,policies,list,listing,ontap,listsnapmirrorpolicies 
+summary: A IU da Web do software Element usa o método ListSnapMirrorPolicies para listar todas as políticas do SnapMirror em um sistema ONTAP remoto. 
+---
+= ListSnapMirrorPolicies
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A IU da Web do software Element usa o `ListSnapMirrorPolicies` método para listar todas as políticas do SnapMirror em um sistema ONTAP remoto.
+
+
+
+== Parâmetro
+
+Este método tem o seguinte parâmetro de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+Liste apenas as políticas associadas ao ID de endpoint especificado. Se não for fornecida nenhuma ID de endpoint, o sistema lista políticas de todos os endpoints SnapMirror conhecidos.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Não
+
+|===
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+MirrorPolicies
+ a| 
+Uma lista das políticas do SnapMirror no sistema de storage do ONTAP.
+ a| 
+xref:reference_element_api_snapmirrorpolicy.adoc[SnapMirrorPolicy] array
+
+|===
+
+
+== Novo desde a versão
+
+10,1

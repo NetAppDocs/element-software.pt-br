@@ -1,0 +1,129 @@
+---
+permalink: api/reference_element_api_testldapauthentication.html 
+sidebar: sidebar 
+keywords: ldap,auth,authentication,test,testing,testldapauthentication 
+summary: Você pode usar o método TestLdapAuthentication para validar as configurações de autenticação LDAP atualmente habilitadas. Se a configuração estiver correta, a chamada API retornará a associação de grupo do usuário testado. 
+---
+= TestLdapAuthentication
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode utilizar o `TestLdapAuthentication` método para validar as definições de autenticação LDAP atualmente ativadas. Se a configuração estiver correta, a chamada API retornará a associação de grupo do usuário testado.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+nome de utilizador
+ a| 
+O nome de usuário a ser testado.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+palavra-passe
+ a| 
+A senha para o nome de usuário a ser testado.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+LdapConfiguration
+ a| 
+Um objeto ldapConfiguration a ser testado. Se você fornecer este parâmetro, o sistema testa a configuração fornecida, mesmo que a autenticação LDAP esteja desativada no momento.
+ a| 
+xref:reference_element_api_ldapconfiguration.adoc[LdapConfiguration]
+ a| 
+Nenhum
+ a| 
+Não
+
+|===
+
+
+== Valores de retorno
+
+Este método tem os seguintes valores de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+grupos
+ a| 
+Lista de grupos LDAP que incluem o usuário testado como membro.
+ a| 
+array
+
+
+
+ a| 
+UserDN
+ a| 
+O nome completo do LDAP distinto do utilizador testado.
+ a| 
+cadeia de carateres
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+"method": "TestLdapAuthentication",
+"params": {"username":"admin1",
+           "password":"admin1PASS"
+      },
+  "id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+ "id": 1,
+ "result": {
+    "groups": [
+        "CN=StorageMgmt,OU=PTUsers,DC=prodtest,DC=solidfire,DC=net"
+      ],
+        "userDN": "CN=Admin1 Jones,OU=PTUsers,DC=prodtest,DC=solidfire,DC=net"
+  }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

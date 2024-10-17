@@ -1,0 +1,25 @@
+---
+permalink: storage/task_replication_pause_replication.html 
+sidebar: sidebar 
+keywords: replication, pause, volume pairs 
+summary: Você pode pausar manualmente a replicação se precisar interromper o processamento de e/S por um curto período de tempo. Talvez você queira pausar a replicação se houver um aumento no processamento de e/S e você quiser reduzir a carga de processamento. 
+---
+= Pausar a replicação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode pausar manualmente a replicação se precisar interromper o processamento de e/S por um curto período de tempo. Talvez você queira pausar a replicação se houver um aumento no processamento de e/S e você quiser reduzir a carga de processamento.
+
+. Selecione *proteção de dados* > *pares de volume*.
+. Clique no ícone ações do par de volumes.
+. Clique em *Editar*.
+. No painel *Editar par de volume*, pause manualmente o processo de replicação.
++
+
+IMPORTANT: Pausar ou retomar a replicação de volume manualmente faz com que a transmissão de dados cesse ou retome. Certifique-se de que você coordenou essas alterações em ambos os sites.
+
+. Clique em *Salvar alterações*.
+

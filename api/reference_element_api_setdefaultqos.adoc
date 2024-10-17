@@ -1,0 +1,139 @@
+---
+permalink: api/reference_element_api_setdefaultqos.html 
+sidebar: sidebar 
+keywords: qos,value,configure,configuring,default,set,setting,setdefaultqos 
+summary: 'Você pode usar o método SetDefaultQoS para configurar os valores padrão de qualidade de serviço (QoS) (medidos em entradas e saídas por segundo, ou IOPS) para um volume.' 
+---
+= SetDefaultQoS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `SetDefaultQoS` método para configurar os valores padrão de qualidade do serviço (QoS) (medidos em entradas e saídas por segundo ou IOPS) para um volume.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+MinIOPS
+ a| 
+O número mínimo de IOPS contínuo fornecido pelo cluster para um volume.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+IOPS máximo
+ a| 
+O número máximo de IOPS contínuo fornecido pelo cluster para um volume.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+IOPS
+ a| 
+O número máximo de IOPS permitido em um cenário de pico curto.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Não
+
+|===
+
+
+== Valores de retorno
+
+Este método tem os seguintes valores de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+MinIOPS
+ a| 
+O número mínimo de IOPS contínuo fornecido pelo cluster para um volume.
+ a| 
+número inteiro
+
+
+
+ a| 
+IOPS máximo
+ a| 
+O número máximo de IOPS contínuo fornecido pelo cluster para um volume.
+ a| 
+número inteiro
+
+
+
+ a| 
+IOPS
+ a| 
+O número máximo de IOPS permitido em um cenário de pico curto.
+ a| 
+número inteiro
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "SetDefaultQoS",
+    "params": {
+        "burstIOPS":8000,
+        "maxIOPS":1000,
+        "minIOPS":200
+    },
+    "id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+    "id":1,
+    "result": {
+        "burstIOPS":8000,
+        "maxIOPS":1000,
+        "minIOPS":200
+    ​}
+}
+----
+
+
+== Novo desde a versão
+
+9,6

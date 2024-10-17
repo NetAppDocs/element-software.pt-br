@@ -1,0 +1,103 @@
+---
+permalink: api/reference_element_api_getnodestats.html 
+sidebar: sidebar 
+keywords: node,get,getting,stats,getnodestats 
+summary: Você pode usar o método GetNodeStats para recuperar as medições de atividade de alto nível para um único nó. 
+---
+= GetNodeStats
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode utilizar o `GetNodeStats` método para recuperar as medições de atividade de alto nível para um único nó.
+
+
+
+== Parâmetro
+
+Este método tem o seguinte parâmetro de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+NodeID
+ a| 
+Especifica a ID do nó para o qual as estatísticas serão retornadas.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+NodeStats
+ a| 
+Informações sobre a atividade do nó.
+ a| 
+xref:reference_element_api_nodestats.adoc[NodeStats]
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "GetNodeStats",
+   "params": {
+     "nodeID": 5
+   },
+   "id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+   "id" : 1,
+   "result" : {
+     "nodeStats" : {
+       "cBytesIn" : 9725856460404,
+       "cBytesOut" : 16730049266858,
+       "cpu" : 98,
+       "mBytesIn" : 50808519,
+       "mBytesOut" : 52040158,
+       "networkUtilizationCluster" : 84,
+       "networkUtilizationStorage" : 0,
+       "sBytesIn" : 9725856460404,
+       "sBytesOut" : 16730049266858,
+       "timestamp" : "2012-05-16T19:14:37.167521Z",
+       "usedMemory" : 41195708000
+     }
+   }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

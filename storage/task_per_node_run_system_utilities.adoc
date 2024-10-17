@@ -1,0 +1,103 @@
+---
+permalink: storage/task_per_node_run_system_utilities.html 
+sidebar: sidebar 
+keywords: storage nodes, running system utilities, system utilities, network settings, testing changes, reboot the node, power cycle, shuts down the node 
+summary: Você pode usar a IU por nó para o nó de armazenamento para criar ou excluir pacotes de suporte, redefinir configurações para unidades e reiniciar serviços de rede ou cluster. 
+---
+= Execute utilitários do sistema usando a IU por nó
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a IU por nó para o nó de armazenamento para criar ou excluir pacotes de suporte, redefinir configurações para unidades e reiniciar serviços de rede ou cluster.
+
+Você fez login na IU por nó do nó de armazenamento.
+
+. Clique em *Utilitários do sistema*.
+. Clique no botão do utilitário de sistema que você deseja executar.
++
+** *Potência de controle*
++
+Reinicializa, liga ou desliga o nó.
+
++
+
+IMPORTANT: Esta operação causa perda temporária de conetividade de rede.
+
++
+Especifique os seguintes parâmetros:
+
++
+*** Ação: As opções incluem reiniciar e parar (desligar).
+*** Atraso de ativação: Qualquer tempo adicional antes do nó voltar online.
+
+
+** *Coletar Logs de nó*
++
+Cria um pacote de suporte no diretório /tmp/bundles do nó.
+
++
+Especifique os seguintes parâmetros:
+
++
+*** Nome do pacote: Nome exclusivo para cada pacote de suporte criado. Se nenhum nome for fornecido, então "supportbundle" e o nome do nó serão usados como o nome do arquivo.
+*** Args extra: Este parâmetro é alimentado para o script sf_make_support_bundle. Este parâmetro deve ser utilizado apenas a pedido do suporte NetApp.
+*** Segundos de tempo limite: Especifique o número de segundos a aguardar por cada resposta de ping individual.
+
+
+** *Excluir Logs de nó*
++
+Exclui todos os pacotes de suporte atuais no nó que foram criados usando *Create Cluster Support Bundle* ou o método da API CreateSupportBundle.
+
+** *Repor drives*
++
+Inicializa unidades e remove todos os dados atualmente residentes na unidade. Você pode reutilizar a unidade em um nó existente ou em um nó atualizado.
+
++
+Especifique o seguinte parâmetro:
+
++
+*** Unidades: Lista de nomes de dispositivos (não drives) a repor.
+
+
+** *Redefinir configuração de rede*
++
+Ajuda a resolver problemas de configuração de rede para um nó individual e redefine a configuração de rede de um nó individual para as configurações padrão de fábrica.
+
+** *Repor nó*
++
+Repõe um nó nas definições de fábrica. Todos os dados são removidos, mas as configurações de rede para o nó são preservadas durante esta operação. Os nós só podem ser redefinidos se não forem atribuídos a um cluster e no estado disponível.
+
++
+
+IMPORTANT: Todos os dados, pacotes (atualizações de software), configurações e arquivos de log são excluídos do nó quando você usa essa opção.
+
+** * Reinicie a rede*
++
+Reinicia todos os serviços de rede em um nó.
+
++
+
+IMPORTANT: Esta operação pode causar perda temporária de conetividade de rede.
+
+** *Restart Services*
++
+Reinicia os serviços de software Element em um nó.
+
++
+
+IMPORTANT: Esta operação pode causar interrupção temporária do serviço do nó. Você deve executar esta operação apenas na direção do suporte NetApp.
+
++
+Especifique os seguintes parâmetros:
+
++
+*** Serviço: Nome do serviço a ser reiniciado.
+*** Ação: Ação a executar no serviço. As opções incluem iniciar, parar e reiniciar.
+
+
+
+
+

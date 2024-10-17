@@ -1,0 +1,24 @@
+---
+permalink: storage/task_troubleshoot_remove_mdss_drives.html 
+sidebar: sidebar 
+keywords: mdss, remove, multi-drive slice service 
+summary: 'Pode remover as unidades de serviço de corte multi-drive (MDSS). Este procedimento aplica-se apenas se o nó tiver várias unidades de corte.' 
+---
+= Remova as unidades MDSS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode remover as unidades de serviço de corte multi-unidades (MDSS). Este procedimento aplica-se apenas se o nó tiver várias unidades de corte.
+
+
+NOTE: Se a unidade de corte do sistema e a unidade de ranhura 2 falharem, o sistema irá desligar os serviços de corte e remover as unidades. Se não houver falha e você remover as unidades, ambas devem ser removidas ao mesmo tempo.
+
+. Clique em *Cluster* > *Drives*.
+. Na guia unidades *disponíveis*, clique na caixa de seleção das unidades de corte que estão sendo removidas.
+. Clique em *ações em massa*.
+. Clique em *Remover*.
+. Confirme a ação.
+

@@ -1,0 +1,162 @@
+---
+permalink: api/reference_element_api_createclustersupportbundle.html 
+sidebar: sidebar 
+keywords: CreateClusterSupportBundle,create,cluster,support,bundle,creating 
+summary: Você pode usar o CreateClusterSupportBundle no nó de gerenciamento para reunir pacotes de suporte de todos os nós em um cluster. Quando um pacote é criado, ele é armazenado no nó como um arquivo .tar.gz. Você só pode executar esse método em um nó de gerenciamento; ele não funciona quando executado em um nó de storage. 
+---
+= CreateClusterSupportBundle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `CreateClusterSupportBundle` no nó de gerenciamento para reunir pacotes de suporte de todos os nós em um cluster. Os pacotes de suporte de nó individuais são compatados como arquivos tar.gz. O pacote de suporte de cluster é um arquivo tar que contém os pacotes de suporte de nó. Você só pode executar esse método em um nó de gerenciamento; ele não funciona quando executado em um nó de storage.
+
+
+
+== Parâmetros
+
+
+NOTE: Você deve chamar esse método para o nó de gerenciamento. Por exemplo:
+
+[listing]
+----
+https://<management node IP>:442/json-rpc/10.0
+----
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+AllowIncomplete
+ a| 
+Permite que o script continue a ser executado se os pacotes não puderem ser coletados de um ou mais nós.
+ a| 
+booleano
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+BundleName
+ a| 
+Nome exclusivo para cada pacote de suporte criado. Se nenhum nome for fornecido, então "supportbundle" e o nome do nó serão usados como o nome do arquivo
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+mvip
+ a| 
+O MVIP do cluster. Os pacotes são coletados de todos os nós do cluster. Este parâmetro é necessário se o parâmetro nodes não for especificado.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+nós
+ a| 
+Os endereços IP dos nós a partir dos quais reunir pacotes. Use nós ou mvip, mas não ambos, para especificar os nós a partir dos quais reunir pacotes. Este parâmetro é necessário se o mvip não for especificado.
+ a| 
+array de cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+palavra-passe
+ a| 
+A senha de administrador do cluster. *Nota:* esta palavra-passe é visível como texto quando introduzida.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+nome de utilizador
+ a| 
+O nome de usuário do administrador do cluster.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valores de retorno
+
+Este método não tem valores de retorno.
+
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+"method": "CreateClusterSupportBundle",
+"params": {
+          "bundlename": "clusterbundle",
+          "mvip": "132.119.120.100"
+     }
+   },
+ "id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id":1,
+  "result":{
+   "details":{
+      "bundleName":"clusterbundle",
+      "extraArgs":"",
+      "files":[
+          "/tmp/supportbundles/clusterbundle.cl-4SD5.tar"
+      ],
+      "output":"timeout -s KILL 1790s /usr/local/bin/sfclustersupportbundle --quiet --name=\"clusterbundle\" --target-directory=\"/tmp/solidfire-dtemp.MM7f0m\" --user=\"admin\" --pass=\"admin\" --mvip=132.119.120.100"
+       },
+       "duration":"00:00:24.938127",
+       "result":"Passed"
+    }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

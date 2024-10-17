@@ -1,0 +1,26 @@
+---
+permalink: storage/task_system_manage_virtual_delete_a_virtual_network.html 
+sidebar: sidebar 
+keywords: virtual network delete, remove, object, address blocks, vlan 
+summary: Você pode remover um objeto de rede virtual. Você deve adicionar os blocos de endereço a outra rede virtual antes de remover uma rede virtual. 
+---
+= Eliminar uma rede virtual
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode remover um objeto de rede virtual. Você deve adicionar os blocos de endereço a outra rede virtual antes de remover uma rede virtual.
+
+. Clique em *Cluster* > *Network*.
+. Clique no ícone ações da VLAN que você deseja excluir.
+. Clique em *Excluir*.
+. Confirme a mensagem.
+
+
+
+
+== Encontre mais informações
+
+xref:task_system_manage_virtual_edit_a_virtual_network.adoc[Edite uma rede virtual]

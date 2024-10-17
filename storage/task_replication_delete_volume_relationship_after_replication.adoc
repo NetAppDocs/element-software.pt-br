@@ -1,0 +1,20 @@
+---
+permalink: storage/task_replication_delete_volume_relationship_after_replication.html 
+sidebar: sidebar 
+keywords: volume pair, delete, replication 
+summary: Após a conclusão da replicação e não precisar mais do relacionamento de par de volume, você poderá excluir o relacionamento de volume. 
+---
+= Excluir uma relação de volume após a replicação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Após a conclusão da replicação e não precisar mais do relacionamento de par de volume, você poderá excluir o relacionamento de volume.
+
+. Selecione *proteção de dados* > *pares de volume*.
+. Clique no ícone *ações* para o par de volumes que deseja excluir.
+. Clique em *Excluir*.
+. Confirme a mensagem.
+

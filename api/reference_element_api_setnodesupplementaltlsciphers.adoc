@@ -1,0 +1,118 @@
+---
+permalink: api/reference_element_api_setnodesupplementaltlsciphers.html 
+sidebar: sidebar 
+keywords: tls,cipher,set,setting,list,supplemental,setnodesupplementaltlsciphers,node 
+summary: Você pode usar o método SetNodeSupplementalTlsCiphers para especificar a lista de cifras TLS suplementares. Você pode usar esse comando em nós de gerenciamento. 
+---
+= SetNodeSuplementosTlsCiphers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `SetNodeSupplementalTlsCiphers` método para especificar a lista de cifras TLS suplementares. Você pode usar esse comando em nós de gerenciamento.
+
+
+
+== Parâmetro
+
+
+NOTE: Você deve chamar esse método para o nó de gerenciamento. Por exemplo:
+
+[listing]
+----
+https://<management node IP>:442/json-rpc/10.0
+----
+Este método tem o seguinte parâmetro de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+SuplementalCiphers
+ a| 
+Os nomes de conjuntos de cifras suplementares usando o esquema de nomenclatura OpenSSL. O uso de nomes de conjuntos de codificação é insensível a maiúsculas e minúsculas.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valores de retorno
+
+Este método tem os seguintes valores de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+MandatoryCiphers
+ a| 
+Lista de conjuntos de codificação TLS obrigatórios para o nó. São cifras que estão sempre ativas no nó.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+SuplementalCiphers
+ a| 
+Lista de conjuntos de codificação TLS suplementares para o nó.
+ a| 
+cadeia de carateres
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "SetNodeSupplementalTlsCiphers",
+   "params": {
+        "supplementalCiphers": [
+            "DHE-RSA-AES128-SHA256",
+            "DHE-RSA-AES128-GCM-SHA256",
+            "ECDHE-RSA-AES128-SHA256",
+            "ECDHE-RSA-AES128-GCM-SHA256"
+        ]
+   },
+   "id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id" : 1,
+  "result" : {
+        "mandatoryCiphers": [
+            "DHE-RSA-AES256-SHA256",
+            "DHE-RSA-AES256-GCM-SHA384",
+            "ECDHE-RSA-AES256-SHA384",
+            "ECDHE-RSA-AES256-GCM-SHA384"
+        ],
+        "supplementalCiphers": [
+            "DHE-RSA-AES128-SHA256",
+            "DHE-RSA-AES128-GCM-SHA256",
+            "ECDHE-RSA-AES128-SHA256",
+            "ECDHE-RSA-AES128-GCM-SHA256"
+        ]
+    }
+}
+----

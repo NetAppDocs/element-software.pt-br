@@ -1,0 +1,22 @@
+---
+permalink: storage/task_system_manage_fips_avoid_mixing_nodes_for_fips_drives.html 
+sidebar: sidebar 
+keywords: fips, security, federal information processing standards, 140-2, nodes, drives, ear 
+summary: Para se preparar para ativar o recurso unidades FIPS, evite misturar nós onde alguns são capazes de unidades FIPS e outros não. 
+---
+= Evite misturar nós para unidades FIPS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para se preparar para ativar o recurso unidades FIPS, evite misturar nós onde alguns são capazes de unidades FIPS e outros não.
+
+Um cluster é considerado compatível com unidades FIPS com base nas seguintes condições:
+
+* Todas as unidades são certificadas como unidades FIPS.
+* Todos os nós são nós de unidades FIPS.
+* A encriptação em repouso (EAR) está ativada.
+* O recurso unidades FIPS está ativado. Todas as unidades e nós devem ser capazes de FIPS e a criptografia em repouso deve estar habilitada para habilitar o recurso de unidade FIPS.
+

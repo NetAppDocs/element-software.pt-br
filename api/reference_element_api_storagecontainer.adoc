@@ -1,0 +1,105 @@
+---
+permalink: api/reference_element_api_storagecontainer.html 
+sidebar: sidebar 
+keywords: object,objects,storagecontainer 
+summary: O objeto storageContainer contém os atributos de um recipiente de armazenamento de volume virtual. Você pode recuperar essas informações para cada contentor de armazenamento no cluster usando o método ListStorageContainers API. 
+---
+= StorageContainer
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto storageContainer contém os atributos de um recipiente de armazenamento de volume virtual. Você pode recuperar essas informações para cada contentor de armazenamento no cluster usando o `ListStorageContainers` método API.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+ID Contabilística
+ a| 
+O ID da conta do sistema de armazenamento associado ao recipiente de armazenamento.
+ a| 
+número inteiro
+
+
+
+ a| 
+InitiatorSecret
+ a| 
+O segredo de autenticação CHAP para o iniciador associado ao contentor de armazenamento.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+nome
+ a| 
+O nome do recipiente de armazenamento.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+ProtocolEndpointType
+ a| 
+O tipo de ponto de extremidade do protocolo do recipiente de armazenamento. SCSI é o único valor válido.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+estado
+ a| 
+O status do recipiente de armazenamento. Valores possíveis:
+
+* Ativo: O recipiente de armazenamento está em uso.
+* Bloqueado: O recipiente de armazenamento está bloqueado.
+
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+StorageContainerID
+ a| 
+O ID exclusivo do recipiente de armazenamento.
+ a| 
+UUID
+
+
+
+ a| 
+TargetSecret
+ a| 
+O segredo de autenticação CHAP para o destino associado ao contentor de armazenamento.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+VirtualVolumes
+ a| 
+Uma lista de IDs dos volumes virtuais associados ao contentor de armazenamento.
+ a| 
+Array UUUID
+
+|===
+
+
+== Encontre mais informações
+
+xref:reference_element_api_liststoragecontainers.adoc[ListStorageContainers]

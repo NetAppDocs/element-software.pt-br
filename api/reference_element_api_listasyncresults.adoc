@@ -1,0 +1,119 @@
+---
+permalink: api/reference_element_api_listasyncresults.html 
+sidebar: sidebar 
+keywords: async,asynchronous,result,results,get,list,listing,listasyncresults 
+summary: Você pode usar ListAsyncResults para listar os resultados de todos os métodos assíncronos atualmente em execução e concluídos no sistema. A consulta de resultados assíncronos com ListAsyncResults não faz com que asyncHandles concluídos expirem; você pode usar GetAsyncResult para consultar qualquer um dos asyncHandles retornados por ListAsyncResults. 
+---
+= ListAsyncResults
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar `ListAsyncResults` para listar os resultados de todos os métodos assíncronos atualmente em execução e concluídos no sistema. A consulta de resultados assíncronos com o `ListAsyncResults` não faz com que os asyncHandles concluídos expirem; você pode usar `GetAsyncResult` para consultar qualquer um dos asyncHandles retornados pelo `ListAsyncResults`.
+
+
+
+== Parâmetro
+
+Este método tem o seguinte parâmetro de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+AsyncResultTypes
+ a| 
+Uma lista opcional de tipos de resultados. Você pode usar essa lista para restringir os resultados a apenas esses tipos de operações. Valores possíveis:
+
+* DriveAdd: Operações envolvendo o sistema adicionando uma unidade ao cluster.
+* Bulkvolume: Copie operações entre volumes, como backups ou restaurações.
+* Clone: Operações de clonagem de volume.
+* DriveRemoval: Operações envolvendo o sistema copiando dados de uma unidade em preparação para removê-lo do cluster.
+* RtfiPendingNode: Operações envolvendo o sistema instalando software compatível em um nó antes de adicioná-lo ao cluster.
+
+ a| 
+array de cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+|===
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+
+
+| Nome | Descrição | Tipo 
+
+
+ a| 
+AsyncHandles
+ a| 
+Um array de resultados de método assíncrono serializado.
+ a| 
+Array de objetos JSON
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "ListAsyncResults",
+   "params": {
+   },
+   "id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+   "id": 1,
+   "result": {
+     "asyncHandles": [
+       {
+         "asyncResultID": 47,
+         "completed": true,
+         "createTime": "2016-01-01T22:29:19Z",
+         "data": {
+           "cloneID": 26,
+           "message": "Clone complete.",
+           "volumeID": 48
+         },
+         "lastUpdateTime": "2016-01-01T22:45:43Z",
+         "resultType": "Clone",
+         "success": true
+      },
+      ...]
+   }
+}
+----
+
+
+== Novo desde a versão
+
+9,6
+
+
+
+== Encontre mais informações
+
+xref:reference_element_api_getasyncresult.adoc[GetAsyncResult]

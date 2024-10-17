@@ -1,0 +1,72 @@
+---
+permalink: api/reference_element_api_network_snmp.html 
+sidebar: sidebar 
+keywords: object,objects,network 
+summary: O objeto de rede SNMP contém informações sobre a configuração do SNMP v3 para os nós de cluster. 
+---
+= Rede (SNMP)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto de rede SNMP contém informações sobre a configuração do SNMP v3 para os nós de cluster.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+
+
+| Nome | Descrição | Tipo 
+
+
+ a| 
+acesso
+ a| 
+O tipo de acesso permitido para solicitações de informações SNMP. Valores possíveis:
+
+* Ro: Acesso somente leitura.
+* RW: Acesso de leitura e gravação.
+* Rosys: Acesso somente leitura a um conjunto restrito de informações do sistema.
+
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+cidr
+ a| 
+Uma máscara de rede CIDR. Esta máscara de rede deve ser um número inteiro maior ou igual a 0 e menor ou igual a 32. Também não deve ser igual a 31.
+ a| 
+número inteiro
+
+
+
+ a| 
+comunidade
+ a| 
+A cadeia de carateres da comunidade SNMP.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+rede
+ a| 
+Este membro, juntamente com o membro cidr, controla a qual rede o acesso e a cadeia de carateres da comunidade se aplicam. O valor especial de "default" é usado para especificar uma entrada que se aplica a todas as redes. A máscara CIDR é ignorada quando este membro é um nome de host ou "padrão".
+ a| 
+cadeia de carateres
+
+|===
+
+
+== Encontre mais informações
+
+xref:reference_element_api_getsnmpinfo.adoc[GetSnmpInfo]

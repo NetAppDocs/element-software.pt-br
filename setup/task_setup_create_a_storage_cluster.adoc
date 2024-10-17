@@ -1,0 +1,75 @@
+---
+permalink: setup/task_setup_create_a_storage_cluster.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode criar um cluster de storage depois de configurar todos os nós individuais. Quando você cria um cluster, uma conta de usuário de administrador de cluster é criada automaticamente para você. O administrador do cluster tem permissão para gerenciar todos os atributos do cluster e pode criar outras contas de administrador de cluster. 
+---
+= Crie um cluster de armazenamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar um cluster de storage depois de configurar todos os nós individuais. Quando você cria um cluster, uma conta de usuário de administrador de cluster é criada automaticamente para você. O administrador do cluster tem permissão para gerenciar todos os atributos do cluster e pode criar outras contas de administrador de cluster.
+
+.O que você vai precisar
+* Você instalou o nó de gerenciamento.
+* Você configurou todos os nós individuais.
+
+
+.Sobre esta tarefa
+Durante a nova configuração do nó, os endereços 1G ou 10G Management IP (MIP) são atribuídos a cada nó. Você deve usar um dos endereços IP de nó criados durante a configuração para abrir a página criar um novo cluster. O endereço IP que você usa depende da rede escolhida para o gerenciamento de cluster.
+
+[IMPORTANT]
+====
+Se você quiser habilitar o cluster link:../concepts/concept_solidfire_concepts_security.html#encryption-at-rest-software["criptografia de software em repouso"]para clusters de storage all-flash do SolidFire, faça isso durante a criação do cluster. A partir do elemento 12,5, é necessário habilitar a criptografia de software em repouso na IU criar cluster durante a criação do cluster. Para o elemento 12,3.x e anteriores, você deve criar o cluster usando o link:../api/reference_element_api_createcluster.html["CreateCluster"]método API e alterar o parâmetro enableSoftwareEncryptionAtRest para `true`. Depois que a criptografia de software em repouso estiver ativada no cluster, ela não poderá ser desativada. É possível link:../storage/task_system_manage_cluster_enable_and_disable_encryption_for_a_cluster.html["ativar e desativar"]a criptografia baseada em hardware em repouso após a criação do cluster.
+
+====
+[NOTE]
+====
+Ao criar um novo cluster, considere o seguinte:
+
+* Se você estiver usando nós de storage que residem em um chassi compartilhado, considere a possibilidade de projetar a proteção contra falhas no nível do chassi usando o recurso de domínios de proteção.
+* Se um chassi compartilhado não estiver em uso, você poderá definir um layout de domínio de proteção personalizado.
+
+
+====
+.Passos
+. Em uma janela do navegador, digite `\https://MIP:443`, em que MIP é o endereço IP do nó de gerenciamento.
+. Em criar um novo cluster, insira as seguintes informações:
++
+** VIP de gerenciamento: IP virtual roteável na rede 1GbE ou 10GbE para tarefas de gerenciamento de rede.
++
+
+NOTE: Você pode criar um novo cluster usando endereçamento IPv4 ou IPv6.
+
+** ISCSI (armazenamento) VIP: IP virtual na rede 10GbE para armazenamento e deteção iSCSI.
++
+
+NOTE: Não é possível alterar o nome MVIP, SVIP ou cluster depois de criar o cluster.
+
+** Nome de usuário: O nome de usuário do administrador de cluster principal para acesso autenticado ao cluster. Tem de guardar o nome de utilizador para referência futura.
++
+
+NOTE: Você pode usar letras maiúsculas e minúsculas, carateres especiais e números para o nome de usuário e senha.
+
+** Senha: Senha para acesso autenticado ao cluster. Tem de guardar a palavra-passe para referência futura. A proteção de dados bidirecional é ativada por padrão. Não é possível alterar esta definição.
+
+
+. Leia o Contrato de Licença de Usuário final e selecione *Aceito*.
+. *Opcional*: Na lista de nós, verifique se as caixas de seleção para nós que não devem ser incluídos no cluster não estão selecionadas.
+. Selecione *criar cluster*.
++
+O sistema pode levar vários minutos para criar o cluster, dependendo do número de nós no cluster. Em uma rede configurada corretamente, um pequeno cluster de cinco nós deve levar menos de um minuto. Depois que o cluster é criado, a janela criar um novo cluster é redirecionada para o endereço URL MVIP do cluster e exibe a IU do elemento.
+
+
+
+
+
+== Para mais informações
+
+* link:../api/index.html["Gerenciamento de storage com a API Element"]
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in do NetApp Element para vCenter Server"^]
+

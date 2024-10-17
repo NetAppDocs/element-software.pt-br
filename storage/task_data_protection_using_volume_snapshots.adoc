@@ -1,0 +1,29 @@
+---
+permalink: storage/task_data_protection_using_volume_snapshots.html 
+sidebar: sidebar 
+keywords: data protection, volume snapshots, roll back volume, replicate snapshots 
+summary: Um instantâneo de volume é uma cópia pontual de um volume. Você pode tirar um instantâneo de um volume e usar o instantâneo mais tarde se precisar rolar um volume de volta para o estado em que ele estava no momento em que o snapshot foi criado. 
+---
+= Use snapshots de volume para proteção de dados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um instantâneo de volume é uma cópia pontual de um volume. Você pode tirar um instantâneo de um volume e usar o instantâneo mais tarde se precisar rolar um volume de volta para o estado em que ele estava no momento em que o snapshot foi criado.
+
+Os snapshots são semelhantes aos clones de volume. No entanto, os instantâneos são simplesmente réplicas de metadados de volume, para que você não possa montar ou gravar neles. A criação de um snapshot de volume também exige apenas uma pequena quantidade de recursos e espaço do sistema, o que torna a criação de snapshot mais rápida do que a clonagem.
+
+Você pode tirar um instantâneo de um volume individual ou de um conjunto de volumes.
+
+Opcionalmente, replique snapshots para um cluster remoto e use-os como uma cópia de backup do volume. Isso permite reverter um volume para um ponto específico no tempo usando o instantâneo replicado. Como alternativa, você pode criar um clone de um volume a partir de um snapshot replicado.
+
+
+
+== Encontre mais informações
+
+* xref:task_data_protection_use_individual_volume_snapshots.adoc[Use snapshots de volume individuais para proteção de dados]
+* xref:task_data_protection_use_group_snapshots_for_data_protection.adoc[Uso de snapshots de grupo para tarefa de proteção de dados]
+* xref:task_data_protection_schedule_a_snapshot_task.adoc[Agendar um instantâneo]
+

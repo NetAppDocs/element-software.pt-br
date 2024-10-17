@@ -1,0 +1,88 @@
+---
+permalink: storage/reference_data_manage_volumes_volume_details.html 
+sidebar: sidebar 
+keywords: volume, size of volume 
+summary: A página volumes na guia Gerenciamento fornece informações sobre os volumes ativos, como nome, conta, grupos de acesso associados ao volume e tamanho do volume. 
+---
+= Detalhes do volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A página volumes na guia Gerenciamento fornece informações sobre os volumes ativos, como nome, conta, grupos de acesso associados ao volume e tamanho do volume.
+
+* *ID*
++
+A ID gerada pelo sistema para o volume.
+
+* *Nome*
++
+O nome dado ao volume quando foi criado.
+
+* *Conta*
++
+O nome da conta atribuída ao volume.
+
+* *Grupos de acesso*
++
+O nome do grupo de acesso ao volume ou grupos aos quais o volume pertence.
+
+* *Acesso*
++
+O tipo de acesso atribuído ao volume quando foi criado. Valores possíveis:
+
++
+** Ler / escrever: Todas as leituras e gravações são aceitas.
+** Somente leitura: Todas as atividades de leitura permitidas; não são permitidas gravações.
+** Bloqueado: Apenas acesso de administrador permitido.
+** ReplicationTarget: Designado como um volume de destino em um par de volumes replicado.
+
+
+* *Usado*
++
+A percentagem de espaço utilizado no volume.
+
+* *Tamanho*
++
+O tamanho total (em GB) do volume.
+
+* *Instantâneos*
++
+O número de instantâneos criados para o volume.
+
+* *Política de QoS*
++
+O nome e o link para a política de QoS definida pelo usuário.
+
+* *IOPS mínimo*
++
+O número mínimo de IOPS garantido para o volume.
+
+* *IOPS máximo*
++
+O número máximo de IOPS permitido para o volume.
+
+* *IOPS de explosão*
++
+O número máximo de IOPS permitido durante um curto período de tempo para o volume. Padrão: 15.000.
+
+* *Atributos*
++
+Atributos que foram atribuídos ao volume como um par chave/valor por meio de um método API.
+
+* *512e*
++
+Indicação de se o 512e está ativado num volume. Valores possíveis:
+
++
+** Sim
+** Não
+
+
+* *Criado em*
++
+A data e a hora em que o volume foi criado.
+
+

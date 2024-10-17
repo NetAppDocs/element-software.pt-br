@@ -1,0 +1,56 @@
+---
+permalink: api/reference_element_api_protectiondomainlevel.html 
+sidebar: sidebar 
+keywords: object,objects,protectionDomainLevel 
+summary: O objeto protectionDomainLevel contém informações sobre os níveis atuais de tolerância e resiliência do cluster de armazenamento. Os níveis de tolerância indicam a capacidade do cluster de continuar lendo e gravando dados em caso de falha. Os níveis de resiliência indicam a capacidade do cluster de se recuperar automaticamente de uma ou mais falhas em seu tipo de domínio de proteção associado. 
+---
+= Proteção DomainLevel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto protectionDomainLevel contém informações sobre os níveis atuais de tolerância e resiliência do cluster de armazenamento. Os níveis de tolerância indicam a capacidade do cluster de continuar lendo e gravando dados em caso de falha, e os níveis de resiliência indicam a capacidade do cluster de se recuperar automaticamente de uma ou mais falhas em seu tipo de domínio de proteção associado.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+Proteção DomainType
+ a| 
+O tipo de domínio de proteção que tem a tolerância e resiliência associadas. Valores possíveis:
+
+* Nó: Qualquer nó individual.
+* Chassi: Qualquer nó individual ou todos os nós de storage em um único chassi.
+* Personalizado: Todos os nós de storage em um único domínio de proteção definido pelo cliente.
+
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+resiliência
+ a| 
+A resiliência atual desse cluster na perspetiva desse tipo de domínio de proteção.
+ a| 
+xref:reference_element_api_protectiondomainresiliency.adoc[Proteção DomainResiliency]
+
+
+
+ a| 
+tolerância
+ a| 
+A tolerância atual desse cluster na perspetiva desse tipo de domínio de proteção.
+ a| 
+xref:reference_element_api_protectiondomaintolerance.adoc[Proteção DomainTolerance]
+
+|===

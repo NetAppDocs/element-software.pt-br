@@ -1,0 +1,295 @@
+---
+permalink: api/reference_element_api_cluster.html 
+sidebar: sidebar 
+keywords: objects,object,cluster 
+summary: O objeto cluster contém informações que o nó usa para se comunicar com o cluster. Você pode recuperar essas informações com o método da API GetClusterConfig. 
+---
+= cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto cluster contém informações que o nó usa para se comunicar com o cluster. Você pode recuperar essas informações com o método da API GetClusterConfig.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+cipi
+ a| 
+Interface de rede usada para comunicação de cluster.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+cluster
+ a| 
+Nome exclusivo do cluster.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+Encriptável
+ a| 
+Indica se o nó suporta criptografia de unidade.
+ a| 
+booleano
+
+
+
+ a| 
+ensemble
+ a| 
+Os nós que estão participando do cluster.
+ a| 
+array de cadeia de carateres
+
+
+
+ a| 
+FipsDriveConfiguration
+ a| 
+Indica se o nó é compatível com unidades com certificação FIPS 140-2.
+ a| 
+booleano
+
+
+
+ a| 
+mipi
+ a| 
+A interface de rede usada para o gerenciamento de nós.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+nome
+ a| 
+O nome do cluster.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+NodeID
+ a| 
+A ID do nó do nó no cluster.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+PendingNodeID
+ a| 
+O ID do nó pendente no cluster.
+ a| 
+número inteiro
+
+
+
+ a| 
+função
+ a| 
+Identifica a função do nó.
+ a| 
+número inteiro
+
+
+
+ a| 
+sipi
+ a| 
+A interface de rede utilizada para o tráfego de armazenamento.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+estado
+ a| 
+O estado atual do nó. Valores possíveis:
+
+* Disponível: O nó não foi configurado com um nome de cluster.
+* Pendente: O nó está pendente para um cluster nomeado específico e pode ser adicionado.
+* Ativo: O nó é um membro ativo de um cluster e não pode ser adicionado a outro cluster.
+* PendingActive: O nó está atualmente a ser devolvido à imagem de software de fábrica e ainda não é membro ativo de um cluster. Quando concluído, ele fará a transição para o estado Ativo.
+
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+versão
+ a| 
+A versão do software em execução no nó.
+ a| 
+cadeia de carateres
+
+|===
+
+
+== Modificabilidade dos membros e estados de nós
+
+Esta tabela indica se os parâmetros do objeto podem ou não ser modificados em cada estado de nó possível.
+
+|===
+
+
+| Nome do parâmetro | Estado disponível | Estado pendente | Estado ativo 
+
+
+ a| 
+cipi
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+ a| 
+cluster
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+
+
+
+ a| 
+Encriptável
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+ a| 
+ensemble
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+ a| 
+mipi
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+
+
+
+ a| 
+nome
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+ a| 
+NodeID
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+ a| 
+PendingNodeID
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+ a| 
+função
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+ a| 
+sipi
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+ a| 
+estado
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+ a| 
+versão
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+|===
+
+
+== Encontre mais informações
+
+xref:reference_element_api_getclusterconfig.adoc[GetClusterConfig]

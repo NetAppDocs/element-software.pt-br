@@ -1,0 +1,114 @@
+---
+permalink: api/reference_element_api_listsnapmirrorrelationships.html 
+sidebar: sidebar 
+keywords: snapmirror,endpoints,endpoint,list,listing,listsnapmirrorrelationships 
+summary: A IU da Web do software Element usa o método ListSnapMirrorRelationships para listar uma ou todas as relações SnapMirror em um cluster de armazenamento de elemento. 
+---
+= ListSnapMirrorRelacionships
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A IU da Web do software Element usa o `ListSnapMirrorRelationships` método para listar uma ou todas as relações do SnapMirror em um cluster de storage Element.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+Liste apenas as relações associadas ao ID de endpoint especificado. Se não for fornecida nenhuma ID de endpoint, o sistema lista as relações de todos os endpoints SnapMirror conhecidos.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+Destinaçãovolume
+ a| 
+Listar relações associadas ao volume de destino especificado.
+ a| 
+xref:reference_element_api_snapmirrorvolumeinfo.adoc[SnapMirrorVolumeInfo]
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+Sourcevolume
+ a| 
+Listar relações associadas ao volume de origem especificado.
+ a| 
+xref:reference_element_api_snapmirrorvolumeinfo.adoc[SnapMirrorVolumeInfo]
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+svm
+ a| 
+Listar relações no SVM especificado.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+ID da relação
+ a| 
+Listar relacionamentos associados ao ID de relacionamento especificado.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+|===
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+
+
+| Nome | Descrição | Tipo 
+
+
+ a| 
+SnapMirrorRelacionamentos
+ a| 
+Uma lista de objetos contendo informações sobre relacionamentos do SnapMirror.
+ a| 
+xref:reference_element_api_snapmirrorrelationship.adoc[SnapMirrorRelacionship] array
+
+|===
+
+
+== Novo desde a versão
+
+10,1

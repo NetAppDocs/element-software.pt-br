@@ -1,0 +1,352 @@
+---
+permalink: storage/concept_system_manage_manage_ldap.html 
+sidebar: sidebar 
+keywords: element, solidfire, ldap, enable, disable, test, config, addresses, pre-configuration steps, authentication, element api, view ldap details 
+summary: 'Você pode configurar o protocolo LDAP (Lightweight Directory Access Protocol) para habilitar a funcionalidade de login segura baseada em diretório para o armazenamento SolidFire. Você pode configurar o LDAP no nível do cluster e autorizar usuários e grupos LDAP.' 
+---
+= Gerenciar LDAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode configurar o LDAP (Lightweight Directory Access Protocol) para habilitar a funcionalidade de login segura baseada em diretório para o storage SolidFire. Você pode configurar o LDAP no nível do cluster e autorizar usuários e grupos LDAP.
+
+O gerenciamento do LDAP envolve a configuração da autenticação LDAP em um cluster do SolidFire usando um ambiente existente do Microsoft ative Directory e testar a configuração.
+
+
+NOTE: Você pode usar endereços IPv4 e IPv6.
+
+A ativação do LDAP envolve as seguintes etapas de alto nível, descritas em detalhes:
+
+. *Etapas de pré-configuração completas para suporte LDAP*. Valide que você tem todos os detalhes necessários para configurar a autenticação LDAP.
+. *Ativar autenticação LDAP*. Use a IU do Element ou a API Element.
+. *Validar a configuração LDAP*. Opcionalmente, verifique se o cluster está configurado com os valores corretos executando o método API GetLdapConfiguration ou verificando a configuração LCAP usando a IU do elemento.
+. *Teste a autenticação LDAP* (com o `readonly` usuário). Teste se a configuração LDAP está correta executando o método API TestLdapAuthentication ou usando a IU do Element. Para este teste inicial, use o nome de usuário "AMAccountName" do `readonly` usuário. Isso validará se o cluster está configurado corretamente para autenticação LDAP e também validará se as `readonly` credenciais e o acesso estão corretos. Se esta etapa falhar, repita os passos 1 a 3.
+. *Teste a autenticação LDAP* (com uma conta de usuário que você deseja adicionar). Repita o setp 4 com uma conta de usuário que você deseja adicionar como administrador de cluster de elementos. Copie o `distinguished` nome (DN) ou o usuário (ou o grupo). Este DN será utilizado no passo 6.
+. *Adicione o administrador do cluster LDAP* (copie e cole o DN da etapa de autenticação LDAP de teste). Usando a IU do Element ou o método da API AddLdapClusterAdmin, crie um novo usuário de administrador de cluster com o nível de acesso apropriado. Para o nome de usuário, cole no DN completo que você copiou na Etapa 5. Isso garante que o DN esteja formatado corretamente.
+. *Teste o acesso de administrador do cluster*. Faça login no cluster usando o usuário de administrador de cluster LDAP recém-criado. Se tiver adicionado um grupo LDAP, pode iniciar sessão como qualquer utilizador nesse grupo.
+
+
+
+
+== Conclua as etapas de pré-configuração para suporte a LDAP
+
+Antes de ativar o suporte LDAP no Element, você deve configurar um Windows ative Directory Server e executar outras tarefas de pré-configuração.
+
+.Passos
+. Configurar um Windows ative Directory Server.
+. * Opcional: * Ativar suporte LDAPS.
+. Crie usuários e grupos.
+. Crie uma conta de serviço somente leitura (como "somente leitura") a ser usada para pesquisar o diretório LDAP.
+
+
+
+
+== Ative a autenticação LDAP com a interface do usuário Element
+
+Pode configurar a integração do sistema de armazenamento com um servidor LDAP existente. Isso permite que os administradores LDAP gerenciem centralmente o acesso ao sistema de storage para os usuários.
+
+Você pode configurar o LDAP com a interface do usuário Element ou com a API Element. Este procedimento descreve como configurar o LDAP usando a IU do Element.
+
+Este exemplo mostra como configurar a autenticação LDAP no SolidFire e usa `SearchAndBind` como o tipo de autenticação. O exemplo usa um único servidor ative Directory do Windows Server 2012 R2.
+
+.Passos
+. Clique em *Cluster* > *LDAP*.
+. Clique em *Yes* para ativar a autenticação LDAP.
+. Clique em *Adicionar um servidor*.
+. Introduza o *Nome do anfitrião/endereço IP*.
++
+
+NOTE: Um número de porta personalizado opcional também pode ser inserido.
+
++
+Por exemplo, para adicionar um número de porta personalizado, introduza [nome do anfitrião ou endereço ip>:<port number>
+
+. *Opcional:* Selecione *Use LDAPS Protocol*.
+. Insira as informações necessárias em *Configurações gerais*.
++
+image::../media/element_new_ldap_servers.jpg[element novos servidores ldap]
+
+. Clique em *Ativar LDAP*.
+. Clique em *Test User Authentication* (testar autenticação do utilizador) se pretender testar o acesso ao servidor de um utilizador.
+. Copie o nome distinto e as informações do grupo de usuários que aparecem para uso posterior ao criar administradores de cluster.
+. Clique em *Salvar alterações* para salvar as novas configurações.
+. Para criar um usuário neste grupo para que qualquer pessoa possa fazer login, complete o seguinte:
++
+.. Clique em *User* > *View*.
++
+image::../media/element_new_cluster_admin.jpg[element new cluster admin]
+
+.. Para o novo usuário, clique em *LDAP* para o tipo de usuário e cole o grupo que você copiou no campo Nome distinto.
+.. Selecione as permissões, normalmente todas as permissões.
+.. Role para baixo até o Contrato de Licença de Usuário final e clique em *Aceito*.
+.. Clique em *Create Cluster Admin*.
++
+Agora você tem um usuário com o valor de um grupo do ative Directory.
+
+
+
+
+
+Para testar isso, faça logout da IU do Element e faça login novamente como um usuário nesse grupo.
+
+
+
+== Ative a autenticação LDAP com a API Element
+
+Pode configurar a integração do sistema de armazenamento com um servidor LDAP existente. Isso permite que os administradores LDAP gerenciem centralmente o acesso ao sistema de storage para os usuários.
+
+Você pode configurar o LDAP com a interface do usuário Element ou com a API Element. Este procedimento descreve como configurar o LDAP usando a API Element.
+
+Para utilizar a autenticação LDAP num cluster SolidFire, ative primeiro a autenticação LDAP no cluster utilizando o `EnableLdapAuthentication` método API.
+
+.Passos
+. Ative a autenticação LDAP primeiro no cluster usando o `EnableLdapAuthentication` método API.
+. Introduza as informações necessárias.
++
+[listing]
+----
+{
+     "method":"EnableLdapAuthentication",
+     "params":{
+          "authType": "SearchAndBind",
+          "groupSearchBaseDN": "dc=prodtest,dc=solidfire,dc=net",
+          "groupSearchType": "ActiveDirectory",
+          "searchBindDN": "SFReadOnly@prodtest.solidfire.net",
+          "searchBindPassword": "ReadOnlyPW",
+          "userSearchBaseDN": "dc=prodtest,dc=solidfire,dc=net ",
+          "userSearchFilter": "(&(objectClass=person)(sAMAccountName=%USERNAME%))"
+          "serverURIs": [
+               "ldap://172.27.1.189",
+          [
+     },
+  "id":"1"
+}
+----
+. Altere os valores dos seguintes parâmetros:
++
+[cols="2*"]
+|===
+| Parâmetros utilizados | Descrição 
+
+
+ a| 
+AuthType: SearchAndBind
+ a| 
+Determina que o cluster usará a conta de serviço readonly para primeiro procurar o usuário que está sendo autenticado e, posteriormente, vincular esse usuário se for encontrado e autenticado.
+
+
+
+ a| 
+GroupSearchBaseDN: dc-prodtest,dc-SolidFire,DC-net
+ a| 
+Especifica a localização na árvore LDAP para começar a procurar grupos. Para este exemplo, usamos a raiz da nossa árvore. Se a árvore LDAP for muito grande, talvez você queira definir isso como uma subárvore mais granular para diminuir os tempos de pesquisa.
+
+
+
+ a| 
+UserSearchBaseDN: dc-prodtest,dc-SolidFire,DC-NET
+ a| 
+Especifica a localização na árvore LDAP para começar a procurar usuários. Para este exemplo, usamos a raiz da nossa árvore. Se a árvore LDAP for muito grande, talvez você queira definir isso como uma subárvore mais granular para diminuir os tempos de pesquisa.
+
+
+
+ a| 
+GroupSearchType: ActiveDirectory
+ a| 
+Usa o servidor do ative Directory do Windows como servidor LDAP.
+
+
+
+ a| 
+[listing]
+----
+userSearchFilter:
+“(&(objectClass=person)(sAMAccountName=%USERNAME%))”
+----
+Para usar o userPrincipalName (endereço de e-mail para login), você pode alterar o userSearchFilter para:
+
+[listing]
+----
+“(&(objectClass=person)(userPrincipalName=%USERNAME%))”
+----
+Ou, para pesquisar userPrincipalName e sAMAccountName, você pode usar o seguinte userSearchFilter:
+
+[listing]
+----
+“(&(objectClass=person)(
+----| (SAMAccountName) (userPrincipalName:%USERNAME%))" ---- 
+
+
+ a| 
+Aproveita o sAMAccountName como nosso nome de usuário para fazer login no cluster do SolidFire. Essas configurações dizem ao LDAP que procure o nome de usuário especificado durante o login no atributo sAMAccountName e também limitam a pesquisa a entradas que têm "'pessoa'" como um valor no atributo objectClass.
+ a| 
+SearchBindDN
+
+
+
+ a| 
+Este é o nome distinto do usuário readonly que será usado para pesquisar o diretório LDAP. Para o diretório ativo, geralmente é mais fácil usar o userPrincipalName (formato de endereço de e-mail) para o usuário.
+ a| 
+SearchBindPassword
+
+|===
+
+
+Para testar isso, faça logout da IU do Element e faça login novamente como um usuário nesse grupo.
+
+
+
+== Ver detalhes do LDAP
+
+Exibir informações LDAP na página LDAP na guia Cluster.
+
+
+NOTE: Tem de ativar o LDAP para visualizar estas definições de configuração LDAP.
+
+. Para exibir detalhes do LDAP com a IU do Element, clique em *Cluster* > *LDAP*.
++
+** *Nome do host/endereço IP*: Endereço de um servidor de diretório LDAP ou LDAPS.
+** *Auth Type*: O método de autenticação do usuário. Valores possíveis:
++
+*** Ligação direta
+*** Pesquisa e Bind
+
+
+** *Pesquisar DN*: Um DN totalmente qualificado para fazer login para realizar uma pesquisa LDAP para o usuário (precisa de acesso ao diretório LDAP).
+** *Pesquisar vincular senha*: Senha usada para autenticar o acesso ao servidor LDAP.
+** *User Search base DN*: O DN base da árvore usada para iniciar a pesquisa do usuário. O sistema procura a subárvore a partir da localização especificada.
+** *Filtro de pesquisa do usuário*: Insira o seguinte usando seu nome de domínio:
++
+`(&(objectClass=person)(|(sAMAccountName=%USERNAME%)(userPrincipalName=%USERNAME%)))`
+
+** *Tipo de pesquisa de grupo*: Tipo de pesquisa que controla o filtro de pesquisa de grupo padrão usado. Valores possíveis:
++
+*** Ative Directory: Associação aninhada de todos os grupos LDAP de um usuário.
+*** Sem grupos: Sem apoio de grupo.
+*** DN do Membro: Grupos do tipo DN do Membro (nível único).
+
+
+** *Group Search base DN*: O DN base da árvore usado para iniciar a pesquisa de grupo. O sistema procura a subárvore a partir da localização especificada.
+** *Testar autenticação do usuário*: Depois que o LDAP estiver configurado, use-o para testar a autenticação do nome de usuário e senha para o servidor LDAP. Insira uma conta que já existe para testar isso. As informações de nome distinto e grupo de usuários são exibidas, que você pode copiar para uso posterior ao criar administradores de cluster.
+
+
+
+
+
+
+== Teste a configuração LDAP
+
+Depois de configurar o LDAP, você deve testá-lo usando a IU do Element ou o método da API Element `TestLdapAuthentication`.
+
+.Passos
+. Para testar a configuração LDAP com a IU do Element, faça o seguinte:
++
+.. Clique em *Cluster* > *LDAP*.
+.. Clique em *Test LDAP Authentication* (testar autenticação LDAP).
+.. Resolva quaisquer problemas usando as informações na tabela abaixo:
++
+[cols="2*"]
+|===
+| Mensagem de erro | Descrição 
+
+
+ a| 
+ xLDAPUserNotFound a| 
+*** O usuário que está sendo testado não foi encontrado na subárvore configurada `userSearchBaseDN`.
+*** O `userSearchFilter` está configurado incorretamente.
+
+
+
+
+ a| 
+ xLDAPBindFailed (Error: Invalid credentials) a| 
+*** O nome de usuário que está sendo testado é um usuário LDAP válido, mas a senha fornecida está incorreta.
+*** O nome de utilizador que está a ser testado é um utilizador LDAP válido, mas a conta está atualmente desativada.
+
+
+
+
+ a| 
+ xLDAPSearchBindFailed (Error: Can't contact LDAP server) a| 
+O URI do servidor LDAP está incorreto.
+
+
+
+ a| 
+ xLDAPSearchBindFailed (Error: Invalid credentials) a| 
+O nome de utilizador ou palavra-passe só de leitura está configurado incorretamente.
+
+
+
+ a| 
+ xLDAPSearchFailed (Error: No such object) a| 
+O `userSearchBaseDN` não é um local válido na árvore LDAP.
+
+
+
+ a| 
+ xLDAPSearchFailed (Error: Referral) a| 
+*** O `userSearchBaseDN` não é um local válido na árvore LDAP.
+*** Os `userSearchBaseDN` e `groupSearchBaseDN` estão em uma ou aninhada. Isso pode causar problemas de permissão. A solução alternativa é incluir a UO nas entradas DN de base de usuário e grupo (por exemplo: `ou=storage, cn=company, cn=com`)
+
+
+|===
+
+
+. Para testar a configuração LDAP com a API Element, faça o seguinte:
++
+.. Chame o método TestLdapAuthentication.
++
+[listing]
+----
+{
+  "method":"TestLdapAuthentication",
+     "params":{
+        "username":"admin1",
+        "password":"admin1PASS
+      },
+      "id": 1
+}
+----
+.. Reveja os resultados. Se a chamada de API for bem-sucedida, os resultados incluem o nome distinto do usuário especificado e uma lista de grupos nos quais o usuário é membro.
++
+[listing]
+----
+{
+"id": 1
+     "result": {
+         "groups": [
+              "CN=StorageMgmt,OU=PTUsers,DC=prodtest,DC=solidfire,DC=net"
+         ],
+         "userDN": "CN=Admin1 Jones,OU=PTUsers,DC=prodtest,DC=solidfire,DC=net"
+     }
+}
+----
+
+
+
+
+
+
+== Desativar LDAP
+
+Você pode desativar a integração LDAP usando a IU do Element.
+
+Antes de começar, deve anotar todas as definições de configuração, porque a desativação do LDAP apaga todas as definições.
+
+.Passos
+. Clique em *Cluster* > *LDAP*.
+. Clique em *não*.
+. Clique em *Desativar LDAP*.
+
+
+
+
+== Encontre mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in do NetApp Element para vCenter Server"^]
+

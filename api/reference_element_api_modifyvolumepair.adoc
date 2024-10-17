@@ -1,0 +1,118 @@
+---
+permalink: api/reference_element_api_modifyvolumepair.html 
+sidebar: sidebar 
+keywords: volume,pair,pairs,modify,modifying,edit,editing,changing,change,modifyvolumepair,paired 
+summary: 'Você pode usar o método ModifyVolumePair para pausar ou reiniciar a replicação entre um par de volumes. Este método é definido no volume de origem (o volume com acesso de leitura/escrita).' 
+---
+= ModifyVolumePair
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `ModifyVolumePair` método para pausar ou reiniciar a replicação entre um par de volumes. Este método é definido no volume de origem (o volume com acesso de leitura/gravação).
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+
+
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+VolumeID
+ a| 
+Número de identificação do volume a modificar.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+PausedManual
+ a| 
+A replicação remota pode ser pausada ou reiniciada no volume de origem (leitura/gravação). Valores possíveis:
+
+* Verdadeiro: Pausar a replicação de volume.
+* Falso: Reinicie a replicação do volume.
+
+
+Se nenhum valor for especificado, nenhuma alteração na replicação será executada.
+ a| 
+booleano
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+modo
+ a| 
+Modo de replicação de volume. Valores possíveis:
+
+* Async: As gravações são reconhecidas quando são concluídas localmente. O cluster não espera que as gravações sejam replicadas no cluster de destino.
+* Sincronização: A fonte reconhece a gravação quando os dados são armazenados localmente e no cluster remoto.
+* SnapshotsOnly: Apenas os snapshots criados no cluster de origem são replicados. As gravações ativas do volume de origem não são replicadas.
+
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+|===
+
+
+== Valor de retorno
+
+Este método não tem valor de retorno.
+
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+  "method": "ModifyVolumePair",
+  "params": {
+    "pausedManual": false,
+    "volumeID": 5,
+    "mode": "sync"
+   },
+  "id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+   "id" : 1,
+   "result" : {}
+}
+----
+
+
+== Novo desde a versão
+
+9,6

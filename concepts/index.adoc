@@ -1,0 +1,33 @@
+---
+permalink: concepts/index.html 
+sidebar: sidebar 
+keywords: element, security, clusters, protection, qos 
+summary: Aprenda conceitos básicos relacionados ao software Element. 
+---
+= Conceitos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Aprenda conceitos básicos relacionados ao software Element.
+
+* link:concept_intro_product_overview.html["Visão geral do produto"]
+* xref:concept_solidfire_concepts_solidfire_architecture_overview.adoc[Visão geral da arquitetura SolidFire]
+* xref:concept_solidfire_concepts_nodes.adoc[Nós]
+* xref:concept_intro_clusters.adoc[Clusters]
+* link:concept_solidfire_concepts_security.html["Segurança"]
+* xref:concept_solidfire_concepts_accounts_and_permissions.adoc[Contas e permissões]
+* link:concept_solidfire_concepts_volumes.html["Volumes"]
+* xref:concept_solidfire_concepts_data_protection.adoc[Proteção de dados]
+* xref:concept_data_manage_volumes_solidfire_quality_of_service.adoc[Desempenho e qualidade do serviço]
+
+
+
+
+== Encontre mais informações
+
+* https://www.netapp.com/data-storage/solidfire/["Visão geral do storage all-flash da SolidFire"^]
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+

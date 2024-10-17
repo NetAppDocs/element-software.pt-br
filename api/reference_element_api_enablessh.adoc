@@ -1,0 +1,67 @@
+---
+permalink: api/reference_element_api_enablessh.html 
+sidebar: sidebar 
+keywords: SSH,enable,enabling,single,node,EnableSSH 
+summary: Você pode usar o método EnableSsh para ativar o serviço SSH para um único nó. Este método não afeta a duração do tempo limite do SSH em todo o cluster e não isenta o nó de ter o SSH desativado pelo tempo limite global do SSH. 
+---
+= EnableSsh
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `EnableSsh` método para ativar o serviço Secure Shell (SSH) para um único nó. Este método não afeta a duração do tempo limite do SSH em todo o cluster e não isenta o nó de ter o SSH desativado pelo tempo limite global do SSH.
+
+
+
+== Parâmetro
+
+Este método não tem nenhum parâmetro de entrada.
+
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+ativado
+ a| 
+O status do serviço SSH para este nó.
+ a| 
+booleano
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+  "method": "EnableSsh",
+  "params": {
+     },
+  "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id" : 1,
+  "result" : {"enabled": true}
+}
+----

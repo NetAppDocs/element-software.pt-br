@@ -1,0 +1,24 @@
+---
+permalink: storage/task_replication_validate_volume_replication.html 
+sidebar: sidebar 
+keywords: volume pairings, replication, validate volume replication 
+summary: Depois que um volume é replicado, você deve garantir que os volumes de origem e destino estejam ativos. Quando em um estado ativo, os volumes são emparelhados, os dados estão sendo enviados da origem para o volume de destino e os dados estão em sincronia. 
+---
+= Valide a replicação de volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois que um volume é replicado, você deve garantir que os volumes de origem e destino estejam ativos. Quando em um estado ativo, os volumes são emparelhados, os dados estão sendo enviados da origem para o volume de destino e os dados estão em sincronia.
+
+. Em ambos os clusters, selecione *proteção de dados* > *pares de volume*.
+. Verifique se o status do volume está Ativo.
+
+
+
+
+== Encontre mais informações
+
+xref:reference_replication_volume_pairing_warnings.adoc[Avisos de emparelhamento de volume]

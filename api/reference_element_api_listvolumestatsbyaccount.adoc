@@ -1,0 +1,125 @@
+---
+permalink: api/reference_element_api_listvolumestatsbyaccount.html 
+sidebar: sidebar 
+keywords: volumes,volume,stats,list,listing,account,listvolumestatsbyaccount,activity 
+summary: Pode utilizar o método ListVolumeStatsByAccount para listar medições de atividade de volume de alto nível para cada conta. Os valores são somados a partir de todos os volumes de propriedade da conta. 
+---
+= ListVolumeStatsByAccount
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode utilizar o `ListVolumeStatsByAccount` método para listar medições de atividade de volume de alto nível para cada conta. Os valores são somados a partir de todos os volumes de propriedade da conta.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+IncludeVirtualVolumes
+ a| 
+Os volumes virtuais são incluídos na resposta por padrão. Para excluir volumes virtuais, defina como false.
+ a| 
+booleano
+ a| 
+verdadeiro
+ a| 
+Não
+
+
+
+ a| 
+contas
+ a| 
+Uma lista de IDs de conta para os quais retornar estatísticas de volume. Se omitido, as estatísticas de todas as contas são retornadas.
+ a| 
+array inteiro
+ a| 
+Nenhum
+ a| 
+Não
+
+|===
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+
+
+| Nome | Descrição | Tipo 
+
+
+ a| 
+VolumeStats
+ a| 
+Lista de informações de atividade de volume para cada conta.*Nota:* o membro volumeID é 0 para cada entrada, pois os valores representam a soma de todos os volumes de propriedade da conta.
+ a| 
+xref:reference_element_api_volumestats.adoc[VolumeStats] array
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+"method": "ListVolumeStatsByAccount",
+  "params": {"accounts": [3]},
+  "id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "volumeStats": [
+      {
+        "accountID": 3,
+        "nonZeroBlocks": 155040175,
+        "readBytes": 3156273328128,
+        "readBytesLastSample": 0,
+        "readOps": 770574543,
+        "readOpsLastSample": 0,
+        "samplePeriodMSec": 500,
+        "timestamp": "2016-10-17T20:42:26.231661Z",
+        "unalignedReads": 0,
+        "unalignedWrites": 0,
+        "volumeAccessGroups": [],
+        "volumeID": 0,
+        "volumeSize": 1127428915200,
+        "writeBytes": 1051988406272,
+        "writeBytesLastSample": 0,
+        "writeOps": 256833107,
+        "writeOpsLastSample": 0,
+        "zeroBlocks": 120211025
+      }
+    ]
+  }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

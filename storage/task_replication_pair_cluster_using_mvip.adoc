@@ -1,0 +1,36 @@
+---
+permalink: storage/task_replication_pair_cluster_using_mvip.html 
+sidebar: sidebar 
+keywords: pair clusters, mvip, connection 
+summary: É possível emparelhar dois clusters para replicação em tempo real usando o MVIP de um cluster para estabelecer uma conexão com o outro cluster. Para usar esse método, é necessário o acesso de administrador de cluster nos dois clusters. O nome de usuário e a senha do administrador do cluster são usados para autenticar o acesso ao cluster antes que os clusters possam ser emparelhados. 
+---
+= Emparelhe clusters usando MVIP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+É possível emparelhar dois clusters para replicação em tempo real usando o MVIP de um cluster para estabelecer uma conexão com o outro cluster. Para usar esse método, é necessário o acesso de administrador de cluster nos dois clusters. O nome de usuário e a senha do administrador do cluster são usados para autenticar o acesso ao cluster antes que os clusters possam ser emparelhados.
+
+. No cluster local, selecione *proteção de dados* > *pares de cluster*.
+. Clique em *Emparelhar Cluster*.
+. Clique em *Start Pairing* (Iniciar emparelhamento) e clique em *Yes* (Sim) para indicar que tem acesso ao cluster remoto.
+. Introduza o endereço MVIP do cluster remoto.
+. Clique em *Complete pareamento no cluster remoto*.
++
+Na janela *Autenticação necessária*, introduza o nome de utilizador e a palavra-passe do administrador do cluster remoto.
+
+. No cluster remoto, selecione *proteção de dados* > *pares de cluster*.
+. Clique em *Emparelhar Cluster*.
+. Clique em *Complete Pairing*.
+. Clique no botão *Complete Pairing*.
+
+
+
+
+== Encontre mais informações
+
+* xref:task_replication_pair_cluster_using_pairing_key.adoc[Emparelhe clusters usando uma chave de emparelhamento]
+* https://www.youtube.com/watch?v=HbKxPZnNvn4&feature=youtu.be["Emparelhar clusters com MVIP (vídeo)"]
+

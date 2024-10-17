@@ -1,0 +1,22 @@
+---
+permalink: storage/task_system_manage_snmp_configure_an_snmp_usm_user.html 
+sidebar: sidebar 
+keywords: snmp, usm user, config, requests 
+summary: Ao ativar o SNMP versão 3, tem de configurar um utilizador USM para receber pedidos SNMP autorizados. 
+---
+= Configurar um utilizador SNMP USM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ao ativar o SNMP versão 3, tem de configurar um utilizador USM para receber pedidos SNMP autorizados.
+
+. Clique em *Cluster* > *SNMP*.
+. Em *General SNMP Settings*, clique em *Yes* para ativar o SNMP.
+. Na lista *versão*, selecione *versão 3*.
+. Na secção *USM Users*, introduza o nome, a palavra-passe e a frase-passe.
+. *Opcional:* para adicionar outro usuário USM, clique em *Adicionar um usuário USM* e insira o nome, a senha e a senha.
+. Clique em *Salvar alterações*.
+

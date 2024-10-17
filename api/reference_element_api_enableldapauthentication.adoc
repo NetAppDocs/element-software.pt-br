@@ -1,0 +1,215 @@
+---
+permalink: api/reference_element_api_enableldapauthentication.html 
+sidebar: sidebar 
+keywords: LDAP,auth,authentication,enable,enabling,EnableLdapAuthentication 
+summary: Você pode usar o método EnableLdapAuthentication para configurar uma conexão de diretório LDAP para autenticação LDAP em um cluster. Os usuários que são membros do diretório LDAP podem então fazer login no sistema de storage usando suas credenciais LDAP. 
+---
+= EnableLdapAuthentication
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode utilizar o `EnableLdapAuthentication` método para configurar uma ligação de diretório LDAP para autenticação LDAP a um cluster. Os usuários que são membros do diretório LDAP podem então fazer login no sistema de storage usando suas credenciais LDAP.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+AuthType
+ a| 
+Identifica qual método de autenticação de usuário usar. Valores possíveis:
+
+* `DirectBind`
+* `SearchAndBind`
+
+ a| 
+cadeia de carateres
+ a| 
+SearchAndBind
+ a| 
+Não
+
+
+
+ a| 
+GroupSearchBaseDN
+ a| 
+O DN base da árvore para iniciar a pesquisa de subárvore do grupo.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+GroupSearchType
+ a| 
+Controla o filtro de pesquisa de grupo padrão usado. Valores possíveis:
+
+* NoGroups: Sem suporte a grupos.
+* ActiveDirectory: Associação aninhada de todos os grupos de diretórios ativos de um usuário.
+* MemberDN: Grupos de estilo MemberDN (nível único).
+
+ a| 
+cadeia de carateres
+ a| 
+ActiveDirectory
+ a| 
+Não
+
+
+
+ a| 
+ServerURIs
+ a| 
+Uma lista separada por vírgulas de URIs de servidor LDAP ou LDAPS. Você pode adicionar uma porta personalizada ao final de um URI LDAP ou LDAPS usando dois pontos seguidos pelo número da porta. Por exemplo, o URI "ldap://1,2.3,4" usa a porta padrão e o URI "ldaps://1,2.3,4:123" usa a porta personalizada 123.
+ a| 
+array de cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+UserSearchBaseDN
+ a| 
+O DN base da árvore para iniciar a pesquisa de subárvore. Este parâmetro é necessário ao usar um AuthType de SearchAndBind.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+SearchBindDN
+ a| 
+Um DN totalmente qualificado para iniciar sessão para efetuar uma pesquisa LDAP para o utilizador. O DN requer acesso de leitura ao diretório LDAP. Este parâmetro é necessário ao usar um AuthType de SearchAndBind.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+SearchBindPassword
+ a| 
+A senha da conta searchBindDN usada para pesquisa. Este parâmetro é necessário ao usar um AuthType de SearchAndBind.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+UserSearchFilter
+ a| 
+O filtro de pesquisa LDAP a ser usado ao consultar o servidor LDAP. A cadeia de carateres deve ter o texto de marcador "%USERNAME%" que é substituído pelo nome de usuário do usuário de autenticação. Por exemplo, o campo sAMAccountName (nome de USUÁRIO) usará o campo sAMAccountName no ative Directory para corresponder ao nome de usuário inserido no login do cluster. Este parâmetro é necessário ao usar um AuthType de SearchAndBind.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+Placa de utilizador
+ a| 
+Um modelo de cadeia de carateres usado para definir um padrão para a construção de um DN (nome distinto) completo do usuário. A cadeia de carateres deve ter o texto de marcador "%USERNAME%" que é substituído pelo nome de usuário do usuário de autenticação. Este parâmetro é necessário ao usar um AuthType of DirectBind.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+GroupSearchCustomFilter
+ a| 
+Para utilizar com o tipo de pesquisa CustomFilter, um filtro LDAP a utilizar para devolver o DNS dos grupos de um utilizador. A cadeia de carateres pode ter um texto de espaço reservado de %USERNAME% e %USERDN% a ser substituído por seu nome de usuário completo e userDN completo conforme necessário.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valores de retorno
+
+Este método não tem valores de retorno.
+
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+  "method": "EnableLdapAuthentication",
+  "params": {
+     "authType": "SearchAndBind",
+     "groupSearchBaseDN": "dc=prodtest,dc=solidfire,dc=net",
+     "groupSearchType": "ActiveDirectory",
+     "searchBindDN": "SFReadOnly@prodtest.solidfire.net",
+     "searchBindPassword": "zsw@#edcASD12",
+     "sslCert": "",
+     "userSearchBaseDN": "dc=prodtest,dc=solidfire,dc=net",
+     "userSearchFilter": "(&(objectClass=person)(sAMAccountName=%USERNAME%))",
+     "serverURIs":[
+           "ldaps://111.22.333.444",
+           "ldap://555.66.777.888"
+           ]
+       },
+  "id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+"id": 1,
+"result": {
+  }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

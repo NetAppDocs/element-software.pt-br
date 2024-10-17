@@ -1,0 +1,130 @@
+---
+permalink: api/reference_element_api_snapmirrorvserver.html 
+sidebar: sidebar 
+keywords: object,objects,snapMirrorVserver 
+summary: 'O objeto SnapMirrorSVM contém informações sobre as máquinas virtuais de armazenamento (ou VServers) no cluster do ONTAP de destino.' 
+---
+= SnapMirrorSVM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto SnapMirrorSVM contém informações sobre as máquinas virtuais de armazenamento (ou VServers) no cluster do ONTAP de destino.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+A ID do sistema ONTAP de destino.
+ a| 
+número inteiro
+
+
+
+ a| 
+VserverName
+ a| 
+O nome do SVM.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+VserverType
+ a| 
+O tipo de SVM. Valores possíveis:
+
+* dados
+* administrador
+* sistema
+* nó
+
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+VserSubtype
+ a| 
+O subtipo do SVM. Valores possíveis:
+
+* padrão
+* dp_destino
+* dados
+* sync_source
+* sync_destination (destino_sincronização
+
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+Rootvolume
+ a| 
+O volume raiz do SVM.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+RootVolumeAgregate
+ a| 
+O agregado no qual o volume raiz será criado.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+VserAggregateInfo
+ a| 
+Um array de objetos MirrSnaporVserAggregateInfo.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+AdminState
+ a| 
+O estado administrativo detalhado do SVM. Valores possíveis:
+
+* em execução
+* parado
+* arranque
+* parar
+* a inicializar
+* a eliminar
+
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+OperacionalEstado
+ a| 
+O estado operacional básico do SVM. Valores possíveis:
+
+* em execução
+* parado
+
+ a| 
+cadeia de carateres
+
+|===

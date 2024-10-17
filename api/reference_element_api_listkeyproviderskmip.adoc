@@ -1,0 +1,127 @@
+---
+permalink: api/reference_element_api_listkeyproviderskmip.html 
+sidebar: sidebar 
+keywords: KMIP,key providers,key,provider,retrieving,listing,list,retrieve,listkeyproviderskmip 
+summary: 'Você pode usar o método ListKeyProvidersKmip para recuperar uma lista de todos os provedores de chave KMIP (Key Management Interoperability Protocol) existentes. Você pode filtrar a lista especificando parâmetros adicionais.' 
+---
+= ListKeyProvidersKmip
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `ListKeyProvidersKmip` método para recuperar uma lista de todos os provedores de chave KMIP (Key Management Interoperability Protocol) existentes. Você pode filtrar a lista especificando parâmetros adicionais.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+KeyProviderIsActive
+ a| 
+Os filtros devolveram objetos de servidor de chave KMIP com base se eles estão ativos. Valores possíveis:
+
+* Verdadeiro: Retorna apenas provedores de chave KMIP que estão ativos (fornecendo chaves que estão atualmente em uso).
+* Falso: Retorna apenas provedores de chave KMIP que estão inativos (não fornecendo nenhuma chave e capazes de ser excluídos).
+
+
+Se omitido, os provedores de chave KMIP retornados não são filtrados com base se estão ativos.
+ a| 
+booleano
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+KmipKeyProviderHasServerAssigned
+ a| 
+Os filtros devolveram provedores de chave KMIP com base se eles têm um servidor de chave KMIP atribuído. Valores possíveis:
+
+* True: Retorna apenas provedores de chave KMIP que têm um servidor de chave KMIP atribuído.
+* Falso: Retorna apenas provedores de chave KMIP que não têm um servidor de chave KMIP atribuído.
+
+
+Se omitido, os provedores de chave KMIP retornados não são filtrados com base se eles têm um servidor de chave KMIP atribuído.
+ a| 
+booleano
+ a| 
+Nenhum
+ a| 
+Não
+
+|===
+
+
+== Valores de retorno
+
+Este método tem os seguintes valores de retorno:
+
+|===
+
+
+| Nome | Descrição | Tipo 
+
+
+ a| 
+KmipKeyProviders
+ a| 
+Uma lista de provedores de chave KMIP que foram criados.
+ a| 
+link:reference_element_api_keyproviderkmip.html["KeyProviderKmip"] array
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+  "method": "ListKeyProvidersKmip",
+  "params": {},
+"id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+   "id": 1,
+   "result":
+    {
+    "kmipKeyProviders": [
+        {
+            "keyProviderID": 15,
+            "kmipCapabilities": "SSL",
+            "keyProviderIsActive": true,
+            "keyServerIDs": [
+                1
+            ],
+            "keyProviderName": "KeyProvider1"
+        }
+    ]
+}
+}
+----
+
+
+== Novo desde a versão
+
+11,7

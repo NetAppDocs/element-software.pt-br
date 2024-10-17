@@ -1,0 +1,222 @@
+---
+permalink: api/reference_element_api_createcluster.html 
+sidebar: sidebar 
+keywords: CreateCluster,cluster,create,creating,initialize,initializing 
+summary: 'Você pode usar o método CreateCluster para inicializar o nó em um cluster que tem a propriedade dos endereços "mvip" e "svip". Cada novo cluster é inicializado usando o IP de gerenciamento (MIP) do primeiro nó no cluster. Esse método também adiciona automaticamente todos os nós que estão sendo configurados no cluster. Você só precisa usar esse método uma vez cada vez que um novo cluster é inicializado.' 
+---
+= CreateCluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `CreateCluster` método para inicializar o nó em um cluster que tem a propriedade dos endereços "mvip" e "svip". Cada novo cluster é inicializado usando o IP de gerenciamento (MIP) do primeiro nó no cluster. Esse método também adiciona automaticamente todos os nós que estão sendo configurados no cluster. Você só precisa usar esse método uma vez cada vez que um novo cluster é inicializado.
+
+
+NOTE: Depois de fazer login no nó principal do cluster e executar o xref:reference_element_api_getbootstrapconfig.adoc[GetBootStrapConfig] método para obter os endereços IP dos outros nós que você deseja incluir no cluster, você pode executar o método CreateCluster no nó principal do cluster.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+AcceptEula
+ a| 
+Indique a sua aceitação do Contrato de Licença de Utilizador final ao criar este cluster. Para aceitar o EULA, defina este parâmetro como verdadeiro.
+ a| 
+booleano
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+atributos
+ a| 
+Lista de pares nome-valor no formato de objeto JSON.
+ a| 
+Objeto JSON
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+EnableSoftwareEncryptionAtRest
+ a| 
+Ative este parâmetro para usar criptografia baseada em software em repouso. O padrão é false em todos os clusters. Depois que a criptografia de software em repouso estiver ativada, ela não poderá ser desativada no cluster.
+ a| 
+booleano
+ a| 
+verdadeiro
+ a| 
+Não
+
+
+
+ a| 
+mvip
+ a| 
+Endereço IP flutuante (virtual) para o cluster na rede de gerenciamento.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+nós
+ a| 
+Endereços CIP/SIP do conjunto inicial de nós que compõem o cluster. O IP deste nó deve estar na lista.
+ a| 
+array de cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+Número da encomenda
+ a| 
+Número alfanumérico do pedido de vendas. Necessário em plataformas baseadas em software.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não (plataformas baseadas em hardware)
+
+Sim (plataformas baseadas em software)
+
+
+
+ a| 
+palavra-passe
+ a| 
+Senha inicial para a conta de administrador do cluster.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+SerialNumber
+ a| 
+Número de série alfanumérico de nove dígitos. Pode ser necessário em plataformas baseadas em software.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Não (plataformas baseadas em hardware)
+
+Sim (plataformas baseadas em software)
+
+
+
+ a| 
+svip
+ a| 
+Endereço IP flutuante (virtual) para o cluster na rede de armazenamento (iSCSI).
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+
+
+ a| 
+nome de utilizador
+ a| 
+Nome de usuário para o administrador do cluster.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valores de retorno
+
+Este método não tem valores de retorno.
+
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+  "method": "CreateCluster",
+  "params": {
+    "acceptEula": true,
+    "mvip": "10.0.3.1",
+    "svip": "10.0.4.1",
+    "username": "Admin1",
+    "password": "9R7ka4rEPa2uREtE",
+    "attributes": {
+      "clusteraccountnumber": "axdf323456"
+    },
+    "nodes": [
+      "10.0.2.1",
+      "10.0.2.2",
+      "10.0.2.3",
+      "10.0.2.4"
+    ]
+  },
+  "id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+"id" : 1,
+"result" : {}
+}
+----
+
+
+== Novo desde a versão
+
+9,6
+
+[discrete]
+== Encontre mais informações
+
+* link:reference_element_api_getbootstrapconfig.html["GetBootstrapConfig"]
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentação para versões anteriores dos produtos NetApp SolidFire e Element"^]
+

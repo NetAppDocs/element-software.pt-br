@@ -1,0 +1,26 @@
+---
+permalink: storage/task_data_protection_schedule_a_snapshot_task.html 
+sidebar: sidebar 
+keywords: snapshot, schedule, volume snapshots, group snapshots 
+summary: Você pode proteger os dados em um volume ou em um grupo de volumes agendando instantâneos de volume em intervalos especificados. Você pode agendar snapshots de volume único ou snapshots de grupo para serem executados automaticamente. 
+---
+= Agendar um instantâneo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode proteger os dados em um volume ou em um grupo de volumes agendando instantâneos de volume em intervalos especificados. Você pode agendar snapshots de volume único ou snapshots de grupo para serem executados automaticamente.
+
+Ao configurar uma programação de instantâneos, você pode escolher entre intervalos de tempo com base em dias da semana ou dias do mês. Você também pode especificar os dias, horas e minutos antes que o próximo snapshot ocorra. Você pode armazenar os snapshots resultantes em um sistema de storage remoto se o volume estiver sendo replicado.
+
+
+
+== Encontre mais informações
+
+* xref:task_data_protection_create_a_snapshot_schedule.adoc[Criar uma agenda de instantâneos]
+* xref:task_data_protection_edit_a_snapshot_schedule.adoc[Editar uma agenda de instantâneos]
+* xref:task_data_protection_delete_a_snapshot_schedule.adoc[Eliminar uma agenda de instantâneos]
+* xref:task_data_protection_copy_a_snapshot_schedule.adoc[Copiar uma agenda de instantâneos]
+

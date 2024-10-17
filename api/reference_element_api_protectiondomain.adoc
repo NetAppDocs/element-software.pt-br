@@ -1,0 +1,46 @@
+---
+permalink: api/reference_element_api_protectiondomain.html 
+sidebar: sidebar 
+keywords: object,objects,protection domains 
+summary: O objeto protectionDomain contém os detalhes de nome e tipo de um domínio de proteção. 
+---
+= ProtectionDomain
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto protectionDomain contém os detalhes de nome e tipo de um domínio de proteção.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+ProtectionDomainName
+ a| 
+O nome do domínio de proteção.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+Proteção DomainType
+ a| 
+O tipo de domínio de proteção. Valores possíveis:
+
+* Chassi: Todos os nós de storage em um único chassi.
+* Personalizado: Todos os nós de storage em um único domínio de proteção definido pelo cliente.
+
+ a| 
+cadeia de carateres
+
+|===

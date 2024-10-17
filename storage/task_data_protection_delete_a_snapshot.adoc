@@ -1,0 +1,26 @@
+---
+permalink: storage/task_data_protection_delete_a_snapshot.html 
+sidebar: sidebar 
+keywords: snapshot, delete, volume snapshot, storage cluster, remove snapshot 
+summary: Você pode excluir um snapshot de volume de um cluster de storage executando o software Element. Quando você exclui um instantâneo, o sistema o remove imediatamente. 
+---
+= Eliminar um instantâneo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode excluir um snapshot de volume de um cluster de storage executando o software Element. Quando você exclui um instantâneo, o sistema o remove imediatamente.
+
+Você pode excluir snapshots que estão sendo replicados do cluster de origem. Se um instantâneo estiver a sincronizar com o cluster de destino quando o eliminar, a replicação de sincronização é concluída e o instantâneo é eliminado do cluster de origem. O instantâneo não é eliminado do cluster de destino.
+
+Você também pode excluir snapshots que foram replicados para o destino do cluster de destino. O instantâneo excluído é mantido em uma lista de instantâneos excluídos no destino até que o sistema detete que você excluiu o instantâneo no cluster de origem. Quando o destino deteta que você excluiu o instantâneo de origem, o destino interrompe a replicação do instantâneo.
+
+Quando você exclui um snapshot do cluster de origem, o snapshot do cluster de destino não é afetado (o reverso também é verdadeiro).
+
+. Clique em *proteção de dados* > *instantâneos*.
+. Clique no ícone *ações* para o instantâneo que deseja excluir.
+. No menu resultante, selecione *Excluir*.
+. Confirme a ação.
+

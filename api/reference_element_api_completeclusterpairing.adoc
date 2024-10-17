@@ -1,0 +1,99 @@
+---
+permalink: api/reference_element_api_completeclusterpairing.html 
+sidebar: sidebar 
+keywords: CompleteClusterPairing,cluster,pair,pairing,complete,completing 
+summary: O método CompleteClusterPairing é a segunda etapa do processo de emparelhamento de cluster. Use este método com a chave codificada recebida do método StartClusterPairing para concluir o processo de emparelhamento de cluster. 
+---
+= CompleteClusterPairing
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O `CompleteClusterPairing` método é o segundo passo no processo de emparelhamento do cluster. Utilize este método com a chave codificada recebida do `StartClusterPairing` método para concluir o processo de emparelhamento do cluster.
+
+
+
+== Parâmetros
+
+Este método tem o seguinte parâmetro de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+Escolha o seu idioma
+ a| 
+Uma cadeia de carateres que é retornada do xref:reference_element_api_startclusterpairing.adoc[StartClusterPairing]método API.
+ a| 
+cadeia de carateres
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+
+
+| Nome | Descrição | Tipo 
+
+
+ a| 
+ClausterPairID
+ a| 
+Identificador exclusivo para o par de cluster.
+ a| 
+número inteiro
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "CompleteClusterPairing",
+   "params": {
+        "clusterPairingKey" : "7b22636c7573746572506169724944223a312c22636c75737465725061697255554944223a2231636561313336322d346338662d343631612d626537322d373435363661393533643266222c22636c7573746572556e697175654944223a2278736d36222c226d766970223a223139322e3136382e3133392e313232222c226e616d65223a224175746f54657374322d63307552222c2270617373776f7264223a22695e59686f20492d64774d7d4c67614b222c22727063436f6e6e656374696f6e4944223a3931333134323634392c22757365726e616d65223a225f5f53465f706169725f50597a796647704c7246564432444a42227d"
+   },
+   "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+   "id" : 1,
+   "result" : {
+       "clusterPairID" : 1
+   }
+}
+----
+
+
+== Novo desde a versão
+
+9,6
+
+
+
+== Encontre mais informações
+
+xref:reference_element_api_startclusterpairing.adoc[StartClusterPairing]

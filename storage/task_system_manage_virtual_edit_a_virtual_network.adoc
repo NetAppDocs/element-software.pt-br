@@ -1,0 +1,42 @@
+---
+permalink: storage/task_system_manage_virtual_edit_a_virtual_network.html 
+sidebar: sidebar 
+keywords: virtual network, edit, ip address block, vlan attributes 
+summary: Você pode alterar os atributos da VLAN, como nome da VLAN, máscara de rede e tamanho dos blocos de endereço IP. A tag VLAN e o SVIP não podem ser modificados para uma VLAN. O atributo gateway não é um parâmetro válido para VLANs não VRF. 
+---
+= Edite uma rede virtual
+:allow-uri-read: 
+:url-peak: https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_determine_which_VLAN_IP%27s_are_in_use_and_which_nodes_those_IP%27s_are_assigned_to_in_Element
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode alterar os atributos da VLAN, como nome da VLAN, máscara de rede e tamanho dos blocos de endereço IP. A tag VLAN e o SVIP não podem ser modificados para uma VLAN. O atributo gateway não é um parâmetro válido para VLANs não VRF.
+
+Se houver iSCSI, replicação remota ou outras sessões de rede, a modificação pode falhar.
+
+Ao gerenciar o tamanho dos intervalos de endereços IP da VLAN, você deve observar as seguintes limitações:
+
+* Você só pode remover endereços IP do intervalo de endereços IP inicial atribuído no momento em que a VLAN foi criada.
+* Você pode remover um bloco de endereço IP que foi adicionado após o intervalo de endereços IP inicial, mas não pode redimensionar um bloco IP removendo endereços IP.
+* Quando você tenta remover endereços IP, do intervalo de endereços IP inicial ou em um bloco IP, que estão em uso por nós no cluster, a operação pode falhar.
+* Não é possível reatribuir endereços IP específicos em uso a outros nós no cluster.
+
+
+Você pode adicionar um bloco de endereços IP usando o seguinte procedimento:
+
+. Selecione *Cluster* > *Network*.
+. Selecione o ícone ações para a VLAN que você deseja editar.
+. Selecione *Editar*.
+. Na caixa de diálogo *Edit VLAN* (Editar VLAN), insira os novos atributos da VLAN.
+. Selecione *Adicionar um bloco* para adicionar um bloco não contínuo de endereços IP para a rede virtual.
+. Selecione *Salvar alterações*.
+
+
+.Link para solução de problemas de artigos da KB
+Link para os artigos da base de dados de Conhecimento para obter ajuda com a solução de problemas com o gerenciamento de intervalos de endereços IP de VLAN.
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/Duplicate_IP_warning_after_adding_a_storage_node_in_VLAN_on_Element_cluster["Aviso de IP duplicado depois de adicionar um nó de armazenamento na VLAN no cluster do elemento"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_determine_which_VLAN_IP%27s_are_in_use_and_which_nodes_those_IP%27s_are_assigned_to_in_Element["Como determinar quais IP de VLAN estão em uso e quais nós esses IP são atribuídos no elemento"^]
+

@@ -1,0 +1,20 @@
+---
+permalink: storage/task_replication_delete_volume_pairs.html 
+sidebar: sidebar 
+keywords: volume pairs, delete 
+summary: Você pode excluir um par de volume se quiser remover uma associação de par entre dois volumes. 
+---
+= Eliminar pares de volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode excluir um par de volume se quiser remover uma associação de par entre dois volumes.
+
+. Selecione *proteção de dados* > *pares de volume*.
+. Clique no ícone ações do par de volumes que deseja excluir.
+. Clique em *Excluir*.
+. Confirme a mensagem.
+

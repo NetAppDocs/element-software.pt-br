@@ -1,0 +1,131 @@
+---
+permalink: api/reference_element_api_getaccountefficiency.html 
+sidebar: sidebar 
+keywords: accounts,account,efficiency,get,getting,GetAccountEfficiency 
+summary: Você pode usar GetAccountEfficiency para obter estatísticas de eficiência sobre uma conta de volume. Este método retorna informações de eficiência apenas para a conta que você dá como parâmetro. 
+---
+= GetAccountEfficiency
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar `GetAccountEfficiency` para obter estatísticas de eficiência sobre uma conta de volume. Este método retorna informações de eficiência apenas para a conta que você dá como parâmetro.
+
+
+
+== Parâmetros
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+ID Contabilística
+ a| 
+Especifica a conta de volume para a qual as estatísticas de eficiência são retornadas.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+compactação
+ a| 
+A quantidade de espaço economizada pela compressão de dados para todos os volumes na conta. Indicado como uma relação em que um valor de "1" significa que os dados foram armazenados sem compressão.
+ a| 
+flutuação
+
+
+
+ a| 
+deduplicação
+ a| 
+A quantidade de espaço economizada não duplicando dados para todos os volumes na conta. Indicado como uma relação.
+ a| 
+flutuação
+
+
+
+ a| 
+Volumes
+ a| 
+Os volumes que não puderam ser consultados para dados de eficiência. Volumes ausentes podem ser causados pelo ciclo de coleta de lixo (GC) com menos de uma hora de idade, perda temporária de conetividade de rede ou serviços reiniciados desde o ciclo GC.
+ a| 
+array inteiro
+
+
+
+ a| 
+Provisionamento excessivo
+ a| 
+A proporção de espaço utilizado com a quantidade de espaço alocado para armazenar dados. Indicado como uma relação.
+ a| 
+flutuação
+
+
+
+ a| 
+timestamp
+ a| 
+A última vez que os dados de eficiência foram coletados após coleta de lixo (GC), no formato UTC-0.
+ a| 
+String de data ISO 8601
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "GetAccountEfficiency",
+   "params": {
+     "accountID": 3
+   },
+   "id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+   "id": 1,
+   "result": {
+       "compression": 2.020468042933262,
+       "deduplication": 2.042488619119879,
+       "missingVolumes": [],
+       "thinProvisioning": 1.010087163391013,
+       "timestamp": "2014-03-10T14:06:02Z"
+   }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

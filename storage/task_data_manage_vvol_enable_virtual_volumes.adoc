@@ -1,0 +1,55 @@
+---
+permalink: storage/task_data_manage_vvol_enable_virtual_volumes.html 
+sidebar: sidebar 
+keywords: virtual volumes, enable, functionality on the cluster, vvols 
+summary: 'Você deve habilitar manualmente a funcionalidade vSphere Virtual volumes (vols) por meio do software NetApp Element. O sistema de software Element vem com a funcionalidade vols desativada por padrão e não é automaticamente ativada como parte de uma nova instalação ou atualização. Ativar o recurso Vols é uma tarefa de configuração única.' 
+---
+= Ativar volumes virtuais
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve habilitar manualmente a funcionalidade volumes virtuais do vSphere (vols) por meio do software NetApp Element. O sistema de software Element vem com a funcionalidade vols desativada por padrão e não é automaticamente ativada como parte de uma nova instalação ou atualização. Ativar o recurso Vols é uma tarefa de configuração única.
+
+.O que você vai precisar
+* O cluster deve estar executando o elemento 9,0 ou posterior.
+* O cluster deve estar conetado a um ambiente ESXi 6,0 ou posterior compatível com o Vols.
+* Se você estiver usando o elemento 11,3 ou posterior, o cluster deve estar conetado a um ambiente ESXi 6,0 atualização 3 ou posterior.
+
+
+
+IMPORTANT: A ativação da funcionalidade vSphere Virtual volumes altera permanentemente a configuração do software Element. Você só deve habilitar a funcionalidade vols se o cluster estiver conetado a um ambiente compatível com VMware ESXi Vols. Você pode desativar o recurso Vols e restaurar as configurações padrão somente retornando o cluster à imagem de fábrica, que exclui todos os dados do sistema.
+
+.Passos
+. Selecione *clusters* > *Configurações*.
+. Localize as configurações específicas do cluster para volumes virtuais.
+. Clique em *Ativar volumes virtuais*.
+. Clique em *Sim* para confirmar a alteração de configuração de volumes virtuais.
++
+A guia *Vols* aparece na IU do elemento.
+
++
+
+NOTE: Quando a funcionalidade do VVols está ativada, o cluster do SolidFire inicia o provedor VASA, abre a porta 8444 para tráfego VASA e cria pontos de extremidade de protocolo que podem ser descobertos pelo vCenter e por todos os hosts ESXi.
+
+. Copie o URL do provedor VASA a partir das configurações de volumes virtuais (VVols) em *clusters* > *Configurações*. Você usará este URL para Registrar o provedor VASA no vCenter.
+. Crie um contentor de armazenamento em *Vols* > *Storage Containers*.
++
+
+NOTE: Você precisa criar pelo menos um contêiner de storage para que as VMs possam ser provisionadas para um armazenamento de dados da VVol.
+
+. Selecione *Vols* > *Protocol Endpoints*.
+. Verifique se foi criado um ponto final de protocolo para cada nó no cluster.
++
+
+NOTE: Tarefas de configuração adicionais são necessárias no vSphere. Consulte o _Guia de configuração do VMware vSphere Virtual volumes for SolidFire Storage_ para Registrar o provedor VASA no vCenter, criar e gerenciar datastores VVol e gerenciar o storage com base em políticas.
+
+
+
+
+
+== Encontre mais informações
+
+https://www.netapp.com/pdf.html?item=/media/10516-tr4642pdf.pdf["Guia de configuração do VMware vSphere Virtual volumes for SolidFire Storage"^]

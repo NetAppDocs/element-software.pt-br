@@ -1,0 +1,119 @@
+---
+permalink: api/reference_element_api_account.html 
+sidebar: sidebar 
+keywords: account,object,accounts 
+summary: 'O objeto conta contém informações sobre uma conta. Este objeto inclui apenas informações "configuradas" sobre a conta, não qualquer informação de tempo de execução ou uso.' 
+---
+= conta
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O `account` objeto contém informações sobre uma conta. Este objeto inclui apenas informações "configuradas" sobre a conta, não qualquer informação de tempo de execução ou uso.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+`accountID`
+ a| 
+O ID exclusivo da conta.
+ a| 
+número inteiro
+
+
+
+ a| 
+`attributes`
+ a| 
+Lista de pares nome-valor no formato de objeto JSON.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+`enableChap`
+ a| 
+Especifica se as credenciais da conta CHAP podem ser usadas por um iniciador para acessar volumes.
+ a| 
+booleano
+
+
+
+ a| 
+`initiatorSecret`
+ a| 
+O segredo do iniciador CHAP.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+`status`
+ a| 
+O status atual da conta. Valores possíveis:
+
+* Ativo: Uma conta ativa.
+* Bloqueado: Uma conta bloqueada.
+* Removido: Uma conta que foi excluída e eliminada.
+
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+`storageContainerID`
+ a| 
+O ID exclusivo do contentor de armazenamento de volume virtual associado a essa conta.
+ a| 
+UUID
+
+
+
+ a| 
+`targetSecret`
+ a| 
+O segredo CHAP alvo.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+`username`
+ a| 
+O nome de usuário da conta.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+`volumes`
+ a| 
+Uma lista de IDs de volume para volumes pertencentes a essa conta.
+ a| 
+array inteiro
+
+|===
+
+
+== Encontre mais informações
+
+* xref:reference_element_api_addaccount.adoc[Contagem de endereços]
+* xref:reference_element_api_getaccountbyid.adoc[GetAccountByID]
+* xref:reference_element_api_getaccountbyname.adoc[GetAccountByName]
+* xref:reference_element_api_listaccounts.adoc[Contagens de listas]
+

@@ -1,0 +1,14 @@
+---
+permalink: setup/task_setup_set_up_an_element_storage_system.html 
+sidebar: sidebar 
+keywords:  
+summary: A configuração de um sistema de armazenamento de software NetApp Element envolve a configuração de um nó de armazenamento, a criação de um cluster de armazenamento e a adição de unidades ao cluster. Se você usar uma rede Fibre Channel, poderá configurar um nó Fibre Channel. 
+---
+= Configure um sistema de storage Element
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A configuração de um sistema de armazenamento de software NetApp Element envolve a configuração de um nó de armazenamento, a criação de um cluster de armazenamento e a adição de unidades ao cluster. Se você usar uma rede Fibre Channel, poderá configurar um nó Fibre Channel.

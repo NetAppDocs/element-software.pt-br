@@ -1,0 +1,36 @@
+---
+permalink: api/concept_element_api_replication_api_methods.html 
+sidebar: sidebar 
+keywords: replication,api,methods 
+summary: 'Os métodos de API de replicação permitem conetar dois clusters para proteção contínua de dados (CDP). Quando você conecta dois clusters, os volumes ativos em um cluster podem ser replicados continuamente para um segundo cluster a fim de fornecer recuperação de dados. Ao emparelhar volumes para replicação, você pode proteger seus dados de eventos que podem torná-los inacessíveis.' 
+---
+= Métodos de API de replicação
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os métodos de API de replicação permitem conectar dois clusters para proteção contínua de dados (CDP). Quando você conecta dois clusters, os volumes ativos em um cluster podem ser replicados continuamente para um segundo cluster a fim de fornecer recuperação de dados. Ao emparelhar volumes para replicação, você pode proteger seus dados de eventos que podem torná-los inacessíveis.
+
+* xref:reference_element_api_cluster_pairing_order_of_operations.adoc[Ordem de operações de emparelhamento por cluster]
+* xref:reference_element_api_volume_pairing_order_of_operations.adoc[Ordem de operações de emparelhamento de volume]
+* xref:reference_element_api_supported_modes_of_replication.adoc[Modos de replicação compatíveis para clusters emparelhados]
+* xref:reference_element_api_completeclusterpairing.adoc[CompleteClusterPairing]
+* xref:reference_element_api_completevolumepairing.adoc[CompleteVolumePairing]
+* xref:reference_element_api_listclusterpairs.adoc[ListClusterPairs]
+* xref:reference_element_api_listactivepairedvolumes.adoc[ListActivePairedVolumes]
+* xref:reference_element_api_modifyvolumepair.adoc[ModifyVolumePair]
+* xref:reference_element_api_removeclusterpair.adoc[RemoveClusterPair]
+* xref:reference_element_api_removevolumepair.adoc[RemoveVolumePair]
+* xref:reference_element_api_startclusterpairing.adoc[StartClusterPairing]
+* xref:reference_element_api_startvolumepairing.adoc[StartVolumePairing]
+
+
+
+
+== Encontre mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentação para versões anteriores dos produtos NetApp SolidFire e Element"^]
+

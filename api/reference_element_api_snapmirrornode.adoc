@@ -1,0 +1,95 @@
+---
+permalink: api/reference_element_api_snapmirrornode.html 
+sidebar: sidebar 
+keywords: object,objects,snapMirrorNode 
+summary: O objeto SnapMirrorNode contém informações sobre os nós do cluster ONTAP de destino em uma relação SnapMirror. 
+---
+= SnapMirrorNode
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto SnapMirrorNode contém informações sobre os nós do cluster ONTAP de destino em uma relação SnapMirror.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+A ID do sistema ONTAP de destino.
+ a| 
+número inteiro
+
+
+
+ a| 
+nome
+ a| 
+O nome do nó ONTAP.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+modelo
+ a| 
+O modelo do nó ONTAP.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+SerialNumber
+ a| 
+O número de série do nó ONTAP.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+Versão do produto
+ a| 
+A versão do produto ONTAP.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+IsNodeHealthy
+ a| 
+Integridade de um nó no cluster do ONTAP. Valores possíveis:
+
+* verdadeiro
+* falso
+
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+IsNodeEligable
+ a| 
+Se o nó está ou não qualificado para participar de um cluster do ONTAP. Valores possíveis:
+
+* verdadeiro
+* falso
+
+ a| 
+cadeia de carateres
+
+|===

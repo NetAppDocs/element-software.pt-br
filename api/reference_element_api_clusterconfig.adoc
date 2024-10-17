@@ -1,0 +1,150 @@
+---
+permalink: api/reference_element_api_clusterconfig.html 
+sidebar: sidebar 
+keywords: objects,object,clusterConfig 
+summary: O objeto clusterConfig retorna informações que o nó usa para se comunicar com o cluster. 
+---
+= ClusterConfig
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O `clusterConfig` objeto retorna informações que o nó usa para se comunicar com o cluster.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+`cipi`
+ a| 
+Interface de rede usada para comunicação de cluster.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+`cluster`
+ a| 
+Nome exclusivo do cluster.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+`encryptionCapable`
+ a| 
+Especifica se o nó suporta criptografia.
+ a| 
+booleano
+
+
+
+ a| 
+`ensemble`
+ a| 
+Nós que estão participando do cluster.
+ a| 
+array de cadeia de carateres
+
+
+
+ a| 
+`fipsDriveConfiguration`
+ a| 
+Especifica se o nó é compatível com unidades com certificação FIPS 140-2.
+ a| 
+booleano
+
+
+
+ a| 
+`hasLocalAdmin`
+ a| 
+Especifica se o cluster tem um administrador local.
+ a| 
+booleano
+
+
+
+ a| 
+`mipi`
+ a| 
+Interface de rede usada para gerenciamento de nós.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+`name`
+ a| 
+Identificador exclusivo para o cluster.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+`nodeID`
+ a| 
+Identificador exclusivo para o nó.
+ a| 
+número inteiro
+
+
+
+ a| 
+`pendingNodeID`
+ a| 
+Identificador exclusivo para o nó pendente.
+ a| 
+número inteiro
+
+
+
+ a| 
+`role`
+ a| 
+Identifica a função do nó.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+`sipi`
+ a| 
+Interface de rede usada para armazenamento.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+`state`
+ a| 
+Indica o estado do nó.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+`version`
+ a| 
+Indica a versão do nó.
+ a| 
+cadeia de carateres
+
+|===

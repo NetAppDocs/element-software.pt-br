@@ -1,0 +1,51 @@
+---
+permalink: api/reference_element_api_protectiondomainresiliency.html 
+sidebar: sidebar 
+keywords: object,objects,protectionDomainResiliency 
+summary: 'O objeto protectionDomainResiliency contém o status de resiliência deste cluster de armazenamento. Resiliência indica a capacidade do cluster de storage de se curar automaticamente de uma ou mais falhas, tudo em um único domínio de proteção de seu tipo de domínio de proteção associado. Um cluster de armazenamento é considerado curado quando ele pode continuar lendo e gravando dados por meio da falha de qualquer nó de armazenamento único (um estado conhecido como tolerância do nó).' 
+---
+= Proteção DomainResiliency
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto protectionDomainResiliency contém o status de resiliência deste cluster de armazenamento. Resiliência indica a capacidade do cluster de storage de se curar automaticamente de uma ou mais falhas, tudo em um único domínio de proteção de seu tipo de domínio de proteção associado. Um cluster de storage é considerado curado quando pode continuar lendo e gravando dados por meio da falha de qualquer nó de storage único (um estado conhecido como tolerância do nó).
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+ProtecçãoSchemeResiliencies
+ a| 
+Uma lista de objetos (um para cada esquema de proteção) contendo informações de resiliência de falhas para o tipo de domínio de proteção associado.
+ a| 
+xref:reference_element_api_protectionschemeresiliency.adoc[Proteção SchemeResiliency] array
+
+
+
+ a| 
+SingleFailureThresholdBytesForBlockData
+ a| 
+O número máximo de bytes que podem ser armazenados no cluster de storage antes de perder a capacidade de recuperar automaticamente um estado de tolerância do nó.
+ a| 
+número inteiro
+
+
+
+ a| 
+SustentávelFailuresForEnsemble
+ a| 
+O número previsto de falhas simultâneas que podem ocorrer sem perder a capacidade de curar automaticamente para um estado de tolerância de nó para o quórum de ensemble.
+ a| 
+número inteiro
+
+|===

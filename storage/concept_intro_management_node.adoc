@@ -1,0 +1,19 @@
+---
+permalink: storage/concept_intro_management_node.html 
+sidebar: sidebar 
+keywords: what is the management node, what is the mNode 
+summary: 'O nó de gerenciamento (mNode) é uma máquina virtual que é executada em paralelo com um ou mais clusters de armazenamento baseados em software Element. Ele é usado para atualizar e fornecer serviços de sistema, incluindo monitoramento e telemetria, gerenciar ativos e configurações de cluster, executar testes e utilitários do sistema e habilitar o acesso ao suporte NetApp para solução de problemas.' 
+---
+= Nó de gerenciamento do software Element
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O nó de gerenciamento (mNode) é uma máquina virtual que é executada em paralelo com um ou mais clusters de storage baseados em software Element. Ele é usado para atualizar e fornecer serviços de sistema, incluindo monitoramento e telemetria, gerenciar ativos e configurações de cluster, executar testes e utilitários do sistema e habilitar o acesso ao suporte NetApp para solução de problemas.
+
+A partir da versão do Element 11,3, o nó de gerenciamento funciona como um host microservice, permitindo atualizações mais rápidas de serviços de software selecionados fora das principais versões. Esses microsserviços ou serviços de gerenciamento, como o coletor Active IQ, o QoSSIOC para o plug-in do vCenter e o serviço mNode, são atualizados frequentemente como pacotes de serviços. Serviços adicionais para atualizações de software de nó de storage e ferramentas de suporte (encapsulamento de suporte remoto) também estão disponíveis no nó de gerenciamento.
+
+
+NOTE: Como prática recomendada, associe apenas um nó de gerenciamento a uma instância do VMware vCenter e evite definir os mesmos recursos de storage e computação ou instâncias do vCenter em vários nós de gerenciamento.

@@ -1,0 +1,43 @@
+---
+permalink: setup/task_setup_fc_add_fibre_channel_nodes_to_a_cluster.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode adicionar nós Fibre Channel a um cluster quando for necessário mais storage ou durante a criação do cluster. Os nós de Fibre Channel exigem configuração inicial quando são ativados pela primeira vez. Depois que o nó é configurado, ele aparece na lista de nós pendentes e você pode adicioná-lo a um cluster. 
+---
+= Adicionar nós Fibre Channel a um cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode adicionar nós Fibre Channel a um cluster quando for necessário mais storage ou durante a criação do cluster. Os nós de Fibre Channel exigem configuração inicial quando são ativados pela primeira vez. Depois que o nó é configurado, ele aparece na lista de nós pendentes e você pode adicioná-lo a um cluster.
+
+A versão do software em cada nó Fibre Channel em um cluster deve ser compatível. Quando você adiciona um nó Fibre Channel a um cluster, o cluster instala a versão do cluster do Element no novo nó, conforme necessário.
+
+.Passos
+. Selecione *Cluster* > *nodes*.
+. Clique em *pendente* para ver a lista de nós pendentes.
+. Execute um dos seguintes procedimentos:
++
+** Para adicionar nós individuais, clique no ícone *ações* para o nó que você deseja adicionar.
+** Para adicionar vários nós, marque a caixa de seleção dos nós a serem adicionados e, em seguida, *ações em massa*.
++
+
+NOTE: Se o nó que você está adicionando tiver uma versão diferente do Element que a versão em execução no cluster, o cluster atualiza assincronamente o nó para a versão do elemento em execução no master do cluster. Depois que o nó é atualizado, ele se adiciona automaticamente ao cluster. Durante esse processo assíncrono, o nó estará em um estado pendingActive.
+
+
+
+. Clique em *Add*.
++
+O nó aparece na lista de nós ativos.
+
+
+
+
+
+== Encontre mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in do NetApp Element para vCenter Server"^]
+

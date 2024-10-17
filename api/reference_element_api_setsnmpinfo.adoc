@@ -1,0 +1,154 @@
+---
+permalink: api/reference_element_api_setsnmpinfo.html 
+sidebar: sidebar 
+keywords: snmp,info,setting,set,setsnmpinfo 
+summary: Você pode usar o método SetSnmpInfo para configurar o SNMP versão 2 e versão 3 em nós de cluster. Os valores definidos com esta interface aplicam-se a todos os nós do cluster e os valores passados substituem todos os valores definidos em qualquer chamada anterior para SetSnmpInfo. 
+---
+= SetSnmpInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `SetSnmpInfo` método para configurar o SNMP versão 2 e versão 3 em nós de cluster. Os valores definidos com esta interface aplicam-se a todos os nós do cluster e os valores passados substituem todos os valores definidos em qualquer chamada anterior ao `SetSnmpInfo`.
+
+
+
+== Parâmetros
+
+
+NOTE: SetSnmpInfo está obsoleto para as versões 6,0 e posteriores do Element. Em vez disso, use os xref:reference_element_api_enablesnmp.adoc[EnableSnmp]métodos e.xref:reference_element_api_setsnmpacl.adoc[SetSnmpACL]
+
+Este método tem os seguintes parâmetros de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+redes
+ a| 
+Lista de redes e que tipo de acesso têm aos servidores SNMP em execução nos nós de cluster. Consulte o objeto SNMP xref:reference_element_api_network_snmp.adoc[rede]para obter possíveis valores. Este parâmetro é necessário apenas para SNMP v2.
+ a| 
+xref:reference_element_api_network_snmp.adoc[rede] array
+ a| 
+Nenhum
+ a| 
+Não
+
+
+
+ a| 
+ativado
+ a| 
+Se definido como verdadeiro, o SNMP é ativado em cada nó do cluster.
+ a| 
+booleano
+ a| 
+falso
+ a| 
+Não
+
+
+
+ a| 
+snmpV3Enabled
+ a| 
+Se definido como verdadeiro, o SNMP v3 é ativado em cada nó no cluster.
+ a| 
+booleano
+ a| 
+falso
+ a| 
+Não
+
+
+
+ a| 
+UsmUsers
+ a| 
+Se o SNMP v3 estiver ativado, este valor deve ser passado no lugar do parâmetro de redes. Este parâmetro é necessário apenas para SNMP v3.
+ a| 
+xref:reference_element_api_usmuser.adoc[UsmUser]
+ a| 
+Nenhum
+ a| 
+Não
+
+|===
+
+
+== Valores de retorno
+
+Este método não tem valores de retorno.
+
+
+
+== Exemplo de solicitação com SNMP v3 ativado
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+"method":"SetSnmpInfo",
+"params":{
+    "enabled":true,
+    "snmpV3Enabled":true,
+    "usmUsers":[
+      {
+        "name":"user1",
+        "access":"rouser",
+        "secLevel":"auth",
+        "password":"namex1",
+        "passphrase":"yourpassphrase"
+      }
+    ]
+  },
+ "id":1
+}
+----
+
+
+== Exemplo de solicitação com SNMP v2 ativado
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+"method":"SetSnmpInfo",
+"params":{
+    "enabled":true,
+    "snmpV3Enabled":false,
+    "networks":[
+      {
+        "community":"public",
+        "access":"ro",
+        "network":"localhost",
+      }
+    ]
+  },
+  "id":1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id" : 1
+  "result" :{
+  }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

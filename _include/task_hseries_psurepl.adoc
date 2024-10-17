@@ -1,0 +1,107 @@
+= Encontre mais informações
+:allow-uri-read: 
+
+
+Cada chassi inclui duas unidades de fonte de alimentação para redundância de energia. Se uma unidade de fonte de alimentação estiver avariada, deve substituí-la o mais rapidamente possível para garantir que o chassis tem uma fonte de alimentação redundante.
+
+.O que você vai precisar
+* Determinou que a unidade da fonte de alimentação está avariada.
+* Tem uma fonte de alimentação de substituição.
+* Verificou-se que a segunda unidade de fonte de alimentação está a funcionar.
+* Você tem uma pulseira de descarga eletrostática (ESD) ou tomou outras precauções antiestáticas.
+
+
+.Sobre esta tarefa
+O procedimento de substituição aplica-se aos seguintes modelos de nós:
+
+* Duas unidades de rack (2UU), chassi NetApp HCI de quatro nós
+* Uma unidade de rack (1UU) H610SU chassis de armazenamento
++
+
+NOTE: No caso do H610S, os termos "nó" e "chassi" são usados alternadamente porque nó e chassi não são componentes separados, ao contrário do 2U, chassi de quatro nós.
+
+
+
+Os alarmes na IU do Element fornecem informações sobre a unidade de fonte de alimentação com falha, referindo-se a ela como PS1 ou PS2. Em um chassi de quatro nós NetApp HCI 2U, PS1 refere-se à unidade na linha superior do chassi e PS2 refere-se à unidade na linha inferior do chassi. Pode substituir a unidade de fonte de alimentação avariada enquanto o chassis estiver ligado e a funcionar, desde que a unidade de fonte de alimentação redundante esteja a funcionar.
+
+
+NOTE: Se você estiver substituindo ambas as PSUs em um nó, as PSUs devem ter o mesmo número de peça e potência. PSUs incompatíveis podem danificar o sistema.
+
+.Passos
+. Localize a unidade de fonte de alimentação avariada no chassis. O LED na unidade avariada apresenta a cor âmbar.
++
+
+NOTE: As unidades de fonte de alimentação estão localizadas de forma diferente com base no tipo de chassi.
+
++
+Consulte as imagens abaixo para obter as localizações das unidades de alimentação:
+
++
+[cols="2*"]
+|===
+| Modelo | Localização das unidades da fonte de alimentação 
+
+
+| 2U, chassi de storage NetApp HCI de quatro nós  a| 
+image::storage_chassis_psu.png[Mostra as unidades de fonte de alimentação em um 2U]
+
+
+NOTE: Os nós no seu chassi podem parecer diferentes dependendo do tipo de nós (storage ou computação) que você tem.
+
+
+
+| Chassi de H610S U.  a| 
+image::h610s_psu.png[Mostra as unidades de fonte de alimentação em um chassi de H610SU.]
+
+|===
+. Identifique o nó correto usando a etiqueta azul de saída ou o número de série. A etiqueta azul pull-out lista o número de série (S/N) e o layout da unidade. Confirme o número de série do nó a ser reparado.
++
+** Se estiver a substituir ambas as unidades de fonte de alimentação, avance para o passo 3.
+** Se estiver a substituir apenas uma fonte de alimentação, avance para o passo 4.
+
+
+. Confirme se o nó foi desligado ou está pronto para ser desligado para serviço. Observe o seguinte:
++
+** Um nó que foi desligado não exibe nenhum LED azul de alimentação nas unidades ou no botão liga/desliga.
+** Um nó que ainda não foi desligado exibe LEDs azuis nas unidades e no botão liga/desliga.
+** Um nó que foi desligado e está pronto para serviço exibe um LED da PSU piscando que pisca (verde) e desligado (sem cor).
+** Um nó que ainda não foi desligado exibe LEDs verdes sólidos nas fontes de alimentação.
+
+
+. Desconete o cabo de alimentação da unidade da fonte de alimentação ou dos dois cabos de alimentação, se substituir ambas as unidades.
+. Levante o manípulo do excêntrico e prima o trinco azul para deslizar para fora a unidade da fonte de alimentação.
++
+image::psu-remove.gif[Mostra o manípulo do came a ser levantado e a unidade de alimentação a ser deslizada para fora do chassis.]
+
++
+
+NOTE: A ilustração é um exemplo. A(s) localização(ões) da(s) unidade(s) de alimentação no chassis e a cor do botão de libertação variam consoante o tipo de chassis que tem.
+
++
+
+IMPORTANT: Certifique-se de que utiliza ambas as mãos para suportar o peso da fonte de alimentação.
+
++
+Repita as etapas 3, 4 e 5 se substituir uma segunda unidade de fonte de alimentação.
+
+. Localize a etiqueta na unidade da fonte de alimentação que removeu do chassis. A etiqueta contém detalhes do fabricante e potência de saída.
++
+
+NOTE: Não substitua a fonte de alimentação se a potência da fonte de alimentação da RMA não corresponder à potência da fonte de alimentação removida. Entre em Contato com o suporte da NetApp para as próximas etapas.
+
+. Utilizando ambas as mãos, alinhe as extremidades da unidade de alimentação com a abertura no chassis, empurre cuidadosamente a unidade para dentro do chassis utilizando a pega do excêntrico até encaixar no devido lugar e volte a colocar a pega do excêntrico na posição vertical.
++
+image::psu-install.gif[Mostra a unidade de fonte de alimentação que está sendo instalada no chassi.]
+
+. Conete um ou ambos os cabos de alimentação.
+. Se você substituiu ambas as unidades de fonte de alimentação, vá para a frente do nó e pressione o botão liga/desliga para ligar os nós. Depois de ligar, o LED do botão de alimentação acende uma cor azul sólida. Os LEDs azuis das unidades e o botão de identificação começam a piscar.
+. Devolva a unidade avariada à NetApp seguindo as instruções na caixa que lhe foi enviada.
+
+
+
+
+== Encontre mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentação para versões anteriores dos produtos NetApp SolidFire e Element"^]
+

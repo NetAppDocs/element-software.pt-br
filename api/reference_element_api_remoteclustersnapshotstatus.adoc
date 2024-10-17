@@ -1,0 +1,48 @@
+---
+permalink: api/reference_element_api_remoteclustersnapshotstatus.html 
+sidebar: sidebar 
+keywords: object,objects,remoteClusterSnapshotStatus 
+summary: O objeto remoteClusterSnapshotStatus contém o UUID e o status de um snapshot armazenado em um cluster de armazenamento remoto. Você pode obter essas informações com os métodos ListSnapshots ou ListGroupSnapshots API. 
+---
+= RemoteClusterSnapshotStatus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O `remoteClusterSnapshotStatus` objeto contém o UUID e o status de um snapshot armazenado em um cluster de armazenamento remoto. Você pode obter essas informações com os `ListSnapshots` métodos ou `ListGroupSnapshots` API.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+RemoteStatus
+ a| 
+O status da replicação do snapshot remoto no cluster de destino, como visto do cluster de origem. Valores possíveis:
+
+* Presente: O instantâneo existe num cluster remoto.
+* Notpresent: O instantâneo não existe em um cluster remoto.
+* Sincronização: Este é um cluster de destino e está atualmente replicando o snapshot.
+* Excluído: Este é um cluster de destino. O instantâneo foi excluído e ainda existe na origem.
+
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+VolumePairUID
+ a| 
+O identificador universal do par de volumes.
+ a| 
+UUID
+
+|===

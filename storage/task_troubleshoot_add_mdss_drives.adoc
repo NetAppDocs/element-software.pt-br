@@ -1,0 +1,24 @@
+---
+permalink: storage/task_troubleshoot_add_mdss_drives.html 
+sidebar: sidebar 
+keywords: mdss, add, multi-drive slice service 
+summary: 'Você pode adicionar uma segunda unidade de metadados em um nó SolidFire convertendo a unidade de bloco no slot 2 em uma unidade de fatia. Isto é conseguido ativando a funcionalidade de serviço de corte multi-drive (MDSS). Para ativar esse recurso, entre em Contato com o suporte da NetApp.' 
+---
+= Adicione unidades MDSS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode adicionar uma segunda unidade de metadados em um nó SolidFire convertendo a unidade de bloco no slot 2 em uma unidade de fatia. Isto é conseguido ativando a funcionalidade de serviço de corte multi-unidades (MDSS). Para ativar esse recurso, entre em Contato com o suporte da NetApp.
+
+Obter uma unidade de corte em um estado disponível pode exigir a substituição de uma unidade com falha por uma unidade nova ou sobressalente. Tem de adicionar a unidade de corte do sistema ao mesmo tempo que adiciona a unidade para o slot 2. Se tentar adicionar a unidade de corte slot 2 sozinha ou antes de adicionar a unidade de corte do sistema, o sistema irá gerar um erro.
+
+. Clique em *Cluster* > *Drives*.
+. Clique em *Available* para ver a lista de unidades disponíveis.
+. Selecione as unidades de corte a adicionar.
+. Clique em *ações em massa*.
+. Clique em *Add*.
+. Confirme na guia *unidades ativas* que as unidades foram adicionadas.
+

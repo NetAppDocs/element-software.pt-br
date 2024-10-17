@@ -1,0 +1,155 @@
+---
+permalink: api/reference_element_api_virtualvolume.html 
+sidebar: sidebar 
+keywords: object,objects,virtualVolume 
+summary: O objeto virtualvolume contém informações de configuração sobre um volume virtual, bem como informações sobre instantâneos do volume virtual. Ele não inclui informações de tempo de execução ou uso. Você pode usar o método ListVirtualVolumes para recuperar essas informações para um cluster. 
+---
+= Virtualvolume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto virtualvolume contém informações de configuração sobre um volume virtual, bem como informações sobre instantâneos do volume virtual. Ele não inclui informações de tempo de execução ou uso. Você pode usar o `ListVirtualVolumes` método para recuperar essas informações para um cluster.
+
+
+
+== Membros do objeto
+
+Este objeto contém os seguintes membros:
+
+|===
+| Nome | Descrição | Tipo 
+
+
+ a| 
+ligações
+ a| 
+Uma lista de IDs de vinculação para esse volume virtual.
+ a| 
+Array UUUID
+
+
+
+ a| 
+crianças
+ a| 
+Uma lista de UUIDs de volume virtual que são filhos deste volume virtual.
+ a| 
+Array UUUID
+
+
+
+ a| 
+descendentes
+ a| 
+Quando você passa recursivo: Verdadeiro para o método ListVirtualVolumes, contém uma lista de UUUIDs de volume virtual que são descendentes deste volume virtual.
+ a| 
+Array UUUID
+
+
+
+ a| 
+metadados
+ a| 
+Pares de valor-chave dos metadados do volume virtual, como tipo de volume virtual, tipo de SO convidado e assim por diante.
+ a| 
+Objeto JSON
+
+
+
+ a| 
+ParentVirtualVolumeID
+ a| 
+O ID de volume virtual do volume virtual pai. Se o ID for todos zeros, este é um volume virtual independente sem ligação a um pai.
+ a| 
+UUID
+
+
+
+ a| 
+SnapshotID
+ a| 
+A ID do instantâneo do volume subjacente. Este valor é "0" se o volume virtual não representar um instantâneo.
+ a| 
+número inteiro
+
+
+
+ a| 
+SnapshotInfo
+ a| 
+O objeto snapshot para o snapshot associado (null se nonixestent).
+ a| 
+xref:reference_element_api_snapshot.adoc[snapshot]
+
+
+
+ a| 
+estado
+ a| 
+Estado atual do volume virtual. Valores possíveis:
+
+* Clonagem: O volume virtual está sendo processado em resposta a uma operação de clone ou snapshot.
+* Em espera: O volume virtual está aguardando a conclusão de uma operação de snapshot.
+* Pronto: O volume virtual está pronto para uso geral.
+
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+StorageContainer
+ a| 
+Um objeto que descreve o contêiner de storage que possui esse volume virtual.
+ a| 
+xref:reference_element_api_storagecontainer.adoc[StorageContainer]
+
+
+
+ a| 
+VirtualVolumeID
+ a| 
+O ID exclusivo do volume virtual.
+ a| 
+UUID
+
+
+
+ a| 
+VirtualVolumeType
+ a| 
+O tipo do volume virtual.
+ a| 
+cadeia de carateres
+
+
+
+ a| 
+VolumeID
+ a| 
+O ID do volume subjacente.
+ a| 
+número inteiro
+
+
+
+ a| 
+VolumeInfo
+ a| 
+Quando você passa detalhes: Verdadeiro para o método ListVirtualVolumes, este membro é um objeto descrevendo o volume.
+ a| 
+xref:reference_element_api_volume.adoc[volume]
+
+|===
+
+
+== Encontre mais informações
+
+* xref:reference_element_api_listvirtualvolumes.adoc[ListVirtualVolumes]
+* xref:reference_element_api_snapshot.adoc[snapshot]
+* xref:reference_element_api_storagecontainer.adoc[StorageContainer]
+* xref:reference_element_api_volume.adoc[volume]
+

@@ -1,0 +1,21 @@
+---
+permalink: storage/concept_intro_persistent_volumes.html 
+sidebar: sidebar 
+keywords: persistent volumes, what are persistent volumes 
+summary: Os volumes persistentes permitem que os dados de configuração do nó de gerenciamento sejam armazenados em um cluster de storage especificado, em vez de localmente com uma VM, para que os dados possam ser preservados em caso de perda ou remoção do nó de gerenciamento. Volumes persistentes são uma configuração de nó de gerenciamento opcional, mas recomendada. 
+---
+= Volumes persistentes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os volumes persistentes permitem que os dados de configuração do nó de gerenciamento sejam armazenados em um cluster de storage especificado, em vez de localmente com uma VM, para que os dados possam ser preservados em caso de perda ou remoção do nó de gerenciamento. Volumes persistentes são uma configuração de nó de gerenciamento opcional, mas recomendada.
+
+Uma opção para ativar volumes persistentes está incluída nos scripts de instalação e atualização ao implantar um novo nó de gerenciamento. Os volumes persistentes são volumes em um cluster de storage baseado em software Element que contém informações de configuração de nó de gerenciamento para a VM do nó de gerenciamento de host que permanecem além da vida útil da VM. Se o nó de gerenciamento for perdido, uma VM de nó de gerenciamento de substituição poderá se reconetar e recuperar dados de configuração da VM perdida.
+
+A funcionalidade de volumes persistentes, se ativada durante a instalação ou atualização, cria automaticamente vários volumes com o NetApp-HCI- previamente anexado ao nome no cluster atribuído. Esses volumes, como qualquer volume baseado no software Element, podem ser visualizados usando a interface da Web do software Element, o plug-in do NetApp Element para vCenter Server ou a API, dependendo de sua preferência e instalação. Os volumes persistentes devem estar ativos e em execução com uma conexão iSCSI ao nó de gerenciamento para manter os dados de configuração atuais que podem ser usados para recuperação.
+
+
+IMPORTANT: Volumes persistentes associados a serviços de gerenciamento são criados e atribuídos a uma nova conta durante a instalação ou atualização. Se você estiver usando volumes persistentes, não modifique ou exclua os volumes ou a conta associada.

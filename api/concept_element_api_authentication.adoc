@@ -1,0 +1,24 @@
+---
+permalink: api/concept_element_api_authentication.html 
+sidebar: sidebar 
+keywords: API,authentication,auth,SolidFire 
+summary: Você pode autenticar com o sistema ao usar a API, incluindo um cabeçalho de autenticação HTTP Basic com todas as solicitações de API. Se você omitir informações de autenticação, o sistema rejeita a solicitação não autenticada com uma resposta HTTP 401. O sistema suporta autenticação HTTP Basic através de TLS. 
+---
+= Autenticação API
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode autenticar com o sistema ao usar a API, incluindo um cabeçalho de autenticação HTTP Basic com todas as solicitações de API. Se você omitir informações de autenticação, o sistema rejeita a solicitação não autenticada com uma resposta HTTP 401. O sistema suporta autenticação HTTP Basic através de TLS.
+
+Use a conta de administrador do cluster para autenticação de API.
+
+
+
+== Encontre mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentação para versões anteriores dos produtos NetApp SolidFire e Element"^]
+

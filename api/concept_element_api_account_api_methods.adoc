@@ -1,0 +1,31 @@
+---
+permalink: api/concept_element_api_account_api_methods.html 
+sidebar: sidebar 
+keywords: account,method,methods,API,managing,manage 
+summary: Os métodos de conta permitem adicionar, remover, exibir e modificar informações de conta e segurança. 
+---
+= Métodos de API de conta
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os métodos de conta permitem adicionar, remover, exibir e modificar informações de conta e segurança.
+
+* xref:reference_element_api_addaccount.adoc[Contagem de endereços]
+* xref:reference_element_api_getaccountbyid.adoc[GetAccountByID]
+* xref:reference_element_api_getaccountbyname.adoc[GetAccountByName]
+* xref:reference_element_api_getaccountefficiency.adoc[GetAccountEfficiency]
+* xref:reference_element_api_listaccounts.adoc[Contagens de listas]
+* xref:reference_element_api_modifyaccount.adoc[ModifyAccount]
+* xref:reference_element_api_removeaccount.adoc[Contagem remota]
+
+
+
+
+== Encontre mais informações
+
+* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentação para versões anteriores dos produtos NetApp SolidFire e Element"^]
+

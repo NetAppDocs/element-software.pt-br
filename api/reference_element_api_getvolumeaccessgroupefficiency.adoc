@@ -1,0 +1,133 @@
+---
+permalink: api/reference_element_api_getvolumeaccessgroupefficiency.html 
+sidebar: sidebar 
+keywords: volume,volumes,get,getting,access,group,efficiency,GetVolumeAccessGroupEfficiency 
+summary: Você pode usar o método GetVolumeAccessGroupEfficiency para obter informações de eficiência sobre um grupo de acesso de volume. Somente o grupo de acesso de volume fornecido como parâmetro neste método API é usado para calcular a capacidade. 
+---
+= GetVolumeAccessGroupEfficiência
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o `GetVolumeAccessGroupEfficiency` método para obter informações de eficiência sobre um grupo de acesso de volume. Somente o grupo de acesso de volume fornecido como parâmetro neste método API é usado para calcular a capacidade.
+
+
+
+== Parâmetro
+
+Este método tem o seguinte parâmetro de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+VolumeAccessGroupID
+ a| 
+Especifica o grupo de acesso ao volume para o qual a capacidade é calculada.
+ a| 
+número inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valor de retorno
+
+Este método tem o seguinte valor de retorno:
+
+|===
+
+
+| Nome | Descrição | Tipo 
+
+
+ a| 
+compactação
+ a| 
+A quantidade de espaço economizada pela compressão de dados para todos os volumes no grupo de acesso ao volume. Indicado como uma relação em que um valor de 1 significa que os dados foram armazenados sem compressão.
+ a| 
+flutuação
+
+
+
+ a| 
+deduplicação
+ a| 
+A quantidade de espaço economizada não duplicando dados para todos os volumes no grupo de acesso ao volume. Indicado como uma relação.
+ a| 
+flutuação
+
+
+
+ a| 
+Provisionamento excessivo
+ a| 
+A proporção de espaço utilizado com a quantidade de espaço alocado para armazenar dados. Indicado como uma relação.
+ a| 
+flutuação
+
+
+
+ a| 
+timestamp
+ a| 
+A última vez que os dados de eficiência foram coletados após coleta de lixo.
+ a| 
+String de dados ISO 8601
+
+
+
+ a| 
+Volumes
+ a| 
+Os volumes que não puderam ser consultados para dados de eficiência. Volumes ausentes podem ser causados por uma coleta de lixo recente, perda temporária da rede ou serviços reiniciados desde o ciclo de coleta de lixo.
+ a| 
+array inteiro
+
+|===
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "GetVolumeAccessGroupEfficiency",
+   "params": {
+      "volumeAccessGroupID": 1
+   },
+   "id": 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+   "id": 1,
+   "result": {
+       "compression": 2.006012925331075,
+       "deduplication": 1,
+       "missingVolumes": [],
+       "thinProvisioning": 1.009861932938856,
+       "timestamp": "2014-03-10T17:05:27Z"
+   }
+}
+----
+
+
+== Novo desde a versão
+
+9,6

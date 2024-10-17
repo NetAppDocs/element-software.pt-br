@@ -1,0 +1,100 @@
+---
+permalink: api/reference_element_api_removenodes.html 
+sidebar: sidebar 
+keywords: node,nodes,cluster,remove,removing,removenodes 
+summary: Você pode usar os RemoveNodes para remover um ou mais nós que não devem mais participar do cluster. 
+---
+= RemovesNodes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar `RemoveNodes` para remover um ou mais nós que não devem mais participar do cluster.
+
+Antes de remover um nó, você deve remover todas as unidades que o nó contém usando o `RemoveDrives` método. Não é possível remover um nó até que o `RemoveDrives` processo esteja concluído e todos os dados tenham sido migrados para fora do nó. Depois de remover um nó, ele se Registra como um nó pendente. Você pode adicionar o nó novamente ou desligá-lo (desligar o nó remove-o da lista de nós pendentes).
+
+
+
+== Remoção do nó principal do cluster
+
+Se você usar `RemoveNodes` para remover o nó mestre do cluster, o método pode ter tempo limite antes de retornar uma resposta. Se a chamada de método não conseguir remover o nó, faça a chamada de método novamente. Observe que se você estiver removendo o nó mestre do cluster junto com outros nós, você deve usar uma chamada separada para remover o nó mestre do cluster sozinho.
+
+
+
+== Parâmetro
+
+Este método tem o seguinte parâmetro de entrada:
+
+|===
+| Nome | Descrição | Tipo | Valor padrão | Obrigatório 
+
+
+ a| 
+IgnoreEnsembleToleranceChange
+ a| 
+Ignore as alterações na tolerância de falha do nó do ensemble ao remover nós.
+
+Se o cluster de storage usar esquemas de proteção de dados que toleram várias falhas de nós e a remoção dos nós diminuiria a tolerância de falha de nó do conjunto, a remoção do nó normalmente falhará com um erro. Você pode definir este parâmetro como verdadeiro para desativar a verificação de tolerância do ensemble para que a remoção do nó seja bem-sucedida.
+ a| 
+booleano
+ a| 
+falso
+ a| 
+Não
+
+
+
+ a| 
+nós
+ a| 
+Lista de NodeIDs para os nós a serem removidos.
+ a| 
+array inteiro
+ a| 
+Nenhum
+ a| 
+Sim
+
+|===
+
+
+== Valor de retorno
+
+Este método não tem valor de retorno.
+
+
+
+== Exemplo de solicitação
+
+As solicitações para este método são semelhantes ao seguinte exemplo:
+
+[listing]
+----
+{
+   "method": "RemoveNodes",
+   "params": {
+     "nodes"  : [3,4,5]
+   },
+   "id" : 1
+}
+----
+
+
+== Exemplo de resposta
+
+Este método retorna uma resposta semelhante ao seguinte exemplo:
+
+[listing]
+----
+{
+  "id" : 1
+  "result" : {},
+}
+----
+
+
+== Novo desde a versão
+
+9,6
