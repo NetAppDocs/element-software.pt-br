@@ -115,7 +115,6 @@
   <block id="f8d237cd828d649cb8579bc85ca63755" category="inline-link-macro">Versões de firmware de storage compatíveis para nós de storage do SolidFire</block>
   <block id="e9bda769b7371811c281817667bdd729" category="paragraph">1 para obter uma matriz completa de firmware e firmware de driver para o seu hardware, <block ref="d11d83532a3cbdacb76bb5921c49349a" category="inline-link-macro-rx"></block>consulte .</block>
   <block id="0fe84530e14d6cb77f51c3d2cc85aa18" category="paragraph">2 se você combinar um cluster com uma carga de IOPS de gravação pesada com um tempo de atualização de firmware mais longo, o tempo de sincronização de dados aumentará.</block>
-  <block id="33d4cce2372c2f81af75e357ed402fe5" category="paragraph">3 começando com o elemento 12,7, os nós de storage SF2405 e SF9608 e os nós FC FC0025 e SF-FCN-01 não são suportados. Se você tentar atualizar um desses nós para o elemento 12,7, verá um erro informando que esse nó não é suportado pelo elemento 12,7.</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="list-title">Antes de começar</block>
   <block id="56ee8203bf76c58f39596dab101d98d5" category="list-text">Algumas funções no Active IQ, por exemplo, qualidade de serviço (QoS), exigem que o elemento 11,3 ou posterior funcione corretamente. Para confirmar que você tem a capacidade de usar todas as funções do Active IQ, o NetApp recomenda o seguinte:</block>
   <block id="7ae82c07422143d84f2406fe018d3f73" category="list-text">O cluster de storage está executando o software NetApp Element 11,3 ou posterior.</block>
@@ -1674,8 +1673,6 @@
   <block id="65bd83537129be15c8027ec94bec5bd3" category="inline-xref-macro">Controle de acesso</block>
   <block id="4108d76cefab2b4494492fb5c706aa01" category="list-text"><block ref="4108d76cefab2b4494492fb5c706aa01" category="inline-xref-macro-rx"></block></block>
   <block id="c2c075d7ecfea2a1a630498ac1110e78" category="list-text"><block ref="c2c075d7ecfea2a1a630498ac1110e78" category="inline-xref-macro-rx"></block></block>
-  <block id="b0cda36836b6d8e27c36c8d9d6b48f3a" category="inline-link">Página de recursos de storage all-flash da SolidFire</block>
-  <block id="a980426853b5ccc1de52aeb0b0ae0463" category="list-text"><block ref="a980426853b5ccc1de52aeb0b0ae0463" category="inline-link-rx"></block></block>
   <block id="d25459b3c5acd2943fae1e5fda4cfa22" category="inline-link">Centro de Documentação de Software SolidFire e Element</block>
   <block id="024c22e90f2315636ed8d61b006ad1b5" category="list-text"><block ref="024c22e90f2315636ed8d61b006ad1b5" category="inline-link-rx"></block></block>
   <block id="62f0b25f98beb1882b9384da1aba8b58" category="summary">A IU da Web do software Element usa o método de amoraSpelrorRelacionship para interromper as transferências SnapMirror que foram iniciadas, mas ainda não estão completas.</block>
@@ -2243,7 +2240,6 @@
   <block id="ef7c876f00f3acddd00fa671f52d0b1f" category="paragraph">uuid</block>
   <block id="472ec58c29ef9a54cbd559744d4a9c90" category="paragraph">O identificador exclusivo para o cluster.</block>
   <block id="4ba6dd2d59030fb9ee4b6523df69086c" category="list-text"><block ref="4ba6dd2d59030fb9ee4b6523df69086c" category="inline-link-macro-rx"></block></block>
-  <block id="591c130bf36c26fe5946fac7eeba4c11" category="list-text"><block ref="5858de35bb153f56bdb4f3fbd003b515" category="inline-link-rx"></block>apresentação]</block>
   <block id="0240dc8e87d832706ecb80b01f87c0a1" category="summary">O objeto clusterPair contém informações sobre clusters emparelhados com o cluster local. Você pode recuperar uma lista de objetos clusterPair para o cluster local com o método ListClusterPairs.</block>
   <block id="343d28c140c3f5ce20a1ac3f8f7dae2c" category="paragraph">Nome exclusivo</block>
   <block id="3a06c32a878ccae19db7d0f82bd00a47" category="paragraph">O nome do outro cluster no par.</block>
@@ -3377,10 +3373,6 @@
   <block id="6f474670193ed24101adc00a3a72f9f1" category="summary">Você pode usar o método GetFeatureStatus para recuperar o status de um recurso de cluster.</block>
   <block id="5fe0920c9761a6b3a87a1bbfa4bb9caa" category="paragraph">Você pode usar o<block ref="d5ca0cd6f152369af358915f6c3a2a53" prefix=" " category="inline-code"></block> método para recuperar o status de um recurso de cluster.</block>
   <block id="1a11a5dbdb3a36b6daa4510ffff8ca04" category="paragraph">O status de um recurso de cluster. Se nenhum valor for fornecido, o sistema retornará um status de todos os recursos. Valores possíveis:</block>
-  <block id="fd92c1c5cef8e392199a662567e717aa" category="list-text">Vvols: Recuperar status para o recurso de cluster do VVols.</block>
-  <block id="5e345bcbaddcc57a5f3ac0fed5034dec" category="list-text">SnapMirror: Recuperar o status do recurso de cluster de replicação do SnapMirror.</block>
-  <block id="dda284e7bd1ad4ea16811e634581811f" category="list-text">FIPS: Recuperar o status do recurso de criptografia FIPS 140-2 para comunicação HTTPS.</block>
-  <block id="26ec8711a6e8d05f3d325ea4fa66c869" category="list-text">FipsDrives: Recupere o status do recurso de criptografia da unidade FIPS 140-2.</block>
   <block id="9f034b63948763d489f944319c2eb3de" category="paragraph">caraterísticas</block>
   <block id="215ee6aa91837f28e7d05a1a6faafac5" category="paragraph">Um array de objetos de recurso indicando o nome do recurso e seu status. Membros do objeto:</block>
   <block id="fcc7ebdd91e5bb840d6f95a4e3b0fc28" category="list-text">Característica: (String) o nome do recurso.</block>
@@ -4472,8 +4464,6 @@
   <block id="6b194904c32ac4b3629f472ddb325eff" category="paragraph">Quando for necessário aumentar os volumes de tamanho que estão sendo replicados, faça isso na seguinte ordem para evitar erros de replicação:</block>
   <block id="7fd604d5a16d58c4f2811b923ad7877f" category="paragraph">Acesso permitido para os volumes. Valores possíveis:</block>
   <block id="00b1983df56a7fa830315720c415311e" category="paragraph">O AccountID ao qual os volumes são reatribuídos. Se nenhum for especificado, o nome da conta anterior será usado.</block>
-  <block id="3c1a8d9bd4749cfbde8131745b6b686a" category="list-text">Verdadeiro: Associe o volume à política de QoS especificada no parâmetro QoSPolicyID.</block>
-  <block id="668b0f5def0f280a60f397b286c359d0" category="list-text">False: Não associe o volume à política de QoS especificada no parâmetro QoSPolicyID. Quando falsa, qualquer associação de política existente é removida, independentemente de você especificar uma política de QoS no parâmetro QoSPolicy.</block>
   <block id="b8449546ce80375e233d72eb2aadd3c3" category="paragraph">As novas configurações de qualidade de serviço para os volumes. Se não for especificado, as definições de QoS não são alteradas. Valores possíveis:</block>
   <block id="6d7a4b5dd6075716aa9f5f029e137fe9" category="paragraph">O novo tamanho dos volumes em bytes. 1000000000 é igual a 1GB. O tamanho é arredondado para cima até o megabyte mais próximo em tamanho. Este parâmetro só pode ser utilizado para aumentar o tamanho de um volume.</block>
   <block id="db0bd6d885921bd5ff8fa3a1cedbd136" category="paragraph">Uma lista de volumeIDs para os volumes a serem modificados.</block>
@@ -6102,11 +6092,7 @@
   <block id="4b8861a11346d673205d074f862db70a" category="inline-link">Versões de firmware e driver ESXi compatíveis</block>
   <block id="bb3b8b57aaaa2ec5e665324ff79ed132" category="list-text"><block ref="16447f3faa9ba0e1db5b0d946a9dbeaf" category="inline-link-rx"></block> _NOVO_</block>
   <block id="242169bc3cfede608a33f18d694f8ac7" category="summary">O NetApp atualiza periodicamente o software SolidFire e Element para oferecer novos recursos, aprimoramentos e correções de bugs.</block>
-  <block id="482c14e23170c54f9df57d397733d7af" category="doc">O que há de novo no software Element 12,5 e posterior</block>
-  <block id="5267888908e1548e1d5846f51c92bac9" category="paragraph">O NetApp atualiza periodicamente o software SolidFire e Element para oferecer novos recursos, aprimoramentos e correções de bugs. O Element 12,7 é a versão mais recente e inclui atualizações de segurança e componentes do sistema, melhorias operacionais e problemas resolvidos.</block>
-  <block id="31433f4c595cf82b6f9b0654fe86c038" category="admonition">As atualizações cumulativas de software e firmware são instaladas como parte de uma atualização do Element 12,7 com base na versão atual do Element executada em um cluster de storage. Por exemplo, se um cluster estiver executando o elemento 12,3.x no momento, você pode atualizar diretamente para o elemento 12,7 para obter as atualizações cumulativas do elemento 12,5 e 12,7. Para obter os caminhos de atualização suportados, consulte isto<block ref="5d2488aae82cc199977a2b418e4bfb0b" category="inline-link-rx"></block></block>
   <block id="7a5d44771145d6289118d595153e9a0f" category="section-title">Elemento 12,7</block>
-  <block id="c5955a73b2634f54a283c2c1c11a5f00" category="paragraph">Saiba mais sobre o que há de novo no Element 12,7.</block>
   <block id="e1aa603edc6a21750a2c4f3ad4c5c6fe" category="section-title">Algoritmos CHAP seguros</block>
   <block id="7d8047866d4cd4b945792113fe0aef7e" category="paragraph">O Element 12,7 inclui suporte para algoritmos CHAP (Challenge-Handshake Authentication Protocol) seguros compatíveis com FIPS SHA1, SHA-256 e SHA3-256. <block ref="b6cad66d2ee175f758d394e0154cb07f" category="inline-link-macro-rx"></block>.</block>
   <block id="3dd61b40b979f11e2f99dcbda82fabe4" category="section-title">Taxa de sincronização de bloco dinâmico (bin)</block>
@@ -6127,7 +6113,6 @@
   <block id="69893000f4da30e1e42922cbcf8dac0e" category="inline-link">NetApp Bugs Online</block>
   <block id="dacb18e4909785f6226e9cc6bcd62371" category="paragraph">Problemas resolvidos e conhecidos são listados na ferramenta NetApp Bugs Online. Você pode procurar esses problemas para o software Element e outros produtos em<block ref="6d0e40d4342f9a7ae6016dd8d3efbf3e" category="inline-link-rx"></block>.</block>
   <block id="38614c843f3a64f496d80e9b3a15ca3c" category="section-title">Elemento 12,5</block>
-  <block id="710206b65e21ddd5a34f739582fb411f" category="paragraph">O Element 12,5 apresenta acesso melhorado ao nó de armazenamento, capacidade de gerenciamento aprimorada de domínios de proteção personalizados, falhas e eventos de cluster novos e aprimorados, funcionalidade aprimorada de criar interface de usuário de cluster e segurança aprimorada.</block>
   <block id="632a0cf5bff2b4038d81ba8a87bedf56" category="section-title">Acesso aprimorado ao nó de storage</block>
   <block id="36c6fef8b472466a86d8c04fae14b83a" category="paragraph">O Element 12,5 traz acesso remoto aprimorado a nós individuais usando certificados SSH assinados. Para fornecer acesso remoto seguro aos nós de storage, uma nova conta de usuário local de privilégios limitados chamada<block ref="0357e74b1f39a5a7eea977b92e864daf" prefix=" " category="inline-code"></block> agora é criada durante o RTFI de um nó de storage. A<block ref="0357e74b1f39a5a7eea977b92e864daf" prefix=" " category="inline-code"></block> conta permite o acesso ao back-end do nó de storage para fins básicos de manutenção ou solução de problemas. Agora você pode configurar o<block ref="16deeb1542b48d5c3cc48574bd812c77" prefix=" " category="inline-code"></block> tipo de acesso para um usuário administrador de cluster para permitir o acesso de suporte do NetApp ao cluster conforme necessário.</block>
   <block id="c4850a0256fd94385624e245ebb4e3f5" category="section-title">Gerenciamento de domínios de proteção personalizados aprimorados</block>
@@ -6146,8 +6131,6 @@
   <block id="4a3ccd34d84d8d5dcf651bea4f92dde6" category="list-text"><block ref="4a3ccd34d84d8d5dcf651bea4f92dde6" category="inline-link-rx"></block></block>
   <block id="feaf808951dafefbf9943700efdb4315" category="inline-link">Centro de Documentação de Software SolidFire e Element para versões anteriores</block>
   <block id="049adc1802f0210729234e1fe80d95e6" category="list-text"><block ref="049adc1802f0210729234e1fe80d95e6" category="inline-link-rx"></block></block>
-  <block id="c93817bbfc3fab71f5f7ca740a11c847" category="inline-link">Página de recursos do NetApp HCI</block>
-  <block id="bc218e71c18c2f809dffb10d3bc2a6e8" category="list-text"><block ref="bc218e71c18c2f809dffb10d3bc2a6e8" category="inline-link-rx"></block></block>
   <block id="b1eb510dd705c0d83386b5f196686d5a" category="inline-link-macro">Versões de firmware de storage compatíveis para nós de storage do SolidFire</block>
   <block id="2b1ef5ee19eb343f5728f051c35efde4" category="list-text"><block ref="2b1ef5ee19eb343f5728f051c35efde4" category="inline-link-macro-rx"></block></block>
   <block id="a34166d7b2a72e36c4faae9587f3fe85" category="summary">Para administrar e fornecer acesso a recursos de storage em seu sistema, você precisará configurar contas para recursos do sistema.</block>
@@ -7959,8 +7942,6 @@
   <block id="88935f8e32d3f781d70b8758aacc2e03" category="paragraph">Você pode executar a solução de problemas básica de um nó que ainda não foi adicionado a um cluster. Você pode usar a conta do sistema sfradonly para esse fim com ou sem a ajuda do suporte da NetApp. Se você tiver um nó de gerenciamento configurado, poderá usá-lo para SSH e executar o script fornecido para essa tarefa.</block>
   <block id="39d7e3e1db072701b357f9d1235c66dc" category="list-text">A partir de uma máquina Windows, Linux ou Mac que tenha um cliente SSH instalado, execute o script apropriado para o seu sistema fornecido pelo suporte da NetApp.</block>
   <block id="326d0c521ea9c5fcd0fc04bacc22d618" category="list-text">SSH para o IP do nó:</block>
-  <block id="a83404b3b2ca8b3c39459b719d7844d7" category="inline-link">Página de recursos do NetApp HCI</block>
-  <block id="efb3497df51898324a04d1329dc9b9ae" category="list-text"><block ref="efb3497df51898324a04d1329dc9b9ae" category="inline-link-rx"></block></block>
   <block id="d40819e9e843e97335bf320aeb8d5ac1" category="summary">Você pode usar o nó de gerenciamento para habilitar o acesso ao suporte da NetApp para solução de problemas.</block>
   <block id="e606a329fd1c8e2f2543e5fd1dce6af5" category="doc">Inicie uma sessão remota de suporte do NetApp</block>
   <block id="6d76b07dcfce8c041eb64f1886c69449" category="paragraph">Se você precisar de suporte técnico para o seu sistema de storage all-flash SolidFire, o suporte NetApp pode se conetar remotamente ao seu sistema. Para iniciar uma sessão e obter acesso remoto, o suporte da NetApp pode abrir uma conexão SSH (Secure Shell) reversa ao seu ambiente.</block>
@@ -7983,16 +7964,10 @@
   <block id="7ff6cc997b141399bcdf2c338fb4031c" category="cell">OpenStack</block>
   <block id="9385b032418674e92472a8b4a2ae5cdf" category="list-text">(Nó de gerenciamento 12,0 e posterior com servidor proxy) você atualizou o Controle de nuvem híbrida do NetApp para os serviços de gerenciamento versão 2,16 antes de configurar um servidor proxy.</block>
   <block id="0406c3e25004e3d1dddbc367d2c4010f" category="paragraph">O nó de gerenciamento do Element 12,2 é uma atualização opcional. Não é necessário para implantações existentes.</block>
-  <block id="3ab5d74afdff3156333304ac18ad1977" category="paragraph">Antes de seguir este procedimento, você deve ter uma compreensão <block ref="6cc910c0977361227d631be0efac7242" category="inline-link-macro-rx"></block>e se deseja ou não usá-los. Os volumes persistentes são opcionais, mas recomendados para a recuperação de dados de configuração de nó de gerenciamento no caso de perda de uma máquina virtual (VM).</block>
   <block id="47a326e49e46acb78cf32cae1353fcac" category="list-text"><block ref="581882d49acbe8ab5e8325e4c151b8db" category="inline-xref-macro-rx"></block></block>
-  <block id="f894cbc944582e1f10fec4bf2a0639f0" category="inline-xref">Crie o administrador do nó de gerenciamento e configure a rede</block>
-  <block id="2ef294393b47ae9f1c9dee1f319efb0d" category="list-text"><block ref="bf7a9c417954187cdc8487e05cd6fa32" category="inline-xref-macro-rx"></block></block>
   <block id="cd7b2f0814db99464baac1222444932f" category="list-text"><block ref="cbfedbfc47267d0d76c848bfa4f73e5d" category="inline-xref-macro-rx"></block></block>
-  <block id="c92609be7302c756d6d918553df475c1" category="list-text"><block ref="d9e86326331a25418b718094ae602c19" category="inline-xref-macro-rx"></block></block>
-  <block id="0267f7e06220d0fa6fb42578b5746da3" category="list-text"><block ref="b41cb2f7bd156a4035cdf9347b89cebe" category="inline-xref-macro-rx"></block></block>
   <block id="5bf2236fb0d245894b988f96a0ff32f6" category="section-title">Baixe ISO ou OVA e implante a VM</block>
   <block id="12b8893b065179b6b80fdc2d448862df" category="inline-link-macro">Software Element</block>
-  <block id="e43f2538484fde027e53efbedb634fce" category="list-text">Transfira a OVA ou ISO para a sua instalação a partir da <block ref="00b11b6abe7f0003872aa657422c59ae" category="inline-link-macro-rx"></block>página no site de suporte da NetApp.</block>
   <block id="7b4b2bec7b806d58982537647a92deef" category="list-text">Selecione *Download Latest Release* e aceite o EULA.</block>
   <block id="9fd5f1f79bb7ead4a7bdb1a4e6b94825" category="list-text">Selecione a imagem do nó de gestão que pretende transferir.</block>
   <block id="b8ccf40afa6e3a195a8f4d93c8daa17d" category="list-text">Se você baixou o OVA, siga estas etapas:</block>
@@ -8023,9 +7998,7 @@
   <block id="72e1f4df2e744d26601b11dcae2de156" category="inline-link-macro">Configurar um controlador de interface de rede (NIC) de armazenamento</block>
   <block id="585629174bd7d07bea958ff023cef12f" category="admonition">Se você precisar de uma NIC adicional para isolar o tráfego de armazenamento, consulte as instruções sobre como configurar outra NIC: <block ref="3a94a0bfa09a6011bad07afa39abc05f" category="inline-link-macro-rx"></block>.</block>
   <block id="2f81f1b5bf706c50ec3a59d0de214061" category="section-title">Configurar a sincronização da hora</block>
-  <block id="dfa921e1a8d1ecc5798d976447ec498d" category="list-text">Certifique-se de que o tempo é sincronizado entre o nó de gerenciamento e o cluster de armazenamento usando NTP:</block>
   <block id="4ff9fc7c23fbbdf410e784b18625c201" category="inline-xref">subpasso (f)</block>
-  <block id="26e6608a1d4408ec1913111c30b06508" category="admonition">A partir do elemento 12,3.1, as subetapas (a) a (e) são executadas automaticamente. Para o nó de gerenciamento 12,3.1, prossiga para <block ref="745b7d927b75ef73b131f4d1b2da0731" category="inline-xref-macro-rx"></block>concluir a configuração de sincronização de tempo.</block>
   <block id="95f677ec3d6290caa67730d5209b4cc2" category="list-text">Faça login no nó de gerenciamento usando SSH ou o console fornecido pelo seu hypervisor.</block>
   <block id="5c64c907c80a4eaf523f296d26d13989" category="list-text">Parar NTPD:</block>
   <block id="5c6c4538d95e26d538800e50027bee98" category="list-text">Edite o arquivo de configuração<block ref="da6e8c31c4b01f79120fb363f8545fb0" prefix=" " category="inline-code"></block> NTP :</block>
@@ -8043,7 +8016,6 @@
   <block id="29c3f66306d4b9c80ad86deebb2fabcf" category="admonition">Não ative essa opção se você fizer alterações futuras na VM.</block>
   <block id="2d80cb22364fea2daaca797ae1d938cb" category="inline-link-macro">comando de configuração</block>
   <block id="a482c646f7f8199c69090c0d13cac33b" category="admonition">Não edite o NTP depois de concluir a configuração de sincronização de tempo porque afeta o NTP quando executa o <block ref="418ec8b5cff4068b256dfd7e9fc5ded7" category="inline-link-macro-rx"></block> no nó de gestão.</block>
-  <block id="627bbdc5a7179606b85a5d6ccb6f65e1" category="section-title">Configure o nó de gerenciamento</block>
   <block id="5a808c62f4f9557c4df556d6a230ba7c" category="list-text">Configure e execute o comando de configuração do nó de gerenciamento:</block>
   <block id="58df37229524fed632f3c53880c146c3" category="admonition">Você será solicitado a inserir senhas em um prompt seguro. Se o cluster estiver atrás de um servidor proxy, você deverá configurar as configurações de proxy para que você possa chegar a uma rede pública.</block>
   <block id="57aa15c5b6505e27c5150f48bdab73d6" category="list-text">Substitua o valor entre parênteses [ ] (incluindo os colchetes) para cada um dos seguintes parâmetros necessários:</block>
@@ -8070,7 +8042,6 @@
   <block id="aabee241823de4ff993b60d0a196a387" category="list-text">(Opcional) Use a ajuda de parâmetros se você precisar de informações adicionais sobre cada parâmetro:</block>
   <block id="f89c180fd45cb0275c5ee18e59d2b43d" category="list-text">*--help (-h)*: Retorna informações sobre cada parâmetro. Os parâmetros são definidos como necessários ou opcionais com base na implantação inicial. Os requisitos de parâmetros de atualização e reimplantação podem variar.</block>
   <block id="79032d0c879c3afbbb570dd870eb09e1" category="list-text">Executar o<block ref="73028873f2b0a018096b6a3d871634b5" prefix=" " category="inline-code"></block> comando.</block>
-  <block id="7ea2768c656768f853cd68b9066eba0f" category="section-title">Configurar ativos do controlador</block>
   <block id="4240350efa82cb4b2d0dcd00f64f496b" category="list-text">Localize a ID de instalação:</block>
   <block id="81b4d8ce3b6d3d31bcc065c5589192ab" category="list-text">A partir de um navegador, faça login na IU da API REST do nó de gerenciamento:</block>
   <block id="ed4faf2b135a0f2d74eef06f6fd8899e" category="list-text">Aceda ao MVIP de armazenamento e inicie sessão. Esta ação faz com que o certificado seja aceite para a próxima etapa.</block>
@@ -9158,7 +9129,6 @@
   <block id="e20bd5cbcbe45cd37f6757535ba650c4" category="list-text">SF3010</block>
   <block id="6062dc119fdeb97b9bb107c1063467a8" category="list-text">SF6010</block>
   <block id="f01ab7a5082dba0b14f15d3b2e71f12b" category="list-text">SF9010</block>
-  <block id="eb354756273b461b7f8b4d3abc6ac150" category="paragraph">Se você tentar atualizar um desses nós para uma versão de elemento não suportado, você verá um erro informando que esse nó não é suportado pelo elemento 12.x.</block>
   <block id="428b7755325d17c48c70b8ede83fbd03" category="summary">Você pode gerenciar o storage SolidFire e os nós Fibre Channel na página nós da guia Cluster.</block>
   <block id="ae619d07e6bf5785b1aa9e019371db58" category="paragraph">Se um nó recém-adicionado representar mais de 50% da capacidade total do cluster, parte da capacidade desse nó será inutilizável ("encalhado"), de modo que esteja em conformidade com a regra de capacidade. Este continua a ser o caso até que mais armazenamento seja adicionado. Se um nó muito grande for adicionado que também desobedeça à regra de capacidade, o nó anteriormente encalhado não ficará mais encalhado, enquanto o nó recém-adicionado fica encalhado. A capacidade deve ser sempre adicionada em pares para evitar que isso aconteça. Quando um nó fica preso, uma falha de cluster apropriada é lançada.</block>
   <block id="651db5eb7a028b601a697fc69cd3d768" category="inline-xref-macro">Adicione um nó a um cluster</block>
@@ -10161,8 +10131,6 @@
   <block id="5f93174c2b6fa00ee106be4342b5fae5" category="paragraph">Nos sistemas de storage da SolidFire, os locatários podem usar contas para permitir que os clientes se conetem a volumes em um cluster. Uma conta contém a autenticação CHAP (Challenge-Handshake Authentication Protocol) necessária para acessar os volumes atribuídos a ela. Quando você cria um volume, ele é atribuído a uma conta específica.</block>
   <block id="4082f16ece7fe49a6ae9cff89731b948" category="paragraph">Uma conta pode ter até dois mil volumes atribuídos a ela, mas um volume pode pertencer a apenas uma conta.</block>
   <block id="adf63029757917f4aff07fe55725e5d9" category="section-title">Algoritmos CHAP</block>
-  <block id="3b2569fbd052a233a8a46886c97fc207" category="paragraph">A partir do Element 12,7, os algoritmos CHAP seguros compatíveis com FIPS SHA1, SHA-256 e SHA3-256 são suportados. Com o elemento 12,7, quando um iniciador iSCSI de host está criando uma sessão iSCSI com um destino iSCSI de elemento, ele solicita uma lista de algoritmos CHAP para usar. O destino iSCSI Element escolhe o primeiro algoritmo que suporta a partir da lista solicitada pelo iniciador iSCSI do host. Para confirmar que o destino iSCSI Element escolhe o algoritmo mais seguro, você deve configurar o iniciador iSCSI do host para enviar uma lista de algoritmos solicitados da maioria dos seguros, por exemplo, SHA3-256, para o menos seguro, por exemplo, SHA1 ou MD5. Quando os algoritmos SHA não são solicitados pelo iniciador iSCSI do host, o destino iSCSI do elemento escolhe MD5, assumindo que a lista de algoritmos proposta do host contém MD5. Talvez seja necessário atualizar a configuração do iniciador iSCSI do host para habilitar o suporte aos algoritmos seguros.</block>
-  <block id="b8bb97697b35e86a4877aef90f591533" category="paragraph">Durante uma atualização do Element 12,7, se você já atualizou a configuração do iniciador iSCSI do host para enviar uma solicitação de sessão com uma lista que inclui algoritmos SHA, à medida que os nós de storage reiniciam, os novos algoritmos seguros são ativados e sessões iSCSI novas ou reconetadas são estabelecidas usando o protocolo mais seguro. Todas as sessões iSCSI existentes passam de MD5 para SHA durante a atualização. Se você não atualizar a configuração do iniciador iSCSI do host para solicitar SHA, as sessões iSCSI existentes continuarão a usar o MD5. Posteriormente, depois de atualizar os algoritmos CHAP do iniciador iSCSI do host, as sessões iSCSI devem passar gradualmente de MD5 para SHA ao longo do tempo com base em atividades de manutenção que resultem em reconexões de sessão iSCSI.</block>
   <block id="db6cb10180fa1523938da319a188d13d" category="paragraph">Por exemplo, o iniciador iSCSI de host padrão no Red Hat Enterprise Linux (RHEL) 8,3 tem a<block ref="12ae26f661d7aa8afdec22883fd5a200" prefix=" " category="inline-code"></block> configuração comentada, o que resulta no iniciador iSCSI usando apenas MD5. Descomentando esta configuração no host e reiniciando o iniciador iSCSI aciona sessões iSCSI desse host para começar a usar o SHA3-256.</block>
   <block id="55fc627721522ae45305c9f988153a20" category="paragraph">Se necessário, você pode usar o<block ref="06aa6b6b67e008146e7c8d6417794b62" category="inline-link-rx"></block> método API para ver os algoritmos CHAP que estão sendo usados para cada sessão.</block>
   <block id="2fdfd506efea08144c0794c32ca8250a" category="section-title">Crie uma conta</block>
@@ -11581,7 +11549,6 @@
   <block id="026348f9f6e3dc829e365625c33c007a" category="list-text">Revise os detalhes do nó:</block>
   <block id="8511241aabf0b5b22a6ec0f33205020a" category="list-text">*Node ID*: O ID gerado pelo sistema para o nó.</block>
   <block id="11340b9f0ba088ec3cf2083a21132d99" category="list-text">*Nome do nó*: O nome do host para o nó.</block>
-  <block id="0ee99b520b4502ffd981cfc386b7a410" category="list-text">*disponível 4K IOPS*: O IOPS configurado para o nó.</block>
   <block id="2e08da9f1b8a2b955bb7528232c66123" category="list-text">*Função do nó*: A função que o nó tem no cluster. Valores possíveis:</block>
   <block id="5b677361708b3a9e7ae889385ded1639" category="list-text">Mestre de cluster: O nó que executa tarefas administrativas em todo o cluster e contém o MVIP e o SVIP.</block>
   <block id="e6897c8bbde08136163ed91dd0933239" category="list-text">Nó do ensemble: Um nó que participa do cluster. Existem 3 ou 5 nós de ensemble dependendo do tamanho do cluster.</block>
@@ -11815,9 +11782,6 @@
   <block id="59a003ce49b82fe00de09fe03510553f" category="doc">Descrição geral da sequência de atualização</block>
   <block id="ce90f7229835d74f781e9e0252243716" category="paragraph">Você pode manter seu sistema de storage SolidFire Element atualizado após a implantação, atualizando sequencialmente todos os componentes de storage do NetApp.</block>
   <block id="7fdc03d82c29eba6b61c702a58fd28ba" category="paragraph">Esses componentes incluem serviços de gerenciamento, controle de nuvem híbrida NetApp, software Element, nó de gerenciamento e (dependendo da sua instalação) o plug-in Element para vCenter Server.</block>
-  <block id="df0f8acf74958be223bdd3dabcce5038" category="inline-link">As atualizações do SolidFire e HCI não podem ser iniciadas devido a um erro de carregamento do pacote de atualização</block>
-  <block id="b9bbae8efe5c0f15ffba3f05d619b861" category="list-text">A partir de novembro de 2023, você não pode iniciar uma atualização de componente usando o Controle de nuvem híbrida ou a API REST do NetApp porque os certificados de chave de assinatura (privados e públicos) expiraram em 5 de novembro de 2023. Você pode resolver esse problema seguindo a solução alternativa documentada no artigo da base de dados de Conhecimento<block ref="43e83b9864cac922c7475bad0e74a40f" category="inline-link-rx"></block> .</block>
-  <block id="ab23337415270010383937ce784cb519" category="list-text">A partir do elemento 12,7, os nós de storage SF2405 e SF9608 e os nós FC FC0025 e SF-FCN-01 não são suportados. Se você tentar atualizar um desses nós para o elemento 12,7, verá um erro informando que esse nó não é suportado pelo elemento 12,7.</block>
   <block id="abad8a22ec62bb4befaee820afb760ef" category="inline-link">Atualize para o Element 12,3 usando HealthTools</block>
   <block id="9732e3757f397fc8e75412dea43c030e" category="list-text">A partir do Element 12,5, o NetApp HealthTools não é mais suportado para atualizações de software Element. Se você estiver executando o Element 11,0 ou 11,1, primeiro<block ref="e9afc225a78965c54dbba9b335afd021" category="inline-link-rx"></block> e depois atualize para o Element 12,5 ou posterior usando o Controle de nuvem híbrida da NetApp.</block>
   <block id="d38f48e8e196e92a833076faf76e21bc" category="inline-xref">sequência de atualização do sistema</block>
@@ -12216,8 +12180,6 @@
   <block id="b9e50e6a339819ad9d12906b29e978ca" category="list-text">Verifique a alteração de versão na guia *sobre* no ponto de extensão *Configuração do NetApp Element* do plug-in.</block>
   <block id="a2b39afbde860c9c0fc759f3772e2dd2" category="paragraph">Você deve ver os seguintes detalhes de versão ou detalhes de uma versão mais recente:</block>
   <block id="4715e0cc20eb79c52c1f181ce0f6afb0" category="admonition">O plug-in do vCenter contém conteúdo de ajuda on-line. Para garantir que a Ajuda contenha o conteúdo mais recente, limpe o cache do navegador depois de atualizar o plug-in.</block>
-  <block id="cafb4d76dc2f8321d0134957e0bf3f5d" category="sidebar">Um sistema de storage all-flash da SolidFire é composto por componentes de hardware, como unidades e nós, combinados em um pool de recursos de storage. Com a interface Element, a API ou outras ferramentas de gerenciamento, você pode gerenciar esses clusters de recursos de storage com o software NetApp Element. Este site contém a documentação do software Element.</block>
-  <block id="ab8cbf6e7f3310f1970fbef383696645" category="sidebar">Documentação do software SolidFire e Element 12,7</block>
   <block id="c6ad545ed5197a02a4f86759e091d934" category="sidebar">Um sistema de storage all-flash da SolidFire é composto por componentes de hardware, como unidades e nós, combinados em um pool de recursos de storage. Como um único sistema de storage, esse cluster unificado é gerenciado com o software NetApp Element.</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Comece agora</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">Notas de lançamento</block>
@@ -12243,7 +12205,6 @@
   <block id="213686afc3803be7caa09348765467fe" category="sidebar">Onde obter ajuda</block>
   <block id="93168a8084b3e838d2932c4734bd234e" category="sidebar">Versões anteriores</block>
   <block id="b47307258c4d85ffb5f4141d7a660a9b" category="sidebar">Elemento 11.8.2 e documentação anterior</block>
-  <block id="f46f40c99ef0e96fdc79a2f007e1939a" category="sidebar">Documentação do software SolidFire e Element 12,7</block>
   <block id="f0e8a2f025f562374fa58233f9f7cd01" category="sidebar">Gerencie o storage com o plug-in Element para vCenter Server</block>
   <block id="45f40a7365f71f3eafc4489e01e9aa82" category="sidebar">Monitore o storage com o NetApp SolidFire Active IQ</block>
   <block id="e558a93d8af634916bae37b7136be1d2" category="sidebar">GetSoftwareEncryptionatRestInfo</block>
@@ -12273,11 +12234,135 @@
   <block id="909a1c829d29d09da00949e5c8b87a0e" category="sidebar">Atualize seu sistema de storage all-flash NetApp SolidFire</block>
   <block id="b837bae0f441ebacd86887d737939282" category="sidebar">Procedimentos de atualização do sistema</block>
   <block id="c4891769f65182d5fc5a37494844c496" category="inline-link">Notas de versão do vCenter Plug-in 5,4</block>
-  <block id="230e88f97688d3fb971fe1a76f5b2a13" category="list-text"><block ref="912995e99772bb097b2c7b32940725bb" category="inline-link-rx"></block> _NOVO_</block>
   <block id="ce90fd614158a5c7e0a42a5908fa1cd7" category="list-text"><block ref="ce90fd614158a5c7e0a42a5908fa1cd7" category="inline-link-rx"></block></block>
   <block id="6f00c58e2f26b2ef4542eb663cdb651d" category="inline-link-macro">Aviso para Serviços de gerenciamento 2.26.30 (plug-in do NetApp Element para VMware vCenter Server 5,4.1)</block>
   <block id="ea3b1d5907ee8e4303c54ecc7765f0f2" category="list-text"><block ref="ea3b1d5907ee8e4303c54ecc7765f0f2" category="inline-link-macro-rx"></block></block>
   <block id="fdbd44871ecf32ab0e37e9d3c077e28a" category="list-text">Você está atualizando para o Element Plug-in para vCenter Server 5,4, 5,3, 5,2, 5,1 ou 5,0.</block>
   <block id="ec584e493ebc5976220074c48288215d" category="summary">Você deve criar um endpoint do SnapMirror antes de criar uma relação de replicação. Você só pode executar essa tarefa na IU da Web do software Element ou usando os métodos de API.</block>
   <block id="a1d54a55e83901cd25e5b3724d5ca5e5" category="summary">É necessário habilitar o SnapMirror no cluster do Element antes de criar uma relação de replicação. Você só pode executar essa tarefa na IU da Web do software Element ou usando o método API.</block>
+  <block id="5f974f5b5837f6beacdf509a09ac0df9" category="paragraph">3 os seguintes nós não são suportados. Se você tentar atualizar um desses nós para uma versão de elemento não suportado, verá um erro informando que o nó não é suportado pelo elemento 12.x:</block>
+  <block id="5d58ca5bc208ae8a2b2dccd548e30ae3" category="list-text">A partir dos nós de storage Element 12,8, SF4805, SF9605, SF19210 e SF38410.</block>
+  <block id="69da7b5a3b37b70e629a477452983e5d" category="summary">Pode utilizar o método DisableFeature para desativar o VolumeLoadBalanceOnActualIOPS.</block>
+  <block id="e0d42ad7a0a546483523eee990c4c722" category="doc">DisableFeature</block>
+  <block id="8672fdc0f030d7ad0aaee99cc9cfdd76" category="paragraph">Pode utilizar o<block ref="e0d42ad7a0a546483523eee990c4c722" prefix=" " category="inline-code"></block> método para desativar a<block ref="02d9b6b9cb591592d0f848c16ce0627a" prefix=" " category="inline-code"></block> funcionalidade.<block ref="02d9b6b9cb591592d0f848c16ce0627a" prefix=" " category="inline-code"></block> está desativado por padrão.</block>
+  <block id="ef3cc95d5005ad47e31876972451919d" category="paragraph">Se você tentar desabilitar outro recurso, como o VVols, a seguinte mensagem de erro será exibida:</block>
+  <block id="ca5bd77a41b5024709aa0c976742b627" category="paragraph">Desative um recurso de cluster. Valor possível:</block>
+  <block id="b1e9ed0268988420a784ad80c03e59d5" category="list-text"><block ref="02d9b6b9cb591592d0f848c16ce0627a" prefix="" category="inline-code"></block>: Desative o balanceamento de fatia em IOPS real em vez de IOPS mínimo.</block>
+  <block id="e76af95319f03251bdf6c3771f39afbe" category="paragraph">12,8</block>
+  <block id="20b0ad010903f7b2d428d021e0c7d07f" category="list-text"><block ref="20b0ad010903f7b2d428d021e0c7d07f" category="inline-xref-macro-rx"></block></block>
+  <block id="e2d508b5a306e7983664021f6348fbff" category="paragraph">VolumeLoadBalanceOnActualIopsState</block>
+  <block id="2f422ae686124762f34b256f66599041" category="paragraph">O status do balanceamento de fatia com base no IOPS real em vez do recurso IOPS mínimo. Disponível a partir do elemento 12,8.</block>
+  <block id="505be3e758aee452e5c40a4250623ef3" category="cell"><block ref="16611c4971284ff4b42c5d19de7c4fc6" prefix="" category="inline-code"></block></block>
+  <block id="02d9b6b9cb591592d0f848c16ce0627a" category="inline-link-macro">VolumeLoadBalanceOnActualIOPS</block>
+  <block id="23c40fdcbdf2c33e4c5cb256f37b65d0" category="paragraph">Evite que um volume se mova ao equilibrar a carga com IOPS real. Esta definição está disponível a partir do elemento 12,8 e só é eficaz quando <block ref="636ea693b7b2510b539677d0148e4233" category="inline-link-macro-rx"></block>está ativado. Valores possíveis:</block>
+  <block id="c29abafd53b30e2b89cd07dbab20364e" category="list-text"><block ref="b326b5062b2f0e69046810717534cb09" prefix="" category="inline-code"></block>: O volume não carrega o equilíbrio com base no IOPS real.</block>
+  <block id="5d7a3b5e704aa7e7bf62279cc3278f01" category="list-text"><block ref="68934a3e9455fa72420237eb05902327" prefix="" category="inline-code"></block>: O volume faz o balanceamento de carga com base em IOPS real.</block>
+  <block id="12d73ef73ec07c1c3f13c03403458ac4" category="paragraph">*Nota*: O balanceamento para alta disponibilidade (falha de nó) tem precedência sobre<block ref="02d9b6b9cb591592d0f848c16ce0627a" prefix=" " category="inline-code"></block> e<block ref="16611c4971284ff4b42c5d19de7c4fc6" prefix=" " category="inline-code"></block>.</block>
+  <block id="70477f1cbb1f9b0ee1ed984e95d175c9" category="list-text"><block ref="02d9b6b9cb591592d0f848c16ce0627a" prefix="" category="inline-code"></block>: Ative o balanceamento de fatia em IOPS real em vez de IOPS mínimo. Disponível a partir do elemento 12,8.</block>
+  <block id="51f05aff487f481c11bffc15bbc6e4b2" category="list-text"><block ref="6a4d46deeb21ef2b80060c11f49187e4" prefix="" category="inline-code"></block>: Retrieve status para o recurso de cluster do vols.</block>
+  <block id="553a63549898987796cafd553180c07b" category="list-text"><block ref="794cb725c5631ad99b5b7c000307f0df" prefix="" category="inline-code"></block>: Retrieve status para o recurso de cluster de replicação do SnapMirror.</block>
+  <block id="ec81003d6bad23cab3a28018beda6730" category="list-text"><block ref="db70af2af82d2621886d13d37995e481" prefix="" category="inline-code"></block>: Recupere o status do recurso de criptografia FIPS 140-2 para comunicação HTTPS.</block>
+  <block id="cd9f39d245dd7eda6cce60f0322f58d0" category="list-text"><block ref="4223a206268b7c5a804c6b4d52900ea5" prefix="" category="inline-code"></block>: Recupere o status do recurso de criptografia da unidade FIPS 140-2.</block>
+  <block id="490aeb503dc1e4b03161fcccf4cdffc2" category="list-text"><block ref="02d9b6b9cb591592d0f848c16ce0627a" prefix="" category="inline-code"></block>: Recupere o status do balanceamento de fatia no IOPS real em vez do recurso de IOPS mínimo. Disponível a partir do elemento 12,8.</block>
+  <block id="16611c4971284ff4b42c5d19de7c4fc6" category="paragraph">DontMoveforIopsRebalance</block>
+  <block id="4b568da388833daf83ea72e69801ba34" category="paragraph">NodeHeat</block>
+  <block id="b5c845afcfb7df2d9d7fbef7714c09a9" category="paragraph">Informações de utilização do nó. Disponível a partir do elemento 12,8. Membros:</block>
+  <block id="ca4488466d23621c06230504c824fb83" category="list-text">Primário TotalHeat: O IOPS total primário/configurado do nó foi calculado em média em 24 horas</block>
+  <block id="9ebe3bf85a15ba77ec5b2cc4408f55d0" category="list-text">RecentPrimaryTotalHeat: O total de IOPS/nó configurado do nó primário foi calculado em média ao longo de uma hora</block>
+  <block id="1d6d531f7e976462553ff19c1ec745af" category="list-text">RecentTotalHeat: O total de IOPS/IOPS configurado do nó foi calculado em média durante uma hora</block>
+  <block id="545f1469911d2f62c6bceead8a0c2cc8" category="list-text">TotalHeat: Média de IOPS/IOPS configurado do nó em 24 horas</block>
+  <block id="cd10546771cf4d9146236c94201b070f" category="paragraph">SliceIopsStats</block>
+  <block id="e690e448c74acc89f30fd24eaf5cd5d5" category="paragraph">As estatísticas de uso de e/S para um volume. Disponível a partir do elemento 12,8. Valores possíveis para sliceIopsStats:</block>
+  <block id="c43b8cf1e5e1112e458b0a8aebe23131" category="list-text">LargeStatistics: As estatísticas de e/S para o volume medido durante um período de tempo mais longo, normalmente as últimas 24 horas.</block>
+  <block id="1b11f84facc1daeaa9620b3c31f3c6d0" category="list-text">SmallStatistics: As estatísticas de e/S para o volume medido em um período de tempo mais curto, normalmente a última hora.</block>
+  <block id="9c976e58e6bcd2d0658085166cadade3" category="paragraph">Valores possíveis para largeStatistics e smallStatistics:</block>
+  <block id="18cb448ab99d0b204d2b0056e16c6797" category="list-text">AverageReadIops: A média de IOPS de leitura do volume.</block>
+  <block id="82b21b548a27fb7c5ccc9f32dd738465" category="list-text">AverageTotalIops: O total médio de IOPS (leitura e gravação) para o volume.</block>
+  <block id="ea7f8d6913391d8b988f31fb9efec9bc" category="list-text">AverageWriteIops: A média de IOPS de gravação do volume.</block>
+  <block id="eaa3a19818b7f5619e46432a531d1f6a" category="list-text">NSamples: O número de amostras incluídas no cálculo estatístico.</block>
+  <block id="7fdf87eada1272182b73c768f9f29592" category="list-text">PeakReadIops: O máximo de IOPS de leitura observado em um intervalo estatístico.</block>
+  <block id="ea1542c36a1086ca0fcd1be36c6f32c6" category="list-text">PeakTotalIops: O total máximo de IOPS observado em um intervalo estatístico.</block>
+  <block id="f96ed95b5509cb599aadb504ec5aa0d5" category="list-text">PeakWriteIops: O IOPS máximo de gravação observado em um intervalo estatístico.</block>
+  <block id="041f17de41a9f1db9829ff79ad3ef600" category="list-text">SliceID: ID de volume ou ID de corte</block>
+  <block id="6db7dd4182be7a1979ad403111fa8618" category="inline-link">Notas de versão do software NetApp Element 12,8</block>
+  <block id="7d776811219f8ebb17adecaa976bd578" category="list-text"><block ref="53e04163346326834efd61306c0800b5" category="inline-link-rx"></block> _NOVO_</block>
+  <block id="912995e99772bb097b2c7b32940725bb" category="list-text"><block ref="912995e99772bb097b2c7b32940725bb" category="inline-link-rx"></block></block>
+  <block id="de1923eab698e40e118f826163735ce9" category="doc">O que há de novo no software Element</block>
+  <block id="95dc02f465fb1139e3e92c363bf6965b" category="paragraph">O NetApp atualiza periodicamente o software SolidFire e Element para oferecer novos recursos, aprimoramentos e correções de bugs. O Element 12,8 é a versão mais recente e inclui atualizações de segurança e componentes do sistema, melhorias operacionais e problemas resolvidos.</block>
+  <block id="54c87de7f5250ba9aa116c671d66513b" category="inline-link">Qual é a matriz de atualização para clusters de storage que executam o software NetApp Element</block>
+  <block id="cbc21275b31252cb0d62b8238bf2f7f4" category="admonition">As atualizações cumulativas de software e firmware são instaladas como parte de uma atualização do Element 12,8 com base na versão atual do Element executada em um cluster de storage. Por exemplo, se um cluster estiver executando o elemento 12,5 atualmente, você pode atualizar diretamente para o elemento 12,8 para obter as atualizações cumulativas do elemento 12,7 e 12,8. Para obter os caminhos de atualização suportados, consulte o artigo da base de dados de Conhecimento<block ref="c5b23fd17ac7c12a5a03bb47eaffc085" category="inline-link-rx"></block> .</block>
+  <block id="b96f7bb136ed4e13e527257ff99d9aa8" category="section-title">Elemento 12,8</block>
+  <block id="5f3e8fa2bb7cacdfa568d72b6619b9f7" category="paragraph">Saiba mais sobre o que há de novo no Element 12,8.</block>
+  <block id="de8b5a628a603f8c3af1b2f5792e68de" category="section-title">Balanceamento de carga de volume</block>
+  <block id="9a015d8a2733454aff7d7b5bed746662" category="paragraph">O elemento 12,8 introduz o recurso balanceamento de carga de volume. Você pode usar esse recurso para equilibrar volumes entre nós com base no nível de IOPS real de cada volume, em vez do IOPS mínimo configurado na política de QoS. Você só pode usar o recurso balanceamento de carga de volume para equilibrar volumes. Você não pode usá-lo para equilibrar volumes virtuais. O recurso balanceamento de carga de volume está desativado por padrão. Você pode ativá-lo e desativá-lo usando o<block ref="02d9b6b9cb591592d0f848c16ce0627a" prefix=" " category="inline-code"></block> parâmetro API com os <block ref="1028004a3d63b00e7896fde204286489" category="inline-link-macro-rx"></block>métodos e <block ref="ca543ea41b9fe86f5db5c46f8401b9de" category="inline-link-macro-rx"></block> API ou a <block ref="0e280c25b1846637cc005ef57df39d27" category="inline-link-macro-rx"></block> opção na IU do elemento.</block>
+  <block id="380221f3a88d939f31cd4269828e2920" category="section-title">Exibir informações de utilização do nó</block>
+  <block id="cf1de2ea971a9d03b59178af9472d4b0" category="paragraph">Com o Element 12,8, você pode visualizar as informações de utilização do nó como<block ref="4b568da388833daf83ea72e69801ba34" prefix=" " category="inline-code"></block> usando os<block ref="f26fbe9dd2d7f06608bbf6327141caa9" prefix=" " category="inline-code"></block> métodos e<block ref="84b7393e47ffdee1d6a06f5067a7270c" prefix=" " category="inline-code"></block> API. O<block ref="4b568da388833daf83ea72e69801ba34" prefix=" " category="inline-code"></block> objeto é um membro do<block ref="d9bfbffd38f5f9686a85ef17e8138b5c" prefix=" " category="inline-code"></block> objeto e exibe informações de utilização do nó com base na proporção de IOPS total primário ou IOPS total com a média de IOPS configurada ao longo do tempo.</block>
+  <block id="75a2cb34cbc05ac90dcef2f4d04c6588" category="paragraph">Além disso, você pode exibir a utilização do nó como uma porcentagem de<block ref="3e970dc4a731d994269545ba0dc518ab" prefix=" " category="inline-code"></block> no visor Exibir detalhes de um nó na IU do elemento.</block>
+  <block id="df9435e47754394c09f05283809f164d" category="section-title">Exibir estatísticas de e/S para um volume</block>
+  <block id="3fb4d6085a8835e3addca4a9c0fbbf66" category="paragraph">Com o Element 12,8, você pode visualizar estatísticas de uso de e/S para um volume<block ref="cd10546771cf4d9146236c94201b070f" prefix=" " category="inline-code"></block> usando os<block ref="d0d8364463968eb91608c292d6fe317a" prefix=" " category="inline-code"></block> métodos e<block ref="27e97d4871384c3d242cfa858abc544a" prefix=" " category="inline-code"></block> API. As estatísticas de e/S são calculadas usando as informações de IOPS de leitura e gravação para o volume e medidas ao longo de dois períodos de tempo, as últimas 24 horas e a última hora. <block ref="e0c529df1577dac200ea6d61065ab487" category="inline-link-macro-rx"></block>.</block>
+  <block id="dfa7d479451fc6bd725c9494a87f3a6a" category="section-title">Algoritmo CHAP para sessão iSCSI</block>
+  <block id="b7ff4d8cc30e1648a2610b037b9c5b97" category="paragraph">Um iniciador iSCSI do host solicita uma lista de algoritmos CHAP (Challenge-Handshake Authentication Protocol) para usar quando está criando uma sessão iSCSI com um destino iSCSI Element. A partir do elemento 12,8, pode visualizar o algoritmo CHAP suportado que o destino iSCSI Element escolhe utilizar para uma sessão iSCSI.</block>
+  <block id="3c72afcfca67f187b816a55135a243dd" category="section-title">Atualize a versão do hardware da VM</block>
+  <block id="7dba8a3f7eba09c328d90efc88b182cd" category="paragraph">Se você estiver executando uma atualização no local de um nó de gerenciamento existente para o elemento 12,8, antes de atualizar, certifique-se de que a versão de hardware da VM no nó de gerenciamento seja compatível com o ESXi 6,7 (hardware da VM versão 14) ou posterior, dependendo do seu ambiente. <block ref="f415360b3de270935343c57ae74254e8" category="inline-link-macro-rx"></block>.</block>
+  <block id="9c5d76276e21d49836999553da451b64" category="paragraph">Saiba mais sobre o que há de novo no Element 12,7.</block>
+  <block id="c709a2d01de03a4c29036ff9f37c0dff" category="paragraph">Saiba mais sobre o que há de novo no Element 12,5.</block>
+  <block id="ad0a505756223d68dc11afeae3459351" category="inline-link">Documentação do NetApp HCI</block>
+  <block id="bf667c8802395357e4f080e2fcd819e4" category="list-text"><block ref="bf667c8802395357e4f080e2fcd819e4" category="inline-link-rx"></block></block>
+  <block id="f512bd2c4d2b9ed8c936fc1a75c3581e" category="paragraph">Dependendo da versão do software Element, os seguintes nós não são suportados:</block>
+  <block id="c31b8aa345140496ac5200d0d80fa702" category="list-text">A partir dos nós de storage Element 12,7, SF2405 e SF9608, e dos nós FC de FC0025 e SF-FCN-01.</block>
+  <block id="975648a39ca92865d807bc35f02b5984" category="inline-link-macro">Aviso para o software Element 12,8</block>
+  <block id="2d0be4b4ba388979c4f454ae05179965" category="list-text"><block ref="2d0be4b4ba388979c4f454ae05179965" category="inline-link-macro-rx"></block></block>
+  <block id="906ea05443e4b488a42f3f06305353ee" category="paragraph">Antes de seguir este procedimento, você deve ter uma compreensão <block ref="6cc910c0977361227d631be0efac7242" category="inline-link-macro-rx"></block>e se deseja ou não usá-los. Os volumes persistentes são opcionais, mas recomendados para a recuperação de dados de configuração de nó de gerenciamento no caso de perda de uma máquina virtual (VM).</block>
+  <block id="6d8cd87a85946daeae42cb54aade3baa" category="section-title">Passo 1: Baixe ISO ou OVA e implante a VM</block>
+  <block id="90c4d8ddd76d9f5f86c144316cec5657" category="paragraph">Transfira a ISO ou OVA adequada a partir do site de suporte da NetApp e instale a VM.</block>
+  <block id="4aee9657f267c579c49541b5f19ca32c" category="list-text">Transfira a OVA ou ISO para a sua instalação a partir da <block ref="00b11b6abe7f0003872aa657422c59ae" category="inline-link-macro-rx"></block>página no site de suporte da NetApp. O novo OVA contém um certificado SSL atualizado.</block>
+  <block id="c6913d34fefabb7329dba971ad99632d" category="section-title">Etapa 2: Crie o administrador do nó de gerenciamento e configure a rede</block>
+  <block id="8e1cc7b20e9f183452b777f8a4fb586d" category="paragraph">Após a conclusão da instalação da VM, crie o usuário de administrador do nó de gerenciamento e configure a rede do nó de gerenciamento.</block>
+  <block id="5e0472334bca93d0d28d3eeaaf723518" category="section-title">Passo 3: Configurar a sincronização de tempo</block>
+  <block id="6646ab3d83d88b5b34e61e3a58b244e8" category="paragraph">Antes de configurar o nó de gerenciamento, sincronize o tempo entre o nó de gerenciamento e o cluster de storage.</block>
+  <block id="e2a752315a25d69098c34f13da4b8c94" category="list-text">Verifique se a hora é sincronizada entre o nó de gerenciamento e o cluster de armazenamento usando NTP:</block>
+  <block id="60ba6327b0772f4d0beb24ef192dcf80" category="admonition">A partir do elemento 12,3.1, as subetapas (a) a (e) são executadas automaticamente. Para o nó de gerenciamento 12,3.1, prossiga para <block ref="745b7d927b75ef73b131f4d1b2da0731" category="inline-xref-macro-rx"></block>concluir a configuração de sincronização de tempo.</block>
+  <block id="ef246c91c687e7d720eb49c5e2a4cd47" category="section-title">Etapa 4: Configure o nó de gerenciamento</block>
+  <block id="9f150d20e38589485a1bb878b18c51e2" category="paragraph">Configure o nó de gerenciamento usando o<block ref="73028873f2b0a018096b6a3d871634b5" prefix=" " category="inline-code"></block> comando.</block>
+  <block id="2cec258fd66ace0725a9af6922c80f3e" category="section-title">Etapa 5: Configurar ativos do controlador</block>
+  <block id="b5d27a207b01cd3ca9fef9594d50836f" category="paragraph">Localize o ID de instalação e adicione um ativo do controlador vCenter.</block>
+  <block id="e667096facd9382b6410238147c6bd7d" category="inline-xref-macro">Ative e desative o balanceamento de carga de volume</block>
+  <block id="11bdcf58ce21896925e2cbc1f2174d99" category="list-text"><block ref="11bdcf58ce21896925e2cbc1f2174d99" category="inline-xref-macro-rx"></block></block>
+  <block id="6c7b496a2d02d11880156e116d65fdae" category="paragraph">Se você tentar atualizar um desses nós para uma versão de elemento não suportado, você verá um erro informando que o nó não é suportado pelo elemento 12.x.</block>
+  <block id="b8857076c45a770e167d021272059208" category="list-text">*CHAP*</block>
+  <block id="9cfc902e020fbc18dd2aff7989d4d45f" category="paragraph">O algoritmo CHAP para uma sessão iSCSI. Se um algoritmo CHAP não estiver sendo usado, um traço (-) é exibido. Disponível a partir do elemento 12,8.</block>
+  <block id="4072b99d321d18f605cb9f09366d1668" category="paragraph">A partir do Element 12,7, os algoritmos CHAP seguros compatíveis com FIPS SHA1, SHA-256 e SHA3-256 são suportados. Quando um iniciador iSCSI do host está criando uma sessão iSCSI com um destino iSCSI de elemento, ele solicita uma lista de algoritmos CHAP para usar. O destino iSCSI Element escolhe o primeiro algoritmo que suporta a partir da lista solicitada pelo iniciador iSCSI do host. Para confirmar que o destino iSCSI Element escolhe o algoritmo mais seguro, você deve configurar o iniciador iSCSI do host para enviar uma lista de algoritmos solicitados da maioria dos seguros, por exemplo, SHA3-256, para o menos seguro, por exemplo, SHA1 ou MD5. Quando os algoritmos SHA não são solicitados pelo iniciador iSCSI do host, o destino iSCSI do elemento escolhe MD5, assumindo que a lista de algoritmos proposta do host contém MD5. Talvez seja necessário atualizar a configuração do iniciador iSCSI do host para habilitar o suporte aos algoritmos seguros.</block>
+  <block id="b0d6e61e8313606c921c3d2b2ae7e76d" category="paragraph">Durante uma atualização do elemento 12,7 ou posterior, se você já tiver atualizado a configuração do iniciador iSCSI do host para enviar uma solicitação de sessão com uma lista que inclui algoritmos SHA, à medida que os nós de storage reiniciam, os novos algoritmos seguros são ativados e sessões iSCSI novas ou reconetadas são estabelecidas usando o protocolo mais seguro. Todas as sessões iSCSI existentes passam de MD5 para SHA durante a atualização. Se você não atualizar a configuração do iniciador iSCSI do host para solicitar SHA, as sessões iSCSI existentes continuarão a usar o MD5. Posteriormente, depois de atualizar os algoritmos CHAP do iniciador iSCSI do host, as sessões iSCSI devem passar gradualmente de MD5 para SHA ao longo do tempo com base em atividades de manutenção que resultem em reconexões de sessão iSCSI.</block>
+  <block id="aaee41e33731b48ea709a8d86f92665f" category="summary">A partir do elemento 12,8, é possível habilitar o balanceamento de carga de volume para equilibrar volumes entre nós com base no IOPS real de cada volume, em vez do IOPS mínimo configurado na política de QoS.</block>
+  <block id="3ef41e0639b21f006f7d5de45b6ee839" category="paragraph">A partir do elemento 12,8, você pode usar o balanceamento de carga de volume para equilibrar volumes entre nós com base no IOPS real de cada volume, em vez do IOPS mínimo configurado na política de QoS. Você pode ativar e desativar o balanceamento de carga de volume, que é desativado por padrão, usando a IU ou API do Element.</block>
+  <block id="bcdaa8bc7cb207354c87d8e1232ab12f" category="list-text">Selecione *Cluster* &gt; *Settings*.</block>
+  <block id="0f4c8c48f2ee6af3905e369c115e564d" category="list-text">Na seção específica do cluster, altere o status do balanceamento de carga de volume:</block>
+  <block id="3ad3b40ee22c1193fd89bfbd535ff89c" category="open-title">Ative o balanceamento de carga de volume</block>
+  <block id="fc974f059cad1de90d3d0a8283162c27" category="paragraph">Selecione *Ativar balanceamento de carga no IOPS real* e confirme sua seleção.</block>
+  <block id="f2b86d8559c9ce4d77248b1cb9564340" category="open-title">Desativar balanceamento de carga de volume:</block>
+  <block id="3216ad57a8f2305cd9a59ab5917e54e4" category="paragraph">Selecione *Desativar balanceamento de carga em IOPS reais* e confirme sua seleção.</block>
+  <block id="66b402adbbe6b9f984ecdcd5248bfec0" category="list-text">Opcionalmente, selecione *Relatório* &gt; *Visão geral* para confirmar a alteração de status para saldo em IOPS reais. Talvez seja necessário rolar para baixo as informações de integridade do cluster para exibir o status.</block>
+  <block id="4e5a27f88db1734e1af540886a80a4e9" category="inline-link-macro">Ative o balanceamento de carga de volume usando a API</block>
+  <block id="3b23faa50d0cdbc4e395b29066b18b08" category="list-text"><block ref="3b23faa50d0cdbc4e395b29066b18b08" category="inline-link-macro-rx"></block></block>
+  <block id="e94e13cb2fcae56ae542775b50cc0b10" category="inline-link">Desative o balanceamento de carga de volume usando a API</block>
+  <block id="9ffe0c15921805682448240c94ddc614" category="list-text"><block ref="9ffe0c15921805682448240c94ddc614" category="inline-link-rx"></block></block>
+  <block id="a7f635a546cbb7490b31779618511dd1" category="list-text"><block ref="a7f635a546cbb7490b31779618511dd1" category="inline-link-macro-rx"></block></block>
+  <block id="e52172b27eb39053f2941029ca952216" category="list-text">*Utilização de nós*: A porcentagem de utilização de nós baseada no nodeHeat. O valor exibido é recentPrimaryTotalHeat como uma porcentagem. Disponível a partir do elemento 12,8.</block>
+  <block id="5e8ecd2e12df03135f7d9ea0fc9f1e5e" category="list-text">*Domínio de proteção personalizada*: O domínio de proteção personalizado atribuído ao nó.</block>
+  <block id="c5c29b3089afd57677f0c6e16b8f6bc1" category="inline-link-macro">realizar uma atualização no local do nó de gerenciamento</block>
+  <block id="870c21ddabb9d392de6b8260f26cb2bd" category="list-text">A partir de novembro de 2023, não é possível iniciar uma atualização de componente usando o Controle de nuvem híbrida ou a API REST do NetApp porque os certificados de chave de assinatura (privados e públicos) expiraram em 5 de novembro de 2023. Você pode resolver esse problema <block ref="3f48e72cfa47aa3f4c9b8d036d27a113" category="inline-link-macro-rx"></block>até a versão 12,8 antes de usar o controle de nuvem híbrida ou a API REST do NetApp para atualizar os serviços de gerenciamento, o software Element e o firmware de storage.</block>
+  <block id="155ca98fbc1ded22cd8604d6760bbd99" category="paragraph">Se você estiver implantando um novo nó de gerenciamento com a versão 12,8, poderá usar o Controle de nuvem híbrida ou a API REST do NetApp para realizar atualizações de componentes na ordem listada no <block ref="c0f289a1ce14070fe1c9e60f6416d18d" category="inline-xref-macro-rx"></block>.</block>
+  <block id="1806b0c9501c3b2013932e456db5038b" category="list-text">Os seguintes nós não são suportados. Se você tentar atualizar um desses nós para uma versão de elemento não suportado, verá um erro informando que o nó não é suportado pelo elemento 12.x:</block>
+  <block id="b036ebb7aa6b63db449d4df71f28c3cd" category="section-title">Etapa 1: Atualize a versão do hardware da VM em um nó de gerenciamento</block>
+  <block id="6bdecd9b5d3ab973ac36df911f986fc3" category="paragraph">Se você estiver executando uma atualização no local de um nó de gerenciamento existente para o elemento 12,8, antes de atualizar, certifique-se de que a versão de hardware da VM no nó de gerenciamento seja compatível com o ESXi 6,7 (hardware da VM versão 14) ou posterior, dependendo do seu ambiente.</block>
+  <block id="da356a9209429c8cb4f06565d719d2b8" category="list-text">Faça login no vSphere Web Client como um vCenter Administrator.</block>
+  <block id="7936b082e6a3d2167a2478cee0772514" category="list-text">No menu vSphere Client, selecione *VMs* &gt; *Templates*.</block>
+  <block id="ad4062bf296d686c04c351f026e2400d" category="list-text">Clique com o botão direito do rato na máquina virtual e selecione *Compatibilidade* &gt; *Atualizar a compatibilidade da VM*.</block>
+  <block id="cf8716d5690805e881fbd8fa22fb282a" category="list-text">Selecione ESXi 6,7 ou uma versão posterior, dependendo da versão do seu ambiente vSphere.</block>
+  <block id="3d1c64d2c8b1e4058225a78c3ef09fa6" category="list-text">Selecione *OK*.</block>
+  <block id="43c3c8c2f75e6064714e6ec942f1e916" category="list-text">Depois que a atualização estiver concluída, selecione *vSphere client refresh* e verifique se a compatibilidade da VM está na versão desejada.</block>
+  <block id="6b17900bf8b7a52b1be75bbe68b2d77e" category="section-title">Etapa 2: Atualize um nó de gerenciamento para o elemento 12,5 ou posterior</block>
+  <block id="d5bdcd035d3751961b201dd1c2261aa3" category="paragraph">Escolha uma das seguintes opções de atualização:</block>
+  <block id="8c5a891df58bfda1762ec23302a952b6" category="sidebar">Um sistema de storage all-flash da SolidFire é composto por componentes de hardware, como unidades e nós, combinados em um pool de recursos de storage. Com a interface Element, a API ou outras ferramentas de gerenciamento, você pode gerenciar esses clusters de recursos de storage com o software NetApp Element. Este site contém a documentação do software Element 12,8.</block>
+  <block id="83214fe0ca2841bff645ee69075302da" category="sidebar">Documentação do software SolidFire e Element 12,8</block>
 </blocks>

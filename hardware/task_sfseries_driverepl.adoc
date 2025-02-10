@@ -37,6 +37,7 @@ As instruções se aplicam aos seguintes modelos de nós de storage da SolidFire
 ====
 Dependendo da versão do software Element, os seguintes nós não são suportados:
 
+* A partir dos nós de storage Element 12,8, SF4805, SF9605, SF19210 e SF38410.
 * A partir dos nós de storage Element 12,7, SF2405 e SF9608.
 * A partir dos nós de storage Element 12,0, SF3010, SF6010 e SF9010.
 

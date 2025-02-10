@@ -115,7 +115,7 @@ NOTE: Se você precisar de uma NIC adicional para isolar o tráfego de armazenam
 
 == Configurar a sincronização da hora
 
-. Certifique-se de que o tempo é sincronizado entre o nó de gerenciamento e o cluster de armazenamento usando NTP:
+. Verifique se a hora é sincronizada entre o nó de gerenciamento e o cluster de armazenamento usando NTP:
 
 
 

@@ -24,6 +24,15 @@ Dependendo da versão do software Element, os seguintes nós de storage da séri
 | Começando com... | Nó de armazenamento não suportado... 
 
 
+| Elemento 12,8  a| 
+* SF4805
+* SF9605
+* SF19210
+* SF38410
+
+
+
+
 | Elemento 12,7  a| 
 * SF2405
 * SF9608
@@ -38,4 +47,4 @@ Dependendo da versão do software Element, os seguintes nós de storage da séri
 
 
 |===
-Se você tentar atualizar um desses nós para uma versão de elemento não suportado, você verá um erro informando que esse nó não é suportado pelo elemento 12.x.
+Se você tentar atualizar um desses nós para uma versão de elemento não suportado, você verá um erro informando que o nó não é suportado pelo elemento 12.x.

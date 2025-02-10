@@ -43,6 +43,17 @@ Associe o volume à política de QoS especificada. Valores possíveis:
 | `attributes` | Lista de pares nome-valor no formato de objeto JSON. O tamanho total do atributo deve ser inferior a 1000B, ou 1KB, incluindo carateres de formatação JSON. | Objeto JSON | Nenhum | Não 
 
 
+| `dontMoveforIopsRebalance`  a| 
+Evite que um volume se mova ao equilibrar a carga com IOPS real. Esta definição está disponível a partir do elemento 12,8 e só é eficaz quando link:reference_element_api_enablefeature.html["VolumeLoadBalanceOnActualIOPS"]está ativado. Valores possíveis:
+
+* `true`: O volume não carrega o equilíbrio com base no IOPS real.
+* `false`: O volume faz o balanceamento de carga com base em IOPS real.
+
+
+*Nota*: O balanceamento para alta disponibilidade (falha de nó) tem precedência sobre `VolumeLoadBalanceOnActualIOPS` e `dontMoveforIopsRebalance`.
+| booleano | falso | Não 
+
+
 | `enable512e`  a| 
 Ative a emulação de setor de 512 bytes. Valores possíveis:
 
@@ -92,8 +103,6 @@ As definições iniciais de qualidade do serviço para este volume. Os valores p
 Este método tem os seguintes valores de retorno:
 
 |===
-
-
 | Nome | Descrição | Tipo 
 
 
@@ -134,19 +143,16 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 {
    "method": "CreateVolume",
    "params": {
-      "name": "mysqldata",
-      "accountID": 1,
-      "totalSize": 107374182400,
+      "name": "testit",
+      "accountID": 22,
+      "dontMoveForIopsRebalance": true,
+      "totalSize": 100000000000,
       "enable512e": false,
-      "attributes": {
-         "name1": "value1",
-         "name2": "value2",
-         "name3": "value3"
-      },
+      "attributes": {},
       "qos": {
-         "minIOPS": 50,
-         "maxIOPS": 500,
-         "burstIOPS": 1500,
+         "minIOPS": 500,
+         "maxIOPS": 27000,
+         "burstIOPS": 27000,
          "burstTime": 60
       }
    },
@@ -165,59 +171,66 @@ Este método retorna uma resposta semelhante ao seguinte exemplo:
     "id": 1,
     "result": {
         "curve": {
-            "4096": 100,
-            "8192": 160,
-            "16384": 270,
-            "32768": 500,
-            "65536": 1000,
+            "1048576": 15000,
             "131072": 1950,
+            "16384": 270,
             "262144": 3900,
+            "32768": 500,
+            "4096": 100,
             "524288": 7600,
-            "1048576": 15000
+            "65536": 1000,
+            "8192": 160
         },
         "volume": {
             "access": "readWrite",
-            "accountID": 1,
-            "attributes": {
-                "name1": "value1",
-                "name2": "value2",
-                "name3": "value3"
-            },
+            "accountID": 22,
+            "attributes": {},
             "blockSize": 4096,
-            "createTime": "2016-03-31T22:20:22Z",
+            "createTime": "2024-04-02T13:03:02Z",
+            "currentProtectionScheme": "doubleHelix",
             "deleteTime": "",
+            "dontMoveForIopsRebalance": true,
             "enable512e": false,
+            "enableSnapMirrorReplication": false,
+            "fifoSize": 24,
             "iqn": "iqn.2010-01.com.solidfire:mysqldata.677",
-            "name": "mysqldata",
+            "lastAccessTime": null,
+            "lastAccessTimeIO": null,
+            "minFifoSize": 0,
+            "name": "testit",
+            "previousProtectionScheme": null,
             "purgeTime": "",
             "qos": {
-                "burstIOPS": 1500,
+                "burstIOPS": 27000,
                 "burstTime": 60,
                 "curve": {
-                    "4096": 100,
-                    "8192": 160,
-                    "16384": 270,
-                    "32768": 500,
-                    "65536": 1000,
+                    "1048576": 15000,
                     "131072": 1950,
+                    "16384": 270,
                     "262144": 3900,
+                    "32768": 500,
+                    "4096": 100,
                     "524288": 7600,
-                    "1048576": 15000
+                    "65536": 1000,
+                    "8192": 160
                 },
-                "maxIOPS": 500,
-                "minIOPS": 50
+                "maxIOPS": 27000,
+                "minIOPS": 500
             },
-            "scsiEUIDeviceID": "6a796179000002a5f47acc0100000000",
-            "scsiNAADeviceID": "6f47acc1000000006a796179000002a5",
+            "qosPolicyID": null,
+            "scsiEUIDeviceID": "3365657500000140f47acc0100000000",
+            "scsiNAADeviceID": "6f47acc1000000003365657500000140",
             "sliceCount": 0,
             "status": "active",
-            "totalSize": 107374182400,
+            "totalSize": 1000000716800,
             "virtualVolumeID": null,
             "volumeAccessGroups": [],
-            "volumeID": 677,
-            "volumePairs": []
+            "volumeConsistencyGroupUUID": "8ed68e57-13ee-47df-8381-29b125142718",
+            "volumeID": 320,
+            "volumePairs": [],
+            "volumeUUID": "e0e2c938-4ecd-4de9-a1be-f6b17c93ce5d"
         },
-        "volumeID": 677
+        "volumeID": 320
     }
 }
 ----

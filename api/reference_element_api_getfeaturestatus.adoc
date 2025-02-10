@@ -19,6 +19,7 @@ Você pode usar o `GetFeatureStatus` método para recuperar o status de um recur
 
 Este método tem o seguinte parâmetro de entrada:
 
+[cols="1a,3a,1a,1a,1a"]
 |===
 | Nome | Descrição | Tipo | Valor padrão | Obrigatório 
 
@@ -28,10 +29,11 @@ recurso
  a| 
 O status de um recurso de cluster. Se nenhum valor for fornecido, o sistema retornará um status de todos os recursos. Valores possíveis:
 
-* Vvols: Recuperar status para o recurso de cluster do VVols.
-* SnapMirror: Recuperar o status do recurso de cluster de replicação do SnapMirror.
-* FIPS: Recuperar o status do recurso de criptografia FIPS 140-2 para comunicação HTTPS.
-* FipsDrives: Recupere o status do recurso de criptografia da unidade FIPS 140-2.
+* `Vvols`: Retrieve status para o recurso de cluster do vols.
+* `SnapMirror`: Retrieve status para o recurso de cluster de replicação do SnapMirror.
+* `Fips`: Recupere o status do recurso de criptografia FIPS 140-2 para comunicação HTTPS.
+* `FipsDrives`: Recupere o status do recurso de criptografia da unidade FIPS 140-2.
+* `VolumeLoadBalanceOnActualIOPS`: Recupere o status do balanceamento de fatia no IOPS real em vez do recurso de IOPS mínimo. Disponível a partir do elemento 12,8.
 
  a| 
 cadeia de carateres
@@ -105,6 +107,10 @@ Este método retorna uma resposta semelhante ao seguinte exemplo:
             {
                 "enabled": true,
                 "feature": "FipsDrives"
+            },
+            {
+                "enabled": true,
+                "feature": "VolumeLoadBalanceOnActualIOPS"
             }
         ]
     }

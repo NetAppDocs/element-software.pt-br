@@ -19,6 +19,7 @@ Você pode configurar configurações como limite de preenchimento de cluster, a
 * xref:concept_data_manage_vvol_work_virtual_volumes.adoc[Trabalhe com volumes virtuais]
 * xref:task_snapmirror_use_replication_between_element_and_ontap_clusters.adoc[Use a replicação do SnapMirror entre clusters Element e ONTAP]
 * xref:task_system_manage_cluster_set_the_cluster_full_threshold.adoc[Defina o limite máximo do cluster]
+* xref:task_system_manage_cluster_volume_load_balancing.adoc[Ative e desative o balanceamento de carga de volume]
 * xref:task_system_manage_cluster_enable_and_disable_support_access.adoc[Ativar e desativar o acesso ao suporte]
 * https://kb.netapp.com/Advice_and_Troubleshooting/Flash_Storage/SF_Series/How_are_the_blockSpace_thresholds_calculated_for_Element["Como são calculados os limites de blockSpace para o elemento"]
 * xref:task_system_manage_cluster_enable_and_disable_encryption_for_a_cluster.adoc[Ativar e desativar a encriptação para um cluster]
@@ -27,8 +28,8 @@ Você pode configurar configurações como limite de preenchimento de cluster, a
 * xref:concept_system_manage_snmp_manage_snmp.adoc[Gerenciar SNMP]
 * xref:concept_system_manage_drives_managing_drives.adoc[Gerenciar unidades]
 * xref:concept_system_manage_nodes_manage_nodes.adoc[Gerenciar nós]
-* xref:concept_system_manage_virtual_manage_virtual_networks.adoc[Gerenciar redes virtuais]
 * xref:task_system_manage_fc_view_fibre_channel_ports_details.adoc[Veja os detalhes das portas Fibre Channel]
+* xref:concept_system_manage_virtual_manage_virtual_networks.adoc[Gerenciar redes virtuais]
 
 
 

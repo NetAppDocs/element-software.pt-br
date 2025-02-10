@@ -53,6 +53,8 @@ entries:
       url: "/storage/task_system_manage_cluster_enable_and_disable_encryption_for_a_cluster.html"
     - title: Defina o limite máximo do cluster
       url: "/storage/task_system_manage_cluster_set_the_cluster_full_threshold.html"
+    - title: Ative e desative o balanceamento de carga de volume
+      url: "/storage/task_system_manage_cluster_volume_load_balancing.html"
     - title: Ativar e desativar o acesso ao suporte
       url: "/storage/task_system_manage_cluster_enable_and_disable_support_access.html"
     - title: Gerenciar os termos de uso banner

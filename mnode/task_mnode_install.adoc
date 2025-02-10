@@ -18,7 +18,7 @@ Você pode instalar manualmente o nó de gerenciamento do cluster que executa o 
 
 Este processo manual destina-se a administradores de storage all-flash do SolidFire que não estejam usando o mecanismo de implantação do NetApp para a instalação do nó de gerenciamento.
 
-.O que você vai precisar
+.Antes de começar
 * A versão do cluster está executando o software NetApp Element 11,3 ou posterior.
 * Sua instalação usa IPv4. O nó de gerenciamento 11,3 não oferece suporte ao IPv6.
 +
@@ -55,19 +55,13 @@ O nó de gerenciamento do Element 12,2 é uma atualização opcional. Não é ne
 
 Antes de seguir este procedimento, você deve ter uma compreensão link:../concepts/concept_solidfire_concepts_volumes.html#persistent-volumes["Volumes persistentes"]e se deseja ou não usá-los. Os volumes persistentes são opcionais, mas recomendados para a recuperação de dados de configuração de nó de gerenciamento no caso de perda de uma máquina virtual (VM).
 
-.Passos
-. <<Baixe ISO ou OVA e implante a VM>>
-. <<create_mnode_admin,Crie o administrador do nó de gerenciamento e configure a rede>>
-. <<Configurar a sincronização da hora>>
-. <<Configure o nó de gerenciamento>>
-. <<Configurar ativos do controlador>>
 
 
+== Passo 1: Baixe ISO ou OVA e implante a VM
 
+Transfira a ISO ou OVA adequada a partir do site de suporte da NetApp e instale a VM.
 
-== Baixe ISO ou OVA e implante a VM
-
-. Transfira a OVA ou ISO para a sua instalação a partir da link:https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab["Software Element"^]página no site de suporte da NetApp.
+. Transfira a OVA ou ISO para a sua instalação a partir da link:https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab["Software Element"^]página no site de suporte da NetApp. O novo OVA contém um certificado SSL atualizado.
 +
 .. Selecione *Download Latest Release* e aceite o EULA.
 .. Selecione a imagem do nó de gestão que pretende transferir.
@@ -111,8 +105,11 @@ NOTE: A instalação de um nó de gerenciamento usando a imagem pode resultar em
 
 
 
-== Crie o administrador do nó de gerenciamento e configure a rede
+== Etapa 2: Crie o administrador do nó de gerenciamento e configure a rede
 
+Após a conclusão da instalação da VM, crie o usuário de administrador do nó de gerenciamento e configure a rede do nó de gerenciamento.
+
+.Passos
 . Usando a interface do usuário de terminal (TUI), crie um usuário de administrador de nó de gerenciamento.
 +
 
@@ -139,9 +136,12 @@ NOTE: Se você precisar de uma NIC adicional para isolar o tráfego de armazenam
 
 
 
-== Configurar a sincronização da hora
+== Passo 3: Configurar a sincronização de tempo
 
-. Certifique-se de que o tempo é sincronizado entre o nó de gerenciamento e o cluster de armazenamento usando NTP:
+Antes de configurar o nó de gerenciamento, sincronize o tempo entre o nó de gerenciamento e o cluster de storage.
+
+.Passos
+. Verifique se a hora é sincronizada entre o nó de gerenciamento e o cluster de armazenamento usando NTP:
 
 
 
@@ -216,8 +216,11 @@ NOTE: Não edite o NTP depois de concluir a configuração de sincronização de
 
 
 
-== Configure o nó de gerenciamento
+== Etapa 4: Configure o nó de gerenciamento
 
+Configure o nó de gerenciamento usando o `setup-mnode` comando.
+
+.Passos
 . Configure e execute o comando de configuração do nó de gerenciamento:
 +
 
@@ -279,8 +282,11 @@ NOTE: Use um nome de conta exclusivo para volumes persistentes que seja diferent
 
 
 
-== Configurar ativos do controlador
+== Etapa 5: Configurar ativos do controlador
 
+Localize o ID de instalação e adicione um ativo do controlador vCenter.
+
+.Passos
 . Localize a ID de instalação:
 +
 .. A partir de um navegador, faça login na IU da API REST do nó de gerenciamento:
@@ -336,7 +342,8 @@ NOTE: Você deve criar uma nova função HCC do NetApp no vCenter para adicionar
 
 
 
-[discrete]
+
+
 == Encontre mais informações
 
 * link:../concepts/concept_solidfire_concepts_volumes.html#persistent-volumes["Volumes persistentes"]

@@ -20,8 +20,16 @@ Esses componentes incluem serviços de gerenciamento, controle de nuvem híbrida
 
 [NOTE]
 ====
-* A partir de novembro de 2023, você não pode iniciar uma atualização de componente usando o Controle de nuvem híbrida ou a API REST do NetApp porque os certificados de chave de assinatura (privados e públicos) expiraram em 5 de novembro de 2023. Você pode resolver esse problema seguindo a solução alternativa documentada no artigo da base de dados de Conhecimento https://kb.netapp.com/onprem/solidfire/Element_OS/SolidFire_and_HCI_upgrades_unable_to_start_due_to_upgrade_package_upload_error["As atualizações do SolidFire e HCI não podem ser iniciadas devido a um erro de carregamento do pacote de atualização"^] .
-* A partir do elemento 12,7, os nós de storage SF2405 e SF9608 e os nós FC FC0025 e SF-FCN-01 não são suportados. Se você tentar atualizar um desses nós para o elemento 12,7, verá um erro informando que esse nó não é suportado pelo elemento 12,7.
+* A partir de novembro de 2023, não é possível iniciar uma atualização de componente usando o Controle de nuvem híbrida ou a API REST do NetApp porque os certificados de chave de assinatura (privados e públicos) expiraram em 5 de novembro de 2023. Você pode resolver esse problema link:task_hcc_upgrade_management_node.html["realizar uma atualização no local do nó de gerenciamento"]até a versão 12,8 antes de usar o controle de nuvem híbrida ou a API REST do NetApp para atualizar os serviços de gerenciamento, o software Element e o firmware de storage.
++
+Se você estiver implantando um novo nó de gerenciamento com a versão 12,8, poderá usar o Controle de nuvem híbrida ou a API REST do NetApp para realizar atualizações de componentes na ordem listada no <<sys_upgrade,sequência de atualização do sistema>>.
+
+* Os seguintes nós não são suportados. Se você tentar atualizar um desses nós para uma versão de elemento não suportado, verá um erro informando que o nó não é suportado pelo elemento 12.x:
++
+** A partir dos nós de storage Element 12,8, SF4805, SF9605, SF19210 e SF38410.
+** A partir dos nós de storage Element 12,7, SF2405 e SF9608 e dos nós FC de FC0025 e SF-FCN-01.
+
+
 * A partir do Element 12,5, o NetApp HealthTools não é mais suportado para atualizações de software Element. Se você estiver executando o Element 11,0 ou 11,1, primeiro https://docs.netapp.com/us-en/element-software-123/upgrade/task_hcc_upgrade_element_software.html#upgrade-element-software-at-connected-sites-using-healthtools["Atualize para o Element 12,3 usando HealthTools"^] e depois atualize para o Element 12,5 ou posterior usando o Controle de nuvem híbrida da NetApp.
 
 
@@ -30,7 +38,7 @@ Esses componentes incluem serviços de gerenciamento, controle de nuvem híbrida
 
 O link:task_sf_upgrade_all_vsphere.html["Sequência de atualização do vSphere"]conteúdo do plug-in do Element para vCenter Server inclui etapas adicionais de pré e pós-atualização necessárias para reinstalar o plug-in do Element para o vCenter Server.
 
-.O que você vai precisar
+.Antes de começar
 * Você está executando o nó de gerenciamento 11,3 ou posterior. As versões mais recentes do nó de gerenciamento têm uma arquitetura modular que fornece serviços individuais.
 +
 

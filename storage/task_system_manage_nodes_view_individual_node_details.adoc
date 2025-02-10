@@ -21,7 +21,6 @@ Você pode exibir detalhes de nós individuais, como tags de serviço, detalhes 
 +
 ** *Node ID*: O ID gerado pelo sistema para o nó.
 ** *Nome do nó*: O nome do host para o nó.
-** *disponível 4K IOPS*: O IOPS configurado para o nó.
 ** *Função do nó*: A função que o nó tem no cluster. Valores possíveis:
 +
 *** Mestre de cluster: O nó que executa tarefas administrativas em todo o cluster e contém o MVIP e o SVIP.
@@ -31,6 +30,7 @@ Você pode exibir detalhes de nós individuais, como tags de serviço, detalhes 
 
 ** *Tipo de nó*: O tipo de modelo do nó.
 ** *Unidades ativas*: O número de unidades ativas no nó.
+** *Utilização de nós*: A porcentagem de utilização de nós baseada no nodeHeat. O valor exibido é recentPrimaryTotalHeat como uma porcentagem. Disponível a partir do elemento 12,8.
 ** *IP de gerenciamento*: O endereço IP de gerenciamento (MIP) atribuído ao nó para tarefas de administração de rede 1GbE ou 10GbE.
 ** *IP do cluster*: O endereço IP do cluster (CIP) atribuído ao nó usado para a comunicação entre nós no mesmo cluster.
 ** *IP de armazenamento*: O endereço IP de armazenamento (SIP) atribuído ao nó usado para descoberta de rede iSCSI e todo o tráfego de rede de dados.
@@ -39,6 +39,7 @@ Você pode exibir detalhes de nós individuais, como tags de serviço, detalhes 
 ** *Versão*: A versão do software em execução em cada nó.
 ** *Porta de replicação*: A porta usada em nós para replicação remota.
 ** *Etiqueta de serviço*: O número exclusivo da etiqueta de serviço atribuído ao nó.
+** *Domínio de proteção personalizada*: O domínio de proteção personalizado atribuído ao nó.
 
 
 

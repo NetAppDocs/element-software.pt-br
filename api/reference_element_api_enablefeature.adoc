@@ -22,6 +22,7 @@ Este método tem o seguinte parâmetro de entrada.
 
 NOTE: Para sistemas que executam o software Element 11.x, ativar volumes virtuais antes ou depois da configuração do monitoramento de domínio de proteção faz com que o recurso de domínios de proteção de cluster funcione apenas no nível do nó.
 
+[cols="1a,3a,1a,1a,1a"]
 |===
 | Nome | Descrição | Tipo | Valor padrão | Obrigatório 
 
@@ -34,6 +35,7 @@ Ative um recurso de cluster. Valores possíveis:
 * `fips`: Ative a criptografia com certificação FIPS 140-2 para comunicações HTTPS.
 * `FipsDrives`: Ative o suporte da unidade FIPS 140-2 para o cluster de armazenamento.
 * `SnapMirror`: Ative o recurso de cluster de replicação do SnapMirror.
+* `VolumeLoadBalanceOnActualIOPS`: Ative o balanceamento de fatia em IOPS real em vez de IOPS mínimo. Disponível a partir do elemento 12,8.
 * `vvols`: Ative o recurso de cluster Vols do software Element.
 
  a| 

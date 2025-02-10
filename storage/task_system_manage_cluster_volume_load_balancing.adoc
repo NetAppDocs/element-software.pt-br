@@ -1,0 +1,43 @@
+---
+permalink: storage/task_system_manage_cluster_volume_load_balancing.html 
+sidebar: sidebar 
+keywords: cluster, volume, volumes, load, balancing, actual, IOPS 
+summary: A partir do elemento 12,8, é possível habilitar o balanceamento de carga de volume para equilibrar volumes entre nós com base no IOPS real de cada volume, em vez do IOPS mínimo configurado na política de QoS. 
+---
+= Ative e desative o balanceamento de carga de volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A partir do elemento 12,8, você pode usar o balanceamento de carga de volume para equilibrar volumes entre nós com base no IOPS real de cada volume, em vez do IOPS mínimo configurado na política de QoS. Você pode ativar e desativar o balanceamento de carga de volume, que é desativado por padrão, usando a IU ou API do Element.
+
+.Passos
+. Selecione *Cluster* > *Settings*.
+. Na seção específica do cluster, altere o status do balanceamento de carga de volume:
++
+[role="tabbed-block"]
+====
+.Ative o balanceamento de carga de volume
+--
+Selecione *Ativar balanceamento de carga no IOPS real* e confirme sua seleção.
+
+--
+.Desativar balanceamento de carga de volume:
+--
+Selecione *Desativar balanceamento de carga em IOPS reais* e confirme sua seleção.
+
+--
+====
+. Opcionalmente, selecione *Relatório* > *Visão geral* para confirmar a alteração de status para saldo em IOPS reais. Talvez seja necessário rolar para baixo as informações de integridade do cluster para exibir o status.
+
+
+
+
+== Encontre mais informações
+
+* link:../api/reference_element_api_enablefeature.html["Ative o balanceamento de carga de volume usando a API"]
+* https://docs.netapp.com/us-en/element-software/api/reference_element_api_disablefeature.html["Desative o balanceamento de carga de volume usando a API"]
+* link:../hccstorage/task-hcc-qos-policies.html["Criar e gerenciar políticas de QoS de volume"]
+

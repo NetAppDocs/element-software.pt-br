@@ -123,6 +123,21 @@ número inteiro
 
 
  a| 
+NodeHeat
+ a| 
+Informações de utilização do nó. Disponível a partir do elemento 12,8. Membros:
+
+* Primário TotalHeat: O IOPS total primário/configurado do nó foi calculado em média em 24 horas
+* RecentPrimaryTotalHeat: O total de IOPS/nó configurado do nó primário foi calculado em média ao longo de uma hora
+* RecentTotalHeat: O total de IOPS/IOPS configurado do nó foi calculado em média durante uma hora
+* TotalHeat: Média de IOPS/IOPS configurado do nó em 24 horas
+
+ a| 
+Objeto JSON
+
+
+
+ a| 
 ReadLatencyUSecTotal
  a| 
 Valor monotonicamente crescente do tempo total gasto realizando operações de leitura para o nó.
