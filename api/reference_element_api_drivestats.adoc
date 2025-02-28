@@ -51,6 +51,15 @@ número inteiro
 
 
  a| 
+IosInProgress
+ a| 
+O número de I/os para esta unidade que estão em andamento.
+ a| 
+número inteiro
+
+
+
+ a| 
 LifeRemainingPercent
  a| 
 Indicador de desgaste do material de transmissão.
@@ -87,9 +96,36 @@ número inteiro
 
 
  a| 
+lê
+ a| 
+O número de chamadas read() por segundo para esta unidade.
+ a| 
+número inteiro
+
+
+
+ a| 
 ReadBytes
  a| 
 Total de bytes lidos da unidade devido às operações do cliente.
+ a| 
+número inteiro
+
+
+
+ a| 
+ReadsCombined
+ a| 
+O número de chamadas read() para setores adjacentes que podem ser combinados em uma leitura maior.
+ a| 
+número inteiro
+
+
+
+ a| 
+ReadMseg
+ a| 
+O número de milissegundos gastos com leitura.
  a| 
 número inteiro
 
@@ -168,9 +204,36 @@ número inteiro
 
 
  a| 
+gravações
+ a| 
+O número de chamadas write() por segundo para esta unidade.
+ a| 
+número inteiro
+
+
+
+ a| 
 Escreve Bytes
  a| 
 Total de bytes gravados na unidade devido à atividade do cliente.
+ a| 
+número inteiro
+
+
+
+ a| 
+WritesCombined
+ a| 
+O número de chamadas write() para setores adjacentes que podem ser combinados em uma gravação maior.
+ a| 
+número inteiro
+
+
+
+ a| 
+Escreva o seu comentário
+ a| 
+O número de milissegundos gasto escrevendo.
  a| 
 número inteiro
 
@@ -189,3 +252,5 @@ número inteiro
 == Encontre mais informações
 
 xref:reference_element_api_getdrivestats.adoc[GetDriveStats]
+
+ // 2025 FEB 27, DOC-4778

@@ -114,7 +114,7 @@ número inteiro
 O estado da operação. Valores possíveis:
 
 * preparar
-* ativo
+* em execução
 * concluído
 * falha
 

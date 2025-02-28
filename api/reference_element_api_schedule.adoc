@@ -150,7 +150,20 @@ número inteiro
  a| 
 ScheduleInfo
  a| 
-Inclui o nome exclusivo dado ao agendamento, o período de retenção do instantâneo criado e o ID do volume do volume a partir do qual o instantâneo foi criado.
+Inclui o nome exclusivo dado ao agendamento, o período de retenção do instantâneo criado e o ID do volume do volume a partir do qual o instantâneo foi criado. Valores válidos:
+
+* `enableRemoteReplication`: Indica se o instantâneo deve ser incluído na replicação remota. (booleano)
+* `ensureSerialCreation`: Especifica se uma nova criação de snapshot deve ser permitida se uma replicação de snapshot anterior estiver em andamento. (booleano)
+* `name`: O nome do instantâneo a ser usado. (string)
+* `retention`: A quantidade de tempo em que o instantâneo é retido. Dependendo da hora, ele é exibido em um dos seguintes formatos:
++
+** fifo: O snapshot é retido em uma base First-in-First-out (FIFO). Se estiver vazio, o instantâneo é mantido para sempre. (string)
+** HH:mm:ss
+
+
+* `volumeID`: A ID do volume a ser incluído no instantâneo. (número inteiro)
+* `volumes`: Uma lista de IDs de volume a serem incluídas no instantâneo do grupo. (array inteiro)
+
  a| 
 Objeto JSON
 

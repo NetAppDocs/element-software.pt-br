@@ -30,7 +30,7 @@ BlocksPerSegond
  a| 
 O número de blocos de dados sendo transferidos por segundo do cluster de origem para o cluster de destino. Presente apenas se o membro do tipo estiver definido como remoto.
  a| 
-flutuação
+número inteiro
 
 
 
@@ -97,7 +97,7 @@ ElapsedTime
  a| 
 O tempo decorrido, em segundos, desde o início do trabalho de sincronização.
  a| 
-flutuação
+flutuante ou inteiro dependendo do tipo de operação de sincronização
 
 
 
@@ -124,7 +124,7 @@ Percentil completo
  a| 
 A percentagem de conclusão do trabalho de sincronização.
  a| 
-número inteiro
+flutuante ou inteiro dependendo do tipo de operação de sincronização
 
 
 
@@ -133,7 +133,7 @@ Tempo restante
  a| 
 O tempo estimado, em segundos, para concluir a operação.
  a| 
-número inteiro
+flutuação
 
 
 
