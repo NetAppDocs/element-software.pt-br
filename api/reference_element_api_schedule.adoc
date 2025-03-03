@@ -157,7 +157,7 @@ Inclui o nome exclusivo dado ao agendamento, o período de retenção do instant
 * `name`: O nome do instantâneo a ser usado. (string)
 * `retention`: A quantidade de tempo em que o instantâneo é retido. Dependendo da hora, ele é exibido em um dos seguintes formatos:
 +
-** fifo: O snapshot é retido em uma base First-in-First-out (FIFO). Se estiver vazio, o instantâneo é mantido para sempre. (string)
+** `fifo`: O instantâneo é retido em uma base de primeiro em primeiro em primeiro em primeiro lugar (FIFO). Se estiver vazio, o instantâneo é mantido para sempre. (string)
 ** HH:mm:ss
 
 
