@@ -27,7 +27,7 @@ Saiba mais sobre o que há de novo no Element 12,8.
 
 === Balanceamento de carga de volume
 
-O elemento 12,8 introduz o recurso balanceamento de carga de volume. Você pode usar esse recurso para equilibrar volumes entre nós com base no nível de IOPS real de cada volume, em vez do IOPS mínimo configurado na política de QoS. Você só pode usar o recurso balanceamento de carga de volume para equilibrar volumes. Você não pode usá-lo para equilibrar volumes virtuais. O recurso balanceamento de carga de volume está desativado por padrão. Você pode ativá-lo e desativá-lo usando o `VolumeLoadBalanceOnActualIOPS` parâmetro API com os link:../api/reference_element_api_enablefeature.html["EnableFeature"]métodos e link:../api/reference_element_api_disablefeature.html["DisableFeature"] API ou a link:../storage/task_system_manage_cluster_volume_load_balancing.html["Balanceamento de carga de volume"] opção na IU do elemento.
+O elemento 12,8 introduz o recurso balanceamento de carga de volume. Você pode usar esse recurso para equilibrar volumes entre nós com base no nível de IOPS real de cada volume, em vez do IOPS mínimo configurado na política de QoS. Você só pode usar o recurso balanceamento de carga de volume para equilibrar volumes. Você não pode usá-lo para equilibrar volumes virtuais. O recurso balanceamento de carga de volume está desativado por padrão. Você pode ativá-lo e desativá-lo usando o `VolumeLoadBalanceOnActualIOPS` parâmetro API com os link:../api/reference_element_api_enablefeature.html["EnableFeature"]métodos e link:../api/reference_element_api_disablefeature.html["DisableFeature"] API ou usando a link:../storage/task_system_manage_cluster_volume_load_balancing.html["Balanceamento de carga de volume"] opção na IU do elemento.
 
 
 
