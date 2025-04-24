@@ -61,9 +61,13 @@ NOTE: É necessária uma conta de administrador de cluster local (não LDAP) par
 
 
 +
+[NOTE]
+====
+Todas as permissões estão disponíveis para o tipo de acesso do administrador.
 
-NOTE: Todas as permissões estão disponíveis para o tipo de acesso do administrador.
+Existem tipos de acesso disponíveis através da API que não estão disponíveis na IU do Element.
 
+====
 +
 ** *Type*: O tipo de administrador de cluster. Valores possíveis:
 +
@@ -152,12 +156,9 @@ Você pode usar a IU do elemento para alterar as senhas do administrador do clus
 . Clique em *Salvar alterações*.
 
 
-
-
-== Encontre mais informações
-
+.Informações relacionadas
+* link:../api/reference_element_api_app_b_access_control.html["Saiba mais sobre os tipos de acesso disponíveis para APIs do Element"]
 * link:task_system_manage_enable_ldap_authentication.html["Ative a autenticação LDAP com a interface do usuário Element"]
 * link:concept_system_manage_manage_ldap.html["Desativar LDAP"]
-* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plug-in do NetApp Element para vCenter Server"^]
 
