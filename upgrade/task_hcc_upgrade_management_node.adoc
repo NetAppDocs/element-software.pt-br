@@ -29,12 +29,17 @@ Se você estiver executando uma atualização no local de um nó de gerenciament
 
 .Passos
 . Faça login no vSphere Web Client como um vCenter Administrator.
-. No menu vSphere Client, selecione *VMs* > *Templates*.
-. Clique com o botão direito do rato na máquina virtual e selecione *Compatibilidade* > *Atualizar a compatibilidade da VM*.
+. No menu vSphere Client, selecione *VMs e modelos*.
+. Clique com o botão direito do rato na máquina virtual (VM) e selecione *Power* > *Shut Down Guest os*.
++
+Aguarde até que a VM seja desligada.
+
+. Clique com o botão direito do rato na VM e selecione *Compatibilidade* > *Atualizar a compatibilidade da VM*.
 . Selecione *Sim*.
 . Selecione ESXi 6,7 ou uma versão posterior, dependendo da versão do seu ambiente vSphere.
 . Selecione *OK*.
-. Depois que a atualização estiver concluída, selecione *vSphere client refresh* e verifique se a compatibilidade da VM está na versão desejada.
+. Após a conclusão da atualização, clique com o botão direito do Mouse na VM e selecione *Power* > *Power on*.
+. Selecione *Atualização do cliente vSphere* e verifique se a Compatibilidade da VM está na versão desejada.
 
 
 
@@ -57,7 +62,7 @@ NOTE: Se você não atualizar sequencialmente seus serviços de gerenciamento se
 
 === Atualize um nó de gerenciamento para a versão 12,5 ou posterior a partir da versão 12,3.x ou posterior
 
-Você pode fazer uma atualização no local do nó de gerenciamento da versão 12,3.x ou posterior para a versão 12,5 ou posterior sem precisar provisionar uma nova máquina virtual de nó de gerenciamento.
+Você pode fazer uma atualização no local do nó de gerenciamento da versão 12,3.x ou posterior para a versão 12,5 ou posterior sem precisar provisionar uma nova VM do nó de gerenciamento.
 
 
 NOTE: O nó de gerenciamento do Element 12,5 ou posterior é uma atualização opcional. Não é necessário para implantações existentes.
@@ -80,8 +85,8 @@ NOTE: Os volumes persistentes podem exigir um adaptador de rede adicional se o e
 
 
 .Passos
-. Faça login na máquina virtual do nó de gerenciamento usando SSH ou acesso ao console.
-. Faça o download do https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab["Nó de gestão ISO"^] software for Element do site de suporte da NetApp para a máquina virtual do nó de gerenciamento.
+. Faça login na VM do nó de gerenciamento usando SSH ou acesso ao console.
+. Faça o download do https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab["Nó de gestão ISO"^] software for Element do site de suporte da NetApp para a VM do nó de gerenciamento.
 +
 
 NOTE: O nome do ISO é semelhante `solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso`

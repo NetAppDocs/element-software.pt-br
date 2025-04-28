@@ -38,11 +38,3 @@ Saiba como configurar o sistema de armazenamento para o seu ambiente.
 
 
 
-
-
-
-== Encontre mais informações
-
-* https://www.netapp.com/data-storage/solidfire/["Visão geral do storage all-flash da SolidFire"^]
-* https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
-

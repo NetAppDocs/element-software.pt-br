@@ -5961,8 +5961,6 @@
   <block id="4195434d2c036cf973c32bdb4ac19828" category="paragraph">Usar os nós de storage fornecidos pelo NetApp e integrados ao software NetApp Element.</block>
   <block id="cc9d5c6e43509b7b512cd8106b62cef6" category="inline-link-macro">Visão geral da arquitetura de storage all-flash SolidFire</block>
   <block id="ce772989c5b639e2ddb875f41c132379" category="paragraph"><block ref="ce772989c5b639e2ddb875f41c132379" category="inline-link-macro-rx"></block></block>
-  <block id="e2291d0b9bc2d41bc343cf77cf0a1a87" category="inline-link">Visão geral do storage all-flash da SolidFire</block>
-  <block id="e2c85d417b263e570fcb0b7027cad0ba" category="list-text"><block ref="e2c85d417b263e570fcb0b7027cad0ba" category="inline-link-rx"></block></block>
   <block id="148da2fc8997120fa9c4ae723fb03eb1" category="summary">O Active IQ é uma ferramenta baseada na Web que fornece visualizações históricas continuamente atualizadas de dados em todo o cluster. Você pode configurar alertas para eventos, limites ou métricas específicos. Com o Active IQ, você monitora a performance e a capacidade do sistema, além de se manter informado sobre a integridade do cluster.</block>
   <block id="286e5e658aa2035edb6c87d9b36606aa" category="summary">Você pode gerenciar um sistema de storage SolidFire usando interfaces de software NetApp Element e utilitários de integração.</block>
   <block id="8899b6ed5385e8973e5fe00da2101ccd" category="doc">Interfaces de software SolidFire</block>
@@ -12032,7 +12030,6 @@
   <block id="f3bac24ec8b72ab99e38f7ecb167cc25" category="paragraph">Escolha esta opção se você tiver *sequencialmente* atualizado (1) a versão dos serviços de gerenciamento e (2) a versão de armazenamento de elementos e quiser *manter* o nó de gerenciamento existente:</block>
   <block id="1edc36bdf08bca8bac4f78d104c92780" category="admonition">Se você não atualizar sequencialmente seus serviços de gerenciamento seguidos pelo armazenamento de elementos, não poderá reconfigurar a reautenticação usando este procedimento. Em vez disso, siga o procedimento de atualização apropriado.</block>
   <block id="2a67edcd39483da3b7c2244d1a853ca7" category="section-title">Atualize um nó de gerenciamento para a versão 12,5 ou posterior a partir da versão 12,3.x ou posterior</block>
-  <block id="00986f242d79556b370e046857ac478c" category="paragraph">Você pode fazer uma atualização no local do nó de gerenciamento da versão 12,3.x ou posterior para a versão 12,5 ou posterior sem precisar provisionar uma nova máquina virtual de nó de gerenciamento.</block>
   <block id="162101c4a12e19388bdcdc0495ccc2ae" category="admonition">O nó de gerenciamento do Element 12,5 ou posterior é uma atualização opcional. Não é necessário para implantações existentes.</block>
   <block id="ec29698b029ebdc0e8d965b404b70339" category="list-text">A RAM da VM do nó de gerenciamento é 24GB.</block>
   <block id="cd847f70c9955e37a7a701eee9f2cd67" category="list-text">O nó de gerenciamento que você pretende atualizar é a versão 12,0 e usa a rede IPv4. O nó de gerenciamento versão 12,5 ou posterior não suporta IPv6.</block>
@@ -12043,9 +12040,7 @@
   <block id="4733d6f93dbca188e79e25900eaeacb7" category="list-text">Você configurou um adaptador de rede adicional (se necessário) usando as instruções do <block ref="1f5ebd4d6fe6b214007c2692b1a22cfb" category="inline-link-macro-rx"></block>.</block>
   <block id="97badad042e3a18dd496d204994f3a2f" category="admonition">Os volumes persistentes podem exigir um adaptador de rede adicional se o eth0 não puder ser roteado para o SVIP. Configure um novo adaptador de rede na rede de armazenamento iSCSI para permitir a configuração de volumes persistentes.</block>
   <block id="b529479350602e9be1d9caa1838edb9b" category="list-text">Os nós de storage estão executando o elemento 12,3.x ou posterior.</block>
-  <block id="1a6ffd97834fd7495156f52f3058e50b" category="list-text">Faça login na máquina virtual do nó de gerenciamento usando SSH ou acesso ao console.</block>
   <block id="303c7d52b5c18e714947ecd4996594a2" category="inline-link">Nó de gestão ISO</block>
-  <block id="bc6733dc102d98376848617102ed0352" category="list-text">Faça o download do<block ref="ef86b20d3f4c031a449af5dec98fb6d8" category="inline-link-rx"></block> software for Element do site de suporte da NetApp para a máquina virtual do nó de gerenciamento.</block>
   <block id="e097e26564fa470c938b5aa9cb375497" category="admonition">O nome do ISO é semelhante<block ref="6d2621b65437e9daea4c85caf8ee22ac" prefix=" " category="inline-code"></block></block>
   <block id="7af3e8bcf74bc743e6d42428a1ef8e84" category="list-text">Verifique a integridade do download executando o md5sum no arquivo baixado e compare a saída com o que está disponível no site de suporte da NetApp para o software Element, como no exemplo a seguir:</block>
   <block id="4e82f8cfbdbaab82d0c8c7e65d59b756" category="paragraph"><block ref="b2c4a82594dbf4c4ad269ec26ad77e05" prefix="" category="inline-code"></block></block>
@@ -12353,11 +12348,8 @@
   <block id="b036ebb7aa6b63db449d4df71f28c3cd" category="section-title">Etapa 1: Atualize a versão do hardware da VM em um nó de gerenciamento</block>
   <block id="6bdecd9b5d3ab973ac36df911f986fc3" category="paragraph">Se você estiver executando uma atualização no local de um nó de gerenciamento existente para o elemento 12,8, antes de atualizar, certifique-se de que a versão de hardware da VM no nó de gerenciamento seja compatível com o ESXi 6,7 (hardware da VM versão 14) ou posterior, dependendo do seu ambiente.</block>
   <block id="da356a9209429c8cb4f06565d719d2b8" category="list-text">Faça login no vSphere Web Client como um vCenter Administrator.</block>
-  <block id="7936b082e6a3d2167a2478cee0772514" category="list-text">No menu vSphere Client, selecione *VMs* &gt; *Templates*.</block>
-  <block id="ad4062bf296d686c04c351f026e2400d" category="list-text">Clique com o botão direito do rato na máquina virtual e selecione *Compatibilidade* &gt; *Atualizar a compatibilidade da VM*.</block>
   <block id="cf8716d5690805e881fbd8fa22fb282a" category="list-text">Selecione ESXi 6,7 ou uma versão posterior, dependendo da versão do seu ambiente vSphere.</block>
   <block id="3d1c64d2c8b1e4058225a78c3ef09fa6" category="list-text">Selecione *OK*.</block>
-  <block id="43c3c8c2f75e6064714e6ec942f1e916" category="list-text">Depois que a atualização estiver concluída, selecione *vSphere client refresh* e verifique se a compatibilidade da VM está na versão desejada.</block>
   <block id="6b17900bf8b7a52b1be75bbe68b2d77e" category="section-title">Etapa 2: Atualize um nó de gerenciamento para o elemento 12,5 ou posterior</block>
   <block id="d5bdcd035d3751961b201dd1c2261aa3" category="paragraph">Escolha uma das seguintes opções de atualização:</block>
   <block id="8c5a891df58bfda1762ec23302a952b6" category="sidebar">Um sistema de storage all-flash da SolidFire é composto por componentes de hardware, como unidades e nós, combinados em um pool de recursos de storage. Com a interface Element, a API ou outras ferramentas de gerenciamento, você pode gerenciar esses clusters de recursos de storage com o software NetApp Element. Este site contém a documentação do software Element 12,8.</block>
@@ -12389,4 +12381,13 @@
   <block id="e3ae42684db77c59ef80c04aae526de5" category="paragraph"><block ref="e3ae42684db77c59ef80c04aae526de5" category="inline-link-macro-rx"></block></block>
   <block id="f72c81a1158d9efb9bad238e3c497a6c" category="inline-link-macro">Saiba mais sobre os tipos de acesso disponíveis para APIs do Element</block>
   <block id="c858f3d30df8c552799df529153c0e44" category="list-text"><block ref="c858f3d30df8c552799df529153c0e44" category="inline-link-macro-rx"></block></block>
+  <block id="6e93fbac14e98fd4eee5f4f560e1d580" category="list-text">No menu vSphere Client, selecione *VMs e modelos*.</block>
+  <block id="be19667c20f2f3c6b932b48a9c488774" category="list-text">Clique com o botão direito do rato na máquina virtual (VM) e selecione *Power* &gt; *Shut Down Guest os*.</block>
+  <block id="6f5f678ae471ecc070cea185b3d40ed4" category="paragraph">Aguarde até que a VM seja desligada.</block>
+  <block id="b58c4fe6ac8a2dffa0fb94c9d1de7556" category="list-text">Clique com o botão direito do rato na VM e selecione *Compatibilidade* &gt; *Atualizar a compatibilidade da VM*.</block>
+  <block id="eeb196c0a77fbb85f8908ae3cca16bfc" category="list-text">Após a conclusão da atualização, clique com o botão direito do Mouse na VM e selecione *Power* &gt; *Power on*.</block>
+  <block id="917268d8045dd1bb18e5f8cc7caf9359" category="list-text">Selecione *Atualização do cliente vSphere* e verifique se a Compatibilidade da VM está na versão desejada.</block>
+  <block id="a879c8e657832d392ef358d2440c3faf" category="paragraph">Você pode fazer uma atualização no local do nó de gerenciamento da versão 12,3.x ou posterior para a versão 12,5 ou posterior sem precisar provisionar uma nova VM do nó de gerenciamento.</block>
+  <block id="6a309ddf9d0a46d94d5772dacb71dbc0" category="list-text">Faça login na VM do nó de gerenciamento usando SSH ou acesso ao console.</block>
+  <block id="7258351fe62749f68f4b75a51c56912b" category="list-text">Faça o download do<block ref="ef86b20d3f4c031a449af5dec98fb6d8" category="inline-link-rx"></block> software for Element do site de suporte da NetApp para a VM do nó de gerenciamento.</block>
 </blocks>
