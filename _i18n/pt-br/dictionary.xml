@@ -12307,7 +12307,6 @@
   <block id="906ea05443e4b488a42f3f06305353ee" category="paragraph">Antes de seguir este procedimento, você deve ter uma compreensão <block ref="6cc910c0977361227d631be0efac7242" category="inline-link-macro-rx"></block>e se deseja ou não usá-los. Os volumes persistentes são opcionais, mas recomendados para a recuperação de dados de configuração de nó de gerenciamento no caso de perda de uma máquina virtual (VM).</block>
   <block id="6d8cd87a85946daeae42cb54aade3baa" category="section-title">Passo 1: Baixe ISO ou OVA e implante a VM</block>
   <block id="90c4d8ddd76d9f5f86c144316cec5657" category="paragraph">Transfira a ISO ou OVA adequada a partir do site de suporte da NetApp e instale a VM.</block>
-  <block id="4aee9657f267c579c49541b5f19ca32c" category="list-text">Transfira a OVA ou ISO para a sua instalação a partir da <block ref="00b11b6abe7f0003872aa657422c59ae" category="inline-link-macro-rx"></block>página no site de suporte da NetApp. O novo OVA contém um certificado SSL atualizado.</block>
   <block id="c6913d34fefabb7329dba971ad99632d" category="section-title">Etapa 2: Crie o administrador do nó de gerenciamento e configure a rede</block>
   <block id="8e1cc7b20e9f183452b777f8a4fb586d" category="paragraph">Após a conclusão da instalação da VM, crie o usuário de administrador do nó de gerenciamento e configure a rede do nó de gerenciamento.</block>
   <block id="5e0472334bca93d0d28d3eeaaf723518" category="section-title">Passo 3: Configurar a sincronização de tempo</block>
@@ -12390,4 +12389,5 @@
   <block id="a879c8e657832d392ef358d2440c3faf" category="paragraph">Você pode fazer uma atualização no local do nó de gerenciamento da versão 12,3.x ou posterior para a versão 12,5 ou posterior sem precisar provisionar uma nova VM do nó de gerenciamento.</block>
   <block id="6a309ddf9d0a46d94d5772dacb71dbc0" category="list-text">Faça login na VM do nó de gerenciamento usando SSH ou acesso ao console.</block>
   <block id="7258351fe62749f68f4b75a51c56912b" category="list-text">Faça o download do<block ref="ef86b20d3f4c031a449af5dec98fb6d8" category="inline-link-rx"></block> software for Element do site de suporte da NetApp para a VM do nó de gerenciamento.</block>
+  <block id="e43f2538484fde027e53efbedb634fce" category="list-text">Transfira a OVA ou ISO para a sua instalação a partir da <block ref="00b11b6abe7f0003872aa657422c59ae" category="inline-link-macro-rx"></block>página no site de suporte da NetApp.</block>
 </blocks>

@@ -62,7 +62,7 @@ Antes de seguir este procedimento, você deve ter uma compreensão link:../conce
 Transfira a ISO ou OVA adequada a partir do site de suporte da NetApp e instale a VM.
 
 .Passos
-. Transfira a OVA ou ISO para a sua instalação a partir da link:https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab["Software Element"^]página no site de suporte da NetApp. O novo OVA contém um certificado SSL atualizado.
+. Transfira a OVA ou ISO para a sua instalação a partir da link:https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab["Software Element"^]página no site de suporte da NetApp.
 +
 .. Selecione *Download Latest Release* e aceite o EULA.
 .. Selecione a imagem do nó de gestão que pretende transferir.
