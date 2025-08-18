@@ -9788,7 +9788,6 @@
   <block id="2f00805e044ca70467775f06c1872f89" category="paragraph">Servidor LDAP</block>
   <block id="5483ab43104d3514dfdd7917f5a51b09" category="paragraph">389 TCP/UDP</block>
   <block id="19a0425f816e3267d5a9f5ee03f4fc4f" category="paragraph">Pesquisa LDAP (opcional)</block>
-  <block id="6ca93b96b4cd5e33a779ecc83fde0268" category="paragraph">Atualizações de firmware de storage Element</block>
   <block id="5ee0194e49d16c87d081efc156fb0d74" category="paragraph">Cluster de armazenamento remoto MVIP</block>
   <block id="75a4d5a956df2844befb13a89867e179" category="paragraph">Comunicação de emparelhamento do cluster de replicação remota</block>
   <block id="e902ca26db3b32a7d466ef307db87d60" category="paragraph">MIP do nó de storage remoto</block>
@@ -12390,4 +12389,5 @@
   <block id="6a309ddf9d0a46d94d5772dacb71dbc0" category="list-text">Faça login na VM do nó de gerenciamento usando SSH ou acesso ao console.</block>
   <block id="7258351fe62749f68f4b75a51c56912b" category="list-text">Faça o download do<block ref="ef86b20d3f4c031a449af5dec98fb6d8" category="inline-link-rx"></block> software for Element do site de suporte da NetApp para a VM do nó de gerenciamento.</block>
   <block id="e43f2538484fde027e53efbedb634fce" category="list-text">Transfira a OVA ou ISO para a sua instalação a partir da <block ref="00b11b6abe7f0003872aa657422c59ae" category="inline-link-macro-rx"></block>página no site de suporte da NetApp.</block>
+  <block id="bd000e3a7a010d55765a9684adc1c25f" category="paragraph">Atualizações de armazenamento de elementos</block>
 </blocks>
