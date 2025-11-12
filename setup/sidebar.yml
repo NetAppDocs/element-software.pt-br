@@ -1,10 +1,10 @@
 ---
 section: setup
 title: Configure o armazenamento
-url: "/setup/concept_setup_overview.html"
 entries:
+- title: Saiba mais sobre como configurar o armazenamento.
+  url: "/setup/concept_setup_overview.html"
 - title: Configurar um cluster com nós de storage
-  url: "/setup/task_setup_cluster_with_storage_nodes.html"
   entries:
   - title: Configurar um nó de storage
     url: "/setup/concept_setup_configure_a_storage_node.html"
@@ -15,7 +15,6 @@ entries:
   - title: Adicionar unidades ao cluster
     url: "/setup/task_setup_add_drives_to_a_cluster.html"
 - title: Configurar um cluster com nós Fibre Channel
-  url: "/setup/task_setup_cluster_with_fibre_channel_nodes.html"
   entries:
   - title: Configurar um nó Fibre Channel
     url: "/setup/concept_setup_fc_configure_a_fibre_channel_node.html"

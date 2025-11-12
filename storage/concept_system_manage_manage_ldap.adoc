@@ -67,7 +67,7 @@ Por exemplo, para adicionar um número de porta personalizado, introduza [nome d
 . *Opcional:* Selecione *Use LDAPS Protocol*.
 . Insira as informações necessárias em *Configurações gerais*.
 +
-image::../media/element_new_ldap_servers.jpg[element novos servidores ldap]
+image::../media/element_new_ldap_servers.jpg[Captura de tela das informações de Configurações Gerais]
 
 . Clique em *Ativar LDAP*.
 . Clique em *Test User Authentication* (testar autenticação do utilizador) se pretender testar o acesso ao servidor de um utilizador.
@@ -77,7 +77,7 @@ image::../media/element_new_ldap_servers.jpg[element novos servidores ldap]
 +
 .. Clique em *User* > *View*.
 +
-image::../media/element_new_cluster_admin.jpg[element new cluster admin]
+image::../media/element_new_cluster_admin.jpg[Captura de tela da página Criar um novo usuário]
 
 .. Para o novo usuário, clique em *LDAP* para o tipo de usuário e cole o grupo que você copiou no campo Nome distinto.
 .. Selecione as permissões, normalmente todas as permissões.

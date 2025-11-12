@@ -13,12 +13,13 @@ summary: 'Você pode usar o método EnableEncryptionAtRest para habilitar a crip
 [role="lead"]
 Você pode usar o `EnableEncryptionAtRest` método para ativar a criptografia AES (Advanced Encryption Standard) de 256 bits em repouso no cluster para que o cluster possa gerenciar a chave de criptografia usada para as unidades em cada nó. Esta funcionalidade não está ativada por predefinição.
 
+[NOTE]
+====
+* Este método não ativa a encriptação de software em repouso. Isso só pode ser feito usando o link:../api/reference_element_api_createcluster.html["criar método de cluster"^] com `enableSoftwareEncryptionAtRest` definido como `true`.
+* Para visualizar o estado atual da criptografia em repouso, da criptografia de software em repouso ou de ambas no cluster, utilize o link:../api/reference_element_api_getclusterinfo.html["obtenha o método de informações do cluster"]. Você pode usar o `GetSoftwareEncryptionAtRestInfo` link:../api/reference_element_api_getsoftwareencryptionatrestinfo.html["método para obter informações que o cluster usa para criptografar dados em repouso"].
 
-TIP: Para ver o status atual da criptografia em repouso e/ou criptografia de software em repouso no cluster, use o link:../api/reference_element_api_getclusterinfo["obtenha o método de informações do cluster"^]. Pode utilizar a `GetSoftwareEncryptionAtRestInfo` link:../api/reference_element_api_getsoftwareencryptionatrestinfo["método para obter informações que o cluster usa para criptografar dados em repouso"^].
 
-
-NOTE: Este método não ativa a encriptação de software em repouso. Isso só pode ser feito usando o link:../api/reference_element_api_createcluster.html["criar método de cluster"^] com `enableSoftwareEncryptionAtRest` definido como `true`.
-
+====
 Quando você ativa a criptografia em repouso, o cluster gerencia automaticamente as chaves de criptografia internamente para as unidades em cada nó do cluster.
 
 Se um keyProviderID for especificado, a senha será gerada e recuperada de acordo com o tipo de provedor de chaves. Isso geralmente é feito usando um servidor de chave KMIP (Key Management Interoperability Protocol) no caso de um provedor de chaves KMIP. Após esta operação, o provedor especificado é considerado ativo e não pode ser excluído até que a criptografia em repouso seja desativada usando o `DisableEncryptionAtRest` método.

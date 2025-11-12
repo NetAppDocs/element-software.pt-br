@@ -22,7 +22,7 @@ Você pode atualizar o Registro do plug-in no vCenter Server Virtual Appliance (
 ====
 O pacote de serviços de gerenciamento 2.27 inclui o Element Plug-in para vCenter Server 5.5, que é compatível apenas com o nó de gerenciamento 12.8. Ao atualizar para os serviços de gerenciamento 2.27, você deve alterar a sequência de atualização e atualizar o pacote de serviços de gerenciamento _após_ a atualização para o Element 12.8 para ter compatibilidade entre o nó de gerenciamento e os serviços de gerenciamento.
 
-O pacote de serviços de gerenciamento 2.22.7 inclui o plug-in Element para vCenter Server 5.0, que contém o plug-in remoto. Se você usa o plug-in Element, deve atualizar para os serviços de gerenciamento 2.22.7 ou posterior para atender à diretiva da VMware que remove o suporte a plug-ins locais. https://kb.vmware.com/s/article/87880["Saiba mais"^] .
+O pacote de serviços de gerenciamento 2.22.7 inclui o plug-in Element para vCenter Server 5.0, que contém o plug-in remoto. Se você utiliza o plug-in Element, é recomendável atualizar para os serviços de gerenciamento 2.22.7 ou posterior para estar em conformidade com a diretiva da VMware que remove o suporte para plug-ins locais. https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-sdks-tools/8-0/developing-local-plug-ins-client-sdk/about-this-book-local/deprecation-of-local-plug-in-architecture.html["Saiba mais"^].
 
 ====
 [role="tabbed-block"]

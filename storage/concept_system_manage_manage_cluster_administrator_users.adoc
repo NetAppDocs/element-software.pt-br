@@ -77,7 +77,7 @@ Existem tipos de acesso disponíveis através da API que não estão disponívei
 
 ** *Atributos*: Se a conta de administrador de cluster foi criada usando a API Element, essa coluna mostrará os pares nome-valor que foram definidos usando esse método.
 +
-link:../api/index.html["Referência da API do software NetApp Element"]Consulte .
+Verlink:../api/concept_element_api_about_the_api.html["Referência da API do software NetApp Element"] .
 
 
 
@@ -91,7 +91,7 @@ Você pode criar novas contas de administrador de cluster com permissões para p
 
 Se pretender criar uma conta de administrador de cluster LDAP, certifique-se de que o LDAP está configurado no cluster antes de começar.
 
-link:task_system_manage_enable_ldap_authentication.html["Ative a autenticação LDAP com a interface do usuário Element"]
+link:concept_system_manage_manage_ldap.html["Ative a autenticação LDAP com a interface do usuário Element"]
 
 Mais tarde, você pode alterar o Privileges de contas de administrador de cluster para geração de relatórios, nós, unidades, volumes, contas e acesso em nível de cluster. Quando você ativa uma permissão, o sistema atribui acesso de gravação para esse nível. O sistema concede ao usuário administrador acesso somente leitura para os níveis que você não selecionou.
 
@@ -158,7 +158,7 @@ Você pode usar a IU do elemento para alterar as senhas do administrador do clus
 
 .Informações relacionadas
 * link:../api/reference_element_api_app_b_access_control.html["Saiba mais sobre os tipos de acesso disponíveis para APIs do Element"]
-* link:task_system_manage_enable_ldap_authentication.html["Ative a autenticação LDAP com a interface do usuário Element"]
+* link:concept_system_manage_manage_ldap.html["Ative a autenticação LDAP com a interface do usuário Element"]
 * link:concept_system_manage_manage_ldap.html["Desativar LDAP"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plug-in do NetApp Element para vCenter Server"^]
 

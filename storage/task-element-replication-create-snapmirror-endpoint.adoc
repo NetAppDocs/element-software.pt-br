@@ -11,7 +11,7 @@ summary: Você deve criar um endpoint do SnapMirror antes de criar uma relação
 
 
 [role="lead"]
-Você deve criar um endpoint do SnapMirror antes de criar uma relação de replicação. Você só pode executar essa tarefa na IU da Web do software Element ou usando o link:../api/concept_element_api_snapmirror_api_methods.html["Métodos de API do SnapMirror"].
+Você precisa criar um endpoint SnapMirror antes de poder criar uma relação de replicação. Você só pode realizar essa tarefa na interface web do software Element ou usando o link:../api/reference_element_api_abortsnapmirrorrelationship.html["Métodos de API do SnapMirror"].
 
 .Antes de começar
 Você deve ter ativado o SnapMirror no cluster do Element.

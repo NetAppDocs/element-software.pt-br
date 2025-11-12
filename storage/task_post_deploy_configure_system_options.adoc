@@ -24,7 +24,7 @@ Além disso, você pode configurar configurações para autenticação multifato
 * link:task_post_deploy_credentials.html["Alterar credenciais no NetApp HCI e no NetApp SolidFire"]
 * link:reference_post_deploy_change_default_ssl_certificate.html["Altere o certificado SSL padrão do software Element"]
 * link:task_post_deploy_credential_change_ipmi_password.html["Altere a senha do IPMI para nós"]
-* link:concept_system_manage_mfa_enable_multi_factor_authentication.html["Ativar a autenticação multifator"]
+* link:task_system_manage_mfa_set_up_multi_factor_authentication.html["Ativar a autenticação multifator"]
 * link:concept_system_manage_key_get_started_with_external_key_management.html["Comece a usar o gerenciamento de chaves externas"]
 * link:task_system_manage_fips_create_a_cluster_supporting_fips_drives.html["Criar um cluster compatível com unidades FIPS"]
 

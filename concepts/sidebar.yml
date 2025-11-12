@@ -6,8 +6,9 @@ entries:
 - title: Visão geral do produto
   url: "/concepts/concept_intro_product_overview.html"
 - title: Arquitetura e componentes
-  url: "/concepts/concept_solidfire_concepts_solidfire_architecture_overview.html"
   entries:
+  - title: Saiba mais sobre a arquitetura SolidFire .
+    url: "/concepts/concept_solidfire_concepts_solidfire_architecture_overview.html"
   - title: Interfaces de software SolidFire
     url: "/concepts/concept_intro_solidfire_software_interfaces.html"
   - title: SolidFire Active IQ

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: bindings, vvols, bound virtual volumes 
 summary: Para executar operações de e/S com um volume virtual, um host ESXi deve primeiro vincular o volume virtual. 
 ---
-= Ligações
+= Saiba mais sobre encadernações
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -28,6 +28,20 @@ NOTE: O emparelhamento de cluster requer conetividade total entre nós na rede d
 
 
 
+== Emparelhe clusters usando MVIP ou uma chave de emparelhamento
+
+Você pode emparelhar um cluster de origem e destino usando o MVIP do cluster de destino se houver acesso de administrador de cluster aos dois clusters. Se o acesso do administrador do cluster estiver disponível apenas num cluster num par de clusters, pode ser utilizada uma chave de emparelhamento no cluster de destino para concluir o emparelhamento do cluster.
+
+. Selecione um dos seguintes métodos para emparelhar clusters:
++
+** link:task_replication_pair_cluster_using_mvip.html["Emparelhe clusters usando MVIP"]Utilize este método se houver acesso de administrador de cluster a ambos os clusters. Este método utiliza o MVIP do cluster remoto para emparelhar dois clusters.
+** link:task_replication_pair_cluster_using_pairing_key.html["Emparelhe clusters usando uma chave de emparelhamento"]Utilize este método se o administrador do cluster tiver acesso a apenas um dos clusters. Este método gera uma chave de emparelhamento que pode ser usada no cluster de destino para concluir o emparelhamento do cluster.
+
+
+
+
+
+
 == Encontre mais informações
 
 xref:reference_prereq_network_port_requirements.adoc[Requisitos de porta de rede]

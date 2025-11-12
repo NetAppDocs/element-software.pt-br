@@ -11,7 +11,7 @@ summary: Se não tiver credenciais de administrador de cluster para um cluster r
 
 
 [role="lead"]
-Se não tiver credenciais de administrador de cluster para um cluster remoto, pode emparelhar um volume com outro volume num cluster remoto utilizando uma chave de emparelhamento.
+Se você tiver acesso de administrador de cluster apenas ao cluster de origem (e não tiver credenciais de administrador de cluster para um cluster remoto), poderá emparelhar um volume com outro volume em um cluster remoto usando uma chave de emparelhamento.
 
 .O que você vai precisar
 * Certifique-se de que os clusters que contêm os volumes estão emparelhados.

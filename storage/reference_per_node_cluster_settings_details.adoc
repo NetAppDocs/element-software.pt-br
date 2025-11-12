@@ -13,7 +13,7 @@ summary: Você pode verificar as configurações do cluster para um nó de armaz
 [role="lead"]
 Você pode verificar as configurações do cluster para um nó de armazenamento após a configuração do cluster e modificar o nome do host do nó.
 
-A lista a seguir descreve as configurações de cluster para um nó de armazenamento indicado na página *Configurações de cluster* da interface  IP por nó(https://<node[]>:442/hcc/nó/configurações de cluster).
+A lista a seguir descreve as configurações de cluster para um nó de armazenamento indicado na página *Configurações do Cluster* da interface do usuário de cada nó. (`https://<node_IP>:442/hcc/node/cluster-settings`).
 
 * *Função*
 +

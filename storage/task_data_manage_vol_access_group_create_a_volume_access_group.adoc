@@ -61,7 +61,7 @@ TIP: Você pode encontrar o iniciador IQN para cada volume selecionando *Exibir 
 
 Quando você modifica um iniciador, você pode alternar o atributo requidCHAP para true, o que permite definir o segredo do iniciador de destino. Para obter detalhes, consulte informações de API sobre o método API ModifyInitiator.
 
-link:../api/index.html["Gerencie o storage com a API Element"]
+link:../api/concept_element_api_about_the_api.html["Gerencie o storage com a API Element"]
 
 |===
 . *Opcional:* Adicione mais iniciadores conforme necessário.

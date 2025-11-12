@@ -61,7 +61,6 @@ Os nós Fibre Channel têm as seguintes características:
 
 == estados de operação do nó
 
-[role="lead"]
 Um nó pode estar em um de vários estados, dependendo do nível de configuração.
 
 * *Disponível*
@@ -90,7 +89,8 @@ A autenticação é necessária para modificar o nó.
 
 Em cada um desses estados, alguns campos são lidos somente.
 
-[discrete]
+
+
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

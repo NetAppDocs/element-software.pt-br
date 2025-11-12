@@ -13,6 +13,8 @@ summary: 'Usando o modo de broadcast, você pode instruir cada nó em um cluster
 [role="lead"]
 Usando o modo de broadcast, você pode instruir cada nó em um cluster para ouvir na rede mensagens de broadcast do Network Time Protocol (NTP) de um servidor específico.
 
+O NTP é usado para sincronizar relógios em uma rede. A ligação a um servidor NTP interno ou externo deve fazer parte da configuração inicial do cluster.
+
 .O que você vai precisar
 * Você deve ter o administrador de cluster Privileges para configurar essa configuração.
 * Tem de configurar um servidor NTP na rede como um servidor de difusão.
@@ -30,6 +32,7 @@ Usando o modo de broadcast, você pode instruir cada nó em um cluster para ouvi
 
 == Encontre mais informações
 
+* link:../storage/task_system_manage_cluster_ntp_configure.html["Configurar servidores Network Time Protocol para o cluster a consultar"]
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plug-in do NetApp Element para vCenter Server"^]
 

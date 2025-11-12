@@ -14,8 +14,6 @@ summary: A documentação para versões anteriores está disponível caso você 
 [role="lead"]
 A documentação para versões anteriores está disponível no site de suporte da NetApp.
 
-* https://docs.netapp.com/us-en/element-software-125/index.html["Documentação do elemento 12,5"^]
-* https://docs.netapp.com/us-en/element-software-123/index.html["Documentação do elemento 12,3.x"^]
 * https://mysupport.netapp.com/documentation/docweb/index.html?productID=63945&language=en-US["Documentação do elemento 12.2.1"^]
 * https://mysupport.netapp.com/documentation/docweb/index.html?productID=63593&language=en-US["Documentação do elemento 12,2"^]
 * https://mysupport.netapp.com/documentation/docweb/index.html?productID=63946&language=en-US["Documentação do elemento 12.0.1"^]

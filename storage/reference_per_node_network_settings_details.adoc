@@ -13,7 +13,7 @@ summary: Você pode alterar as configurações de rede do nó de armazenamento p
 [role="lead"]
 Você pode alterar as configurações de rede do nó de armazenamento para dar ao nó um novo conjunto de atributos de rede.
 
-Pode ver as definições de rede para um nó de armazenamento na página *Definições de rede* quando iniciar sessão no (https://<node[]nó IP>:442/hcc/nó/definições de rede). Pode selecionar as definições *Bond1G* (gestão) ou *Bond10G* (armazenamento). A lista a seguir descreve as configurações que você pode modificar quando um nó de armazenamento está no estado disponível, pendente ou Ativo:
+Você pode visualizar as configurações de rede de um nó de armazenamento na página *Configurações de Rede* ao fazer login no nó. (`https://<node_IP>:442/hcc/node/network-settings`). Você pode selecionar as configurações *Bond1G* (gerenciamento) ou *Bond10G* (armazenamento). A lista a seguir descreve as configurações que você pode modificar quando um nó de armazenamento estiver nos estados Disponível, Pendente ou Ativo:
 
 * *Método*
 +

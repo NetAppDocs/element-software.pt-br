@@ -15,7 +15,7 @@ Você deve configurar nós individuais antes de adicioná-los a um cluster. Depo
 
 Há duas opções para configurar nós de storage:
 
-* <<Configurar um nó de storage usando a IU por nó,IU por nó>>: Use a IU por nó (https://<node_management_IP>:442[]) para configurar as configurações de rede do nó.
+* <<Configurar um nó de storage usando a IU por nó,IU por nó>>Utilize a interface de usuário por nó. (`https://<node_management_IP>:442`) para configurar as definições de rede do nó.
 * <<Configure um nó de storage usando a TUI,TUI>>: Use a interface do usuário do terminal de nó (TUI) para configurar o nó.
 
 
@@ -44,7 +44,7 @@ IMPORTANT: Você deve configurar as interfaces de gerenciamento (Bond1G) e armaz
 .Passos
 . Em uma janela do navegador, insira o endereço IP DHCP de um nó.
 +
-Você deve adicionar a extensão `:442` para acessar o nó; por exemplo https://172.25.103.6:442[], .
+Você precisa adicionar a extensão. `:442` para acessar o nó; por exemplo, `https://172.25.103.6:442`.
 
 +
 A guia *Configurações de rede* é aberta com a seção *Bond1G*.

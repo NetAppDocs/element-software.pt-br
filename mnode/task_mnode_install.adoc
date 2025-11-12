@@ -158,7 +158,7 @@ sudo service ntpd stop
 . Edite o arquivo de configuração `/etc/ntp.conf` NTP :
 +
 .. Comente os servidores padrão (`server 0.gentoo.pool.ntp.org`) adicionando um `#` à frente de cada um.
-.. Adicione uma nova linha para cada servidor de hora padrão que você deseja adicionar. Os servidores de hora padrão devem ser os mesmos servidores NTP usados no cluster de armazenamento que você usará em um link:task_mnode_install.html#set-up-the-management-node["passo posterior"].
+.. Adicione uma nova linha para cada servidor de horário padrão que você deseja adicionar. Os servidores de horário padrão devem ser os mesmos servidores NTP usados no cluster de armazenamento que você usará em um <<set-up-the-management-node,passo posterior>>.
 +
 [listing]
 ----
@@ -213,7 +213,7 @@ NOTE: Não ative essa opção se você fizer alterações futuras na VM.
 
 
 
-NOTE: Não edite o NTP depois de concluir a configuração de sincronização de tempo porque afeta o NTP quando executa o link:task_mnode_install.html#set-up-the-management-node["comando de configuração"] no nó de gestão.
+NOTE: Não edite o NTP depois de concluir a configuração de sincronização de tempo, pois isso afetará o NTP quando você executar o programa. <<set-up-the-management-node,comando de configuração>> no nó de gerenciamento.
 
 
 
@@ -240,7 +240,7 @@ NOTE: A forma abreviada do nome do comando está entre parênteses ( ) e pode se
 
 +
 *** *--mnode_admin_user (-mu) [username]*: O nome de usuário da conta de administrador do nó de gerenciamento. É provável que seja o nome de usuário da conta de usuário usada para fazer login no nó de gerenciamento.
-*** *--storage_mvip (-sm) [endereço MVIP]*: O endereço IP virtual de gerenciamento (MVIP) do cluster de armazenamento executando o software Element. Configure o nó de gerenciamento com o mesmo cluster de armazenamento usado durante link:task_mnode_install.html#configure-time-sync["Configuração de servidores NTP"]o .
+*** *--storage_mvip (-sm) [Endereço MVIP]*: O endereço IP virtual de gerenciamento (MVIP) do cluster de armazenamento que executa o software Element. Configure o nó de gerenciamento com o mesmo cluster de armazenamento que você usou durante <<configure-time-sync,Configuração de servidores NTP>>.
 *** *--storage_username (-su) [username]*: O nome de usuário do administrador do cluster de armazenamento para o cluster especificado pelo `--storage_mvip` parâmetro.
 *** *--Telemetry_active (-t) [true]*: Retenha o valor true que permite a coleta de dados para análise pelo Active IQ.
 

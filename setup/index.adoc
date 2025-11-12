@@ -33,7 +33,7 @@ Saiba como configurar o sistema de armazenamento para o seu ambiente.
 
 
 ** xref:task_setup_determine_which_solidfire_components_to_install.adoc[Determine quais componentes do SolidFire instalar]
-** xref:/task_setup_gh_redirect_set_up_a_management_node.adoc[Configure um nó de gerenciamento]
+** xref:task_setup_gh_redirect_set_up_a_management_node.adoc[Configure um nó de gerenciamento]
 ** xref:concept_setup_whats_next.adoc[O que se segue?]
 
 

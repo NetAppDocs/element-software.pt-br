@@ -11,9 +11,11 @@ summary: Você pode usar essas etapas básicas por meio da API Element para conf
 
 
 [role="lead"]
+A autenticação multifator (MFA) usa um provedor de identidade (IDP) de terceiros por meio da Security Assertion Markup Language (SAML) para gerenciar sessões de usuários. O MFA permite que os administradores configurem fatores adicionais de autenticação conforme necessário, como senha e mensagem de texto, senha e mensagem de e-mail.
+
 Você pode usar essas etapas básicas por meio da API Element para configurar seu cluster para usar a autenticação multifator.
 
-Os detalhes de cada método de API podem ser encontrados no link:../api/index.html["Referência da API do Element"].
+Os detalhes de cada método da API podem ser encontrados no link:../api/concept_element_api_about_the_api.html["Referência da API do Element"].
 
 . Crie uma nova configuração de provedor de identidade (IDP) de terceiros para o cluster chamando o seguinte método de API e passando os metadados IDP no formato JSON: `CreateIdpConfiguration`
 +

@@ -66,7 +66,7 @@ Consulte informações sobre link:../concepts/concept_solidfire_concepts_account
 .. *Iniciadores*: Você pode ver o iniciador iSCSI IQN ou WWPNs Fibre Channel para o volume. Cada IQN adicionado a um grupo de acesso pode acessar cada volume no grupo sem exigir autenticação CHAP. Cada WWPN adicionado a um grupo de acesso permite o acesso à rede Fibre Channel aos volumes no grupo de acesso.
 .. *Políticas de QoS*: Você pode ver a política de QoS aplicada ao volume. Uma política de QoS aplica configurações padronizadas para IOPS mínimo, IOPS máximo e IOPS bursting a vários volumes.
 +
-Consulte informações sobre link:../concepts/concept_data_manage_volumes_solidfire_quality_of_service.html#qos-performance.html["Políticas de performance e QoS"]o .
+Veja informações sobre link:../concepts/concept_data_manage_volumes_solidfire_quality_of_service.html#qos-performance["Políticas de performance e QoS"].
 
 
 

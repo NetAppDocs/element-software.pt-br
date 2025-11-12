@@ -20,7 +20,7 @@ Você pode criar e gerenciar até quatro pontos de extremidade SnapMirror em um 
 
 NOTE: Se um endpoint existente foi originalmente criado usando a API e as credenciais não foram salvas, você pode ver o endpoint na IU do elemento e verificar sua existência, mas ele não pode ser gerenciado usando a IU do elemento. Esse endpoint só pode ser gerenciado usando a API Element.
 
-Para obter detalhes sobre métodos de API, link:../api/index.html["Gerencie o storage com a API Element"]consulte .
+Para obter detalhes sobre os métodos da API, consulte link:../api/concept_element_api_about_the_api.html["Gerencie o storage com a API Element"].
 
 .O que você vai precisar
 * Você deve ter habilitado o SnapMirror na IU do Element para o cluster de storage.

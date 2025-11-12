@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: solidfire, element, aiq, cluster, active iq, vcenter plugin, vcp, storage, what is, activeiq 
 summary: 'Um sistema de storage all-flash da SolidFire é composto por componentes de hardware distintos (unidade e nós) combinados em um único pool de recursos de storage por meio do software NetApp Element executado independentemente em cada nó. Esse cluster unificado se apresenta como um único sistema de storage para uso por clientes externos e é gerenciado como uma única entidade por meio da IU do software Element, da API e de outras ferramentas de gerenciamento.' 
 ---
-= Visão geral da arquitetura SolidFire
+= Saiba mais sobre a arquitetura SolidFire .
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

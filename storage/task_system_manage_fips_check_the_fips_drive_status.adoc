@@ -31,7 +31,7 @@ Você pode verificar se o recurso unidades FIPS está ativado no cluster usando 
 
 == Encontre mais informações
 
-* link:../api/index.html["Gerencie o storage com a API Element"]
+* link:../api/concept_element_api_about_the_api.html["Gerencie o storage com a API Element"]
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plug-in do NetApp Element para vCenter Server"^]
 

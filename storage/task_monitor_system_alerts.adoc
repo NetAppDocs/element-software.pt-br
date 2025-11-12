@@ -102,5 +102,5 @@ Depois que o sistema resolver um alerta, todas as informações sobre o alerta, 
 == Encontre mais informações
 
 * xref:reference_monitor_cluster_fault_codes.adoc[Códigos de falha do cluster]
-* link:../api/index.html["Gerencie o storage com a API Element"]
+* link:../api/concept_element_api_about_the_api.html["Gerencie o storage com a API Element"]
 

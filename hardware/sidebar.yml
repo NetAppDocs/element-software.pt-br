@@ -1,10 +1,8 @@
 ---
 section: hardware
 title: Instale e mantenha o hardware
-url: "/hardware/index.html"
 entries:
 - title: Informações sobre hardware H410S e H610S
-  url: "/hardware/concept_h410s_h610s_info.html"
   entries:
   - title: Instale os nós H410S e H610S
     url: "/hardware/task_h410s_h610s_install.html"
@@ -17,7 +15,6 @@ entries:
   - title: Substitua uma unidade de fonte de alimentação
     url: "/hardware/task_psu_repl.html"
 - title: Informações sobre o hardware da série SF
-  url: "/hardware/concept_sfseries_info.html"
   entries:
   - title: Substitua um chassi
     url: "/hardware/task_sfseries_chassisrepl.html"

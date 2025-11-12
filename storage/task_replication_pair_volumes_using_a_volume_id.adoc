@@ -11,7 +11,7 @@ summary: Você pode emparelhar um volume com outro volume em um cluster remoto s
 
 
 [role="lead"]
-Você pode emparelhar um volume com outro volume em um cluster remoto se tiver credenciais de administrador de cluster para o cluster remoto.
+Você pode emparelhar um volume com outro volume em um cluster remoto se tiver acesso de administrador de cluster a ambos os clusters nos quais os volumes serão emparelhados. Este método utiliza o ID do volume no cluster remoto para iniciar uma conexão.
 
 .O que você vai precisar
 * Certifique-se de que os clusters que contêm os volumes estão emparelhados.

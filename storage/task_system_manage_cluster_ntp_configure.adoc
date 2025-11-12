@@ -13,6 +13,8 @@ summary: 'Você pode instruir cada nó em um cluster a consultar um servidor NTP
 [role="lead"]
 Você pode instruir cada nó em um cluster a consultar um servidor NTP (Network Time Protocol) para obter atualizações. O cluster contacta apenas servidores configurados e solicita informações NTP a partir deles.
 
+O NTP é usado para sincronizar relógios em uma rede. A ligação a um servidor NTP interno ou externo deve fazer parte da configuração inicial do cluster.
+
 Configure o NTP no cluster para apontar para um servidor NTP local. Você pode usar o endereço IP ou o nome do host FQDN. O servidor NTP predefinido no momento da criação do cluster é definido como us.pool.ntp.org; no entanto, uma ligação a este site nem sempre pode ser feita dependendo da localização física do cluster SolidFire.
 
 O uso do FQDN depende se as configurações de DNS do nó de armazenamento individual estão implementadas e operacionais. Para fazer isso, configure os servidores DNS em cada nó de armazenamento e certifique-se de que as portas estão abertas, revisando a página requisitos de porta de rede.
@@ -37,6 +39,7 @@ Você deve ter o administrador de cluster Privileges para configurar essa config
 
 == Encontre mais informações
 
+* link:../storage/task_system_manage_cluster_ntp_configure_to_listen_for_ntp_broadcasts.html["Configure o cluster para ouvir transmissões NTP"]
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plug-in do NetApp Element para vCenter Server"^]
 

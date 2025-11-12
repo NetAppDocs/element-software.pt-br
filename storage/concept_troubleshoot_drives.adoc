@@ -39,6 +39,6 @@ IMPORTANT: Os sistemas de storage SolidFire não suportam a remoção de uma uni
 * xref:task_troubleshoot_remove_mdss_drives.adoc[Remova as unidades MDSS]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2844771["Substituição de unidades para nós de storage do SolidFire"]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2846859["Substituição de unidades para nós de storage da série H600S"]
-* link:../hardware/concept_h410s_h610s_info.html["Informações sobre hardware H410S e H610S"]
-* link:../hardware/concept_sfseries_info.html["Informações sobre o hardware da série SF"]
+* link:../hardware/task_h410s_h610s_install.html["Informações sobre hardware H410S e H610S"]
+* link:../hardware/task_sfseries_chassisrepl.html["Informações sobre o hardware da série SF"]
 

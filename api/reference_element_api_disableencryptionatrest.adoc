@@ -13,12 +13,13 @@ summary: Você pode usar o método DisableEncryptionAtRest para remover a cripto
 [role="lead"]
 Você pode usar o `DisableEncryptionAtRest` método para remover a criptografia que foi aplicada anteriormente ao cluster usando o `EnableEncryptionAtRest` método. Este método de desativação é assíncrono e retorna uma resposta antes de a criptografia ser desativada. Você pode usar o `GetClusterInfo` método para poll o sistema para ver quando o processo foi concluído.
 
+[NOTE]
+====
+* Você não pode usar este método para desativar a criptografia de software em repouso. Para desativar a encriptação de software em repouso, tem de link:reference_element_api_createcluster.html["crie um novo cluster"]desativar a encriptação de software em repouso.
+* Para visualizar o estado atual da criptografia em repouso, da criptografia de software em repouso ou de ambas no cluster, utilize o link:../api/reference_element_api_getclusterinfo.html["obtenha o método de informações do cluster"]. Você pode usar o `GetSoftwareEncryptionAtRestInfo` link:../api/reference_element_api_getsoftwareencryptionatrestinfo.html["método para obter informações que o cluster usa para criptografar dados em repouso"].
 
-TIP: Para ver o status atual da criptografia em repouso e/ou criptografia de software em repouso no cluster, use o link:../api/reference_element_api_getclusterinfo.html["obtenha o método de informações do cluster"^]. Pode utilizar a `GetSoftwareEncryptionAtRestInfo` link:../api/reference_element_api_getsoftwareencryptionatrestinfo.html["método para obter informações que o cluster usa para criptografar dados em repouso"^].
 
-
-NOTE: Você não pode usar este método para desativar a criptografia de software em repouso. Para desativar a encriptação de software em repouso, tem de link:reference_element_api_createcluster.html["crie um novo cluster"]desativar a encriptação de software em repouso.
-
+====
 
 
 == Parâmetros
@@ -67,7 +68,7 @@ Este método retorna uma resposta semelhante ao seguinte exemplo:
 [discrete]
 == Encontre mais informações
 
-* link:api/reference_element_api_getclusterinfo.html["GetClusterInfo"]
+* link:../api/reference_element_api_getclusterinfo.html["GetClusterInfo"]
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
 * https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentação para versões anteriores dos produtos NetApp SolidFire e Element"^]
 

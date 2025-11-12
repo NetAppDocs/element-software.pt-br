@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: failback, perform a failbacl, Element, snapmirror 
 summary: Quando o problema no lado principal tiver sido atenuado, você deve ressincronizar o volume de origem original e fazer o failover de volta para o software NetApp Element. As etapas que você executa variam dependendo se o volume de origem original ainda existe ou se você precisa fazer o failback para um volume recém-criado. 
 ---
-= Execute um failback para o elemento
+= Saiba mais sobre como realizar um failback para o Element.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,6 +12,25 @@ summary: Quando o problema no lado principal tiver sido atenuado, você deve res
 
 [role="lead"]
 Quando o problema no lado principal tiver sido atenuado, você deve ressincronizar o volume de origem original e fazer o failover de volta para o software NetApp Element. As etapas que você executa variam dependendo se o volume de origem original ainda existe ou se você precisa fazer o failback para um volume recém-criado.
+
+
+
+== Cenários de failback do SnapMirror
+
+A funcionalidade de recuperação de desastres do SnapMirror é ilustrada em dois cenários de failback. Estes assumem que o relacionamento original foi falhado sobre (quebrado).
+
+Os passos dos procedimentos correspondentes são adicionados para referência.
+
+
+NOTE: Nos exemplos aqui, R1 é a relação original em que o cluster que executa o software NetApp Element é o volume de origem original (elemento) e ONTAP é o volume de destino original (ONTAP). R2 e R3 representam as relações inversas criadas através da operação ressincronizada reversa.
+
+A imagem a seguir mostra o cenário de failback quando o volume de origem ainda existe:
+
+image::../media/snapmirror_element_failback1.gif[Imagem do cenário de failback quando o volume de origem ainda existe.]
+
+A imagem a seguir mostra o cenário de failback quando o volume de origem não existe mais:
+
+image::../media/snapmirror_element_failback2.png[Imagem do cenário de failback quando o volume de origem deixa de existir.]
 
 
 

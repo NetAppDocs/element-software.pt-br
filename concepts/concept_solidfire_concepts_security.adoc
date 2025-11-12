@@ -57,7 +57,7 @@ A autenticação multifator (MFA) permite exigir que os usuários apresentem vá
 
 Você pode emparelhar a autenticação multifator com provedores de identidade (IDPs) compatíveis com SAML 2,0 comuns, como o Microsoft ative Directory Federation Services (ADFS) e o Shibboleth.
 
-Para configurar o MFA, link:../storage/concept_system_manage_mfa_enable_multi_factor_authentication.html["ativar autenticação multifator"]consulte a documentação.
+Para configurar a MFA, consulte link:../storage/task_system_manage_mfa_set_up_multi_factor_authentication.html["ativar autenticação multifator"] documentação.
 
 
 

@@ -41,4 +41,4 @@ Usado para criar e manter provedores-chave que gerenciam servidores de chave ext
 * TestKeyProviderKmip
 
 
-Para obter informações sobre os métodos de API, link:../api/index.html["Informações de referência da API"]consulte .
+Para obter informações sobre os métodos da API, consulte link:../api/concept_element_api_about_the_api.html["Informações de referência da API"].

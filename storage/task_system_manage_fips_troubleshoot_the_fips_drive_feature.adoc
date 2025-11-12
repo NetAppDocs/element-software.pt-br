@@ -28,7 +28,7 @@ Usando a IU do software NetApp Element, você pode exibir alertas para obter inf
 == Encontre mais informações
 
 * xref:reference_monitor_cluster_fault_codes.adoc[Códigos de falha do cluster]
-* link:../api/index.html["Gerencie o storage com a API Element"]
+* link:../api/concept_element_api_about_the_api.html["Gerencie o storage com a API Element"]
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plug-in do NetApp Element para vCenter Server"^]
 

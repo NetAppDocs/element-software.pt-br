@@ -25,7 +25,7 @@ Se você estiver atualizando para os serviços de gerenciamento 2.21.61 a 2.26.4
 
 [NOTE]
 ====
-* Os serviços de gerenciamento 2.22.7 incluem o plug-in Element para vCenter Server 5,0 que contém o plug-in remoto. Se você usar o plug-in Element, você deve atualizar para os serviços de gerenciamento 2.22.7 ou posterior para cumprir com a diretiva VMware que remove o suporte para plug-ins locais. https://kb.vmware.com/s/article/87880["Saiba mais"^].
+* Os serviços de gerenciamento 2.22.7 incluem o plug-in Element para vCenter Server 5.0, que contém o plug-in remoto. Se você utiliza o plug-in Element, deve atualizar para os serviços de gerenciamento 2.22.7 ou posterior para estar em conformidade com a diretiva da VMware que remove o suporte para plug-ins locais. https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-sdks-tools/8-0/developing-local-plug-ins-client-sdk/about-this-book-local/deprecation-of-local-plug-in-architecture.html["Saiba mais"^].
 * Para obter as notas de versão mais recentes dos serviços de gerenciamento que descrevem os principais serviços, novos recursos, correções de bugs e soluções alternativas para cada pacote de serviços, consulte https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["notas de lançamento dos serviços de gerenciamento"^]
 
 

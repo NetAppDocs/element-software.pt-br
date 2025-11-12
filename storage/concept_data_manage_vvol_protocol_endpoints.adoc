@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: protocol endpoint, access, cluster, storage node, iscsi supported 
 summary: Os endpoints de protocolo são pontos de acesso usados por um host para tratar do storage em um cluster que executa o software NetApp Element. Os endpoints de protocolo não podem ser excluídos ou modificados por um usuário, não estão associados a uma conta e não podem ser adicionados a um grupo de acesso de volume. 
 ---
-= Endpoints do protocolo
+= Saiba mais sobre os pontos de extremidade do protocolo.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

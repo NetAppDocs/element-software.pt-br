@@ -226,6 +226,9 @@ echo '{"trident": true, "mvip": "[mvip IP address]", "account_name": "[persisten
 
 
 
+
+
+[[step_6_recover_mnode_redeploy]]
 . Configure e execute o comando redeploy do nó de gerenciamento para se conetar a volumes persistentes hospedados no cluster e iniciar serviços com dados de configuração do nó de gerenciamento anteriores:
 +
 
