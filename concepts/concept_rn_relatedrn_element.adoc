@@ -20,6 +20,7 @@ NOTE: Você será solicitado a fazer login usando suas credenciais de suporte da
 
 == Software NetApp Element
 
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP3362264["Notas de versão do NetApp Element Software 12.9"^]_Novo_
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2886996["Notas de versão do software NetApp Element 12,8"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2884468["Notas de versão do software NetApp Element 12,7"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2882193["Notas de versão do software NetApp Element 12,5"^]
@@ -49,7 +50,7 @@ NOTE: Você será solicitado a fazer login usando suas credenciais de suporte da
 
 == Plug-in do NetApp Element para vCenter Server
 
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP3344864["Notas de versão do plug-in vCenter 5.5"^]_Novo_
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP3344864["Notas de versão do plug-in vCenter 5.5"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP3330676["Notas de versão do vCenter Plug-in 5,4"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP3316480["Notas de versão do vCenter Plug-in 5,3"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2886272["Notas de versão do vCenter Plug-in 5,2"^]
@@ -78,7 +79,7 @@ NOTE: Você será solicitado a fazer login usando suas credenciais de suporte da
 * https://docs.netapp.com/us-en/hci/docs/rn_storage_firmware_2.76.html["Notas de lançamento do pacote de firmware de armazenamento 2,76"^]
 * https://docs.netapp.com/us-en/hci/docs/rn_storage_firmware_2.27.html["Notas de lançamento do pacote de firmware de armazenamento 2,27"^]
 * https://docs.netapp.com/us-en/hci/docs/rn_H610S_BMC_3.84.07.html["Notas de lançamento do H610S BMC 3.84.07"^]
-* https://docs.netapp.com/us-en/hci/docs/firmware_driver_versions.html["Versões de firmware e driver ESXi compatíveis"] _NOVO_
+* https://docs.netapp.com/us-en/hci/docs/firmware_driver_versions.html["Versões de firmware e driver ESXi compatíveis"]
 
 
 

@@ -11,7 +11,7 @@ summary: O objeto logingServer contém informações sobre quaisquer hosts de lo
 
 
 [role="lead"]
-O objeto logingServer contém informações sobre quaisquer hosts de log configurados para o cluster de armazenamento. Você pode usar `GetRemoteLoggingHosts` para determinar quais são os hosts de log atuais e, em seguida, usar `SetRemoteLoggingHosts` para definir a lista desejada de hosts de log atuais e novos.
+O objeto loggingServer armazena informações sobre os hosts de registro configurados para o cluster de armazenamento.  Usar `GetRemoteLoggingHosts` para visualizar os hosts de registro atuais e, em seguida, usar `SetRemoteLoggingHosts` Para definir a lista desejada de hosts de registro atuais e novos.
 
 
 
@@ -26,7 +26,7 @@ Este objeto contém os seguintes membros:
  a| 
 host
  a| 
-Endereço IP do servidor de log.
+FQDN ou endereço IP do servidor de logs
  a| 
 cadeia de carateres
 
@@ -35,8 +35,12 @@ cadeia de carateres
  a| 
 porta
  a| 
-Número da porta usado para se comunicar com o servidor de log.
+Número da porta usada para comunicação com o servidor de logs.
  a| 
 número inteiro
 
 |===
+.Informações relacionadas
+* link:reference_element_api_getremotelogginghosts.html["GetRemoteLoggingHosts"]
+* link:reference_element_api_setremotelogginghosts.html["SetRemoteLoggingHosts"]
+

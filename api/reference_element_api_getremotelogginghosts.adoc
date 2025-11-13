@@ -17,13 +17,13 @@ Você pode usar o `GetRemoteLoggingHosts` método para obter a lista atual de se
 
 == Parâmetros
 
-Este método não tem parâmetros de entrada.
+Não existem parâmetros de entrada para `GetRemoteLoggingHosts` .
 
 
 
 == Valor de retorno
 
-Este método tem o seguinte valor de retorno:
+O `GetRemoteLoggingHosts` O método tem o seguinte valor de retorno:
 
 |===
 | Nome | Descrição | Tipo 
@@ -32,7 +32,7 @@ Este método tem o seguinte valor de retorno:
  a| 
 RemoteHosts
  a| 
-Lista de endereço IP e informações de porta sobre hosts configurados para receber informações de Registro encaminhadas.
+Lista o endereço IP, o FQDN e as informações de porta dos hosts configurados para receber informações de registro encaminhadas.
  a| 
 xref:reference_element_api_loggingserver.adoc[Servidor de loggingServer] array
 
@@ -69,6 +69,10 @@ Este método retorna uma resposta semelhante ao seguinte exemplo:
          },
          {
            "host": "172.16.1.25"
+         },
+         {
+            "host": "syslogs.lab.company.net",
+            "port": 514
          }
       ]
    }
@@ -78,7 +82,7 @@ Este método retorna uma resposta semelhante ao seguinte exemplo:
 
 == Novo desde a versão
 
-9,6
+Disponível a partir do ONTAP 9.6.
 
 
 

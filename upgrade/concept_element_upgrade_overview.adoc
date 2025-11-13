@@ -20,9 +20,9 @@ Esses componentes incluem serviços de gerenciamento, controle de nuvem híbrida
 
 [NOTE]
 ====
-* A partir de novembro de 2023, não é possível iniciar uma atualização de componente usando o Controle de nuvem híbrida ou a API REST do NetApp porque os certificados de chave de assinatura (privados e públicos) expiraram em 5 de novembro de 2023. Você pode resolver esse problema link:task_hcc_upgrade_management_node.html["realizar uma atualização no local do nó de gerenciamento"]até a versão 12,8 antes de usar o controle de nuvem híbrida ou a API REST do NetApp para atualizar os serviços de gerenciamento, o software Element e o firmware de storage.
+* A partir de novembro de 2023, não será possível iniciar uma atualização de componente usando o NetApp Hybrid Cloud Control ou a API REST, pois os certificados de chave de assinatura (privada e pública) expiraram em 5 de novembro de 2023. Você pode contornar esse problema porlink:task_hcc_upgrade_management_node.html["realizar uma atualização no local do nó de gerenciamento"] Para atualizar os serviços de gerenciamento, o software Element e o firmware de armazenamento, é necessário instalar a versão 12.8 ou posterior.
 +
-Se você estiver implantando um novo nó de gerenciamento com a versão 12,8, poderá usar o Controle de nuvem híbrida ou a API REST do NetApp para realizar atualizações de componentes na ordem listada no <<sys_upgrade,sequência de atualização do sistema>>.
+Se você estiver implantando um novo nó de gerenciamento com a versão 12.8 ou posterior, poderá usar o NetApp Hybrid Cloud Control ou a API REST para realizar atualizações de componentes na ordem listada em<<sys_upgrade,sequência de atualização do sistema>> .
 
 * Os seguintes nós não são suportados. Se você tentar atualizar um desses nós para uma versão de elemento não suportado, verá um erro informando que o nó não é suportado pelo elemento 12.x:
 +
@@ -69,8 +69,8 @@ NOTE: Não é mais necessário atualizar o sistema operacional do nó de gerenci
 +
 [IMPORTANT]
 ====
-** O pacote de serviços de gerenciamento 2.27 inclui o Element Plug-in para vCenter Server 5.5, que é compatível apenas com o nó de gerenciamento 12.8. Ao atualizar para os serviços de gerenciamento 2.27, você deve alterar a sequência de atualização e atualizar o pacote de serviços de gerenciamento _após_ a atualização para o Element 12.8 para ter compatibilidade entre o nó de gerenciamento e os serviços de gerenciamento.
-** Se você estiver atualizando para os serviços de gerenciamento 2.21.61 a 2.26.40, deverá atualizar o pacote de serviços de gerenciamento _antes_ de atualizar para o Element 12.8.
+** O pacote de serviços de gerenciamento 2.27 inclui o plug-in Element para vCenter Server 5.5, que é compatível apenas com o nó de gerenciamento 12.8 ou posterior. Ao atualizar para os serviços de gerenciamento 2.27, você deve alterar a sequência de atualização e atualizar o pacote de serviços de gerenciamento _após_ a atualização para o Element 12.9 para ter compatibilidade entre o nó de gerenciamento e os serviços de gerenciamento.
+** Se você estiver atualizando para os serviços de gerenciamento 2.21.61 a 2.26.40, deverá atualizar o pacote de serviços de gerenciamento _antes_ de atualizar para o Element 12.9.
 
 
 ====

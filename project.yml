@@ -7,8 +7,10 @@ settings:
     pdf_enabled: true
     harmony_enabled: false
   versions:
-  - version-number: '12.8'
+  - version-number: '12.9'
     url: "/element-software"
+  - version-number: '12.8'
+    url: "/element-software-128"
   - version-number: '12.7'
     url: "/element-software-127"
   - version-number: '12.5'
@@ -18,7 +20,7 @@ settings:
   langs: pt-br,us-en,de-de,es-es,fr-fr,it-it,ja-jp,ko-kr,zh-cn,zh-tw
 sidebar:
   entries:
-  - title: Documentação do software SolidFire e Element 12,8
+  - title: Documentação do SolidFire e do Element Software 12.9
     url: "/index.html"
   - title: Notas de lançamento
     entries:
