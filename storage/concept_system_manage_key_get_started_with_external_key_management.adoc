@@ -15,7 +15,7 @@ O gerenciamento de chaves externas (EKM) fornece gerenciamento seguro de chaves 
 
 * link:task_system_manage_key_set_up_external_key_management.html["Configurar o gerenciamento externo"]
 * link:task_system_manage_rekey_software_ear_master_key.html["Rechavear criptografia de software na chave mestra em repouso"]
-* link:concept_system_manage_key_recover_inaccessible_or_invalid_authentication_keys["Recuperar chaves de autenticação inacessíveis ou inválidas"]
+* link:concept_system_manage_key_recover_inaccessible_or_invalid_authentication_keys.html["Recuperar chaves de autenticação inacessíveis ou inválidas"]
 * link:concept_system_manage_key_external_key_management_api_commands.html["Comandos externos da API de gerenciamento de chaves"]
 
 

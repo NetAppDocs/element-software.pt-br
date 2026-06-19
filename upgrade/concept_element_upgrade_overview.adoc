@@ -49,7 +49,7 @@ TIP: Para verificar a versão, faça login no nó de gerenciamento e veja o núm
 Os upgrades com o controle de nuvem híbrida da NetApp não estão disponíveis em versões anteriores do pacote de serviços.
 
 * Você garantiu que a hora do sistema em todos os nós é sincronizada e que o NTP está configurado corretamente para o cluster de armazenamento e nós. Cada nó deve ser configurado com um servidor de nomes DNS na IU da Web por nó (`https://[IP address]:442`) sem falhas de cluster não resolvidas relacionadas ao desvio de tempo.
-* Você agendou tempo suficiente para o link:task_hcc_upgrade_element_software.html#element-upgrade-time["Software Element"] e link:task_hcc_upgrade_storage_firmware.html#storage-firmware-upgrade["firmware de armazenamento"] upgrades. Quando você atualiza para o software Element 12,5 ou posterior, o tempo do processo de atualização varia dependendo da versão do software Element e das atualizações de firmware.
+* Você reservou tempo suficiente para suas link:task_hcc_upgrade_element_software.html["Software Element"] e link:task_hcc_upgrade_storage_firmware.html#storage-firmware-upgrade["firmware de armazenamento"] atualizações. Ao atualizar para o software Element 12.5 ou posterior, o tempo do processo de atualização varia dependendo da versão do software Element e das atualizações de firmware.
 
 
 
