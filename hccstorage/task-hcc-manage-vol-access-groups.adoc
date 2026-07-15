@@ -24,6 +24,7 @@ Você pode criar novos grupos de acesso a volume, fazer alterações no nome, in
 
 
 
+[[add-a-volume-access-group]]
 == Adicionar um grupo de acesso de volume
 
 Você pode adicionar um grupo de acesso a volume a um cluster de storage usando o Controle de nuvem híbrida da NetApp.
@@ -45,6 +46,7 @@ Se você associar um iniciador ao grupo de acesso ao volume, esse iniciador pode
 
 
 
+[[edit-a-volume-access-group]]
 == Editar um grupo de acesso ao volume
 
 Você pode editar as propriedades de um grupo de acesso a volume existente usando o Controle de nuvem híbrida da NetApp. Você pode fazer alterações no nome, iniciadores associados ou volumes associados de um grupo de acesso.
@@ -63,6 +65,7 @@ Você pode editar as propriedades de um grupo de acesso a volume existente usand
 
 
 
+[[delete-a-volume-access-group]]
 == Eliminar um grupo de acesso ao volume
 
 Você pode remover um grupo de acesso ao volume usando o Controle de nuvem híbrida da NetApp e, ao mesmo tempo, remover do sistema os iniciadores associados a esse grupo de acesso.

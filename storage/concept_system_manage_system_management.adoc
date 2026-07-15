@@ -21,6 +21,7 @@ Você pode gerenciar seu sistema na IU do Element. Isso inclui a ativação da a
 
 
 
+[[for-more-information]]
 == Para mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

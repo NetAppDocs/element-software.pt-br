@@ -12,6 +12,7 @@ TIP: Os termos "nó" e "chassi" são usados alternadamente no caso do H610S, que
 
 
 
+[[best-practices-for-adding-and-removing-drives]]
 == Práticas recomendadas para adicionar e remover unidades
 
 Você deve seguir estas práticas recomendadas para adicionar unidades ao cluster:
@@ -70,6 +71,7 @@ NOTE: Consulte a documentação do fornecedor do switch se o switch não reconhe
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

@@ -17,6 +17,7 @@ Se um nó recém-adicionado representar mais de 50% da capacidade total do clust
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 xref:task_system_manage_nodes_adding_a_node_to_a_cluster.adoc[Adicione um nó a um cluster]

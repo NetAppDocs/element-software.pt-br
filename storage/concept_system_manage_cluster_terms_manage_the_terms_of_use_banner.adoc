@@ -18,6 +18,7 @@ Você pode ativar, editar ou configurar um banner que contenha uma mensagem para
 
 
 
+[[enable-the-terms-of-use-banner]]
 == Ative o banner termos de uso
 
 Você pode habilitar um banner de termos de uso que aparece quando um usuário faz login na IU do Element. Quando o usuário clica no banner, uma caixa de diálogo de texto é exibida contendo a mensagem que você configurou para o cluster. O banner pode ser demitido a qualquer momento.
@@ -35,6 +36,7 @@ NOTE: Não exceda 4096 carateres.
 
 
 
+[[edit-the-terms-of-use-banner]]
 == Edite o banner termos de uso
 
 Você pode editar o texto que um usuário vê ao selecionar o banner de login dos termos de uso.
@@ -56,6 +58,7 @@ NOTE: Não exceda 4096 carateres.
 
 
 
+[[disable-the-terms-of-use-banner]]
 == Desative o banner termos de uso
 
 Você pode desativar o banner termos de uso. Com o banner desativado, o usuário não é mais solicitado a aceitar os termos de uso ao usar a IU do elemento.

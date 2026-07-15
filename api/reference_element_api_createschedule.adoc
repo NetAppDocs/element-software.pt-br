@@ -20,6 +20,7 @@ NOTE: Você pode criar snapshots se a plenitude do cluster estiver na fase 1, 2 
 
 
 
+[[parameters]]
 == Parâmetros
 
 Este método tem os seguintes parâmetros de entrada:
@@ -242,6 +243,7 @@ Sim (se agendar para dias da semana)
 |===
 
 
+[[return-values]]
 == Valores de retorno
 
 Este método tem os seguintes valores de retorno:
@@ -271,6 +273,7 @@ xref:reference_element_api_schedule.adoc[programação]
 |===
 
 
+[[request-example-1]]
 == Exemplo de solicitação 1
 
 O seguinte exemplo de programação tem os seguintes parâmetros:
@@ -319,6 +322,7 @@ O seguinte exemplo de programação tem os seguintes parâmetros:
 ----
 
 
+[[response-example-1]]
 == Exemplo de resposta 1
 
 A solicitação acima retorna uma resposta semelhante ao seguinte exemplo:
@@ -367,6 +371,7 @@ A solicitação acima retorna uma resposta semelhante ao seguinte exemplo:
 ----
 
 
+[[request-example-2]]
 == Exemplo de solicitação 2
 
 O seguinte exemplo de programação tem os seguintes parâmetros:
@@ -409,6 +414,7 @@ O seguinte exemplo de programação tem os seguintes parâmetros:
 ----
 
 
+[[response-example-2]]
 == Exemplo de resposta 2
 
 A solicitação acima retorna uma resposta semelhante ao seguinte exemplo:
@@ -452,6 +458,7 @@ A solicitação acima retorna uma resposta semelhante ao seguinte exemplo:
 ----
 
 
+[[request-example-3]]
 == Exemplo de solicitação 3
 
 O seguinte exemplo de programação tem os seguintes parâmetros:
@@ -489,6 +496,7 @@ O seguinte exemplo de programação tem os seguintes parâmetros:
 ----
 
 
+[[response-example-3]]
 == Exemplo de resposta 3
 
 A solicitação acima retorna uma resposta semelhante ao seguinte exemplo:
@@ -534,6 +542,7 @@ A solicitação acima retorna uma resposta semelhante ao seguinte exemplo:
 ----
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 9,6

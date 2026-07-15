@@ -17,6 +17,7 @@ Os três endpoints de solicitação na API são designados das seguintes maneira
 
 
 
+[[cluster-api-methods]]
 == Métodos de API de cluster
 
 O endpoint HTTPS para solicitações de API em todo o cluster de armazenamento é `+https://<mvip>/json-rpc/<api-version>+`, onde:
@@ -27,6 +28,7 @@ O endpoint HTTPS para solicitações de API em todo o cluster de armazenamento �
 
 
 
+[[cluster-creation-and-bootstrap-api-methods]]
 == Criação de cluster e métodos de API bootstrap
 
 O endpoint HTTPS para criar um cluster de armazenamento e acessar solicitações de API de bootstrap é `+https://<nodeIP>/json-rpc/<api-version>+`, onde:
@@ -37,6 +39,7 @@ O endpoint HTTPS para criar um cluster de armazenamento e acessar solicitações
 
 
 
+[[per-node-api-methods]]
 == Métodos de API por nó
 
 O endpoint HTTPS para solicitações individuais de API de nó de armazenamento é `+https://<nodeIP>:442/json-rpc/<api-version>+`, onde:
@@ -47,6 +50,7 @@ O endpoint HTTPS para solicitações individuais de API de nó de armazenamento 
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

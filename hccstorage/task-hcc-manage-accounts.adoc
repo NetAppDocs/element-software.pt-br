@@ -24,6 +24,7 @@ Gerencie os seguintes tipos de contas:
 
 
 
+[[enable-ldap]]
 == Ativar LDAP
 
 Para utilizar LDAP para qualquer conta de utilizador, tem de ativar primeiro o LDAP.
@@ -40,12 +41,14 @@ Para utilizar LDAP para qualquer conta de utilizador, tem de ativar primeiro o L
 
 
 
+[[manage-authoritative-cluster-accounts]]
 == Gerenciar contas de cluster autoritativas
 
 link:../concepts/concept_solidfire_concepts_accounts_and_permissions.html#authoritative-cluster-user-accounts["Contas de usuário autoritativas"] São gerenciados no menu superior direito opção Gerenciamento de usuários no Controle de nuvem híbrida da NetApp. Esses tipos de contas permitem que você se autentique em qualquer ativo de storage associado a uma instância de controle de nuvem híbrida da NetApp de nós e clusters. Com essa conta, você pode gerenciar volumes, contas, grupos de acesso e muito mais em todos os clusters.
 
 
 
+[[create-an-authoritative-cluster-account]]
 === Crie uma conta de cluster autorizada
 
 Você pode criar uma conta usando o controle de nuvem híbrida da NetApp.
@@ -82,6 +85,7 @@ TIP: Para garantir que todos os filhos de um grupo herdem permissões, crie um g
 
 
 
+[[edit-an-authoritative-cluster-account]]
 === Edite uma conta de cluster autoritativa
 
 Você pode alterar as permissões ou a senha em uma conta de usuário usando o Controle de nuvem híbrida da NetApp.
@@ -106,6 +110,7 @@ NOTE: A IU do Controle de nuvem híbrida da NetApp pode levar até 2 minutos par
 
 
 
+[[delete-an-authoritative-user-account]]
 === Eliminar uma conta de utilizador autorizada
 
 Você pode excluir uma ou mais contas quando não for mais necessário. Pode eliminar uma conta de utilizador LDAP.
@@ -121,6 +126,7 @@ Não é possível eliminar a conta de utilizador de administrador principal para
 
 
 
+[[manage-volume-accounts]]
 == Gerenciar contas de volume
 
 link:../concepts/concept_solidfire_concepts_accounts_and_permissions.html#volume-accounts["Contas de volume"] São gerenciados na tabela volumes de controle de nuvem híbrida da NetApp. Essas contas são específicas apenas para o cluster de armazenamento no qual foram criadas. Esses tipos de contas permitem que você defina permissões em volumes na rede, mas não têm efeito fora desses volumes.
@@ -129,6 +135,7 @@ Uma conta de volume contém a autenticação CHAP necessária para acessar os vo
 
 
 
+[[create-a-volume-account]]
 === Crie uma conta de volume
 
 Crie uma conta específica para este volume.
@@ -154,6 +161,7 @@ NOTE: Para gerar automaticamente qualquer senha, deixe os campos de credencial e
 
 
 
+[[edit-a-volume-account]]
 === Editar uma conta de volume
 
 Você pode alterar as informações do CHAP e alterar se uma conta está ativa ou bloqueada.
@@ -172,6 +180,7 @@ IMPORTANT: Excluir ou bloquear uma conta associada ao nó de gerenciamento resul
 
 
 
+[[delete-a-volume-account]]
 === Eliminar uma conta de volume
 
 Exclua uma conta que você não precisa mais.

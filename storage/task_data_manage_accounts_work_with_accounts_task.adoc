@@ -17,6 +17,7 @@ Uma conta pode ter até dois mil volumes atribuídos a ela, mas um volume pode p
 
 
 
+[[chap-algorithms]]
 == Algoritmos CHAP
 
 A partir do Element 12,7, os algoritmos CHAP seguros compatíveis com FIPS SHA1, SHA-256 e SHA3-256 são suportados. Quando um iniciador iSCSI do host está criando uma sessão iSCSI com um destino iSCSI de elemento, ele solicita uma lista de algoritmos CHAP para usar. O destino iSCSI Element escolhe o primeiro algoritmo que suporta a partir da lista solicitada pelo iniciador iSCSI do host. Para confirmar que o destino iSCSI Element escolhe o algoritmo mais seguro, você deve configurar o iniciador iSCSI do host para enviar uma lista de algoritmos solicitados da maioria dos seguros, por exemplo, SHA3-256, para o menos seguro, por exemplo, SHA1 ou MD5. Quando os algoritmos SHA não são solicitados pelo iniciador iSCSI do host, o destino iSCSI do elemento escolhe MD5, assumindo que a lista de algoritmos proposta do host contém MD5. Talvez seja necessário atualizar a configuração do iniciador iSCSI do host para habilitar o suporte aos algoritmos seguros.
@@ -29,6 +30,7 @@ Se necessário, você pode usar o https://docs.netapp.com/us-en/element-software
 
 
 
+[[create-an-account]]
 == Crie uma conta
 
 Você pode criar uma conta para permitir o acesso a volumes.
@@ -53,6 +55,7 @@ NOTE: Deixe os campos de credencial em branco para gerar automaticamente qualque
 
 
 
+[[view-account-details]]
 == Ver detalhes da conta
 
 Você pode visualizar a atividade de desempenho de contas individuais em um formato gráfico.
@@ -82,6 +85,7 @@ Aqui estão alguns dos detalhes:
 
 
 
+[[edit-an-account]]
 == Edite uma conta
 
 Você pode editar uma conta para alterar o status, alterar os segredos CHAP ou modificar o nome da conta.
@@ -110,6 +114,7 @@ NOTE: Se você não alterar as credenciais *CHAP Settings*, elas permanecerão a
 
 
 
+[[delete-an-account]]
 == Eliminar uma conta
 
 Você pode excluir uma conta quando ela não for mais necessária.
@@ -127,6 +132,7 @@ IMPORTANT: Os volumes persistentes associados a serviços de gerenciamento são 
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

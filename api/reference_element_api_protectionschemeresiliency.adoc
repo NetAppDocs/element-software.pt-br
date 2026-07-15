@@ -15,6 +15,7 @@ O objeto protectionSchemeResiliency contém informações sobre se um cluster de
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:

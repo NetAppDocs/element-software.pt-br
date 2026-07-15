@@ -48,6 +48,7 @@ WARNING: A menos que seja aconselhado pelo suporte NetApp, quaisquer alteraçõe
 
 
 
+[[troubleshoot-a-cluster-node]]
 == Solucionar problemas de um nó de cluster
 
 Você pode executar a solução de problemas básica usando a conta do sistema spreadonly:
@@ -116,6 +117,7 @@ NOTE: O SSH permanece habilitado no nó de gerenciamento se você não o desabil
 
 
 
+[[troubleshoot-a-cluster-node-with-netapp-support]]
 == Solucione problemas de um nó de cluster com o suporte do NetApp
 
 O suporte da NetApp pode executar uma solução de problemas avançada com uma conta de sistema que permite que um técnico execute diagnósticos de elementos mais profundos.
@@ -213,6 +215,7 @@ NOTE: O SSH permanece habilitado no nó de gerenciamento se você não o desabil
 
 
 
+[[troubleshoot-a-node-that-is-not-part-of-cluster]]
 == Solucionar problemas de um nó que não faz parte do cluster
 
 Você pode executar a solução de problemas básica de um nó que ainda não foi adicionado a um cluster. Você pode usar a conta do sistema sfradonly para esse fim com ou sem a ajuda do suporte da NetApp. Se você tiver um nó de gerenciamento configurado, poderá usá-lo para SSH e executar o script fornecido para essa tarefa.

@@ -46,6 +46,7 @@ O sistema pode levar vários minutos para criar o cluster, dependendo do número
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

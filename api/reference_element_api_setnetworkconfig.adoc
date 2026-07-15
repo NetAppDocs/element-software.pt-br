@@ -15,6 +15,7 @@ Você pode usar o `SetNetworkConfig` método para definir a configuração de re
 
 
 
+[[parameter]]
 == Parâmetro
 
 CUIDADO:
@@ -41,6 +42,7 @@ Não
 |===
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tem o seguinte valor de retorno:
@@ -59,6 +61,7 @@ xref:reference_element_api_network_all_interfaces.adoc[rede (todas as interfaces
 |===
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -87,18 +90,21 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example]]
 == Exemplo de resposta
 
 A resposta deste método é a mesma que a resposta do método GetNetworkConfig. O método exibe todos os membros para cada objeto e inclui os novos valores para quaisquer membros alterados.
 
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 9,6
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * xref:reference_element_api_getnetworkconfig.adoc[GetNetworkConfig]

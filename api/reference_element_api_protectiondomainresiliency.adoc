@@ -15,6 +15,7 @@ O objeto protectionDomainResiliency contém o status de resiliência deste clust
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:

@@ -15,6 +15,7 @@ O objeto clusterInfo contém informações que o nó usa para se comunicar com o
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:

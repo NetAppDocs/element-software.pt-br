@@ -15,12 +15,14 @@ Você pode usar o `TestLocateCluster` método para validar que o nó pode locali
 
 
 
+[[parameters]]
 == Parâmetros
 
 Este método não tem parâmetros de entrada.
 
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tem o seguinte valor de retorno:
@@ -39,6 +41,7 @@ Objeto JSON
 |===
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -53,6 +56,7 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example]]
 == Exemplo de resposta
 
 Este método retorna uma resposta semelhante ao seguinte exemplo:
@@ -89,6 +93,7 @@ Este método retorna uma resposta semelhante ao seguinte exemplo:
 ----
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 9,6

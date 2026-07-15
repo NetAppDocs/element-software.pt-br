@@ -15,6 +15,7 @@ Você pode gerenciar relacionamentos de volume de várias maneiras, como pausar 
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * xref:task_replication_pause_replication.adoc[Pausar a replicação]

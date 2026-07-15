@@ -16,6 +16,7 @@ Para saber mais sobre o SolidFire Active IQ, consulte https://docs.netapp.com/us
 
 
 
+[[for-more-information]]
 == Para mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

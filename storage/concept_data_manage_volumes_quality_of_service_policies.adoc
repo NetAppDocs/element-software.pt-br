@@ -27,6 +27,7 @@ link:../concepts/concept_data_manage_volumes_solidfire_quality_of_service.html["
 
 
 
+[[create-a-qos-policy]]
 == Crie uma política de QoS
 
 Você pode criar políticas de QoS e aplicá-las ao criar volumes.
@@ -40,6 +41,7 @@ Você pode criar políticas de QoS e aplicá-las ao criar volumes.
 
 
 
+[[edit-a-qos-policy]]
 == Editar uma política de QoS
 
 Você pode alterar o nome de uma política de QoS existente ou editar os valores associados à política. A alteração de uma política de QoS afeta todos os volumes associados à política.
@@ -60,6 +62,7 @@ Você pode alterar o nome de uma política de QoS existente ou editar os valores
 
 
 
+[[delete-a-qos-policy]]
 == Excluir uma política de QoS
 
 Você pode excluir uma política de QoS se ela não for mais necessária. Quando você exclui uma política de QoS, todos os volumes associados à política mantêm as configurações de QoS, mas tornam-se não associados a uma política.
@@ -75,6 +78,7 @@ NOTE: Se você estiver tentando desassociar um volume de uma política de QoS, p
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * link:task_data_manage_volumes_remove_a_qos_policy_association_of_a_volume.html["Remova a associação de política de QoS de um volume"]

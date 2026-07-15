@@ -15,6 +15,7 @@ O objeto de tarefa contém informações sobre uma tarefa de volume virtual em e
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:
@@ -133,6 +134,7 @@ UUID
 |===
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 xref:reference_element_api_listvirtualvolumetasks.adoc[ListVirtualVolumeTasks]

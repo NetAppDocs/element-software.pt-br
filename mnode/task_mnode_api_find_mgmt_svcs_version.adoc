@@ -28,6 +28,7 @@ Você pode verificar os números de versão do SO do nó de gerenciamento, do pa
 
 
 
+[[api-commands]]
 == Comandos API
 
 * Obtenha informações sobre a versão sobre o SO do nó de gerenciamento, o pacote de serviços de gerenciamento e o serviço de API do nó de gerenciamento (mnode-api) que estão sendo executados no nó de gerenciamento:
@@ -50,6 +51,7 @@ NOTE: Você pode encontrar o `${TOKEN}` portador usado pelo comando API quando l
 
 
 
+[[rest-api-ui-steps]]
 == ETAPAS DA IU DA API REST
 
 . Acesse a IU da API REST do serviço inserindo o endereço IP do nó de gerenciamento seguido de `/mnode/`:

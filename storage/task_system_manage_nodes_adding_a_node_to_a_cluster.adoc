@@ -47,6 +47,7 @@ O nó aparece na lista de nós ativos.
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 xref:concept_system_manage_nodes_node_versioning_and_compatibility.adoc[Controle de versão e compatibilidade de nós]

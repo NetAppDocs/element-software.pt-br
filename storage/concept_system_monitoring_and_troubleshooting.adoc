@@ -29,6 +29,7 @@ Deve monitorizar o sistema para fins de diagnóstico e obter informações sobre
 
 
 
+[[for-more-information]]
 == Para mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

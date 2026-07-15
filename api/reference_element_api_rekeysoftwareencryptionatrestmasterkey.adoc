@@ -15,6 +15,7 @@ Você pode usar o `RekeySoftwareEncryptionAtRestMasterKey` método para rechavea
 
 
 
+[[parameters]]
 == Parâmetros
 
 Este método tem os seguintes parâmetros de entrada. Se o `keyManagementType` parâmetro não for especificado, a operação de rechavear é executada usando a configuração de gerenciamento de chaves existente. Se o `keyManagementType` for especificado e o provedor de chaves for externo, o `keyProviderID` parâmetro também deve ser usado.
@@ -33,6 +34,7 @@ Este método tem os seguintes parâmetros de entrada. Se o `keyManagementType` p
 |===
 
 
+[[return-values]]
 == Valores de retorno
 
 Este método tem os seguintes valores de retorno:
@@ -46,6 +48,7 @@ Este método tem os seguintes valores de retorno:
 |===
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -62,6 +65,7 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example]]
 == Exemplo de resposta
 
 Este método retorna uma resposta semelhante ao seguinte exemplo:
@@ -74,6 +78,7 @@ Este método retorna uma resposta semelhante ao seguinte exemplo:
 ----
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 12,3

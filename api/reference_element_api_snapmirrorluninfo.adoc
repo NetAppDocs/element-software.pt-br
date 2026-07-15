@@ -15,6 +15,7 @@ O objeto snapMirrorLunInfo contém informações sobre o objeto LUN ONTAP.
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:

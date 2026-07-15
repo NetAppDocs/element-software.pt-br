@@ -91,6 +91,7 @@ Escolha uma das seguintes opções de atualização de firmware de armazenamento
 
 
 
+[[use-netapp-hybrid-cloud-control-ui-to-upgrade-storage-firmware]]
 == Use a IU do Controle de nuvem híbrida da NetApp para atualizar o firmware do storage
 
 Você pode usar a IU do Controle de nuvem híbrida da NetApp para atualizar o firmware dos nós de storage no cluster.
@@ -149,6 +150,7 @@ Pode transferir registos após a conclusão da atualização.
 
 
 
+[[upgrade-status-changes]]
 === Alterações de status da atualização
 
 Aqui estão os diferentes estados que a coluna *Status da atualização* na IU mostra antes, durante e após o processo de atualização:
@@ -180,6 +182,7 @@ Aqui estão os diferentes estados que a coluna *Status da atualização* na IU m
 |===
 
 
+[[what-happens-if-an-upgrade-fails-using-netapp-hybrid-cloud-control]]
 == O que acontece se uma atualização falhar usando o controle de nuvem híbrida da NetApp
 
 Se uma unidade ou nó falhar durante uma atualização, a IU do Element mostrará falhas de cluster. O processo de atualização não avança para o nó seguinte e aguarda a resolução das falhas do cluster. A barra de progresso na IU mostra que a atualização está aguardando a resolução das falhas do cluster. Nesta fase, selecionar *Pausa* na IU não funcionará, porque a atualização aguarda que o cluster esteja saudável. Você precisará ativar o suporte da NetApp para ajudar na investigação de falha.
@@ -196,6 +199,7 @@ CAUTION: Abortar a atualização do cluster enquanto um nó está sendo atualiza
 
 
 
+[[use-netapp-hybrid-cloud-control-api-to-upgrade-storage-firmware]]
 == Use a API de controle de nuvem híbrida da NetApp para atualizar o firmware de storage
 
 Você pode usar APIs para atualizar nós de storage em um cluster para a versão mais recente do software Element. Você pode usar uma ferramenta de automação de sua escolha para executar as APIs. O fluxo de trabalho da API documentado aqui usa a IU da API REST disponível no nó de gerenciamento como exemplo.

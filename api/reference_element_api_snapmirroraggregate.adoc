@@ -15,6 +15,7 @@ O objeto snapMirrorAggregate contém informações sobre os agregados ONTAP disp
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:

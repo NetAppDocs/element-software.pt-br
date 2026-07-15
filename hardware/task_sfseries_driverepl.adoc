@@ -77,6 +77,7 @@ Aqui está uma visão geral de alto nível dos passos:
 
 
 
+[[remove-the-drive-from-the-cluster]]
 == Remova a unidade do cluster
 
 O sistema SolidFire coloca uma unidade em um estado com falha se o autodiagnóstico da unidade disser ao nó que falhou ou se a comunicação com a unidade parar por cinco minutos e meio ou mais. O sistema exibe uma lista das unidades com falha. Você deve remover uma unidade com falha da lista de unidades com falha no software NetApp Element.
@@ -116,6 +117,7 @@ Para remover várias unidades
 
 
 
+[[replace-the-drive-from-the-chassis]]
 == Substitua a unidade do chassi
 
 Depois de remover uma unidade com falha da lista de unidades com falha na IU do elemento, você estará pronto para substituir fisicamente a unidade com falha do chassi.
@@ -159,6 +161,7 @@ O suporte da NetApp fornecerá instruções para retornar a unidade com falha.
 
 
 
+[[add-the-drive-to-the-cluster]]
 == Adicione a unidade ao cluster
 
 Depois de instalar uma nova unidade no chassis, esta regista-se conforme disponível. Você deve adicionar a unidade ao cluster usando a IU do Element antes que ela possa participar do cluster.
@@ -194,6 +197,7 @@ Para adicionar várias unidades
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

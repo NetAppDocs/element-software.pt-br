@@ -15,6 +15,7 @@ O objeto loggingServer armazena informações sobre os hosts de registro configu
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:

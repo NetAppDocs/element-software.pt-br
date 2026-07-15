@@ -15,6 +15,7 @@ Você pode usar o `ListIdpConfigurations` método para listar configurações pa
 
 
 
+[[parameters]]
 == Parâmetros
 
 Este método tem os seguintes parâmetros de entrada:
@@ -63,6 +64,7 @@ Não
 |===
 
 
+[[return-values]]
 == Valores de retorno
 
 Este método tem o seguinte valor de retorno:
@@ -83,6 +85,7 @@ link:reference_element_api_idpconfiginfo.html["IdpConfigInfo"] array
 |===
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -96,6 +99,7 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example]]
 == Exemplo de resposta
 
 Este método retorna uma resposta semelhante ao seguinte exemplo:
@@ -125,6 +129,7 @@ Este método retorna uma resposta semelhante ao seguinte exemplo:
 ----
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 12,0

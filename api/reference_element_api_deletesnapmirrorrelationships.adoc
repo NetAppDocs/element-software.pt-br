@@ -15,6 +15,7 @@ A IU da Web do Element usa o `DeleteSnapMirrorRelationships` método para remove
 
 
 
+[[parameters]]
 == Parâmetros
 
 Este método tem os seguintes parâmetros de entrada:
@@ -50,6 +51,7 @@ Sim
 |===
 
 
+[[return-values]]
 == Valores de retorno
 
 Este método tem os seguintes valores de retorno:
@@ -70,6 +72,7 @@ Objeto JSON
 |===
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 10,1

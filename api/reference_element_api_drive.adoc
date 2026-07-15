@@ -15,6 +15,7 @@ O objeto da unidade contém informações sobre unidades individuais nos nós at
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:
@@ -171,6 +172,7 @@ número inteiro
 |===
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 xref:reference_element_api_listdrives.adoc[ListDrives]

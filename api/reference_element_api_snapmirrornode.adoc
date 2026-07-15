@@ -15,6 +15,7 @@ O objeto SnapMirrorNode contém informações sobre os nós do cluster ONTAP de 
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:

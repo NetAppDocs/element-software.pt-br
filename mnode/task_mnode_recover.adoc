@@ -56,6 +56,7 @@ Você pode implantar um novo OVA e executar um script de reimplantação para ex
 
 
 
+[[download-iso-or-ova-and-deploy-the-vm]]
 == Baixe ISO ou OVA e implante a VM
 
 . Transfira a OVA ou ISO para a sua instalação a partir da https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab["Software Element"^] página no site de suporte da NetApp.
@@ -97,6 +98,7 @@ NOTE: A instalação de um nó de gerenciamento usando a imagem pode resultar em
 
 
 
+[[configure-the-network]]
 == Configure a rede
 
 . Usando a interface do usuário de terminal (TUI), crie um usuário de administrador de nó de gerenciamento.
@@ -113,6 +115,7 @@ NOTE: Se você precisar de uma NIC adicional para isolar o tráfego de armazenam
 
 
 
+[[configure-time-sync]]
 == Configurar a sincronização da hora
 
 . Verifique se a hora é sincronizada entre o nó de gerenciamento e o cluster de armazenamento usando NTP:
@@ -190,6 +193,7 @@ NOTE: Não edite o NTP depois de concluir a configuração de sincronização de
 
 
 
+[[configure-the-management-node]]
 == Configure o nó de gerenciamento
 
 . Crie um diretório de destino temporário para o conteúdo do pacote de serviços de gerenciamento:

@@ -19,6 +19,7 @@ Você pode agendar instantâneos de volume para que ocorram autonomamente em int
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

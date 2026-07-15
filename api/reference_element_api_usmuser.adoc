@@ -15,6 +15,7 @@ Você pode usar o objeto SNMP usmUser com o `SetSnmpInfo` método API para confi
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:
@@ -78,6 +79,7 @@ cadeia de carateres
 |===
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 xref:reference_element_api_setsnmpinfo.adoc[SetSnmpInfo]

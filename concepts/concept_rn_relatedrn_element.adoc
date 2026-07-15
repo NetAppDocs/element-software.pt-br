@@ -18,6 +18,7 @@ NOTE: Você será solicitado a fazer login usando suas credenciais de suporte da
 
 
 
+[[netapp-element-software]]
 == Software NetApp Element
 
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP3362264["Notas de versão do NetApp Element Software 12.9"^]_Novo_
@@ -41,6 +42,7 @@ NOTE: Você será solicitado a fazer login usando suas credenciais de suporte da
 
 
 
+[[management-services]]
 == Serviços de gestão
 
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["Notas de versão dos Serviços de Gestão"^]
@@ -48,6 +50,7 @@ NOTE: Você será solicitado a fazer login usando suas credenciais de suporte da
 
 
 
+[[netapp-element-plug-in-for-vcenter-server]]
 == Plug-in do NetApp Element para vCenter Server
 
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP3344864["Notas de versão do plug-in vCenter 5.5"^]
@@ -68,6 +71,7 @@ NOTE: Você será solicitado a fazer login usando suas credenciais de suporte da
 
 
 
+[[storage-firmware]]
 == Firmware de armazenamento
 
 * https://docs.netapp.com/us-en/hci/docs/rn_storage_firmware_2.182.0.html["Notas de lançamento do pacote de firmware de armazenamento 2.182.0"^] _NOVO_
@@ -84,6 +88,7 @@ NOTE: Você será solicitado a fazer login usando suas credenciais de suporte da
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/vcp/index.html["Plug-in do NetApp Element para vCenter Server"^]

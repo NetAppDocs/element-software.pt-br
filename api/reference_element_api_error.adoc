@@ -15,6 +15,7 @@ O objeto de erro contém um código de erro e uma mensagem se ocorrer um erro du
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:

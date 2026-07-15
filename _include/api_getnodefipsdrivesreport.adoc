@@ -6,12 +6,14 @@ Você pode usar o `GetNodeFipsDrivesReport` método para verificar o status da f
 
 
 
+[[parameter]]
 == Parâmetro
 
 Este método não tem nenhum parâmetro de entrada.
 
 
 
+[[return-values]]
 == Valores de retorno
 
 Este método tem os seguintes valores de retorno:
@@ -35,6 +37,7 @@ cadeia de carateres
 |===
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -49,6 +52,7 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example]]
 == Exemplo de resposta
 
 Este método retorna uma resposta semelhante ao seguinte exemplo:
@@ -64,6 +68,7 @@ Este método retorna uma resposta semelhante ao seguinte exemplo:
 ----
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 11,5

@@ -15,6 +15,7 @@ A IU da Web do Element usa `DeleteSnapMirrorEndpoints` para excluir um ou mais e
 
 
 
+[[parameter]]
 == Parâmetro
 
 Este método tem o seguinte parâmetro de entrada:
@@ -37,12 +38,14 @@ Sim
 |===
 
 
+[[return-values]]
 == Valores de retorno
 
 Este método não tem valores de retorno.
 
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 10,0

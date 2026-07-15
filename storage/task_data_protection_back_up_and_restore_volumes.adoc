@@ -17,6 +17,7 @@ Ao restaurar volumes do OpenStack Swift ou Amazon S3, você precisa de informaç
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * xref:task_data_protection_back_up_volume_to_amazon_s3.adoc[Faça backup de um volume em um armazenamento de objetos do Amazon S3]

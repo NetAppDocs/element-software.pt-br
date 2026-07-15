@@ -28,6 +28,7 @@ NOTE: Por padrão, a cadeia de carateres da comunidade é pública e a rede é l
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * xref:task_system_manage_snmp_configure_snmp_traps.adoc[Configurar traps SNMP]

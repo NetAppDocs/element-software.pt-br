@@ -57,6 +57,7 @@ Antes de seguir este procedimento, você deve ter uma compreensão link:../conce
 
 
 
+[[step-1-download-iso-or-ova-and-deploy-the-vm]]
 == Passo 1: Baixe ISO ou OVA e implante a VM
 
 Transfira a ISO ou OVA adequada a partir do site de suporte da NetApp e instale a VM.
@@ -106,6 +107,8 @@ NOTE: A instalação de um nó de gerenciamento usando a imagem pode resultar em
 
 
 
+[[step-2-create-the-management-node-admin-and-configure-the-network]]
+[[create_mnode_admin]]
 == Etapa 2: Crie o administrador do nó de gerenciamento e configure a rede
 
 Após a conclusão da instalação da VM, crie o usuário de administrador do nó de gerenciamento e configure a rede do nó de gerenciamento.
@@ -137,6 +140,8 @@ NOTE: Se você precisar de uma NIC adicional para isolar o tráfego de armazenam
 
 
 
+[[step-3-configure-time-sync]]
+[[configure-time-sync]]
 == Passo 3: Configurar a sincronização de tempo
 
 Antes de configurar o nó de gerenciamento, sincronize o tempo entre o nó de gerenciamento e o cluster de storage.
@@ -217,6 +222,8 @@ NOTE: Não edite o NTP depois de concluir a configuração de sincronização de
 
 
 
+[[step-4-set-up-the-management-node]]
+[[set-up-the-management-node]]
 == Etapa 4: Configure o nó de gerenciamento
 
 Configure o nó de gerenciamento usando o `setup-mnode` comando.
@@ -283,6 +290,7 @@ NOTE: Use um nome de conta exclusivo para volumes persistentes que seja diferent
 
 
 
+[[step-5-configure-controller-assets]]
 == Etapa 5: Configurar ativos do controlador
 
 Localize o ID de instalação e adicione um ativo do controlador vCenter.
@@ -345,6 +353,7 @@ NOTE: Você deve criar uma nova função HCC do NetApp no vCenter para adicionar
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * link:../concepts/concept_solidfire_concepts_volumes.html#persistent-volumes["Volumes persistentes"]

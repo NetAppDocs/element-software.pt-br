@@ -29,6 +29,7 @@ Na janela *Autenticação necessária*, introduza o nome de utilizador e a palav
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * xref:task_replication_pair_cluster_using_pairing_key.adoc[Emparelhe clusters usando uma chave de emparelhamento]

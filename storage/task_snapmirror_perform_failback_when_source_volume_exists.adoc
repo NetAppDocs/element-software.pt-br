@@ -35,6 +35,7 @@ NOTE: O volume primário original agora pode ser montado para retomar as cargas 
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 xref:concept_snapmirror_failback_scenarios.adoc[Cenários de failback do SnapMirror]

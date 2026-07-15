@@ -15,6 +15,7 @@ A IU da Web do software Element usa o `ResumeSnapMirrorRelationship` método par
 
 
 
+[[parameters]]
 == Parâmetros
 
 Este método tem os seguintes parâmetros de entrada:
@@ -50,6 +51,7 @@ Sim
 |===
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tem o seguinte valor de retorno:
@@ -68,6 +70,7 @@ xref:reference_element_api_snapmirrorrelationship.adoc[SnapMirrorRelacionship]
 |===
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 10,1

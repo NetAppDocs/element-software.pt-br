@@ -15,6 +15,7 @@ Pode utilizar o `RemoveVolumePair` método para remover o emparelhamento remoto 
 
 
 
+[[parameter]]
 == Parâmetro
 
 Este método tem o seguinte parâmetro de entrada:
@@ -37,12 +38,14 @@ Sim
 |===
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método não tem valor de retorno.
 
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -59,6 +62,7 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example]]
 == Exemplo de resposta
 
 Este método retorna uma resposta semelhante ao seguinte exemplo:
@@ -73,6 +77,7 @@ Este método retorna uma resposta semelhante ao seguinte exemplo:
 ----
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 9,6

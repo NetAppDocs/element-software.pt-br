@@ -27,6 +27,7 @@ NOTE: Quando você inicia uma nova sessão de controle de nuvem híbrida da NetA
 
 
 
+[[access-the-netapp-hcc-dashboard]]
 == Acesse o Painel HCC do NetApp
 
 . Abra o endereço IP do nó de gerenciamento em um navegador da Web. Por exemplo:
@@ -43,6 +44,7 @@ image::hcc_dashboard_all.PNG[Painel do HCC]
 
 
 
+[[monitor-storage-resources]]
 == Monitorar recursos de storage
 
 Use o painel *Storage* para ver seu ambiente de armazenamento total. É possível monitorar o número de clusters de storage, nós de storage e volume total.
@@ -59,6 +61,7 @@ TIP: Para ver os dados mais recentes do cluster de armazenamento, use a página 
 
 
 
+[[monitor-storage-capacity]]
 == Monitorar a capacidade de armazenamento
 
 É essencial monitorar a capacidade de storage do seu ambiente. Com o painel capacidade de storage, você pode determinar seus ganhos de eficiência de capacidade de storage com ou sem recursos de compactação, deduplicação e thin Provisioning habilitados.
@@ -97,6 +100,7 @@ NOTE: As eficiências totais são iguais (maxUsedSpace * fator de eficiência) /
 
 
 
+[[monitor-storage-performance]]
 == Monitorar a performance de storage
 
 Você pode ver quanto IOPS ou taxa de transferência você pode obter de um cluster sem superar o desempenho útil desse recurso usando o painel desempenho de armazenamento. A performance de storage é o ponto em que você tem a utilização máxima antes que a latência se torne um problema.

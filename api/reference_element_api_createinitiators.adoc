@@ -17,6 +17,7 @@ Se a operação não conseguir criar um dos iniciadores fornecidos no parâmetro
 
 
 
+[[parameter]]
 == Parâmetro
 
 Este método tem o seguinte parâmetro de entrada:
@@ -50,6 +51,7 @@ Sim
 |===
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tem o seguinte valor de retorno:
@@ -70,6 +72,7 @@ xref:reference_element_api_initiator.adoc[iniciador] array
 |===
 
 
+[[error]]
 == Erro
 
 Este método pode retornar o seguinte erro:
@@ -88,6 +91,7 @@ Retornado se o nome do iniciador que você escolheu já existir.
 |===
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -113,6 +117,7 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example]]
 == Exemplo de resposta
 
 Este método retorna uma resposta semelhante ao seguinte exemplo:
@@ -143,12 +148,14 @@ Este método retorna uma resposta semelhante ao seguinte exemplo:
 ----
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 9,6
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 xref:reference_element_api_listinitiators.adoc[ListInitiators]

@@ -17,6 +17,7 @@ O storage Element permite criar, exibir, editar, excluir, clonar, fazer backup o
 
 
 
+[[persistent-volumes]]
 == Volumes persistentes
 
 Os volumes persistentes permitem que os dados de configuração do nó de gerenciamento sejam armazenados em um cluster de storage especificado, em vez de localmente com uma VM, para que os dados possam ser preservados em caso de perda ou remoção do nó de gerenciamento. Volumes persistentes são uma configuração de nó de gerenciamento opcional, mas recomendada.

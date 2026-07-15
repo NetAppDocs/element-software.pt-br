@@ -15,6 +15,7 @@ O objeto volume contém informações de configuração sobre volumes não empar
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:
@@ -293,6 +294,7 @@ UUID
 |===
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * xref:reference_element_api_listactivevolumes.adoc[ListActiveVolumes]

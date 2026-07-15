@@ -32,6 +32,7 @@ Escolha uma das seguintes opções:
 
 
 
+[[retrieve-the-installation-id-and-cluster-id-of-a-storage-cluster-asset]]
 == Recupere a ID de instalação e a ID de cluster de um ativo de cluster de armazenamento
 
 Você pode usar a API REST obter o ID de instalação e o ID do cluster de armazenamento. Você precisa do ID de instalação para adicionar um novo ativo de cluster de armazenamento e o ID do cluster para modificar ou excluir um ativo de cluster de armazenamento específico.
@@ -98,6 +99,7 @@ A API retorna uma lista de todos os clusters de armazenamento conhecidos nesta i
 
 
 
+[[add-a-new-storage-cluster-asset]]
 == Adicionar um novo ativo de cluster de storage
 
 Você pode usar a API REST para adicionar um ou mais novos ativos de cluster de storage ao inventário do nó de gerenciamento. Quando você adiciona um novo ativo de cluster de storage, ele é registrado automaticamente no nó de gerenciamento.
@@ -163,6 +165,7 @@ A API retorna um objeto que contém informações sobre o ativo de cluster de ar
 
 
 
+[[edit-the-stored-credentials-for-a-storage-cluster-asset]]
 == Edite as credenciais armazenadas para um ativo de cluster de storage
 
 Você pode editar as credenciais armazenadas que o nó de gerenciamento usa para fazer login em um cluster de storage. O usuário que você escolher deve ter acesso ao administrador do cluster.
@@ -212,6 +215,7 @@ https://<ManagementNodeIP>/storage/1/
 
 
 
+[[delete-a-storage-cluster-asset]]
 == Excluir um ativo de cluster de armazenamento
 
 Você pode excluir um ativo de cluster de armazenamento se o cluster de armazenamento não estiver mais em serviço. Quando você remove um ativo de cluster de storage, ele é automaticamente desregistrado do nó de gerenciamento.

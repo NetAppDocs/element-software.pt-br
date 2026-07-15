@@ -15,6 +15,7 @@ O objeto keyServerKmip descreve um servidor de chave KMIP (Key Management Intero
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:

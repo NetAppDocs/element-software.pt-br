@@ -24,6 +24,7 @@ Você deve ter o administrador de cluster Privileges.
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 https://kb.netapp.com/Advice_and_Troubleshooting/Flash_Storage/SF_Series/How_are_the_blockSpace_thresholds_calculated_for_Element["Como são calculados os limites de blockSpace para o elemento"^]

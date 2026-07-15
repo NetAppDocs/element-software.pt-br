@@ -15,6 +15,7 @@ O `authSessionInfo` objeto contém informações sobre uma sessão de autentica�
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:

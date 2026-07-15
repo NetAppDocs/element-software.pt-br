@@ -24,6 +24,7 @@ A criptografia em repouso deve estar habilitada no cluster e todos os nós e uni
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * link:../api/concept_element_api_about_the_api.html["Gerencie o storage com a API Element"]

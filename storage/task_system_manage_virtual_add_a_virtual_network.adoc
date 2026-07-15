@@ -48,6 +48,7 @@ Quando uma rede virtual é adicionada, uma interface para cada nó é criada e c
 
 
 
+[[view-virtual-network-details]]
 == Ver detalhes da rede virtual
 
 .Passos

@@ -19,6 +19,7 @@ Se o parâmetro keepResult estiver ausente ou falso, o asyncHandle ficará inati
 
 
 
+[[parameters]]
 == Parâmetros
 
 Este método tem os seguintes parâmetros de entrada:
@@ -54,6 +55,7 @@ Não
 |===
 
 
+[[return-values]]
 == Valores de retorno
 
 Este método tem os seguintes valores de retorno:
@@ -132,6 +134,7 @@ String de data ISO 8601
 
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -148,6 +151,7 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example-method-error]]
 == Exemplo de resposta: Erro de método
 
 Este método retorna uma resposta semelhante ao seguinte exemplo:
@@ -167,6 +171,7 @@ Se "response" fosse o objeto de resposta JSON da chamada GetAsyncResult, então 
 
 
 
+[[response-example-asynchronous-task-error]]
 == Exemplo de resposta: Erro de tarefa assíncrona
 
 Este método retorna uma resposta semelhante ao seguinte exemplo:
@@ -193,6 +198,7 @@ O "response.result.error" corresponde a um erro resultante da chamada de método
 
 
 
+[[response-example-asynchronous-task-success]]
 == Exemplo de resposta: Sucesso de tarefas assíncronas
 
 Este método retorna uma resposta semelhante ao seguinte exemplo:
@@ -218,6 +224,7 @@ O "response.result.result" é o valor de retorno para a chamada de método origi
 
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 9,6

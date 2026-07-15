@@ -15,6 +15,7 @@ A IU da Web do software Element usa o `ListSnapMirrorAggregates` método para li
 
 
 
+[[parameter]]
 == Parâmetro
 
 Este método tem o seguinte parâmetro de entrada:
@@ -37,6 +38,7 @@ Não
 |===
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tem o seguinte valor de retorno:
@@ -57,6 +59,7 @@ xref:reference_element_api_snapmirroraggregate.adoc[SnapMirrorAggregate] array
 |===
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 10,1

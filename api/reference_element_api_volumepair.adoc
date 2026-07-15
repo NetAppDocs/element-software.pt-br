@@ -15,6 +15,7 @@ O objeto volumePair contém informações sobre um volume que é emparelhado com
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:
@@ -92,6 +93,7 @@ cadeia de carateres
 |===
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * xref:reference_element_api_listactivepairedvolumes.adoc[ListActivePairedVolumes]

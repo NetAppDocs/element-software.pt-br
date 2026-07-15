@@ -31,6 +31,7 @@ A ativação do LDAP envolve as seguintes etapas de alto nível, descritas em de
 
 
 
+[[complete-pre-configuration-steps-for-ldap-support]]
 == Conclua as etapas de pré-configuração para suporte a LDAP
 
 Antes de ativar o suporte LDAP no Element, você deve configurar um Windows ative Directory Server e executar outras tarefas de pré-configuração.
@@ -44,6 +45,7 @@ Antes de ativar o suporte LDAP no Element, você deve configurar um Windows ativ
 
 
 
+[[enable-ldap-authentication-with-the-element-user-interface]]
 == Ative a autenticação LDAP com a interface do usuário Element
 
 Pode configurar a integração do sistema de armazenamento com um servidor LDAP existente. Isso permite que os administradores LDAP gerenciem centralmente o acesso ao sistema de storage para os usuários.
@@ -94,6 +96,7 @@ Para testar isso, faça logout da IU do Element e faça login novamente como um 
 
 
 
+[[enable-ldap-authentication-with-the-element-api]]
 == Ative a autenticação LDAP com a API Element
 
 Pode configurar a integração do sistema de armazenamento com um servidor LDAP existente. Isso permite que os administradores LDAP gerenciem centralmente o acesso ao sistema de storage para os usuários.
@@ -199,6 +202,8 @@ Para testar isso, faça logout da IU do Element e faça login novamente como um 
 
 
 
+[[view-ldap-details]]
+[[view_ldap_details]]
 == Ver detalhes do LDAP
 
 Exibir informações LDAP na página LDAP na guia Cluster.
@@ -237,6 +242,7 @@ NOTE: Tem de ativar o LDAP para visualizar estas definições de configuração 
 
 
 
+[[test-the-ldap-configuration]]
 == Teste a configuração LDAP
 
 Depois de configurar o LDAP, você deve testá-lo usando a IU do Element ou o método da API Element `TestLdapAuthentication`.
@@ -331,6 +337,7 @@ O `userSearchBaseDN` não é um local válido na árvore LDAP.
 
 
 
+[[disable-ldap]]
 == Desativar LDAP
 
 Você pode desativar a integração LDAP usando a IU do Element.
@@ -345,6 +352,7 @@ Antes de começar, deve anotar todas as definições de configuração, porque a
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

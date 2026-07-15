@@ -20,6 +20,7 @@ Você pode exibir detalhes de um grupo de acesso individual, como volumes anexad
 
 
 
+[[volume-access-group-details]]
 == Detalhes do grupo de acesso ao volume
 
 A página grupos de acesso na guia Gerenciamento fornece informações sobre grupos de acesso de volume.

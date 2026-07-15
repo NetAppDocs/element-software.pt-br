@@ -15,6 +15,7 @@ O objeto nodeProtectionDomains contém informações sobre a identificação de 
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:

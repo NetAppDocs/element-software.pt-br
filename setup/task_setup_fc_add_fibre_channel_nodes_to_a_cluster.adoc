@@ -36,6 +36,7 @@ O nó aparece na lista de nós ativos.
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

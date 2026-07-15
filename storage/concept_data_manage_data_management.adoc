@@ -15,6 +15,7 @@ Você pode gerenciar os dados em um cluster executando o software Element na gui
 
 
 
+[[work-with-volumes]]
 == Trabalhe com volumes
 
 O sistema SolidFire provisiona o storage usando volumes. Os volumes são dispositivos de bloco acessados pela rede por clientes iSCSI ou Fibre Channel. Na página volumes na guia Gerenciamento, você pode criar, modificar, clonar e excluir volumes em um nó. Você também pode exibir estatísticas sobre largura de banda de volume e uso de e/S.
@@ -23,6 +24,7 @@ link:../storage/concept_data_manage_volumes_quality_of_service_policies.html["Ap
 
 
 
+[[work-with-virtual-volumes]]
 == Trabalhe com volumes virtuais
 
 Você pode exibir informações e executar tarefas para volumes virtuais e seus contentores de storage associados, pontos de extremidade de protocolo, ligações e hosts usando a IU do Element.
@@ -43,6 +45,7 @@ link:../storage/task_data_manage_vvol_enable_virtual_volumes.html["Aprenda a tra
 
 
 
+[[work-with-volume-access-groups-and-initiators]]
 == Trabalhar com grupos de acesso de volume e iniciadores
 
 Pode utilizar iniciadores iSCSI ou iniciadores Fibre Channel para aceder aos volumes definidos nos grupos de acesso de volume.
@@ -72,6 +75,7 @@ link:../storage/task_data_manage_vol_access_group_create_a_volume_access_group.h
 
 
 
+[[for-more-information]]
 == Para mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

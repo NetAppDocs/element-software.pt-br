@@ -36,6 +36,7 @@ Você pode configurar um cluster com nós Fibre Channel e gerenciá-lo usando o 
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * link:../setup/concept_setup_whats_next.html["Descubra os próximos passos para utilizar o armazenamento"]

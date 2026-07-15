@@ -37,6 +37,7 @@ Desligar um nó deve ser feito sob a direção do suporte NetApp.
 
 
 
+[[for-more-information]]
 == Para mais informações
 
 https://library.netapp.com/ecm/ecm_download_file/ECMLP2844772["Substituição de um chassi SolidFire com falha"]

@@ -15,6 +15,7 @@ Você pode usar o `EnableBmcColdReset` método para habilitar uma tarefa em segu
 
 
 
+[[parameter]]
 == Parâmetro
 
 Este método tem o seguinte parâmetro de entrada:
@@ -37,6 +38,7 @@ Não
 |===
 
 
+[[return-values]]
 == Valores de retorno
 
 Este método tem o seguinte valor de retorno:
@@ -55,6 +57,7 @@ número inteiro
 |===
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -71,6 +74,7 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example]]
 == Exemplo de resposta
 
 Este método retorna uma resposta semelhante ao seguinte exemplo:
@@ -86,6 +90,7 @@ Este método retorna uma resposta semelhante ao seguinte exemplo:
 ----
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 12,0

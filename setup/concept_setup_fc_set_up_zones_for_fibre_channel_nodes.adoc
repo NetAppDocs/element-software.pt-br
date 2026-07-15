@@ -17,6 +17,7 @@ WWPNs são registrados no sistema quando você cria um novo cluster com nós. Na
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

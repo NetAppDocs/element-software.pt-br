@@ -19,6 +19,7 @@ summary: 'Você pode exibir as sessões Fibre Channel "(FC) conetadas ao cluster
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 xref:reference_monitor_fibre_channel_session_details.adoc[Detalhes da sessão Fibre Channel]

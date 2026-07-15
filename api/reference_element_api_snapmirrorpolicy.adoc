@@ -15,6 +15,7 @@ O objeto SnapMirrorPolicy contém informações sobre uma política SnapMirror q
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:

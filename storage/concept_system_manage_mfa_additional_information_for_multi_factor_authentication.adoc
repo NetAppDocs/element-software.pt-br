@@ -24,6 +24,7 @@ NOTE: Se o cluster estiver usando um certificado com menos de 2048 bits de pré-
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * link:../api/concept_element_api_about_the_api.html["Gerenciamento de storage com a API Element"]

@@ -15,12 +15,14 @@ Você pode usar o `GetLldpConfig` método para obter a configuração do protoco
 
 
 
+[[parameters]]
 == Parâmetros
 
 Este método não tem parâmetros de entrada.
 
 
 
+[[return-values]]
 == Valores de retorno
 
 Este método tem os seguintes valores de retorno:
@@ -39,6 +41,7 @@ Objeto JSON
 |===
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -52,6 +55,7 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example]]
 == Exemplo de resposta
 
 Este método retorna uma resposta semelhante ao seguinte exemplo:

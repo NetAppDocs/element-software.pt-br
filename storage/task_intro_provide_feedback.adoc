@@ -23,6 +23,7 @@ Você pode ajudar a melhorar a interface do usuário da Web do software Element 
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

@@ -20,6 +20,7 @@ NOTE: Você pode criar snapshots se a plenitude do cluster estiver na fase 1, 2 
 
 
 
+[[parameters]]
 == Parâmetros
 
 Este método tem os seguintes parâmetros de entrada:
@@ -138,6 +139,7 @@ Sim
 |===
 
 
+[[return-values]]
 == Valores de retorno
 
 Este método tem os seguintes valores de retorno:
@@ -176,6 +178,7 @@ xref:reference_element_api_snapshot.adoc[snapshot]
 |===
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -192,6 +195,7 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example]]
 == Exemplo de resposta
 
 Este método retorna uma resposta semelhante ao seguinte exemplo:
@@ -225,12 +229,14 @@ Este método retorna uma resposta semelhante ao seguinte exemplo:
 ----
 
 
+[[exception]]
 == Exceção
 
 Uma exceção xNotPrimary é exibida quando a `CreateSnapshot` API é chamada e o snapshot não consegue ser criado. Este é o comportamento esperado. Tente novamente a `CreateSnapshot` chamada de API.
 
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 9,6

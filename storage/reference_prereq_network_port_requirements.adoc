@@ -546,6 +546,7 @@ Registro do vCenter Plug-in. A porta pode ser fechada após a conclusão do regi
 |===
 
 
+[[for-more-information]]
 == Para mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

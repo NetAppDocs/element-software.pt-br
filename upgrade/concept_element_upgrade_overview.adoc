@@ -54,6 +54,7 @@ Os upgrades com o controle de nuvem híbrida da NetApp não estão disponíveis 
 
 
 
+[[sysupgradesystem-upgrade-sequence]]
 == [[sys_upgrade]]sequência de atualização do sistema
 
 Use a sequência a seguir para atualizar seu sistema de storage all-flash NetApp SolidFire para o Element 12,5 ou posterior.

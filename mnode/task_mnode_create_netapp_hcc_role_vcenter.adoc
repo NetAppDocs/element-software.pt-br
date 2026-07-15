@@ -33,12 +33,14 @@ Essa função HCC do NetApp limita a visualização de serviços de nós de gere
 
 
 
+[[create-a-new-netapp-hcc-role]]
 == Crie uma nova função HCC do NetApp
 
 Configure uma nova conta de usuário no vCenter, crie uma função HCC do NetApp e atribua as permissões de usuário.
 
 
 
+[[set-up-a-new-user-account-in-vcenter]]
 === Configure uma nova conta de usuário no vCenter
 
 Execute as etapas a seguir para configurar uma nova conta de usuário no vCenter.
@@ -54,6 +56,7 @@ Execute as etapas a seguir para configurar uma nova conta de usuário no vCenter
 
 
 
+[[create-a-new-netapp-hcc-role-in-vcenter]]
 === Crie uma nova função HCC do NetApp no vCenter
 
 Execute as etapas a seguir para criar uma nova função HCC do NetApp no vCenter.
@@ -69,6 +72,7 @@ Execute as etapas a seguir para criar uma nova função HCC do NetApp no vCenter
 
 
 
+[[assign-user-permissions-to-vcenter]]
 === Atribua permissões de usuário ao vCenter
 
 Execute as etapas a seguir para atribuir as permissões de usuário à nova função HCC do NetApp no vCenter.
@@ -111,6 +115,7 @@ image::mnode_new_HCC_role_vcenter.PNG[Mostra a janela Adicionar permissão]
 
 
 
+[[assign-user-permissions-to-the-datacenter]]
 === Atribua permissões de usuário ao datacenter
 
 Execute as etapas a seguir para atribuir permissões de usuário ao datacenter no vCenter.
@@ -136,6 +141,7 @@ IMPORTANT: *NÃO* selecione *propagar para crianças*.
 
 
 
+[[assign-user-permissions-to-netapp-hci-datastores]]
 === Atribua permissões de usuário aos datastores NetApp HCI
 
 Execute as etapas a seguir para atribuir permissões de usuário aos datastores do NetApp HCI no vCenter.
@@ -161,6 +167,7 @@ Adicione os seguintes detalhes na janela *Adicionar permissão*:
 
 
 
+[[assign-user-permissions-to-a-netapp-host-cluster]]
 === Atribua permissões de usuário a um cluster de host do NetApp
 
 Execute as etapas a seguir para atribuir permissões de usuário a um cluster de host do NetApp no vCenter.
@@ -183,12 +190,14 @@ Adicione os seguintes detalhes na janela *Adicionar permissão*:
 
 
 
+[[netapp-esxi-host-configurations]]
 == Configurações de host do NetApp ESXi
 
 Para configurações de host do NetApp ESXi, você deve atualizar a conta de usuário criada pelo NDE para a nova função HCC do NetApp.
 
 
 
+[[netapp-esxi-host-does-not-exist-in-a-vcenter-host-cluster]]
 === O host do NetApp ESXi não existe em um cluster de host do vCenter
 
 Se o host do NetApp ESXi não existir dentro de um cluster de host do vCenter, você poderá usar o procedimento a seguir para atribuir a função HCC do NetApp e permissões de usuário no vCenter.
@@ -212,6 +221,7 @@ Adicione os seguintes detalhes na janela *Adicionar permissão*:
 
 
 
+[[netapp-esxi-host-exists-in-a-vcenter-host-cluster]]
 === O host do NetApp ESXi existe em um cluster de host do vCenter
 
 Se um host do NetApp ESXi existir dentro de um cluster de host do vCenter com outros hosts ESXi fornecedores, você poderá usar o procedimento a seguir para atribuir a função do NetApp HCC e permissões de usuário no vCenter.
@@ -251,6 +261,7 @@ Adicione os seguintes detalhes na janela *Adicionar permissão*:
 
 
 
+[[controller-asset-already-exists-on-the-management-node]]
 == O ativo do controlador já existe no nó de gerenciamento
 
 Se um ativo de controlador já existir no nó de gerenciamento, execute as etapas a seguir para configurar o controlador `PUT /assets /{asset_id} /controllers /{controller_id}` usando o .
@@ -271,12 +282,14 @@ Se um ativo de controlador já existir no nó de gerenciamento, execute as etapa
 
 
 
+[[add-an-asset-to-the-management-node]]
 == Adicione um ativo ao nó de gerenciamento
 
 Se você precisar adicionar manualmente uma nova instalação do POST do ativo, use a nova conta de usuário do HCC criada no <<Configure uma nova conta de usuário no vCenter>>. Para obter mais informações, link:task_mnode_add_assets.html["Adicione um ativo de controlador ao nó de gerenciamento"]consulte .
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/vcp/index.html["Plug-in do NetApp Element para vCenter Server"^]

@@ -23,6 +23,7 @@ Você pode modificar e testar as configurações de rede, cluster e sistema do n
 
 
 
+[[update-management-node-network-settings]]
 == Atualize as configurações de rede do nó de gerenciamento
 
 Na guia Configurações de rede da IU do nó de gerenciamento por nó, você pode modificar os campos da interface de rede do nó de gerenciamento.
@@ -66,6 +67,7 @@ IMPORTANT: As opções IPv6 não são suportadas para versões 11,3 ou posterior
 
 
 
+[[update-management-node-cluster-settings]]
 == Atualize as configurações do cluster do nó de gerenciamento
 
 Na guia Configurações de cluster da IU por nó para o nó de gerenciamento, você pode modificar os campos da interface do cluster quando um nó estiver nos estados disponível, pendente, PendingActive e Ativo.
@@ -83,6 +85,7 @@ Na guia Configurações de cluster da IU por nó para o nó de gerenciamento, vo
 
 
 
+[[test-the-management-node-settings]]
 == Teste as configurações do nó de gerenciamento
 
 Depois de alterar as configurações de gerenciamento e rede para o nó de gerenciamento e confirmar as alterações, você pode executar testes para validar as alterações feitas.

@@ -15,12 +15,14 @@ Você pode usar o `GetSnmpACL` método para obter as permissões de acesso SNMP 
 
 
 
+[[parameters]]
 == Parâmetros
 
 Este método não tem parâmetros de entrada.
 
 
 
+[[return-values]]
 == Valores de retorno
 
 Este método tem os seguintes valores de retorno:
@@ -48,6 +50,7 @@ xref:reference_element_api_usmuser.adoc[UsmUser] array
 |===
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -62,6 +65,7 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example]]
 == Exemplo de resposta
 
 Este método retorna uma resposta semelhante ao seguinte exemplo:
@@ -85,6 +89,7 @@ Este método retorna uma resposta semelhante ao seguinte exemplo:
 ----
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 9,6

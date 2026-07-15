@@ -15,6 +15,7 @@ Ocasionalmente, pode ocorrer um erro que requer a intervenção do utilizador. E
 
 
 
+[[the-cluster-is-unable-to-unlock-the-drives-due-to-a-kmipserverfault-cluster-fault]]
 == O cluster não consegue desbloquear as unidades devido a uma falha do cluster KmipServerFault.
 
 Isso pode ocorrer quando o cluster inicializa pela primeira vez e o servidor de chaves está inacessível ou a chave necessária não está disponível.
@@ -24,6 +25,7 @@ Isso pode ocorrer quando o cluster inicializa pela primeira vez e o servidor de 
 
 
 
+[[a-sliceserviceunhealthy-fault-might-be-set-because-the-metadata-drives-have-been-marked-as-failed-and-placed-into-the-available-state]]
 == Uma falha sliceServiceUnHealthy pode ser definida porque as unidades de metadados foram marcadas como com falha e colocadas no estado "disponível".
 
 Passos para limpar:

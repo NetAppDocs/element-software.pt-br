@@ -32,6 +32,7 @@ Você pode gerenciar volumes no controle de nuvem híbrida da NetApp das seguint
 
 
 
+[[create-a-volume]]
 == Crie um volume
 
 Você pode criar um volume de storage usando o controle de nuvem híbrida da NetApp.
@@ -74,6 +75,7 @@ Os volumes que têm um valor máximo de IOPS ou Burst maior que 20.000 IOPS pode
 
 
 
+[[apply-a-qos-policy-to-a-volume]]
 == Aplicar uma política de QoS a um volume
 
 Use o Controle de nuvem híbrida da NetApp para aplicar uma política de QoS a volumes de storage existentes. Se, em vez disso, você precisar definir valores de QoS personalizados para um volume, poderá <<Edite um volume>>. Para criar uma nova política de QoS, link:task-hcc-qos-policies.html["Criar e gerenciar políticas de QoS de volume"^]consulte .
@@ -93,6 +95,7 @@ NOTE: Se você estiver usando políticas de QoS em um volume, poderá definir Qo
 
 
 
+[[edit-a-volume]]
 == Edite um volume
 
 Com o Controle de nuvem híbrida da NetApp, você pode editar atributos de volume, como valores de QoS, tamanho do volume e a unidade de medida pela qual os valores de byte são calculados. Você também pode modificar o acesso à conta para uso de replicação ou restringir o acesso ao volume.
@@ -162,6 +165,7 @@ TIP: Ao alterar os valores de IOPS, você deve aumentar em dezenas ou centenas. 
 
 
 
+[[clone-volumes]]
 == Clonar volumes
 
 Você pode criar um clone de um único volume de storage ou clonar um grupo de volumes para fazer uma cópia pontual dos dados. Quando você clonar um volume, o sistema cria um snapshot do volume e cria uma cópia dos dados referenciados pelo snapshot.
@@ -212,6 +216,7 @@ NOTE: O tempo para concluir uma operação de clonagem é afetado pelo tamanho d
 
 
 
+[[add-volumes-to-a-volume-access-group]]
 == Adicionar volumes a um grupo de acesso de volume
 
 Você pode adicionar um único volume ou um grupo de volumes a um grupo de acesso de volume.
@@ -228,6 +233,7 @@ Você pode adicionar um único volume ou um grupo de volumes a um grupo de acess
 
 
 
+[[delete-a-volume]]
 == Eliminar um volume
 
 Você pode excluir um ou mais volumes de um cluster de armazenamento de elementos.
@@ -251,6 +257,7 @@ IMPORTANT: Volumes persistentes associados a serviços de gerenciamento são cri
 
 
 
+[[restore-a-deleted-volume]]
 == Restaurar um volume excluído
 
 Depois que um volume de armazenamento é excluído, você ainda pode restaurá-lo se fizer isso antes de oito horas após a exclusão.
@@ -268,6 +275,7 @@ O sistema não limpa imediatamente os volumes eliminados; estes permanecem dispo
 
 
 
+[[purge-a-deleted-volume]]
 == Purgar um volume eliminado
 
 Depois que os volumes de armazenamento são excluídos, eles permanecem disponíveis por aproximadamente oito horas. Após oito horas, eles são purgados automaticamente e não estão mais disponíveis. Se você não quiser esperar as oito horas, você pode excluir

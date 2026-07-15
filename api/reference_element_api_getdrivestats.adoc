@@ -15,6 +15,7 @@ Pode utilizar o `GetDriveStats` método para obter medições de atividade de al
 
 
 
+[[parameter]]
 == Parâmetro
 
 Este método tem o seguinte parâmetro de entrada:
@@ -37,6 +38,7 @@ Sim
 |===
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tem o seguinte valor de retorno:
@@ -55,6 +57,7 @@ xref:reference_element_api_drivestats.adoc[DriveStats]
 |===
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -71,6 +74,7 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example-block-drive]]
 == Exemplo de resposta (unidade de bloco)
 
 Este método retorna uma resposta semelhante ao seguinte exemplo para uma unidade de bloco:
@@ -103,6 +107,7 @@ Este método retorna uma resposta semelhante ao seguinte exemplo para uma unidad
 ----
 
 
+[[response-example-volume-metadata-drive]]
 == Exemplo de resposta (unidade de metadados de volume)
 
 Este método retorna uma resposta semelhante ao exemplo a seguir para uma unidade de metadados de volume:
@@ -136,12 +141,14 @@ Este método retorna uma resposta semelhante ao exemplo a seguir para uma unidad
 ----
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 9,6
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 xref:reference_element_api_listdrives.adoc[ListDrives]

@@ -29,6 +29,7 @@ Apenas um dos volumes emparelhados pode ser identificado como um volume de desti
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * xref:reference_element_api_startvolumepairing.adoc[StartVolumePairing]

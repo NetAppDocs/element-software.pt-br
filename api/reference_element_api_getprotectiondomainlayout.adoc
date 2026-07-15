@@ -15,12 +15,14 @@ Você pode usar o `GetProtectionDomainLayout` método para retornar todas as inf
 
 
 
+[[parameter]]
 == Parâmetro
 
 Este método tem os parâmetros sem entrada.
 
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tem o seguinte valor de retorno:
@@ -39,6 +41,7 @@ JSON lista link:reference_element_api_nodeprotectiondomains.html["NodeProtection
 |===
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -53,6 +56,7 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example]]
 == Exemplo de resposta
 
 Este método retorna uma resposta semelhante ao seguinte exemplo:
@@ -122,6 +126,7 @@ Este método retorna uma resposta semelhante ao seguinte exemplo:
 ----
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 12,0

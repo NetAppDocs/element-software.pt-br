@@ -15,12 +15,14 @@ Você pode usar o `GetConfig` método API para obter todas as informações de c
 
 
 
+[[parameters]]
 == Parâmetros
 
 Este método não tem parâmetros de entrada.
 
 
 
+[[return-values]]
 == Valores de retorno
 
 Este método tem o seguinte valor de retorno:
@@ -43,6 +45,7 @@ Objeto JSON
 |===
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -57,18 +60,21 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example]]
 == Exemplo de resposta
 
 Devido ao tamanho deste exemplo de resposta, ele está documentado em um tópico suplementar.
 
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 9,6
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * xref:reference_element_api_getclusterconfig.adoc[GetClusterConfig]

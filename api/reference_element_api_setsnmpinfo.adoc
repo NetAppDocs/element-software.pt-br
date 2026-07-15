@@ -15,6 +15,7 @@ Você pode usar o `SetSnmpInfo` método para configurar o SNMP versão 2 e vers�
 
 
 
+[[parameters]]
 == Parâmetros
 
 
@@ -79,12 +80,14 @@ Não
 |===
 
 
+[[return-values]]
 == Valores de retorno
 
 Este método não tem valores de retorno.
 
 
 
+[[request-example-with-snmp-v3-enabled]]
 == Exemplo de solicitação com SNMP v3 ativado
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -111,6 +114,7 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[request-example-with-snmp-v2-enabled]]
 == Exemplo de solicitação com SNMP v2 ativado
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -135,6 +139,7 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example]]
 == Exemplo de resposta
 
 Este método retorna uma resposta semelhante ao seguinte exemplo:
@@ -149,6 +154,7 @@ Este método retorna uma resposta semelhante ao seguinte exemplo:
 ----
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 9,6

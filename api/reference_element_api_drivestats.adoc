@@ -15,6 +15,7 @@ O objeto driveStats contém medições de atividade de alto nível para uma úni
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:
@@ -249,6 +250,7 @@ número inteiro
 |===
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 xref:reference_element_api_getdrivestats.adoc[GetDriveStats]

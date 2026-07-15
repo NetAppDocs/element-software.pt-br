@@ -53,6 +53,7 @@ Você pode atualizar os serviços de gerenciamento usando a IU do Controle de nu
 
 
 
+[[update-management-services-using-hybrid-cloud-control]]
 == Atualize os serviços de gerenciamento usando o Hybrid Cloud Control
 
 Você pode atualizar seus serviços de gerenciamento do NetApp usando o controle de nuvem híbrida da NetApp.
@@ -97,6 +98,7 @@ Após o início da atualização, você pode ver o status da atualização nesta
 
 
 
+[[update-management-services-using-the-management-node-api]]
 == Atualize os serviços de gerenciamento usando a API do nó de gerenciamento
 
 Os usuários devem, idealmente, executar atualizações de serviços de gerenciamento a partir do Controle de nuvem híbrida da NetApp. No entanto, você pode fazer o upload, extrair e implantar manualmente uma atualização de pacote de serviços para os serviços de gerenciamento no nó de gerenciamento usando a API REST. Você pode executar cada comando a partir da IU da API REST para o nó de gerenciamento.

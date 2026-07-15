@@ -31,6 +31,7 @@ Este método usa a chave de emparelhamento criada com o xref:reference_element_a
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * xref:reference_element_api_startclusterpairing.adoc[StartClusterPairing]

@@ -15,6 +15,7 @@ A IU da Web do software Element usa o `AbortSnapMirrorRelationship` método para
 
 
 
+[[parameters]]
 == Parâmetros
 
 Este método tem os seguintes parâmetros de entrada:
@@ -67,6 +68,7 @@ Não
 |===
 
 
+[[return-values]]
 == Valores de retorno
 
 Este método tem os seguintes valores de retorno:
@@ -85,6 +87,7 @@ xref:reference_element_api_snapmirrorrelationship.adoc[SnapMirrorRelacionship]
 |===
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 10,1

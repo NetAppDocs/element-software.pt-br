@@ -55,6 +55,7 @@ Depois de concluir o emparelhamento com êxito, recomenda-se que atualize a tabe
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * xref:reference_replication_volume_pairing_messages.adoc[Mensagens de emparelhamento de volume]

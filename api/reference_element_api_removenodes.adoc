@@ -17,12 +17,14 @@ Antes de remover um nó, você deve remover todas as unidades que o nó contém 
 
 
 
+[[cluster-master-node-removal]]
 == Remoção do nó principal do cluster
 
 Se você usar `RemoveNodes` para remover o nó mestre do cluster, o método pode ter tempo limite antes de retornar uma resposta. Se a chamada de método não conseguir remover o nó, faça a chamada de método novamente. Observe que se você estiver removendo o nó mestre do cluster junto com outros nós, você deve usar uma chamada separada para remover o nó mestre do cluster sozinho.
 
 
 
+[[parameter]]
 == Parâmetro
 
 Este método tem o seguinte parâmetro de entrada:
@@ -60,12 +62,14 @@ Sim
 |===
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método não tem valor de retorno.
 
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -82,6 +86,7 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example]]
 == Exemplo de resposta
 
 Este método retorna uma resposta semelhante ao seguinte exemplo:
@@ -95,6 +100,7 @@ Este método retorna uma resposta semelhante ao seguinte exemplo:
 ----
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 9,6

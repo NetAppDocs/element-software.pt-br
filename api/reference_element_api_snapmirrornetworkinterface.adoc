@@ -15,6 +15,7 @@ O objeto snapMirrorNetworkInterface contém informações sobre as interfaces l�
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:

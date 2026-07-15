@@ -43,6 +43,7 @@ Você pode criar um instantâneo de um volume ativo para preservar a imagem do v
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 xref:task_data_protection_schedule_a_snapshot_task.adoc[Agendar um instantâneo]

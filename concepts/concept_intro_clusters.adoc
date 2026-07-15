@@ -32,6 +32,7 @@ NOTE: A partir do elemento versão 11,0, os nós podem ser configurados com IPv4
 
 
 
+[[authoritative-storage-clusters]]
 == Clusters de storage autoritativo
 
 O cluster de armazenamento autorizado é o cluster de armazenamento que o NetApp Hybrid Cloud Control usa para autenticar usuários.
@@ -46,18 +47,21 @@ Consulte link:../mnode/task_mnode_manage_storage_cluster_assets.html["criar e ge
 
 
 
+[[rule-of-thirds]]
 == Regra dos terços
 
 Quando você mistura tipos de nós de storage em um cluster de storage da NetApp SolidFire, nenhum nó de storage pode conter mais de 33% da capacidade total do cluster de storage.
 
 
 
+[[stranded-capacity]]
 == Capacidade ociosa
 
 Se um nó recém-adicionado representar mais de 50% da capacidade total do cluster, parte da capacidade desse nó será inutilizável ("encalhado"), de modo que esteja em conformidade com a regra de capacidade. Esse continua sendo o caso até que mais capacidade de storage seja adicionada. Se um nó muito grande for adicionado que também desobedeça à regra de capacidade, o nó anteriormente encalhado não ficará mais encalhado, enquanto o nó recém-adicionado fica encalhado. A capacidade deve ser sempre adicionada em pares para evitar que isso aconteça. Quando um nó fica preso, uma falha de cluster apropriada é lançada.
 
 
 
+[[storage-efficiency]]
 == Eficiência de storage
 
 Os clusters de storage do NetApp SolidFire utilizam deduplicação, compactação e thin Provisioning para reduzir a quantidade de storage físico necessária para armazenar um volume.
@@ -78,6 +82,7 @@ Um volume ou LUN com thin Provisioning é aquele para o qual o storage não é r
 
 
 
+[[storage-cluster-quorum]]
 == Quorum do cluster de storage
 
 O software Element cria um cluster de storage a partir de nós selecionados, que mantém um banco de dados replicado da configuração do cluster. É necessário um mínimo de três nós para participar do conjunto de cluster para manter o quorum para resiliência de cluster.

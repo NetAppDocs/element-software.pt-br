@@ -19,6 +19,7 @@ Além disso, você pode configurar configurações para autenticação multifato
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * link:task_post_deploy_credentials.html["Alterar credenciais no NetApp HCI e no NetApp SolidFire"]

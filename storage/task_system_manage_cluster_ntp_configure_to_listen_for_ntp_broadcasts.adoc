@@ -30,6 +30,7 @@ O NTP é usado para sincronizar relógios em uma rede. A ligação a um servidor
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * link:../storage/task_system_manage_cluster_ntp_configure.html["Configurar servidores Network Time Protocol para o cluster a consultar"]

@@ -15,6 +15,7 @@ O objeto snapMirrorRelationship contém informações sobre uma relação SnapMi
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:

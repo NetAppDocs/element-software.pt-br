@@ -17,6 +17,7 @@ Ao configurar uma programação de instantâneos, você pode escolher entre inte
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * xref:task_data_protection_create_a_snapshot_schedule.adoc[Criar uma agenda de instantâneos]

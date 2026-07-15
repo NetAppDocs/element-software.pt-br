@@ -15,6 +15,7 @@ O objeto virtualNetwork contém informações sobre uma rede virtual específica
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:
@@ -101,6 +102,7 @@ número inteiro
 |===
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 xref:reference_element_api_listvirtualnetworks.adoc[ListVirtualNetworks]

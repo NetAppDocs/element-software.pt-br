@@ -52,6 +52,7 @@ Você também pode saber mais sobre as verificações de integridade do storage 
 
 
 
+[[use-netapp-hybrid-cloud-control-to-run-element-storage-health-checks-prior-to-upgrading-storage]]
 == Use o controle de nuvem híbrida da NetApp para executar verificações de integridade do storage Element antes de atualizar o storage
 
 Com o Controle de nuvem híbrida da NetApp, você pode verificar se um cluster de storage está pronto para ser atualizado.
@@ -81,6 +82,7 @@ Depois que a verificação de integridade for concluída sem erros, o cluster de
 
 
 
+[[use-api-to-run-element-storage-health-checks-prior-to-upgrading-storage]]
 == Use a API para executar verificações de integridade do storage Element antes de atualizar o storage
 
 Você pode usar a API REST para verificar se um cluster de storage está pronto para ser atualizado. A verificação de integridade verifica se não há obstáculos na atualização, como nós pendentes, problemas de espaço em disco e falhas de cluster.
@@ -212,6 +214,7 @@ Se todas as verificações de integridade forem bem-sucedidas, o retorno será s
 
 
 
+[[storage-health-checks-made-by-the-service]]
 == Verificações de integridade do armazenamento feitas pelo serviço
 
 As verificações de integridade do armazenamento fazem as seguintes verificações por cluster.

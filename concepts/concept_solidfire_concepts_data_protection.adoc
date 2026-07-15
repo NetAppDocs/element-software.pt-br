@@ -26,6 +26,7 @@ A proteção de dados de storage do Element inclui os seguintes conceitos:
 
 
 
+[[remote-replication-types]]
 == Tipos de replicação remota
 
 A replicação remota de dados pode assumir as seguintes formas:
@@ -39,6 +40,7 @@ Para mais informações, consulte  https://www.netapp.com/pdf.html?item=/media/1
 
 
 
+[[synchronous-and-asynchronous-replication-between-clusters]]
 === Replicação síncrona e assíncrona entre clusters
 
 Para clusters que executam o software NetApp Element, a replicação em tempo real permite a criação rápida de cópias remotas de dados de volume.
@@ -73,6 +75,7 @@ A replicação assíncrona é apropriada para as seguintes situações:
 
 
 
+[[snapshot-only-replication]]
 === Replicação somente snapshot
 
 A proteção de dados somente snapshot replica os dados alterados em momentos específicos para um cluster remoto. Somente os snapshots criados no cluster de origem são replicados. As gravações ativas do volume de origem não são.
@@ -83,6 +86,7 @@ A replicação Snapshot não afeta a replicação assíncrona ou síncrona.
 
 
 
+[[replication-between-element-and-ontap-clusters-using-snapmirror]]
 === Replicação entre clusters Element e ONTAP com o SnapMirror
 
 Com a tecnologia NetApp SnapMirror, é possível replicar snapshots obtidos usando o software NetApp Element para a ONTAP para fins de recuperação de desastres. Em uma relação SnapMirror, Element é um endpoint e ONTAP é o outro.
@@ -109,6 +113,7 @@ Para obter mais informações, link:../storage/element-replication-index.html["R
 
 
 
+[[volume-snapshots-for-data-protection]]
 == Snapshots de volume para proteção de dados
 
 Um snapshot de volume é uma cópia pontual de um volume que você poderia usar posteriormente para restaurar um volume para esse tempo específico.
@@ -123,6 +128,7 @@ Você pode tirar um snapshot de um volume individual ou vários para proteção 
 
 
 
+[[volume-clones]]
 == Clones de volume
 
 Um clone de um único volume ou vários volumes é uma cópia pontual dos dados. Quando você clonar um volume, o sistema cria um snapshot do volume e cria uma cópia dos dados referenciados pelo snapshot.
@@ -133,6 +139,7 @@ O cluster dá suporte a até duas solicitações de clone em execução por volu
 
 
 
+[[backup-and-restore-process-overview-for-element-storage]]
 == Visão geral do processo de backup e restauração para armazenamento de elementos
 
 Você pode fazer backup e restaurar volumes para outro storage SolidFire, bem como para armazenamentos de objetos secundários compatíveis com Amazon S3 ou OpenStack Swift.
@@ -148,6 +155,7 @@ Ao restaurar volumes do OpenStack Swift ou Amazon S3, você precisa de informaç
 
 
 
+[[protection-domains]]
 == Domínios de proteção
 
 Um domínio de proteção é um nó ou um conjunto de nós agrupados de modo que qualquer parte ou até mesmo todos eles possam falhar, mantendo a disponibilidade dos dados. Os domínios de proteção permitem que um cluster de armazenamento recupere automaticamente da perda de um chassi (afinidade de chassi) ou de um domínio inteiro (grupo de chassi).
@@ -171,6 +179,7 @@ Ao criar um novo cluster, se você estiver usando nós de storage que residem em
 
 
 
+[[custompdcustom-protection-domains]]
 == [[Custom_PD]]domínios de proteção personalizados
 
 Você pode definir um layout personalizado do domínio de proteção que corresponda ao layout específico do chassi e do nó e onde cada nó está associado a um e apenas um domínio de proteção personalizado. Por padrão, cada nó é atribuído ao mesmo domínio de proteção personalizado padrão.
@@ -198,6 +207,7 @@ Você pode usar a IU do Element para link:../storage/task_data_protection_config
 
 
 
+[[double-helix-high-availability]]
 == Dupla Helix alta disponibilidade
 
 A proteção de dados Double Helix é um método de replicação que espalha pelo menos duas cópias redundantes de dados em todas as unidades dentro de um sistema. A abordagem "sem RAID" permite que um sistema absorva várias falhas simultâneas em todos os níveis do sistema de storage e faça o reparo rapidamente.

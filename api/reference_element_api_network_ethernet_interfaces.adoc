@@ -15,6 +15,7 @@ O objeto de rede (interfaces Ethernet) contém informações de configuração p
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:
@@ -100,6 +101,7 @@ booleano
 |===
 
 
+[[member-modifiability-and-node-states]]
 == Modificabilidade dos membros e estados de nós
 
 Esta tabela indica se os parâmetros do objeto podem ou não ser modificados em cada estado de nó possível.
@@ -188,6 +190,7 @@ N/A.
 |===
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * xref:reference_element_api_getconfig.adoc[GetConfig]

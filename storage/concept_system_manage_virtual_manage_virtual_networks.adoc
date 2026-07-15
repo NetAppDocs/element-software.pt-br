@@ -15,6 +15,7 @@ A rede virtual no armazenamento SolidFire permite que o tráfego entre vários c
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * xref:task_system_manage_virtual_add_a_virtual_network.adoc[Adicione uma rede virtual]

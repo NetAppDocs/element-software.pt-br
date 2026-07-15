@@ -28,6 +28,7 @@ NOTE: A partir do elemento versão 11,0, os nós podem ser configurados com IPv4
 
 
 
+[[configure-a-storage-node-using-the-per-node-ui]]
 == Configurar um nó de storage usando a IU por nó
 
 Você pode configurar nós usando a interface de usuário por nó.
@@ -66,6 +67,7 @@ IMPORTANT: Esse nome deve ser adicionado à configuração de todos os nós ante
 
 
 
+[[configure-a-storage-node-using-the-tui]]
 == Configure um nó de storage usando a TUI
 
 Você pode usar a interface do usuário de terminal (TUI) para executar a configuração inicial para novos nós.
@@ -99,6 +101,7 @@ O nó é colocado em um estado pendente e pode ser adicionado a um cluster exist
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

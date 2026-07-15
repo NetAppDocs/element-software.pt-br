@@ -20,6 +20,7 @@ NOTE: Você pode usar endereços IPv4 e IPv6.
 
 
 
+[[snmp-details]]
 == Detalhes SNMP
 
 Na página SNMP do separador Cluster (Cluster), pode visualizar as seguintes informações.

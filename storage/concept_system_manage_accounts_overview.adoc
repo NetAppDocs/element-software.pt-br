@@ -19,6 +19,7 @@ Nos sistemas de storage da SolidFire, os locatários podem usar contas para perm
 
 
 
+[[for-more-information]]
 == Para mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

@@ -15,6 +15,7 @@ Quando o problema no lado principal tiver sido atenuado, você deve ressincroniz
 
 
 
+[[snapmirror-failback-scenarios]]
 == Cenários de failback do SnapMirror
 
 A funcionalidade de recuperação de desastres do SnapMirror é ilustrada em dois cenários de failback. Estes assumem que o relacionamento original foi falhado sobre (quebrado).
@@ -34,6 +35,7 @@ image::../media/snapmirror_element_failback2.png[Imagem do cenário de failback 
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * xref:task_snapmirror_perform_failback_when_source_volume_exists.adoc[Execute um failback quando o volume de origem ainda existir]

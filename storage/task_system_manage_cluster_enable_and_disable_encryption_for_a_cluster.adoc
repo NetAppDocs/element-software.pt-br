@@ -28,6 +28,7 @@ WARNING: Para clusters de storage all-flash do SolidFire, a criptografia de soft
 
 
 
+[[check-encryption-at-rest-status]]
 == Verifique a criptografia no status de repouso
 
 Para ver o status atual da criptografia em repouso e/ou criptografia de software em repouso no cluster, use o link:../api/reference_element_api_getclusterinfo.html["GetClusterInfo"^] método. Você pode usar o link:../api/reference_element_api_getsoftwareencryptionatrestinfo.html["GetSoftwareEncryptionAtRestInfo"^] método para obter informações que o cluster usa para criptografar dados em repouso.
@@ -43,6 +44,7 @@ NOTE: O painel da IU do software Element no `https://<MVIP>/` momento mostra ape
 
 
 
+[[enable-hardware-based-encryption-at-rest]]
 == Ative a criptografia baseada em hardware em repouso
 
 
@@ -54,6 +56,7 @@ NOTE: Para ativar a encriptação em repouso utilizando uma configuração de ge
 
 
 
+[[enable-software-based-encryption-at-rest]]
 == Ative a criptografia baseada em software em repouso
 
 
@@ -64,6 +67,7 @@ NOTE: A encriptação de software em repouso não pode ser desativada depois de 
 
 
 
+[[disable-hardware-based-encryption-at-rest]]
 == Desative a criptografia baseada em hardware em repouso
 
 . Na IU do elemento, selecione *Cluster* > *Settings*.

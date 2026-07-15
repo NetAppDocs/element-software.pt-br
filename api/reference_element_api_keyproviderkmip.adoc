@@ -15,6 +15,7 @@ O objeto keyProviderKmip descreve um provedor de chave KMIP (Key Management Inte
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:

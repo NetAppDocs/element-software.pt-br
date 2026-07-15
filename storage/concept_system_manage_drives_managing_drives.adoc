@@ -15,6 +15,7 @@ Cada nó contém uma ou mais unidades físicas que são usadas para armazenar um
 
 
 
+[[drives-details]]
 == Detalhes da unidade
 
 A página unidades na guia Cluster fornece uma lista das unidades ativas no cluster. Você pode filtrar a página selecionando a partir das guias Ativo, disponível, Remover, Apagar e Falha.
@@ -62,6 +63,7 @@ O tipo de unidade. O tipo pode ser bloco ou metadados.
 
 
 
+[[for-more-information]]
 == Para mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

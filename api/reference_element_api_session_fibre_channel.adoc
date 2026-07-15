@@ -15,6 +15,7 @@ O objeto de sessão contém informações sobre cada sessão Fibre Channel que �
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:
@@ -85,6 +86,7 @@ número inteiro
 |===
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 xref:reference_element_api_listfibrechannelsessions.adoc[ListFibreChannelSessions]

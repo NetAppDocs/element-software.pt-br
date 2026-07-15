@@ -26,6 +26,7 @@ NOTE: Os dispositivos do acelerador de WAN não foram qualificados pelo NetApp p
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * xref:task_replication_pair_clusters.adoc[Emparelhe clusters para replicação]

@@ -15,6 +15,7 @@ Um instantâneo de volume é uma cópia pontual de um volume. Você pode usar um
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * xref:task_data_protection_create_a_volume_snapshot.adoc[Criar um instantâneo de volume]

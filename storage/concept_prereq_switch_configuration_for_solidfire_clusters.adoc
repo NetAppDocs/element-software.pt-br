@@ -68,6 +68,7 @@ Alguns nós fornecem recursos adicionais de gerenciamento fora da banda por meio
 
 
 
+[[for-more-information]]
 == Para mais informações
 
 * https://docs.netapp.com/us-en/hci/docs/hci_prereqs_network_switch.html["Requisitos de rede e switch NetApp HCI"^]

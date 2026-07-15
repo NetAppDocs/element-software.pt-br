@@ -25,6 +25,7 @@ Usando a IU do software NetApp Element, você pode exibir alertas para obter inf
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * xref:reference_monitor_cluster_fault_codes.adoc[Códigos de falha do cluster]

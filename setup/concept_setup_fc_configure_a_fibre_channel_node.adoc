@@ -31,6 +31,7 @@ WWPNs são registrados no sistema quando você cria um novo cluster com nós. Na
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 xref:task_setup_fc_add_fibre_channel_nodes_to_a_cluster.adoc[Adicionar nós Fibre Channel a um cluster]

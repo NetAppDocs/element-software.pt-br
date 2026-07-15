@@ -15,6 +15,7 @@ O objeto hardwareInfo contém informações detalhadas sobre o hardware e o stat
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:
@@ -195,6 +196,7 @@ UUID
 |===
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 xref:reference_element_api_gethardwareinfo.adoc[GetHardwareInfo]

@@ -15,6 +15,7 @@ O objeto ontapVersionInfo contém informações sobre a versão da API do cluste
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:

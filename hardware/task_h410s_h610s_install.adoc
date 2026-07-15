@@ -26,18 +26,21 @@ TIP: Consulte a link:../media/hseries_isi.pdf["cartaz"^] para obter uma represen
 
 
 
+[[workflow-diagrams]]
 == Diagramas de fluxo de trabalho
 
 Os diagramas de fluxo de trabalho aqui fornecem uma visão geral de alto nível das etapas de instalação. Os passos variam ligeiramente dependendo do modelo da série H.
 
 
 
+[[h410s]]
 === H410S
 
 image::../media/h410s_isi_workflow.png[Fluxo de trabalho de instalação do H410S]
 
 
 
+[[h610s]]
 === H610S
 
 
@@ -47,6 +50,7 @@ image::../media/h610s_isi_workflow.png[Fluxo de trabalho de instalação do H610
 
 
 
+[[prepare-for-installation]]
 == Prepare-se para a instalação
 
 Em preparação para a instalação, faça o inventário do hardware que foi enviado para você e entre em Contato com o suporte da NetApp se algum dos itens estiver faltando.
@@ -80,6 +84,7 @@ CAUTION: Durante a instalação do hardware, certifique-se de que remove todo o 
 
 
 
+[[install-the-rails]]
 == Instale os trilhos
 
 A ordem de hardware que foi enviada para você inclui um conjunto de trilhos deslizantes. Você precisará de uma chave de fenda para concluir a instalação do trilho. As etapas de instalação variam ligeiramente para cada modelo de nó.
@@ -93,6 +98,7 @@ TIP: Instale o hardware da parte inferior do rack até a parte superior para evi
 
 
 
+[[h410s]]
 === H410S
 
 H410S nós são instalados em chassi H-Series de quatro nós 2U, que é fornecido com dois conjuntos de adaptadores. Se você quiser instalar o chassi em um rack com orifícios redondos, use os adaptadores apropriados para um rack com orifícios redondos. Os trilhos para H410S nós cabem um rack entre 29 polegadas e 33,5 polegadas de profundidade. Quando o trilho é totalmente contratado, tem 28 polegadas de comprimento, e as seções dianteira e traseira do trilho são mantidas juntas por apenas um parafuso.
@@ -115,6 +121,7 @@ image::../media/h410s_rail.gif[Instalação do trilho para 2U]
 
 
 
+[[h610s]]
 === H610S
 
 Aqui está uma ilustração para instalar trilhos para um nó de armazenamento H610S:
@@ -126,6 +133,7 @@ TIP: Há trilhos esquerdo e direito no H610S. Posicione o orifício do parafuso 
 
 
 
+[[install-and-cable-the-nodes]]
 == Instale e faça o cabeamento dos nós
 
 Você instala o nó de storage H410S em um chassi de quatro nós de 2U U. Para H610S, instale o chassi/nó diretamente nos trilhos do rack.
@@ -139,6 +147,7 @@ CAUTION: Retire todo o material de embalagem e o acondicionamento da unidade. Is
 
 
 
+[[h410s]]
 === H410S
 
 .Passos
@@ -181,6 +190,7 @@ image::../media/hci_poweron_isg.gif[Esta figura mostra os botões de energia nos
 
 
 
+[[h610s]]
 === H610S
 
 .Passos
@@ -219,6 +229,7 @@ image::../media/h600s_isi_nodefront.png[Esta figura mostra a parte frontal do ch
 
 
 
+[[configure-the-nodes]]
 == Configure os nós
 
 Depois de montar o hardware em bastidor e por cabo, está pronto para configurar o novo recurso de armazenamento.
@@ -244,6 +255,7 @@ TIP:  https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructu
 
 
 
+[[create-a-cluster]]
 == Crie um cluster
 
 Depois de adicionar o nó de armazenamento à sua instalação e configurar o novo recurso de armazenamento, você estará pronto para criar um novo cluster de armazenamento
@@ -255,6 +267,7 @@ Depois de adicionar o nó de armazenamento à sua instalação e configurar o no
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

@@ -27,6 +27,7 @@ Este procedimento destina-se à substituição de unidades em nós de storage H4
 
 
 
+[[best-practices-for-adding-and-removing-drives]]
 == Práticas recomendadas para adicionar e remover unidades
 
 * Adicione todas as unidades de bloco e certifique-se de que a sincronização de bloco está concluída antes de adicionar as unidades de corte.
@@ -115,6 +116,7 @@ NOTE: Quando você instala uma nova unidade em um nó existente, a unidade se Re
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

@@ -37,6 +37,7 @@ Você deve ter o administrador de cluster Privileges para configurar essa config
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * link:../storage/task_system_manage_cluster_ntp_configure_to_listen_for_ntp_broadcasts.html["Configure o cluster para ouvir transmissões NTP"]

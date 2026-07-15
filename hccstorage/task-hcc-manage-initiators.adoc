@@ -30,6 +30,7 @@ Você pode usar link:../concepts/concept_solidfire_concepts_initiators.html["ini
 
 
 
+[[create-an-initiator]]
 == Crie um iniciador
 
 Você pode criar iniciadores iSCSI ou Fibre Channel e, opcionalmente, atribuí-los aliases.
@@ -81,6 +82,7 @@ O formato aceito de um iniciador WWPN de Fibre Channel é `:Aa:bB:CC:dd:11:22:33
 
 
 
+[[add-initiators-to-a-volume-access-group]]
 == Adicionar iniciadores a um grupo de acesso de volume
 
 Você pode adicionar iniciadores a um grupo de acesso de volume. Quando você adiciona um iniciador a um grupo de acesso de volume, o iniciador habilita o acesso a todos os volumes nesse grupo de acesso de volume.
@@ -98,6 +100,7 @@ Você pode adicionar iniciadores a um grupo de acesso de volume. Quando você ad
 
 
 
+[[change-an-initiator-alias]]
 == Alterar um alias do iniciador
 
 Você pode alterar o alias de um iniciador existente ou adicionar um alias se um ainda não existir.
@@ -115,6 +118,7 @@ Você pode alterar o alias de um iniciador existente ou adicionar um alias se um
 
 
 
+[[delete-initiators]]
 == Eliminar iniciadores
 
 Pode eliminar um ou mais iniciadores. Quando você exclui um iniciador, o sistema o remove de qualquer grupo de acesso de volume associado. Quaisquer conexões usando o iniciador permanecem válidas até que a conexão seja redefinida.

@@ -19,6 +19,7 @@ Você pode usar o VirtualNetworkID e o VirtualNetworkTag (VLAN tag) alternadamen
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

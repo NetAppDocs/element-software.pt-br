@@ -15,12 +15,14 @@ Você pode usar o `GetRemoteLoggingHosts` método para obter a lista atual de se
 
 
 
+[[parameters]]
 == Parâmetros
 
 Não existem parâmetros de entrada para `GetRemoteLoggingHosts` .
 
 
 
+[[return-value]]
 == Valor de retorno
 
 O `GetRemoteLoggingHosts` O método tem o seguinte valor de retorno:
@@ -39,6 +41,7 @@ xref:reference_element_api_loggingserver.adoc[Servidor de loggingServer] array
 |===
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -53,6 +56,7 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example]]
 == Exemplo de resposta
 
 Este método retorna uma resposta semelhante ao seguinte exemplo:
@@ -80,12 +84,14 @@ Este método retorna uma resposta semelhante ao seguinte exemplo:
 ----
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 Disponível a partir do ONTAP 9.6.
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 xref:reference_element_api_setremotelogginghosts.adoc[SetRemoteLoggingHosts]

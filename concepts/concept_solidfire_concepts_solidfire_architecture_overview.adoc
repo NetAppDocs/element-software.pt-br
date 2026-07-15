@@ -42,6 +42,7 @@ Você pode gerenciar, monitorar e atualizar o sistema usando a IU da Web do Elem
 
 
 
+[[common-urls]]
 == URLs comuns
 
 Esses são os URLs comuns que você usa com um sistema de storage all-flash SolidFire:
@@ -70,6 +71,7 @@ Esses são os URLs comuns que você usa com um sistema de storage all-flash Soli
 |===
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

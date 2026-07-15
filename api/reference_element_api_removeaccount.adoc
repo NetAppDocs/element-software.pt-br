@@ -15,6 +15,7 @@ Você pode usar o `RemoveAccount` método para remover uma conta existente. Voc�
 
 
 
+[[parameter]]
 == Parâmetro
 
 Este método tem o seguinte parâmetro de entrada:
@@ -37,12 +38,14 @@ Sim
 |===
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método não tem valor de retorno.
 
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao exemplo a seguir.
@@ -59,6 +62,7 @@ As solicitações para este método são semelhantes ao exemplo a seguir.
 ----
 
 
+[[response-example]]
 == Exemplo de resposta
 
 Este método retorna uma resposta semelhante ao seguinte exemplo:
@@ -73,12 +77,14 @@ Este método retorna uma resposta semelhante ao seguinte exemplo:
 ----
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 9,6
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 xref:reference_element_api_deletevolume.adoc[Deletevolume]

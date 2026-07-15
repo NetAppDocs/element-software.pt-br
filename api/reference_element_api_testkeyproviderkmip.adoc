@@ -15,6 +15,7 @@ Você pode usar o `TestKeyProviderKmip` método para testar se o provedor de cha
 
 
 
+[[parameters]]
 == Parâmetros
 
 Este método tem os seguintes parâmetros de entrada:
@@ -37,12 +38,14 @@ Sim
 |===
 
 
+[[return-values]]
 == Valores de retorno
 
 Este método não tem valores de retorno. O teste é considerado bem-sucedido desde que nenhum erro seja retornado.
 
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -59,6 +62,7 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example]]
 == Exemplo de resposta
 
 Este método retorna uma resposta semelhante ao seguinte exemplo:
@@ -74,6 +78,7 @@ Este método retorna uma resposta semelhante ao seguinte exemplo:
 ----
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 11,7

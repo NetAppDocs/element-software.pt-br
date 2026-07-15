@@ -32,6 +32,7 @@ IMPORTANT: Os sistemas de storage SolidFire não suportam a remoção de uma uni
 
 
 
+[[for-more-information]]
 == Para mais informações
 
 * xref:task_troubleshoot_remove_failed_drives.adoc[Remover unidades com falha do cluster]

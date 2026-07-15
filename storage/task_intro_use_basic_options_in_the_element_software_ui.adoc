@@ -22,6 +22,7 @@ As opções básicas incluem a visualização de comandos API ativados pela ativ
 
 
 
+[[for-more-information]]
 == Para mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

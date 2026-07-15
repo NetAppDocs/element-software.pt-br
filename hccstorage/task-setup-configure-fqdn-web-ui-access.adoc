@@ -34,6 +34,7 @@ Você pode configurar ou remover o acesso à IU da Web do FQDN usando o Controle
 
 
 
+[[configure-fqdn-web-ui-access-using-netapp-hybrid-cloud-control]]
 == Configure o acesso à IU da Web do FQDN usando o Controle de nuvem híbrida do NetApp
 
 .Passos
@@ -60,6 +61,7 @@ NOTE: Somente clusters de armazenamento conetados com o conjunto FQDN são lista
 
 
 
+[[configure-fqdn-web-ui-access-using-the-rest-api]]
 == Configure o acesso à IU da Web do FQDN usando a API REST
 
 .Passos
@@ -116,6 +118,7 @@ Por exemplo:
 
 
 
+[[remove-fqdn-web-ui-access-using-netapp-hybrid-cloud-control]]
 == Remova o acesso à IU da Web do FQDN usando o Controle de nuvem híbrida do NetApp
 
 Você pode usar este procedimento para remover o acesso à Web do FQDN para o nó de gerenciamento e os clusters de armazenamento.
@@ -131,6 +134,7 @@ A janela fecha-se e o FQDN não está mais listado no painel *nomes de domínio 
 
 
 
+[[remove-fqdn-web-ui-access-using-the-rest-api]]
 == Remova o acesso à IU da Web do FQDN usando a API REST
 
 .Passos
@@ -181,6 +185,7 @@ https://<management_node_IP>/mnode/2/
 
 
 
+[[troubleshooting]]
 == Solução de problemas
 
 Se os FQDNs estiverem configurados incorretamente, você pode ter problemas ao acessar o nó de gerenciamento, um cluster de armazenamento ou ambos. Use as informações a seguir para ajudar a solucionar o problema.
@@ -212,6 +217,7 @@ Se os FQDNs estiverem configurados incorretamente, você pode ter problemas ao a
 |===
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

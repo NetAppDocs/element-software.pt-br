@@ -15,6 +15,7 @@ Você pode usar o `GetClusterVersionInfo` método para recuperar informações s
 
 
 
+[[cluster-version-info-object-members]]
 == Membros do objeto de informações da versão do cluster
 
 Este método tem os seguintes membros de objeto:
@@ -51,12 +52,14 @@ cadeia de carateres
 |===
 
 
+[[parameters]]
 == Parâmetros
 
 Este método não tem parâmetros de entrada.
 
 
 
+[[return-values]]
 == Valores de retorno
 
 Este método tem os seguintes valores de retorno:
@@ -121,6 +124,7 @@ Objeto JSON
 |===
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -135,6 +139,7 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example]]
 == Exemplo de resposta
 
 Este método retorna uma resposta semelhante ao seguinte exemplo:
@@ -180,6 +185,7 @@ Este método retorna uma resposta semelhante ao seguinte exemplo:
 ----
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 9,6

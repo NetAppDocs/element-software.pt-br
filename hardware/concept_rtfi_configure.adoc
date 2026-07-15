@@ -33,6 +33,7 @@ Implante e instale a imagem da RTFI International Organization for Standardizati
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

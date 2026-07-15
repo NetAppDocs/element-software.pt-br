@@ -30,6 +30,7 @@ Escolha uma das seguintes opções:
 
 
 
+[[use-netapp-hybrid-cloud-control-to-collect-logs]]
 == Use o controle de nuvem híbrida da NetApp para coletar logs
 
 Você pode acessar a área de coleta de logs no Painel de controle de nuvem híbrida da NetApp.
@@ -71,6 +72,8 @@ O pacote de log está em um formato de arquivo .tgz UNIX compactado.
 
 
 
+[[use-the-rest-api-to-collect-logs]]
+[[use-the-rest-api-to-collect-netapp-hci-logs]]
 == Use a API REST para coletar logs
 
 Você pode usar API REST para coletar logs de elemento.

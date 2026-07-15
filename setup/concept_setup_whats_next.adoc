@@ -24,6 +24,7 @@ Depois de configurar o software Element, você gerencia o storage executando alg
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

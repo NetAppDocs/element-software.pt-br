@@ -15,6 +15,7 @@ O objeto snapMirrorJobScheduleCronInfo contém informações sobre um cronograma
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:

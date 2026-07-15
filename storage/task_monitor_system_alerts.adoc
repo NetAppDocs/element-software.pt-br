@@ -99,6 +99,7 @@ Depois que o sistema resolver um alerta, todas as informações sobre o alerta, 
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * xref:reference_monitor_cluster_fault_codes.adoc[Códigos de falha do cluster]

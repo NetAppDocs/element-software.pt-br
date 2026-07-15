@@ -15,12 +15,14 @@ Você pode usar o `GetIpmiInfo` método para exibir um relatório detalhado de s
 
 
 
+[[parameters]]
 == Parâmetros
 
 Este método não tem parâmetros de entrada.
 
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tem o seguinte valor de retorno:
@@ -39,6 +41,7 @@ Array de objetos JSON
 |===
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -53,6 +56,7 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example]]
 == Exemplo de resposta
 
 Devido ao comprimento da resposta retornada para este método API, partes da resposta foram intencionalmente eliminadas deste documento. O que está incluído são as partes das informações de hardware que o sistema monitora para garantir que o nó esteja funcionando com o desempenho ideal.
@@ -187,6 +191,7 @@ Devido ao comprimento da resposta retornada para este método API, partes da res
 ----
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 9,6

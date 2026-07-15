@@ -17,6 +17,7 @@ Com a interface Element, a API ou outras ferramentas de gerenciamento, você pod
 
 
 
+[[solidfire-features]]
 == Recursos do SolidFire
 
 Um sistema SolidFire fornece os seguintes recursos:
@@ -31,6 +32,7 @@ Um sistema SolidFire fornece os seguintes recursos:
 
 
 
+[[solidfire-deployment]]
 == Implantação de SolidFire
 
 Usar os nós de storage fornecidos pelo NetApp e integrados ao software NetApp Element.
@@ -39,6 +41,7 @@ link:../concepts/concept_solidfire_concepts_solidfire_architecture_overview.html
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/vcp/index.html["Plug-in do NetApp Element para vCenter Server"^]

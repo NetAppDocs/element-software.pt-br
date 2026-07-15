@@ -24,12 +24,14 @@ O software NetApp Element define várias funções de nó para um cluster. Os ti
 
 
 
+[[management-node]]
 == Nó de gerenciamento
 
 Um nó de gerenciamento é uma máquina virtual usada para atualizar e fornecer serviços de sistema, incluindo monitoramento e telemetria, gerenciar ativos e configurações de cluster, executar testes e utilitários do sistema e habilitar o acesso ao suporte NetApp para solução de problemas. link:../concepts/concept_intro_management_node.html["Saiba mais"]
 
 
 
+[[storage-node]]
 == Nó de storage
 
 Um nó de armazenamento SolidFire é um servidor que contém uma coleção de unidades que se comunicam entre si através da interface de rede Bond10G. As unidades no nó contêm espaço de bloco e metadados para storage e gerenciamento de dados. Cada nó contém uma imagem de fábrica do software NetApp Element.
@@ -45,6 +47,7 @@ Os nós de storage têm as seguintes características:
 
 
 
+[[fibre-channel-node]]
 == Nó Fibre Channel
 
 Os nós Fibre Channel da SolidFire fornecem conetividade a um switch Fibre Channel, que você pode se conetar a clientes Fibre Channel. Os nós Fibre Channel agem como um conversor de protocolo entre os protocolos Fibre Channel e iSCSI; isso permite adicionar conectividade Fibre Channel a qualquer cluster SolidFire novo ou existente.
@@ -59,6 +62,7 @@ Os nós Fibre Channel têm as seguintes características:
 
 
 
+[[node-states-of-operation]]
 == estados de operação do nó
 
 Um nó pode estar em um de vários estados, dependendo do nível de configuração.
@@ -91,6 +95,7 @@ Em cada um desses estados, alguns campos são lidos somente.
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

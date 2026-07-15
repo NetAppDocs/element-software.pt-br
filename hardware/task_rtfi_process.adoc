@@ -36,6 +36,7 @@ Para configurar o nó após o processo RTFI ser concluído com êxito, consulte 
 
 
 
+[[perform-the-rtfi-process]]
 == Execute o processo RTFI
 
 Use o procedimento a seguir para restaurar o software Element em seu nó SolidFire.
@@ -101,6 +102,7 @@ Se você encontrou uma mensagem de erro durante o processo RTFI, xref:task_rtfi_
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

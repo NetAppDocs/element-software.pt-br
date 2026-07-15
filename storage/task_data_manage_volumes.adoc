@@ -17,6 +17,7 @@ Na página volumes na guia Gerenciamento, você pode criar, modificar, clonar e 
 
 
 
+[[create-a-volume]]
 == Crie um volume
 
 Você pode criar um volume e associar o volume a uma determinada conta. Cada volume deve ser associado a uma conta. Esta associação dá à conta acesso ao volume através dos iniciadores iSCSI usando as credenciais CHAP.
@@ -59,6 +60,7 @@ Os volumes que têm um valor máximo de IOPS ou Burst maior que 20.000 IOPS pode
 
 
 
+[[view-volume-details]]
 == Ver detalhes do volume
 
 . Selecione *Management* > *volumes*.
@@ -100,6 +102,7 @@ Os volumes que têm um valor máximo de IOPS ou Burst maior que 20.000 IOPS pode
 
 
 
+[[view-individual-volume-details]]
 == Ver detalhes individuais do volume
 
 Você pode exibir estatísticas de desempenho para volumes individuais.
@@ -118,6 +121,7 @@ O sistema apresenta informações detalhadas, bem como gráficos de desempenho p
 
 
 
+[[edit-active-volumes]]
 == Editar volumes ativos
 
 Você pode modificar atributos de volume, como valores de QoS, tamanho do volume e a unidade de medida na qual os valores de byte são calculados. Você também pode modificar o acesso à conta para uso de replicação ou restringir o acesso ao volume.
@@ -187,6 +191,7 @@ TIP: Configure volumes com um valor de burst extremamente alto. Isso permite que
 
 
 
+[[delete-a-volume]]
 == Eliminar um volume
 
 Você pode excluir um ou mais volumes de um cluster de armazenamento de elementos.
@@ -225,6 +230,7 @@ O sistema move os volumes para a área *Deleted* na página *volumes*.
 
 
 
+[[restore-a-deleted-volume]]
 == Restaurar um volume excluído
 
 Você pode restaurar um volume no sistema se ele tiver sido excluído, mas ainda não purgado. O sistema limpa automaticamente um volume cerca de oito horas depois de ter sido eliminado. Se o sistema tiver purgado o volume, não poderá restaurá-lo.
@@ -241,6 +247,7 @@ O volume é colocado na lista *ative* volumes e as conexões iSCSI ao volume sã
 
 
 
+[[purge-a-volume]]
 == Purgue um volume
 
 Quando um volume é purgado, ele é removido permanentemente do sistema. Todos os dados no volume são perdidos.
@@ -280,6 +287,7 @@ Purgue vários volumes
 
 
 
+[[clone-a-volume]]
 == Clonar um volume
 
 Você pode criar um clone de um único volume ou vários volumes para fazer uma cópia pontual dos dados. Quando você clonar um volume, o sistema cria um snapshot do volume e cria uma cópia dos dados referenciados pelo snapshot. Este é um processo assíncrono, e a quantidade de tempo que o processo requer depende do tamanho do volume que você está clonando e da carga atual do cluster.
@@ -336,6 +344,7 @@ NOTE: Aumentar o tamanho de volume de um clone resulta em um novo volume com esp
 
 
 
+[[for-more-information]]
 == Para mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

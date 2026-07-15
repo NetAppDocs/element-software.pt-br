@@ -15,6 +15,7 @@ O `certificateDetails` objeto contém as informações decodificadas sobre um ce
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:

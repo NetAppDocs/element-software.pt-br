@@ -15,6 +15,7 @@ Você pode usar o `ListInitiators` método para obter a lista de IQNs do iniciad
 
 
 
+[[parameters]]
 == Parâmetros
 
 Este método tem os seguintes parâmetros de entrada:
@@ -63,6 +64,7 @@ Não
 |===
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tem o seguinte valor de retorno:
@@ -83,6 +85,7 @@ xref:reference_element_api_initiator.adoc[iniciador] array
 |===
 
 
+[[exceptions]]
 == Exceções
 
 Este método pode ter a seguinte exceção:
@@ -101,6 +104,7 @@ Lançado se você incluir tanto os parâmetros startInitiatorID quanto os inicia
 |===
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -115,6 +119,7 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example]]
 == Exemplo de resposta
 
 Este método retorna uma resposta semelhante ao seguinte exemplo:
@@ -140,6 +145,7 @@ Este método retorna uma resposta semelhante ao seguinte exemplo:
 ----
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 9,6

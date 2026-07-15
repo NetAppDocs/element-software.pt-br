@@ -15,6 +15,7 @@ O objeto de encadernação contém informações sobre a vinculação de um volu
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:
@@ -87,6 +88,7 @@ cadeia de carateres
 |===
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * xref:reference_element_api_listvirtualvolumebindings.adoc[ListVirtualVolumeBindings]

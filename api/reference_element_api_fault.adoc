@@ -15,6 +15,7 @@ O objeto de avaria contém informações sobre avarias detetadas no grupo de ins
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:
@@ -180,6 +181,7 @@ cadeia de carateres
 |===
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * xref:reference_element_api_listclusterfaults.adoc[ListClusterFaults]

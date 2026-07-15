@@ -15,6 +15,7 @@ Você pode usar o `TestDrives` método para executar uma validação de hardware
 
 
 
+[[parameters]]
 == Parâmetros
 
 Você só pode usar o `TestDrives` método em nós que não são "ativos" em um cluster.
@@ -55,6 +56,7 @@ Não
 |===
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tem o seguinte valor de retorno:
@@ -73,6 +75,7 @@ Objeto JSON
 |===
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -90,12 +93,14 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example]]
 == Exemplo de resposta
 
 Este método retorna uma tabela contendo resultados de teste para cada unidade no nó.
 
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 9,6

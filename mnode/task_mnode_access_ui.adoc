@@ -24,6 +24,7 @@ Para clusters que executam o software Element versão 11,3 ou posterior, você p
 
 
 
+[[access-the-management-node-per-node-ui]]
 == Acesse a IU do nó de gerenciamento por nó
 
 Na IU por nó, você pode acessar as configurações de rede e cluster e utilizar testes e utilitários do sistema.
@@ -43,6 +44,7 @@ image::mnode_per_node_442_ui.png[IU do nó de gerenciamento por nó]
 
 
 
+[[access-the-management-node-rest-api-ui]]
 == Acesse a IU da API REST do nó de gerenciamento
 
 Na IU da API REST, você pode acessar um menu de APIs relacionadas a serviços que controlam os serviços de gerenciamento no nó de gerenciamento.

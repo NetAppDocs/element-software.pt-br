@@ -39,6 +39,7 @@ Se você quiser permitir mais tempo ao ligar os nós e verificar se eles estão 
 ====
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/How_to_gracefully_shut_down_and_power_on_a_NetApp_Solidfire_HCI_storage_cluster["Como desligar e ligar graciosamente um cluster de storage NetApp SolidFire/HCI"^]

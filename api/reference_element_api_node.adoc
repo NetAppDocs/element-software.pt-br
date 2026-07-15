@@ -15,6 +15,7 @@ O objeto nó contém informações sobre cada nó no cluster. Pode obter esta in
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:
@@ -225,6 +226,7 @@ xref:reference_element_api_virtualnetwork.adoc[VirtualNetwork] array
 |===
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * xref:reference_element_api_listactivenodes.adoc[ListActiveNodes]

@@ -17,6 +17,7 @@ Se `DeleteInitiators` não conseguir excluir um dos iniciadores fornecidos no pa
 
 
 
+[[parameter]]
 == Parâmetro
 
 Este método tem o seguinte parâmetro de entrada:
@@ -39,12 +40,14 @@ Sim
 |===
 
 
+[[return-values]]
 == Valores de retorno
 
 Este método não tem valores de retorno.
 
 
 
+[[error]]
 == Erro
 
 Este método pode retornar o seguinte erro:
@@ -63,6 +66,7 @@ Retornado se o nome do iniciador escolhido não existir.
 |===
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -82,6 +86,7 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example]]
 == Exemplo de resposta
 
 Este método retorna uma resposta semelhante ao seguinte exemplo:
@@ -95,6 +100,7 @@ Este método retorna uma resposta semelhante ao seguinte exemplo:
 ----
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 9,6

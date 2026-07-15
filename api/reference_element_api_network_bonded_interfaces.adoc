@@ -15,6 +15,7 @@ O objeto de rede (interfaces ligadas) contém informações de configuração pa
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:
@@ -294,6 +295,7 @@ cadeia de carateres
 |===
 
 
+[[member-modifiability-and-node-states]]
 == Modificabilidade dos membros e estados de nós
 
 Esta tabela indica se os parâmetros do objeto podem ou não ser modificados em cada estado de nó possível.
@@ -602,6 +604,7 @@ Sim
 |===
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * xref:reference_element_api_getconfig.adoc[GetConfig]

@@ -21,6 +21,7 @@ Você pode remover um objeto de rede virtual. Você deve adicionar os blocos de 
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 xref:task_system_manage_virtual_edit_a_virtual_network.adoc[Edite uma rede virtual]

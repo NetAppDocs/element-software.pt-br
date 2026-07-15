@@ -15,6 +15,7 @@ O objeto snapMirrorPolicyRule contém informações sobre as regras em uma polí
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:

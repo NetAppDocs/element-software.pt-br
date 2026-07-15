@@ -15,6 +15,7 @@ O objeto ISCSIAuthentication contém informações de autenticação sobre uma S
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:

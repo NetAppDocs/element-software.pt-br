@@ -17,6 +17,7 @@ Há um limite de 1000 bytes em objetos de atributo codificados.
 
 
 
+[[object-member]]
 == Membro do objeto
 
 Este objeto contém o seguinte membro:
@@ -35,6 +36,7 @@ Objeto JSON
 |===
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 O exemplo de solicitação a seguir usa o método AddClusterAdmin:

@@ -22,6 +22,7 @@ Com o storage Element, você pode criar e gerenciar os seguintes tipos de contas
 
 
 
+[[storage-cluster-administrator-accounts]]
 == Contas de administrador de cluster de storage
 
 Existem dois tipos de contas de administrador que podem existir em um cluster de storage executando o software NetApp Element:
@@ -37,6 +38,7 @@ Você pode link:../storage/concept_system_manage_manage_cluster_administrator_us
 
 
 
+[[user-accounts]]
 == Contas de utilizador
 
 As contas de usuário são usadas para controlar o acesso aos recursos de armazenamento em uma rede baseada no software NetApp Element. Pelo menos uma conta de usuário é necessária antes que um volume possa ser criado.
@@ -52,6 +54,7 @@ Aqui estão algumas considerações adicionais:
 
 
 
+[[authoritative-cluster-user-accounts]]
 == Contas de usuário de cluster autoritativas
 
 As contas de usuários de cluster autoritativas podem se autenticar em qualquer ativo de storage associado à instância de controle de nuvem híbrida da NetApp de nós e clusters. Com essa conta, você pode gerenciar volumes, contas, grupos de acesso e muito mais em todos os clusters.
@@ -70,6 +73,7 @@ Embora muitos recursos de controle de nuvem híbrida da NetApp funcionem com vá
 
 
 
+[[volume-accounts]]
 == Contas de volume
 
 As contas específicas de volume são específicas apenas para o cluster de armazenamento em que foram criadas. Essas contas permitem que você defina permissões em volumes específicos na rede, mas não têm efeito fora desses volumes.

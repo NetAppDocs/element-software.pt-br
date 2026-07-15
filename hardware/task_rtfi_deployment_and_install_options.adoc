@@ -22,6 +22,7 @@ Depois de baixar a imagem ISO RTFI, você pode implantá-la de acordo com um dos
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

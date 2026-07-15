@@ -19,6 +19,7 @@ Depois que um volume é replicado, você deve garantir que os volumes de origem 
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 xref:reference_replication_volume_pairing_warnings.adoc[Avisos de emparelhamento de volume]

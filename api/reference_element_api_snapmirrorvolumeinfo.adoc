@@ -15,6 +15,7 @@ O objeto SnapMirrorVolumeInfo contém informações sobre uma localização de v
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:

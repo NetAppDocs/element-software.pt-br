@@ -17,6 +17,7 @@ Use a conta de administrador do cluster para autenticação de API.
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

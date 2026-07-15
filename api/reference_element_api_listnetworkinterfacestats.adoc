@@ -15,12 +15,14 @@ Você pode usar o `ListNetworkInterfaceStats` método para listar estatísticas 
 
 
 
+[[parameter]]
 == Parâmetro
 
 Este método não tem parâmetros de entrada.
 
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tem o seguinte valor de retorno:
@@ -33,6 +35,7 @@ Este método tem o seguinte valor de retorno:
 |===
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -47,6 +50,7 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example]]
 == Exemplo de resposta
 
 Este método retorna uma resposta semelhante ao seguinte exemplo:
@@ -79,6 +83,7 @@ Este método retorna uma resposta semelhante ao seguinte exemplo:
 ----
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 12,3

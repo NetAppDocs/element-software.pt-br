@@ -39,6 +39,7 @@ Aqui está uma visão geral de alto nível dos passos:
 
 
 
+[[prepare-to-replace-the-node]]
 == Prepare-se para substituir o nó
 
 Você deve remover o nó de armazenamento defeituoso corretamente do cluster na IU do software NetApp Element antes de instalar o nó de substituição. Você pode fazer isso sem causar qualquer interrupção de serviço. Você deve obter o número de série do nó de armazenamento defeituoso da IU do elemento e combiná-lo com o número de série no adesivo na parte de trás do nó.
@@ -81,6 +82,7 @@ Para remover várias unidades
 
 
 
+[[replace-the-node-in-the-chassis]]
 == Substitua o nó no chassi
 
 Depois de remover o nó defeituoso do cluster usando a IU do software NetApp Element, você estará pronto para remover fisicamente o nó do chassi. Você deve instalar o nó de substituição no mesmo slot no chassi do qual você removeu o nó com falha.
@@ -203,6 +205,7 @@ TIP: Certifique-se de que o nó de substituição seja cabeado da mesma forma qu
 
 
 
+[[add-the-node-to-the-cluster]]
 == Adicione o nó ao cluster
 
 Quando você adiciona um nó ao cluster ou instala novas unidades em um nó existente, as unidades são registradas automaticamente conforme disponível. Você deve adicionar as unidades ao cluster usando a IU ou a API do Element antes que elas possam participar do cluster.
@@ -238,6 +241,7 @@ O nó aparece na lista de nós ativos.
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

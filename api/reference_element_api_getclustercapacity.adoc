@@ -15,6 +15,7 @@ Pode utilizar o `GetClusterCapacity` para obter medições de capacidade de alto
 
 
 
+[[efficiency-calculations]]
 == Cálculos de eficiência
 
 Use as equações a seguir para calcular thin Provisioning, deduplicação e compactação. Essas equações se aplicam ao elemento 8,2 e posterior.
@@ -26,6 +27,7 @@ Use as equações a seguir para calcular thin Provisioning, deduplicação e com
 
 
 
+[[overall-efficiency-rate-calculation]]
 == Cálculo da taxa de eficiência geral
 
 Use a seguinte equação para calcular a eficiência geral do cluster usando os resultados dos cálculos de thin Provisioning, deduplicação e eficiência de compactação.
@@ -35,12 +37,14 @@ Use a seguinte equação para calcular a eficiência geral do cluster usando os 
 
 
 
+[[parameters]]
 == Parâmetros
 
 Este método não tem parâmetros de entrada.
 
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tem o seguinte valor de retorno:
@@ -59,6 +63,7 @@ xref:reference_element_api_clustercapacity.adoc[ClutorCapacidade]
 |===
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -73,6 +78,7 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example]]
 == Exemplo de resposta
 
 Este método retorna uma resposta semelhante ao seguinte exemplo:
@@ -112,6 +118,7 @@ Este método retorna uma resposta semelhante ao seguinte exemplo:
 ----
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 9,6

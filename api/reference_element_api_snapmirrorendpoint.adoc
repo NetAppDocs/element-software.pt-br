@@ -15,6 +15,7 @@ O objeto SnapMirrorEndpoint contém informações sobre os sistemas de armazenam
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:

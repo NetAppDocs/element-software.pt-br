@@ -15,6 +15,7 @@ O `bulkVolumeJob` objeto contém informações sobre operações de leitura ou g
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:

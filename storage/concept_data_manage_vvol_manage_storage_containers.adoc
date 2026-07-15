@@ -19,6 +19,7 @@ Suporte para um máximo de quatro contêineres de storage por cluster. É necess
 
 
 
+[[create-a-storage-container]]
 == Crie um recipiente de armazenamento
 
 Você pode criar contêineres de storage na IU do Element e descobri-los no vCenter. Você precisa criar pelo menos um contêiner de storage para começar a provisionar máquinas virtuais com suporte da VVol.
@@ -48,6 +49,7 @@ NOTE: Como um ID de conta do NetApp Element é criado automaticamente e atribuí
 
 
 
+[[view-storage-container-details]]
 == Veja os detalhes do recipiente de armazenamento
 
 Na página recipientes de armazenamento da guia Vols, você pode exibir informações de todos os contentores de armazenamento ativos no cluster.
@@ -67,6 +69,7 @@ Na página recipientes de armazenamento da guia Vols, você pode exibir informa�
 
 
 
+[[view-individual-storage-container-details]]
 == Ver detalhes individuais do recipiente de armazenamento
 
 Você pode exibir as informações do contentor de armazenamento de um contentor de armazenamento individual selecionando-as na página recipientes de armazenamento na guia vols.
@@ -87,6 +90,7 @@ Você pode exibir as informações do contentor de armazenamento de um contentor
 
 
 
+[[edit-a-storage-container]]
 == Edite um recipiente de armazenamento
 
 Você pode modificar a autenticação CHAP do contentor de armazenamento na IU do Element.
@@ -104,6 +108,7 @@ TIP: Se você não alterar as credenciais das Configurações CHAP, elas permane
 
 
 
+[[delete-a-storage-container]]
 == Excluir um recipiente de armazenamento
 
 Você pode excluir contentores de armazenamento da IU do Element.

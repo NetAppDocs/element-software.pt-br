@@ -15,6 +15,7 @@ O objeto SnapMirrorSVM contém informações sobre as máquinas virtuais de arma
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:

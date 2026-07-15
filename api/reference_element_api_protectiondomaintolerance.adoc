@@ -15,6 +15,7 @@ O objeto protectionDomainTolerance contém informações sobre a capacidade do c
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:

@@ -15,6 +15,7 @@ Você pode usar o `ListVirtualVolumeTasks` método para obter uma lista de taref
 
 
 
+[[parameters]]
 == Parâmetros
 
 Este método tem o seguinte parâmetro de entrada:
@@ -37,6 +38,7 @@ Não
 |===
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tem o seguinte valor de retorno:
@@ -57,6 +59,7 @@ xref:reference_element_api_task_virtual_volumes.adoc[tarefa] array
 |===
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -72,6 +75,7 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example]]
 == Exemplo de resposta
 
 Este método retorna uma resposta semelhante ao seguinte exemplo:
@@ -111,6 +115,7 @@ Este método retorna uma resposta semelhante ao seguinte exemplo:
 ----
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 9,6

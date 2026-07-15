@@ -15,6 +15,7 @@ A IU da Web do Element usa o `BreakSnapMirrorVolume` método para quebrar a rela
 
 
 
+[[parameter]]
 == Parâmetro
 
 Este método tem o seguinte parâmetro de entrada:
@@ -87,18 +88,21 @@ Não
 |===
 
 
+[[return-values]]
 == Valores de retorno
 
 Este método não tem valores de retorno.
 
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 10,0
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 xref:reference_element_api_breaksnapmirrorrelationship.adoc[BreakSnapMirrorRelacionship]

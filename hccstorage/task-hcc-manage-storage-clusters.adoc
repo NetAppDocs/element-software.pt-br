@@ -35,6 +35,7 @@ Depois que um cluster de storage é adicionado, você pode monitorar o desempenh
 
 
 
+[[add-a-storage-cluster]]
 == Adicionar um cluster de armazenamento
 
 Você pode adicionar um cluster de storage ao inventário de ativos de nós de gerenciamento usando o Controle de nuvem híbrida da NetApp. Isso permite gerenciar e monitorar o cluster usando a IU do HCC.
@@ -63,6 +64,7 @@ NOTE: Depois de adicionar o cluster de armazenamento, o inventário do cluster p
 
 
 
+[[confirm-storage-cluster-status]]
 == Confirme o status do cluster de armazenamento
 
 Você pode monitorar o status da conexão dos ativos dos clusters de storage usando a IU do Controle de nuvem híbrida da NetApp.
@@ -76,6 +78,7 @@ Você pode monitorar o status da conexão dos ativos dos clusters de storage usa
 
 
 
+[[edit-storage-cluster-credentials]]
 == Editar credenciais do cluster de storage
 
 Você pode editar o nome de usuário e a senha do administrador do cluster de armazenamento usando a IU do Controle de nuvem híbrida da NetApp.
@@ -91,6 +94,7 @@ Você pode editar o nome de usuário e a senha do administrador do cluster de ar
 
 
 
+[[remove-a-storage-cluster]]
 == Remova um cluster de armazenamento
 
 A remoção de um cluster de storage do controle de nuvem híbrida da NetApp remove o cluster do inventário de nós de gerenciamento. Depois de remover um cluster de armazenamento, o cluster não pode mais ser gerenciado pelo HCC e você pode acessá-lo apenas navegando diretamente para o endereço IP de gerenciamento.
@@ -112,6 +116,7 @@ CAUTION: Selecionar *Sim* em seguida remove o cluster da instalação.
 
 
 
+[[enable-and-disable-maintenance-mode]]
 == Ativar e desativar o modo de manutenção
 
 Se você precisar colocar um nó de storage off-line para manutenção, como atualizações de software ou reparos de host, poderá minimizar o impacto de e/S para o restante do cluster de storage pelo <<enable_main_mode,ativar>>modo de manutenção desse nó. Quando você <<disable_main_mode,desativar>> faz o modo de manutenção, o nó é monitorado para garantir que certos critérios sejam atendidos antes que o nó possa sair do modo de manutenção.
@@ -125,6 +130,7 @@ Se você precisar colocar um nó de storage off-line para manutenção, como atu
 
 
 
+[[enablemainmodeenable-maintenance-mode]]
 === [[enable_main_mode]]Ativar o modo de manutenção
 
 Pode utilizar o seguinte procedimento para ativar o modo de manutenção de um nó de cluster de armazenamento.
@@ -170,6 +176,7 @@ Após a conclusão do *Enable Maintenance Mode*, a coluna *Node Status* exibe um
 
 
 
+[[disablemainmodedisable-maintenance-mode]]
 === [[disable_MAIN_MODE]]Desativar o modo de manutenção
 
 Depois que um nó é colocado com sucesso no modo de manutenção, a ação *Disable Maintenance Mode* está disponível para este nó. As ações nos outros nós ficam indisponíveis até que o modo de manutenção seja desativado com êxito no nó que está sendo submetido a manutenção.
@@ -190,6 +197,7 @@ NOTE: Quando um nó está no modo de manutenção, ele não aceita novos dados. 
 
 
 
+[[troubleshoot]]
 === Solucionar problemas
 
 Se você encontrar erros ao ativar ou desativar o modo de manutenção, um erro de banner será exibido na parte superior da tabela de nós. Para obter mais informações sobre o erro, você pode selecionar o link *Mostrar detalhes* fornecido no banner para mostrar o que a API retorna.

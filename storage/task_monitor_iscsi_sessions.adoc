@@ -19,6 +19,7 @@ Pode visualizar as sessões iSCSI que estão ligadas ao cluster. Você pode filt
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 xref:reference_monitor_iscsi_session_details.adoc[Detalhes da sessão iSCSI]

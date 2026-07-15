@@ -43,6 +43,7 @@ Você pode executar qualquer uma das seguintes tarefas depois de link:task_mnode
 
 
 
+[[disable-or-enable-the-ssh-capability-on-the-management-node-using-netapp-hybrid-cloud-control-ui]]
 == Desative ou ative o recurso SSH no nó de gerenciamento usando a IU do Controle de nuvem híbrida do NetApp
 
 Você pode desativar ou reativar a capacidade SSH no nó de gerenciamento. O recurso SSH que fornece link:task_mnode_enable_remote_support_connections.html["Acesso à sessão do túnel de suporte remoto (RST) do suporte da NetApp"] é desativado por padrão nos nós de gerenciamento que executam serviços de gerenciamento 2,18 ou posterior. A desativação do SSH não termina nem desliga sessões de cliente SSH existentes para o nó de gerenciamento. Se você desabilitar o SSH e optar por reativá-lo posteriormente, poderá fazê-lo usando a IU do Controle de nuvem híbrida da NetApp.
@@ -58,6 +59,7 @@ NOTE: Para ativar ou desativar o acesso de suporte usando SSH para um cluster de
 
 
 
+[[disable-or-enable-the-ssh-capability-on-the-management-node-using-apis]]
 == Desative ou ative o recurso SSH no nó de gerenciamento usando APIs
 
 Você pode desativar ou reativar a capacidade SSH no nó de gerenciamento. O recurso SSH que fornece link:task_mnode_enable_remote_support_connections.html["Acesso à sessão do túnel de suporte remoto (RST) do suporte da NetApp"] é desativado por padrão nos nós de gerenciamento que executam serviços de gerenciamento 2,18 ou posterior. A desativação do SSH não termina nem desliga sessões de cliente SSH existentes para o nó de gerenciamento. Se você desabilitar o SSH e optar por reativá-lo posteriormente, poderá fazê-lo usando a mesma API.
@@ -104,6 +106,7 @@ https://<ManagementNodeIP>/mnode/
 
 
 
+[[determine-status-of-the-ssh-capability-on-the-management-node-using-apis]]
 == Determine o status do recurso SSH no nó de gerenciamento usando APIs
 
 Você pode determinar se a capacidade SSH está ou não ativada no nó de gerenciamento usando uma API de serviço de nó de gerenciamento. O SSH é desativado por padrão nos nós de gerenciamento que executam serviços de gerenciamento 2,18 ou posterior.

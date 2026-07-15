@@ -25,6 +25,7 @@ NOTE: Quando o cluster de armazenamento é carregado fortemente ou você envia m
 
 
 
+[[common-objects]]
 == Objetos comuns
 
 A API do software Element usa objetos JSON para representar conceitos de dados organizados. Muitos desses métodos de API usam esses objetos para entrada e saída de dados. Esta seção documenta esses objetos comumente usados; objetos que são usados somente dentro de um único método são documentados com esse método em vez de nesta seção.
@@ -33,6 +34,7 @@ link:../api/reference_element_api_account.html["Aprenda sobre objetos comuns"]
 
 
 
+[[common-methods]]
 == Métodos comuns
 
 Métodos comuns são métodos usados para recuperar informações sobre o cluster de armazenamento, a própria API ou operações de API em curso.
@@ -41,6 +43,7 @@ link:../api/reference_element_api_getapi.html["Aprenda sobre métodos comuns"]
 
 
 
+[[account-api-methods]]
 == Métodos de API de conta
 
 Os métodos de conta permitem adicionar, remover, exibir e modificar informações de conta e segurança.
@@ -49,6 +52,7 @@ link:../api/reference_element_api_addaccount.html["Saiba mais sobre os métodos 
 
 
 
+[[administrator-api-methods]]
 == Métodos da API do administrador
 
 Você pode usar os métodos de API do administrador para criar, modificar, exibir e remover administradores de cluster de storage e atribuir níveis de acesso e Privileges para aqueles com acesso a um cluster de storage.
@@ -57,6 +61,7 @@ link:../api/reference_element_api_addclusteradmin.html["Saiba mais sobre os mét
 
 
 
+[[cluster-api-methods]]
 == Métodos de API de cluster
 
 Os métodos de API de cluster de software Element permitem gerenciar a configuração e a topologia do cluster de storage e dos nós que pertencem a um cluster de storage.
@@ -67,6 +72,7 @@ link:../api/reference_element_api_addnodes.html["Saiba mais sobre os métodos da
 
 
 
+[[cluster-creation-api-methods]]
 == Métodos da API de criação de clusters
 
 Você pode usar esses métodos de API para criar um cluster de armazenamento. Todos esses métodos precisam ser usados contra o endpoint da API em um único nó.
@@ -75,6 +81,7 @@ link:../api/reference_element_api_checkproposedcluster.html["Saiba mais sobre os
 
 
 
+[[drive-api-methods]]
 == Métodos da API da unidade
 
 Você pode usar os métodos de API de unidade para adicionar e gerenciar unidades que estão disponíveis para um cluster de armazenamento. Quando você adiciona um nó de armazenamento ao cluster de armazenamento ou instala novas unidades em um nó de armazenamento existente, as unidades estão disponíveis para serem adicionadas ao cluster de armazenamento.
@@ -83,6 +90,7 @@ link:../api/reference_element_api_adddrives.html["Saiba mais sobre os métodos d
 
 
 
+[[fibre-channel-api-methods]]
 == Métodos de API Fibre Channel
 
 Você pode usar os métodos de API Fibre Channel para adicionar, modificar ou remover membros de nós Fibre Channel de um cluster de storage.
@@ -91,6 +99,7 @@ link:../api/reference_element_api_getvolumeaccessgrouplunassignments.html["Saiba
 
 
 
+[[initiator-api-methods]]
 == Métodos da API do iniciador
 
 Os métodos de iniciador permitem adicionar, remover, visualizar e modificar objetos do iniciador iSCSI, que lidam com a comunicação entre o sistema de armazenamento e clientes de armazenamento externos.
@@ -99,6 +108,7 @@ link:../api/reference_element_api_createinitiators.html["Saiba mais sobre os mé
 
 
 
+[[ldap-api-methods]]
 == Métodos de API LDAP
 
 Você pode usar o LDAP (Lightweight Directory Access Protocol) para autenticar o acesso ao armazenamento de elementos. Os métodos de API LDAP descritos nesta seção permitem configurar o acesso LDAP ao cluster de armazenamento.
@@ -107,6 +117,7 @@ link:../api/reference_element_api_addldapclusteradmin.html["Saiba mais sobre os 
 
 
 
+[[multi-factor-authentication-api-methods]]
 == Métodos de API de autenticação multifator
 
 Você pode usar a autenticação multifator (MFA) para gerenciar sessões de usuários usando um provedor de identidade (IDP) de terceiros por meio da Security Assertion Markup Language (SAML).
@@ -115,6 +126,7 @@ link:../api/reference_element_api_addidpclusteradmin.html["Saiba mais sobre os m
 
 
 
+[[session-authentication-api-methods]]
 == Métodos API de autenticação de sessão
 
 Você pode usar autenticação baseada em sessão para gerenciar sessões de usuário.
@@ -123,6 +135,7 @@ link:../api/reference_element_api_listauthsessionbyclusteradmin.html["Saiba mais
 
 
 
+[[node-api-methods]]
 == Métodos de API de nó
 
 Você pode usar métodos de API de nó para configurar nós individuais. Esses métodos operam em nós únicos que precisam ser configurados, configurados, mas ainda não participam de um cluster ou participam ativamente de um cluster. Os métodos de API de nó permitem exibir e modificar configurações de nós individuais e da rede de cluster usada para se comunicar com o nó. É necessário executar esses métodos em nós individuais; não é possível executar métodos de API por nó no endereço do cluster.
@@ -131,6 +144,7 @@ link:../api/reference_element_api_checkpingonvlan.html["Aprenda sobre os método
 
 
 
+[[replication-api-methods]]
 == Métodos de API de replicação
 
 Os métodos de API de replicação permitem conectar dois clusters para proteção contínua de dados (CDP). Quando você conecta dois clusters, os volumes ativos em um cluster podem ser replicados continuamente para um segundo cluster a fim de fornecer recuperação de dados. Ao emparelhar volumes para replicação, você pode proteger seus dados de eventos que podem torná-los inacessíveis.
@@ -139,6 +153,7 @@ link:../api/reference_element_api_cluster_pairing_order_of_operations.html["Saib
 
 
 
+[[security-api-methods]]
 == Métodos de API de segurança
 
 Você pode integrar o software Element com serviços externos relacionados à segurança, como um servidor de gerenciamento de chaves externo. Esses métodos relacionados à segurança permitem configurar recursos de segurança do elemento, como gerenciamento de chaves externas para criptografia em repouso.
@@ -147,6 +162,7 @@ link:../api/reference_element_api_addkeyservertoproviderkmip.html["Saiba mais so
 
 
 
+[[snapmirror-api-methods]]
 == Métodos de API do SnapMirror
 
 Os métodos de API do SnapMirror são usados pela IU da Web Element para gerenciar snapshots espelhados com sistemas ONTAP remotos. Esses métodos são destinados apenas para uso pela IU da Web Element. Se você precisar de acesso à API à funcionalidade do SnapMirror, use as APIs do ONTAP. Exemplos de solicitação e retorno não são fornecidos para os métodos de API do SnapMirror.
@@ -155,6 +171,7 @@ link:../api/reference_element_api_abortsnapmirrorrelationship.html["Saiba mais s
 
 
 
+[[system-configuration-api-methods]]
 == Métodos de API de configuração do sistema
 
 Os métodos de API de configuração do sistema permitem obter e definir valores de configuração que se aplicam a todos os nós no cluster.
@@ -163,6 +180,7 @@ link:../api/reference_element_api_disablebmccoldreset.html["Saiba mais sobre os 
 
 
 
+[[multitenant-networking-api-methods]]
 == Métodos de API de rede multitenant
 
 A rede multitenant em clusters de armazenamento Element permite que o tráfego entre vários clientes que estão em redes lógicas separadas seja conetado a um cluster de armazenamento de elemento sem roteamento de camada 3.
@@ -171,6 +189,7 @@ As conexões com o cluster de armazenamento são segregadas na pilha de rede atr
 
 
 
+[[prerequisites-for-setting-up-a-multitenant-virtual-network]]
 === Pré-requisitos para configurar uma rede virtual multitenant
 
 * Você deve ter identificado o bloco de endereços IP de rede cliente a ser atribuído às redes virtuais nos nós de storage.
@@ -179,6 +198,7 @@ As conexões com o cluster de armazenamento são segregadas na pilha de rede atr
 
 
 
+[[virtual-networking-order-of-operations]]
 === Ordem de operações de rede virtual
 
 . Use o método AddVirtualNetwork para provisionar em massa os endereços IP inseridos.
@@ -198,6 +218,7 @@ link:../api/concept_element_api_virtual_network_naming_conventions.html["Aprenda
 
 
 
+[[volume-api-methods]]
 == Métodos de API de volume
 
 Os métodos de API de volume do software Element permitem gerenciar volumes que residem em um nó de storage. Você pode criar, modificar, clonar e excluir volumes com esses métodos. Você também pode usar métodos de API de volume para coletar e exibir medições de dados para um volume.
@@ -206,6 +227,7 @@ link:../api/reference_element_api_cancelclone.html["Saiba mais sobre os métodos
 
 
 
+[[volume-access-group-api-methods]]
 == Métodos de API do grupo de acesso ao volume
 
 Os métodos de grupo de acesso ao volume permitem adicionar, remover, exibir e modificar grupos de acesso ao volume, que são coleções de volumes que os usuários podem acessar usando iniciadores iSCSI ou Fibre Channel.
@@ -214,6 +236,7 @@ link:../api/reference_element_api_addinitiatorstovolumeaccessgroup.html["Saiba m
 
 
 
+[[volume-snapshot-api-methods]]
 == Métodos de API de instantâneo de volume
 
 Os métodos de API de snapshot de volume do software Element permitem gerenciar snapshots de volume. Você pode criar, modificar, clonar e excluir snapshots de volume usando os métodos de API de snapshot de volume.
@@ -222,6 +245,7 @@ link:../api/concept_element_api_snapshots_overview.html["Saiba mais sobre os mé
 
 
 
+[[virtual-volume-api-methods]]
 == Métodos de API de volume virtual
 
 Os métodos de API de volume virtual do software Element permitem gerenciar volumes virtuais (VVols). Você pode visualizar os vols existentes com esses métodos de API, bem como criar, modificar e excluir contentores de armazenamento de volume virtual. Embora você não possa usar esses métodos para operar em volumes normais, você pode usar os métodos de API de volume normal para listar informações sobre vols.
@@ -230,6 +254,7 @@ link:../api/reference_element_api_createstoragecontainer.html["Saiba mais sobre 
 
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentação do software SolidFire e Element"]

@@ -15,6 +15,7 @@ O objeto pendingActiveNode contém informações sobre um nó que está atualmen
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:
@@ -135,6 +136,7 @@ cadeia de carateres
 |===
 
 
+[[find-more-information]]
 == Encontre mais informações
 
 xref:reference_element_api_listpendingactivenodes.adoc[ListPendingActiveNodes]

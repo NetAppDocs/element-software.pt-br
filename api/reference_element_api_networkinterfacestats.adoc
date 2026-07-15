@@ -15,6 +15,7 @@ O objeto networkInterfaceStats contém estatísticas de rede, o número total de
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:

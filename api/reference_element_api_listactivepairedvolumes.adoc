@@ -15,12 +15,14 @@ Pode utilizar o `ListActivePairedVolumes` método para listar todos os volumes a
 
 
 
+[[parameters]]
 == Parâmetros
 
 Este método não tem parâmetros de entrada.
 
 
 
+[[return-value]]
 == Valor de retorno
 
 Este método tem o seguinte valor de retorno:
@@ -39,6 +41,7 @@ xref:reference_element_api_volumepair.adoc[VolumePair] array
 |===
 
 
+[[request-example]]
 == Exemplo de solicitação
 
 As solicitações para este método são semelhantes ao seguinte exemplo:
@@ -54,6 +57,7 @@ As solicitações para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[response-example]]
 == Exemplo de resposta
 
 As respostas para este método são semelhantes ao seguinte exemplo:
@@ -128,6 +132,7 @@ As respostas para este método são semelhantes ao seguinte exemplo:
 ----
 
 
+[[new-since-version]]
 == Novo desde a versão
 
 9,6

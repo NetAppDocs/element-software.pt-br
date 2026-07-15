@@ -15,6 +15,7 @@ O `clusterConfig` objeto retorna informações que o nó usa para se comunicar c
 
 
 
+[[object-members]]
 == Membros do objeto
 
 Este objeto contém os seguintes membros:
